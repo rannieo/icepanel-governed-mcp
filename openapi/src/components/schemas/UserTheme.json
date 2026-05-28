@@ -1,0 +1,8 @@
+{
+  "enum": [
+    "light",
+    "dark",
+    "system"
+  ],
+  "type": "string"
+}

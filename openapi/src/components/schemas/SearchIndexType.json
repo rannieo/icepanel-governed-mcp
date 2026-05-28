@@ -1,0 +1,17 @@
+{
+  "enum": [
+    "actor",
+    "app",
+    "component",
+    "group",
+    "root",
+    "store",
+    "system",
+    "app-diagram",
+    "component-diagram",
+    "context-diagram",
+    "connection",
+    "flow"
+  ],
+  "type": "string"
+}

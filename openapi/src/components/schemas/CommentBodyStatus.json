@@ -1,0 +1,10 @@
+{
+  "enum": [
+    "active",
+    "create",
+    "dismissed",
+    "open",
+    "resolved"
+  ],
+  "type": "string"
+}

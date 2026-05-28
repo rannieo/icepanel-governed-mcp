@@ -1,0 +1,45 @@
+{
+  "properties": {
+    "connectionResolveUrl": {
+      "description": "Resolve the connector from a publicly accessible URL",
+      "type": "string"
+    },
+    "connector": {
+      "$ref": "./RealityConnector.json",
+      "description": "Links this to a resource in reality, if set periodic checks are performed and the status is updated"
+    },
+    "customName": {
+      "description": "Friendly name for the link set by the user",
+      "nullable": true,
+      "type": "string"
+    },
+    "index": {
+      "type": "number"
+    },
+    "url": {
+      "description": "URL pointing to the resource in reality, resolved from the last sync",
+      "type": "string"
+    },
+    "errorMessage": {
+      "description": "Error message that was received during the last sync",
+      "type": "string"
+    },
+    "id": {
+      "description": "Random 20 character identifier",
+      "type": "string"
+    },
+    "name": {
+      "description": "Friendly name describing the resource in reality, resolved from the last sync",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "./RealityLinkStatus.json",
+      "description": "Response that was received from the last sync with reality"
+    }
+  },
+  "required": [
+    "id",
+    "index"
+  ],
+  "type": "object"
+}

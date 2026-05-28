@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "concurrency": {
+      "type": "number"
+    },
+    "type": {
+      "enum": [
+        "concurrency"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "concurrency",
+    "type"
+  ],
+  "type": "object"
+}

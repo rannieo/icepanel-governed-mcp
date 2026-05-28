@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "actions": {
+      "additionalProperties": {
+        "$ref": "./OrganizationLogStatsItemByType.json"
+      },
+      "type": "object"
+    },
+    "date": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "actions",
+    "date"
+  ],
+  "type": "object"
+}

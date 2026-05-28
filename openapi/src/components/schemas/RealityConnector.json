@@ -1,0 +1,67 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./RealityConnectorUrl.json"
+    },
+    {
+      "$ref": "./RealityConnectorAzureDevopsRepo.json"
+    },
+    {
+      "$ref": "./RealityConnectorAzureDevopsBranch.json"
+    },
+    {
+      "$ref": "./RealityConnectorAzureDevopsFolder.json"
+    },
+    {
+      "$ref": "./RealityConnectorAzureDevopsFile.json"
+    },
+    {
+      "$ref": "./RealityConnectorBitbucketRepo.json"
+    },
+    {
+      "$ref": "./RealityConnectorBitbucketBranch.json"
+    },
+    {
+      "$ref": "./RealityConnectorBitbucketFolder.json"
+    },
+    {
+      "$ref": "./RealityConnectorBitbucketFile.json"
+    },
+    {
+      "$ref": "./RealityConnectorBitbucketServerRepo.json"
+    },
+    {
+      "$ref": "./RealityConnectorBitbucketServerBranch.json"
+    },
+    {
+      "$ref": "./RealityConnectorBitbucketServerFolder.json"
+    },
+    {
+      "$ref": "./RealityConnectorBitbucketServerFile.json"
+    },
+    {
+      "$ref": "./RealityConnectorGithubRepo.json"
+    },
+    {
+      "$ref": "./RealityConnectorGithubBranch.json"
+    },
+    {
+      "$ref": "./RealityConnectorGithubFolder.json"
+    },
+    {
+      "$ref": "./RealityConnectorGithubFile.json"
+    },
+    {
+      "$ref": "./RealityConnectorGitlabRepo.json"
+    },
+    {
+      "$ref": "./RealityConnectorGitlabBranch.json"
+    },
+    {
+      "$ref": "./RealityConnectorGitlabFolder.json"
+    },
+    {
+      "$ref": "./RealityConnectorGitlabFile.json"
+    }
+  ]
+}

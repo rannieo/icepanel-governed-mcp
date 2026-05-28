@@ -1,0 +1,34 @@
+{
+  "allOf": [
+    {
+      "$ref": "./ModelObject.json"
+    },
+    {
+      "properties": {
+        "domain": {
+          "$ref": "./DomainExport.json"
+        },
+        "flowsExpanded": {
+          "additionalProperties": {
+            "$ref": "./FlowExport.json"
+          },
+          "description": "Expanded flow exports keyed by flow ID.",
+          "type": "object"
+        },
+        "tags": {
+          "additionalProperties": {
+            "$ref": "./TagExport.json"
+          },
+          "type": "object"
+        },
+        "technologies": {
+          "additionalProperties": {
+            "$ref": "./TechnologyExport.json"
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    }
+  ]
+}

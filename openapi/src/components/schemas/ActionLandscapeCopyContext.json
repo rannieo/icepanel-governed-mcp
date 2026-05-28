@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "targetLandscapeName": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "targetLandscapeName"
+  ],
+  "type": "object"
+}

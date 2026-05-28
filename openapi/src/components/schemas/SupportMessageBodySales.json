@@ -1,0 +1,27 @@
+{
+  "properties": {
+    "feeling": {
+      "type": "string"
+    },
+    "message": {
+      "maxLength": 20000,
+      "type": "string"
+    },
+    "subject": {
+      "maxLength": 1000,
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "sales"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "message",
+    "subject",
+    "type"
+  ],
+  "type": "object"
+}

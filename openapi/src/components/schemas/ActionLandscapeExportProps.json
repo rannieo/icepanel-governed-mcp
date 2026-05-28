@@ -1,0 +1,29 @@
+{
+  "properties": {
+    "bucketPath": {
+      "type": "string"
+    },
+    "filename": {
+      "type": "string"
+    },
+    "filter": {
+      "$ref": "./LandscapeExportFilter.json"
+    },
+    "options": {
+      "$ref": "./LandscapeExportOptions.json"
+    },
+    "type": {
+      "$ref": "./LandscapeExportType.json"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "bucketPath",
+    "filename",
+    "type",
+    "versionId"
+  ],
+  "type": "object"
+}

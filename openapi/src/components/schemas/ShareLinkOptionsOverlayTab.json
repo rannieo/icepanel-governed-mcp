@@ -1,0 +1,8 @@
+{
+  "enum": [
+    "tags",
+    "technology",
+    "status"
+  ],
+  "type": "string"
+}

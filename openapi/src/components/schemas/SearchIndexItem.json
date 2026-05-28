@@ -1,0 +1,55 @@
+{
+  "properties": {
+    "description": {
+      "type": "string"
+    },
+    "handleId": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "nameFts": {
+      "type": "string"
+    },
+    "nameFuzzy": {
+      "type": "string"
+    },
+    "relations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "relationsFts": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "relationsFuzzy": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "type": {
+      "$ref": "./SearchIndexType.json"
+    }
+  },
+  "required": [
+    "id",
+    "handleId",
+    "name",
+    "nameFts",
+    "nameFuzzy",
+    "type"
+  ],
+  "type": "object"
+}

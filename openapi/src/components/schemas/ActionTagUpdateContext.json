@@ -1,0 +1,17 @@
+{
+  "properties": {
+    "groupHandleId": {
+      "type": "string"
+    },
+    "groupName": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "type": "object"
+}

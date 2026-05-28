@@ -1,0 +1,204 @@
+{
+  "properties": {
+    "caption": {
+      "description": "Short summary of the object shown as the display description",
+      "maxLength": 50000,
+      "type": "string"
+    },
+    "commit": {
+      "type": "number"
+    },
+    "description": {
+      "maxLength": 950000,
+      "type": "string"
+    },
+    "external": {
+      "type": "boolean"
+    },
+    "groupIds": {
+      "oneOf": [
+        {
+          "description": "IDs of the groups this model object belongs to",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "description": "Update individual group ids",
+          "properties": {
+            "$add": {
+              "description": "Append group ids to the list",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "$remove": {
+              "description": "Remove group ids from the list",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "icon": {
+      "$ref": "./ModelObjectIconNullable.json"
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "description": "Generic key value store used for creating custom integrations",
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "links": {
+      "properties": {
+        "$add": {
+          "additionalProperties": {
+            "$ref": "./RealityLinkRequired.json"
+          },
+          "type": "object"
+        },
+        "$remove": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "$replace": {
+          "additionalProperties": {
+            "$ref": "./RealityLinkRequired.json"
+          },
+          "type": "object"
+        },
+        "$update": {
+          "additionalProperties": {
+            "$ref": "./RealityLinkPartial.json"
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "parentId": {
+      "description": "Parent model object ID, null for the root level model object",
+      "nullable": true,
+      "type": "string"
+    },
+    "status": {
+      "$ref": "./ModelObjectStatus.json"
+    },
+    "tagIds": {
+      "oneOf": [
+        {
+          "description": "Tag IDs assigned to this model",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "description": "Update individual tag ids",
+          "properties": {
+            "$add": {
+              "description": "Append tag ids to the list",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "$remove": {
+              "description": "Remove tag ids from the list",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "teamIds": {
+      "oneOf": [
+        {
+          "description": "Team IDs that own this model object, does not propergate up or down",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "description": "Update individual team ids",
+          "properties": {
+            "$add": {
+              "description": "Append team ids to the list",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "$remove": {
+              "description": "Remove team ids from the list",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "teamOnlyEditing": {
+      "description": "Model object (+child diagram, diagram groups and flows) can only be edited by owners and admins",
+      "type": "boolean"
+    },
+    "technologyIds": {
+      "oneOf": [
+        {
+          "description": "Technology ids assigned to this model",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "description": "Update individual technology ids",
+          "properties": {
+            "$add": {
+              "description": "Append technology ids to the list",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "$remove": {
+              "description": "Remove technology ids from the list",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "type": {
+      "$ref": "./ModelObjectType.json"
+    }
+  },
+  "type": "object"
+}

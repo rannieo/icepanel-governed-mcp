@@ -1,0 +1,151 @@
+{
+  "properties": {
+    "diagram-contents-list": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientDiagramContentsListBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientDiagramContentsListReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-contents-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientDiagramContentsSubscribeBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientDiagramContentsSubscribeReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-contents-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientDiagramContentsUnsubscribeBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-groups-list": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientDiagramGroupsListBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientDiagramGroupsListReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-groups-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientDiagramGroupsSubscribeBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientDiagramGroupsSubscribeReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-groups-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientDiagramGroupsUnsubscribeBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagrams-list": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientDiagramsListBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientDiagramsListReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagrams-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientDiagramsSubscribeBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientDiagramsSubscribeReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagrams-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientDiagramsUnsubscribeBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "diagram-contents-list",
+    "diagram-contents-subscribe",
+    "diagram-contents-unsubscribe",
+    "diagram-groups-list",
+    "diagram-groups-subscribe",
+    "diagram-groups-unsubscribe",
+    "diagrams-list",
+    "diagrams-subscribe",
+    "diagrams-unsubscribe"
+  ],
+  "type": "object"
+}

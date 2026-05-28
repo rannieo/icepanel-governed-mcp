@@ -1,0 +1,36 @@
+{
+  "properties": {
+    "catalogTechnologyId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "deprecated": true,
+      "description": "Use either urlDark or urlLight",
+      "type": "string"
+    },
+    "urlDark": {
+      "description": "Icon that only works on dark backgrounds",
+      "example": [
+        "/organizations/{organizationId}/dark/{catalogTechnologyId}.png",
+        "/dark/{catalogTechnologyId}.png"
+      ],
+      "type": "string"
+    },
+    "urlLight": {
+      "description": "Icon that only works on light backgrounds",
+      "example": [
+        "/organizations/{organizationId}/light/{catalogTechnologyId}.png",
+        "/light/{catalogTechnologyId}.png"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "catalogTechnologyId",
+    "name"
+  ],
+  "type": "object"
+}

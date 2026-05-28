@@ -1,0 +1,151 @@
+{
+  "properties": {
+    "domainId": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "description": "Filter any objects with this domain id",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "external": {
+      "type": "boolean"
+    },
+    "groupIds": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "description": "Filter any objects with this group id",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "handleId": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "description": "Filter any objects with this handle id",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "linked": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "string"
+    },
+    "parentId": {
+      "description": "Filter objects with this parent id",
+      "nullable": true,
+      "type": "string"
+    },
+    "parentIds": {
+      "description": "Filter objects or child objects with this parent id",
+      "type": "string"
+    },
+    "status": {
+      "oneOf": [
+        {
+          "$ref": "./ModelObjectStatus.json"
+        },
+        {
+          "description": "Filter any objects with this status",
+          "items": {
+            "$ref": "./ModelObjectStatus.json"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "tagIds": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "description": "Filter any objects with this technology id",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "teamIds": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "description": "Filter any objects with this team id",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "technologyIds": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "description": "Filter any objects with this technology id",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "type": {
+      "oneOf": [
+        {
+          "$ref": "./ModelObjectType.json"
+        },
+        {
+          "description": "Filter any objects with this type",
+          "items": {
+            "$ref": "./ModelObjectType.json"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "modelHandleId": {
+      "type": "string"
+    },
+    "modelName": {
+      "type": "string"
+    },
+    "modelType": {
+      "$ref": "./ModelObjectType.json"
+    },
+    "type": {
+      "$ref": "./DiagramObjectType.json"
+    }
+  },
+  "required": [
+    "modelHandleId",
+    "modelName",
+    "modelType",
+    "type"
+  ],
+  "type": "object"
+}

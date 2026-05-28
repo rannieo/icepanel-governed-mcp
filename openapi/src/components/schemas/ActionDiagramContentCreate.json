@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "context": {
+      "$ref": "./ActionDiagramContentCreateContext.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "props": {
+      "$ref": "./DiagramContentRequired.json"
+    },
+    "type": {
+      "enum": [
+        "diagram-content-create"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "context",
+    "id",
+    "props",
+    "type"
+  ],
+  "type": "object"
+}

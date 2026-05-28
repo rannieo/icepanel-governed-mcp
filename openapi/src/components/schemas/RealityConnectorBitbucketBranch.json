@@ -1,0 +1,30 @@
+{
+  "properties": {
+    "branchName": {
+      "type": "string"
+    },
+    "projectId": {
+      "type": "string"
+    },
+    "repositoryId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "bitbucket-branch"
+      ],
+      "type": "string"
+    },
+    "workspaceId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "branchName",
+    "projectId",
+    "repositoryId",
+    "type",
+    "workspaceId"
+  ],
+  "type": "object"
+}

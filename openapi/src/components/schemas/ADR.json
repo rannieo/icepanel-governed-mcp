@@ -1,0 +1,111 @@
+{
+  "properties": {
+    "commit": {
+      "type": "number"
+    },
+    "content": {
+      "description": "The markdown content of the ADR",
+      "maxLength": 100000,
+      "type": "string"
+    },
+    "description": {
+      "description": "The description of the ADR",
+      "maxLength": 100000,
+      "type": "string"
+    },
+    "name": {
+      "description": "The name of the ADR",
+      "maxLength": 1000,
+      "type": "string"
+    },
+    "relatedItems": {
+      "additionalProperties": {
+        "$ref": "./ADRRelatedItem.json"
+      },
+      "type": "object"
+    },
+    "status": {
+      "$ref": "./ADRStatus.json",
+      "description": "The status of the ADR"
+    },
+    "statusChanges": {
+      "items": {
+        "$ref": "./ADRStatusChange.json"
+      },
+      "type": "array"
+    },
+    "handleId": {
+      "description": "The handle id of the ADR",
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "deletedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "deletedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "deletedById": {
+      "type": "string"
+    },
+    "id": {
+      "description": "The id of the ADR",
+      "type": "string"
+    },
+    "landscapeId": {
+      "description": "The id of the landscape that the ADR belongs to",
+      "type": "string"
+    },
+    "latestEntityId": {
+      "type": "string"
+    },
+    "number": {
+      "description": "The incremental number of the ADR",
+      "type": "number"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    },
+    "version": {
+      "type": "number"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "handleId",
+    "name",
+    "status",
+    "commit",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "id",
+    "number",
+    "landscapeId",
+    "updatedAt",
+    "updatedBy",
+    "updatedById",
+    "version",
+    "versionId"
+  ],
+  "type": "object"
+}

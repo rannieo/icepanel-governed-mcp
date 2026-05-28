@@ -1,0 +1,21 @@
+openapi/source/openapi.json
+dist/*.json
+
+# dependencies
+node_modules/
+
+# local env/secrets
+.env
+.env.local
+.env.*.local
+
+# test output
+coverage/
+.vitest/
+
+# runtime/governance artifacts
+.governance/reviews/*.json
+
+# logs and OS files
+*.log
+.DS_Store

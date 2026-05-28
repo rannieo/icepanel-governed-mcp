@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "diagramGroups": {
+      "items": {
+        "$ref": "./DiagramGroup.json"
+      },
+      "type": "array"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "diagramGroups",
+    "requestId"
+  ],
+  "type": "object"
+}

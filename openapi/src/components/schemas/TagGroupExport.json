@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "icon": {
+      "$ref": "./TagGroupIcon.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "icon",
+    "id",
+    "name"
+  ],
+  "type": "object"
+}

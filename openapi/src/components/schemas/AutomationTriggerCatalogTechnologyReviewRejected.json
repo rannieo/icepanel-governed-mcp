@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "catalogTechnologyId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "catalog-technology-review-rejected"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "catalogTechnologyId",
+    "type"
+  ],
+  "type": "object"
+}

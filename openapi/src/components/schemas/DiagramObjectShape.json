@@ -1,0 +1,7 @@
+{
+  "enum": [
+    "area",
+    "box"
+  ],
+  "type": "string"
+}

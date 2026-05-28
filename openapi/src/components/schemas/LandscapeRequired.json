@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "scheduledVersions": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "type": "object"
+}

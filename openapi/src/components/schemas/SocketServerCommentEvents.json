@@ -1,0 +1,167 @@
+{
+  "properties": {
+    "comment-added": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerCommentAddedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "comment-initial-value": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerCommentInitialValueBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "comment-modified": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerCommentModifiedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "comment-removed": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerCommentRemovedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "comment-reply-added": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerCommentReplyAddedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "comment-reply-initial-value": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerCommentReplyInitialValueBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "comment-reply-modified": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerCommentReplyModifiedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "comment-reply-removed": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerCommentReplyRemovedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "comments-list-stream": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerCommentsListStreamBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "comments-reply-list-stream": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerCommentsReplyListStreamBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "comment-added",
+    "comment-initial-value",
+    "comment-modified",
+    "comment-removed",
+    "comment-reply-added",
+    "comment-reply-initial-value",
+    "comment-reply-modified",
+    "comment-reply-removed",
+    "comments-reply-list-stream",
+    "comments-list-stream"
+  ],
+  "type": "object"
+}

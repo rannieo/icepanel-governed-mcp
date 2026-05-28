@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "expiresAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "landscapePermissions": {
+      "additionalProperties": {
+        "type": "boolean"
+      },
+      "type": "object"
+    },
+    "permission": {
+      "$ref": "./PermissionType.json"
+    }
+  },
+  "required": [
+    "email",
+    "expiresAt",
+    "permission"
+  ],
+  "type": "object"
+}

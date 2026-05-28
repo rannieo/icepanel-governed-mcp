@@ -1,0 +1,21 @@
+{
+  "properties": {
+    "color": {
+      "$ref": "./TagColor.json"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "userIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "type": "object"
+}

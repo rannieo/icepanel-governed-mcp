@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "tag": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "minItems": 1,
+          "type": "array"
+        }
+      ]
+    }
+  },
+  "type": "object"
+}

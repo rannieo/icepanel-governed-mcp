@@ -1,0 +1,27 @@
+{
+  "properties": {
+    "contributedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "count": {
+      "type": "number"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "$ref": "./AuthType.json"
+    }
+  },
+  "required": [
+    "contributedAt",
+    "count",
+    "id",
+    "type"
+  ],
+  "type": "object"
+}

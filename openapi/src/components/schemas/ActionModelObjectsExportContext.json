@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "landscapeName": {
+      "type": "string"
+    },
+    "versionName": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "landscapeName",
+    "versionName"
+  ],
+  "type": "object"
+}

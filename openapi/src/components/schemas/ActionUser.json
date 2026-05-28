@@ -1,0 +1,13 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./ActionUserLogin.json"
+    },
+    {
+      "$ref": "./ActionUserLoginFailed.json"
+    },
+    {
+      "$ref": "./ActionUserLogout.json"
+    }
+  ]
+}

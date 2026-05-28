@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "subscriptionId": {
+      "type": "string"
+    },
+    "version": {
+      "$ref": "./Version.json"
+    }
+  },
+  "required": [
+    "version",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

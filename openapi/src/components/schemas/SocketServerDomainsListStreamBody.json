@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "domains": {
+      "items": {
+        "$ref": "./Domain.json"
+      },
+      "type": "array"
+    },
+    "lastBatch": {
+      "type": "boolean"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "domains",
+    "lastBatch",
+    "requestId"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,7 @@
+{
+  "enum": [
+    "expanded",
+    "collapsed"
+  ],
+  "type": "string"
+}

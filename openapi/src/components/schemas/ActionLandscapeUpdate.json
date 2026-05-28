@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "context": {
+      "$ref": "./ActionLandscapeUpdateContext.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "props": {
+      "$ref": "./LandscapePartial.json"
+    },
+    "type": {
+      "enum": [
+        "landscape-update"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "context",
+    "id",
+    "props",
+    "type"
+  ],
+  "type": "object"
+}

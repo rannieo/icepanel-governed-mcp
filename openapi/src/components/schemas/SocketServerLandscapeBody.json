@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "landscape": {
+      "$ref": "./LandscapeNullable.json"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "landscape",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

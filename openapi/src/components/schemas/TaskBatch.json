@@ -1,0 +1,21 @@
+{
+  "properties": {
+    "tasks": {
+      "items": {
+        "$ref": "./Task.json"
+      },
+      "type": "array"
+    },
+    "type": {
+      "enum": [
+        "batch"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "tasks",
+    "type"
+  ],
+  "type": "object"
+}

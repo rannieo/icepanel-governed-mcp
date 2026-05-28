@@ -1,0 +1,28 @@
+{
+  "properties": {
+    "colors": {
+      "description": "Accent, dark, light & palette colors of the brand",
+      "items": {
+        "$ref": "./CatalogSuggestionBrandColor.json"
+      },
+      "type": "array"
+    },
+    "isNsfw": {
+      "description": "true when the brand is for adult content, e.g. is not safe for work",
+      "type": "boolean"
+    },
+    "logos": {
+      "description": "Logos, symbols & icons of the brand",
+      "items": {
+        "$ref": "./CatalogSuggestionBrandLogo.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "isNsfw",
+    "logos",
+    "colors"
+  ],
+  "type": "object"
+}

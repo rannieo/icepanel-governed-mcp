@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "adrs": {
+      "items": {
+        "$ref": "./ADR.json"
+      },
+      "type": "array"
+    },
+    "lastBatch": {
+      "type": "boolean"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "adrs",
+    "lastBatch",
+    "requestId"
+  ],
+  "type": "object"
+}

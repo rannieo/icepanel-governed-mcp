@@ -1,0 +1,141 @@
+{
+  "properties": {
+    "commit": {
+      "type": "number"
+    },
+    "description": {
+      "maxLength": 950000,
+      "type": "string"
+    },
+    "groupId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "index": {
+      "type": "number"
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "modelId": {
+      "description": "model object id this object belongs to",
+      "type": "string"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "parentId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "pinned": {
+      "type": "boolean"
+    },
+    "pinnedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "pinnedIndex": {
+      "type": "number"
+    },
+    "status": {
+      "$ref": "./DiagramStatus.json"
+    },
+    "zoomOverrides": {
+      "$ref": "./DiagramZoomOverridesNullable.json"
+    },
+    "handleId": {
+      "type": "string"
+    },
+    "type": {
+      "$ref": "./DiagramType.json"
+    },
+    "commentCount": {
+      "type": "number"
+    },
+    "connectionCount": {
+      "type": "number"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "deletedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "deletedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "deletedById": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "latestEntityId": {
+      "type": "string"
+    },
+    "objectCount": {
+      "$ref": "./DiagramObjectCount.json"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    },
+    "version": {
+      "type": "number"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "index",
+    "modelId",
+    "name",
+    "type",
+    "commentCount",
+    "commit",
+    "connectionCount",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "groupId",
+    "handleId",
+    "id",
+    "labels",
+    "landscapeId",
+    "objectCount",
+    "parentId",
+    "pinned",
+    "status",
+    "updatedAt",
+    "updatedBy",
+    "updatedById",
+    "version",
+    "versionId"
+  ],
+  "type": "object"
+}

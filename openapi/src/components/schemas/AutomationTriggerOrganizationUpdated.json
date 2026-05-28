@@ -1,0 +1,39 @@
+{
+  "properties": {
+    "balance": {
+      "type": "number"
+    },
+    "billingCollectionMethod": {
+      "$ref": "./OrganizationCollectionMethod.json"
+    },
+    "billingCurrency": {
+      "$ref": "./OrganizationBillingCurrency.json"
+    },
+    "billingCycle": {
+      "$ref": "./OrganizationBillingCycle.json"
+    },
+    "billingEmail": {
+      "type": "string"
+    },
+    "billingPaymentMethod": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "organization-updated"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "organizationId",
+    "type"
+  ],
+  "type": "object"
+}

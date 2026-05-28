@@ -1,0 +1,32 @@
+{
+  "properties": {
+    "diagramHandleId": {
+      "type": "string"
+    },
+    "diagramName": {
+      "type": "string"
+    },
+    "diagramType": {
+      "$ref": "./DiagramType.json"
+    },
+    "domainHandleId": {
+      "type": "string"
+    },
+    "domainName": {
+      "type": "string"
+    },
+    "modelFamily": {
+      "items": {
+        "$ref": "./ActionContextModelObject.json"
+      },
+      "type": "array"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "type": "object"
+}

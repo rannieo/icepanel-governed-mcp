@@ -1,0 +1,30 @@
+{
+  "properties": {
+    "commentId": {
+      "type": "string"
+    },
+    "entityId": {
+      "type": "string"
+    },
+    "props": {
+      "$ref": "./DraftTaskCommentReplyUpdateProps.json"
+    },
+    "snapshot": {
+      "$ref": "./DraftTaskCommentReplyUpdateProps.json"
+    },
+    "type": {
+      "enum": [
+        "draft-comment-reply-update"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "entityId",
+    "props",
+    "snapshot",
+    "type",
+    "commentId"
+  ],
+  "type": "object"
+}

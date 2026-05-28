@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "domainHandleId": {
+      "type": "string"
+    },
+    "domainName": {
+      "type": "string"
+    },
+    "modelFamily": {
+      "items": {
+        "$ref": "./ActionContextModelObject.json"
+      },
+      "type": "array"
+    },
+    "targetHandleId": {
+      "type": "string"
+    },
+    "targetName": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

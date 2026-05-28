@@ -1,0 +1,19 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./ActionModelObjectCreate.json"
+    },
+    {
+      "$ref": "./ActionModelObjectUpdate.json"
+    },
+    {
+      "$ref": "./ActionModelObjectDependenciesExport.json"
+    },
+    {
+      "$ref": "./ActionModelObjectsExport.json"
+    },
+    {
+      "$ref": "./ActionModelObjectDelete.json"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "finalValue": {
+      "type": "boolean"
+    },
+    "flows": {
+      "items": {
+        "$ref": "./Flow.json"
+      },
+      "type": "array"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "finalValue",
+    "flows",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

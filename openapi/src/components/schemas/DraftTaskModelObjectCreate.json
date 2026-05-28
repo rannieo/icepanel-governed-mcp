@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "entityId": {
+      "type": "string"
+    },
+    "props": {
+      "$ref": "./DraftTaskModelObjectCreateProps.json"
+    },
+    "type": {
+      "enum": [
+        "draft-model-object-create"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "entityId",
+    "props",
+    "type"
+  ],
+  "type": "object"
+}

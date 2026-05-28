@@ -1,0 +1,53 @@
+{
+  "properties": {
+    "color": {
+      "$ref": "./TagColor.json"
+    },
+    "description": {
+      "type": "string"
+    },
+    "docsUrl": {
+      "type": "string"
+    },
+    "iconUrl": {
+      "deprecated": true,
+      "description": "Use either iconUrlDark or iconUrlLight",
+      "type": "string"
+    },
+    "iconUrlDark": {
+      "type": "string"
+    },
+    "iconUrlLight": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "nameShort": {
+      "type": "string"
+    },
+    "provider": {
+      "$ref": "./CatalogProviderNullable.json"
+    },
+    "type": {
+      "$ref": "./CatalogTechnologyTypeNullable.json"
+    },
+    "updatesUrl": {
+      "type": "string"
+    },
+    "websiteUrl": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "color",
+    "id",
+    "name",
+    "provider",
+    "type"
+  ],
+  "type": "object"
+}

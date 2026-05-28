@@ -1,0 +1,25 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./ActionApiKey.json"
+    },
+    {
+      "$ref": "./ActionOAuth.json"
+    },
+    {
+      "$ref": "./ActionOrganization.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUser.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUserInvite.json"
+    },
+    {
+      "$ref": "./ActionTeam.json"
+    },
+    {
+      "$ref": "./ActionUser.json"
+    }
+  ]
+}

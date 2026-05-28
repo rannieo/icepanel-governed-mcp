@@ -1,0 +1,45 @@
+{
+  "properties": {
+    "draftHandleId": {
+      "type": "string"
+    },
+    "draftName": {
+      "type": "string"
+    },
+    "filterDiagramHandleId": {
+      "type": "string"
+    },
+    "filterDiagramName": {
+      "type": "string"
+    },
+    "filterDiagramType": {
+      "$ref": "./DiagramType.json"
+    },
+    "filterFlowHandleId": {
+      "type": "string"
+    },
+    "filterFlowName": {
+      "type": "string"
+    },
+    "filterModelObjectHandleId": {
+      "type": "string"
+    },
+    "filterModelObjectName": {
+      "type": "string"
+    },
+    "filterModelObjectType": {
+      "$ref": "./ModelObjectType.json"
+    },
+    "landscapeName": {
+      "type": "string"
+    },
+    "versionName": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "landscapeName",
+    "versionName"
+  ],
+  "type": "object"
+}

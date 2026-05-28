@@ -1,0 +1,119 @@
+{
+  "properties": {
+    "changeSummary": {
+      "$ref": "./DraftChangeSummary.json"
+    },
+    "commit": {
+      "type": "number"
+    },
+    "handleId": {
+      "type": "string"
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "status": {
+      "$ref": "./DraftStatus.json"
+    },
+    "summaryDirtiedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "deletedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "deletedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "deletedById": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "latestEntityId": {
+      "type": "string"
+    },
+    "mergedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "mergedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "mergedById": {
+      "type": "string"
+    },
+    "originVersionId": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    },
+    "version": {
+      "type": "number"
+    },
+    "versionId": {
+      "type": "string"
+    },
+    "viewedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "viewedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "viewedById": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "status",
+    "commit",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "handleId",
+    "id",
+    "labels",
+    "landscapeId",
+    "originVersionId",
+    "updatedAt",
+    "updatedBy",
+    "updatedById",
+    "version",
+    "versionId"
+  ],
+  "type": "object"
+}

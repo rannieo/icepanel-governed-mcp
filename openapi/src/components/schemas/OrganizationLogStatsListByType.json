@@ -1,0 +1,25 @@
+{
+  "properties": {
+    "contributors": {
+      "additionalProperties": {
+        "$ref": "./ActionLogStatsContributor.json"
+      },
+      "type": "object"
+    },
+    "dates": {
+      "items": {
+        "$ref": "./OrganizationLogStatsDateByType.json"
+      },
+      "type": "array"
+    },
+    "totalCount": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "contributors",
+    "dates",
+    "totalCount"
+  ],
+  "type": "object"
+}

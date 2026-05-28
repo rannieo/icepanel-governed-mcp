@@ -1,0 +1,55 @@
+{
+  "properties": {
+    "clientId": {
+      "description": "Client ID for OAuth sessions",
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "expiresAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "ip": {
+      "description": "IP address of the client",
+      "type": "string"
+    },
+    "landscapeId": {
+      "description": "Landscape ID for OAuth sessions",
+      "type": "string"
+    },
+    "providerId": {
+      "description": "ID for the auth provider",
+      "type": "string"
+    },
+    "revokedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "scopes": {
+      "items": {
+        "$ref": "./OAuthScope.json"
+      },
+      "type": "array"
+    },
+    "userAgent": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "createdAt",
+    "expiresAt",
+    "id",
+    "providerId",
+    "userId"
+  ],
+  "type": "object"
+}

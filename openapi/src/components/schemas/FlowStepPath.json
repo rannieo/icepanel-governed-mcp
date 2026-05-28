@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "index": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "index",
+    "name"
+  ],
+  "type": "object"
+}

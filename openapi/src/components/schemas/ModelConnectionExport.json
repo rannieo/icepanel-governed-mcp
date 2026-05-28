@@ -1,0 +1,60 @@
+{
+  "properties": {
+    "description": {
+      "type": "string"
+    },
+    "direction": {
+      "$ref": "./ModelConnectionDirectionNullable.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "links": {
+      "additionalProperties": {
+        "$ref": "./RealityLink.json"
+      },
+      "type": "object"
+    },
+    "name": {
+      "type": "string"
+    },
+    "originId": {
+      "type": "string"
+    },
+    "status": {
+      "$ref": "./ModelConnectionStatus.json"
+    },
+    "tagIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "targetId": {
+      "type": "string"
+    },
+    "technologyIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "viaId": {
+      "nullable": true,
+      "type": "string"
+    }
+  },
+  "required": [
+    "description",
+    "direction",
+    "id",
+    "name",
+    "originId",
+    "status",
+    "tagIds",
+    "targetId",
+    "technologyIds",
+    "viaId"
+  ],
+  "type": "object"
+}

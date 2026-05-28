@@ -1,0 +1,29 @@
+{
+  "properties": {
+    "draftTasks": {
+      "items": {
+        "$ref": "./DraftTaskJson.json"
+      },
+      "type": "array"
+    },
+    "drafts": {
+      "items": {
+        "$ref": "./Draft.json"
+      },
+      "type": "array"
+    },
+    "finalValue": {
+      "type": "boolean"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "draftTasks",
+    "drafts",
+    "finalValue",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

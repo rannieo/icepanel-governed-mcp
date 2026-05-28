@@ -1,0 +1,50 @@
+{
+  "properties": {
+    "completedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "deleteAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "diagramId": {
+      "type": "string"
+    },
+    "error": {
+      "nullable": true,
+      "type": "string"
+    },
+    "fileUrls": {
+      "$ref": "./DiagramExportImageFileUrls.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "options": {
+      "$ref": "./DiagramExportImageOptions.json"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "createdAt",
+    "deleteAt",
+    "diagramId",
+    "error",
+    "fileUrls",
+    "id",
+    "landscapeId",
+    "options",
+    "versionId"
+  ],
+  "type": "object"
+}

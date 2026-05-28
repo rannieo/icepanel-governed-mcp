@@ -1,0 +1,14 @@
+{
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "versionName": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,24 @@
+{
+  "properties": {
+    "batchSize": {
+      "default": 1000,
+      "maximum": 10000,
+      "minimum": 1,
+      "type": "number"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "stream": {
+      "type": "boolean"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "landscapeId",
+    "versionId"
+  ],
+  "type": "object"
+}

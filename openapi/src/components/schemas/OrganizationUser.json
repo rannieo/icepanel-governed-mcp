@@ -1,0 +1,17 @@
+{
+  "properties": {
+    "landscapePermissions": {
+      "additionalProperties": {
+        "type": "boolean"
+      },
+      "type": "object"
+    },
+    "permission": {
+      "$ref": "./PermissionType.json"
+    }
+  },
+  "required": [
+    "permission"
+  ],
+  "type": "object"
+}

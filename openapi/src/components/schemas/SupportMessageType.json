@@ -1,0 +1,11 @@
+{
+  "enum": [
+    "bug",
+    "general",
+    "partnerships",
+    "sales",
+    "sso-saml-registration",
+    "support"
+  ],
+  "type": "string"
+}

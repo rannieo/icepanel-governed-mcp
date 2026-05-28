@@ -1,0 +1,14 @@
+{
+  "properties": {
+    "commit": {
+      "type": "number"
+    },
+    "task": {
+      "$ref": "./DraftTask.json"
+    }
+  },
+  "required": [
+    "task"
+  ],
+  "type": "object"
+}

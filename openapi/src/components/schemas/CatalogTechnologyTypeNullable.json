@@ -1,0 +1,18 @@
+{
+  "enum": [
+    "data-storage",
+    "deployment",
+    "framework-library",
+    "gateway",
+    "other",
+    "language",
+    "message-broker",
+    "network",
+    "protocol",
+    "runtime",
+    "service-tool",
+    null
+  ],
+  "nullable": true,
+  "type": "string"
+}

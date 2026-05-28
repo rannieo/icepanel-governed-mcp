@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "route": {
+      "$ref": "./TaskNavigationRoute.json"
+    },
+    "type": {
+      "enum": [
+        "navigation"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "route",
+    "type"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "context": {
+      "$ref": "./ActionDiagramContentDeleteContext.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "diagram-content-delete"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "context",
+    "id",
+    "type"
+  ],
+  "type": "object"
+}

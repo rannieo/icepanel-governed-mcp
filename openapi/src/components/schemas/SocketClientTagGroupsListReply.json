@@ -1,0 +1,17 @@
+{
+  "properties": {
+    "requestId": {
+      "type": "string"
+    },
+    "tagGroups": {
+      "items": {
+        "$ref": "./TagGroup.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "tagGroups"
+  ],
+  "type": "object"
+}

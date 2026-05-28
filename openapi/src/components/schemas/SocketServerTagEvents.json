@@ -1,0 +1,167 @@
+{
+  "properties": {
+    "tag-added": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerTagAddedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "tag-group-added": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerTagGroupAddedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "tag-group-initial-value": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerTagGroupInitialValueBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "tag-group-modified": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerTagGroupModifiedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "tag-group-removed": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerTagGroupRemovedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "tag-groups-list-stream": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerTagGroupsListStreamBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "tag-initial-value": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerTagInitialValueBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "tag-modified": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerTagModifiedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "tag-removed": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerTagRemovedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "tags-list-stream": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerTagsListStreamBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "tag-added",
+    "tag-group-added",
+    "tag-group-initial-value",
+    "tag-group-modified",
+    "tag-group-removed",
+    "tag-groups-list-stream",
+    "tag-initial-value",
+    "tag-modified",
+    "tag-removed",
+    "tags-list-stream"
+  ],
+  "type": "object"
+}

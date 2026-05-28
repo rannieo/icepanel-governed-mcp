@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "context": {
+      "$ref": "./ActionOrganizationUserAddContext.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "props": {
+      "$ref": "./OrganizationUser.json"
+    },
+    "type": {
+      "enum": [
+        "organization-user-add"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "context",
+    "id",
+    "props",
+    "type"
+  ],
+  "type": "object"
+}

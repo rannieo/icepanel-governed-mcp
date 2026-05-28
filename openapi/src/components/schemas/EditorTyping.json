@@ -1,0 +1,21 @@
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "publishedAt": {
+      "type": "number"
+    },
+    "userId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "publishedAt",
+    "userId"
+  ],
+  "type": "object"
+}

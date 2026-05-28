@@ -1,0 +1,11 @@
+{
+  "properties": {
+    "userNames": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    }
+  },
+  "type": "object"
+}

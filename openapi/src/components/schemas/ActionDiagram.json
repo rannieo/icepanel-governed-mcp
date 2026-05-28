@@ -1,0 +1,16 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./ActionDiagramCreate.json"
+    },
+    {
+      "$ref": "./ActionDiagramUpdate.json"
+    },
+    {
+      "$ref": "./ActionDiagramExport.json"
+    },
+    {
+      "$ref": "./ActionDiagramDelete.json"
+    }
+  ]
+}

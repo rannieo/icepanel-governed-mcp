@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "context": {
+      "$ref": "./ActionShareLinkDeleteContext.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "share-link-delete"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "context",
+    "id",
+    "type"
+  ],
+  "type": "object"
+}

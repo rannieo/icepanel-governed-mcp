@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "commentId": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "comment-reply-delete"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "commentId"
+  ],
+  "type": "object"
+}

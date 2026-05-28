@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "domain-delete"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "type"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "domain": {
+      "$ref": "./Domain.json"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "domain",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,22 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./SupportMessageBodyBug.json"
+    },
+    {
+      "$ref": "./SupportMessageBodyGeneral.json"
+    },
+    {
+      "$ref": "./SupportMessageBodySales.json"
+    },
+    {
+      "$ref": "./SupportMessageBodySSOSamlRegistration.json"
+    },
+    {
+      "$ref": "./SupportMessageBodySupport.json"
+    },
+    {
+      "$ref": "./SupportMessageBodyPartnerships.json"
+    }
+  ]
+}

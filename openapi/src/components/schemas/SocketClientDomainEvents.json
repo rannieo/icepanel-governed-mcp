@@ -1,0 +1,55 @@
+{
+  "properties": {
+    "domains-list": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientDomainsListBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientDomainsListReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "domains-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientDomainsSubscribeBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientDomainsSubscribeReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "domains-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientDomainsUnsubscribeBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "domains-list",
+    "domains-subscribe",
+    "domains-unsubscribe"
+  ],
+  "type": "object"
+}

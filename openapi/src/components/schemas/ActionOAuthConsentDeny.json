@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "props": {
+      "$ref": "./ActionOAuthConsentDenyProps.json"
+    },
+    "type": {
+      "enum": [
+        "oauth-consent-deny"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "props",
+    "type"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "entityId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "draft-diagram-group-delete"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "entityId",
+    "type"
+  ],
+  "type": "object"
+}

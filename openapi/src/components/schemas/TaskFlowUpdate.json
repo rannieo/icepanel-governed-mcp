@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "props": {
+      "$ref": "./FlowPartial.json"
+    },
+    "type": {
+      "enum": [
+        "flow-update"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "props",
+    "type"
+  ],
+  "type": "object"
+}

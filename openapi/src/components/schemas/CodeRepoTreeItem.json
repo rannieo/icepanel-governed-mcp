@@ -1,0 +1,25 @@
+{
+  "properties": {
+    "language": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    },
+    "sha": {
+      "type": "string"
+    },
+    "size": {
+      "type": "number"
+    },
+    "type": {
+      "$ref": "./CodeRepoTreeItemType.json"
+    }
+  },
+  "required": [
+    "path",
+    "sha",
+    "type"
+  ],
+  "type": "object"
+}

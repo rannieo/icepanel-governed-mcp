@@ -1,0 +1,16 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./ActionModelConnectionCreate.json"
+    },
+    {
+      "$ref": "./ActionModelConnectionUpdate.json"
+    },
+    {
+      "$ref": "./ActionModelConnectionsExport.json"
+    },
+    {
+      "$ref": "./ActionModelConnectionDelete.json"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "enum": [
+    "approved",
+    "pending-review",
+    "rejected"
+  ],
+  "type": "string"
+}

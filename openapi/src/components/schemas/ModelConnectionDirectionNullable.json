@@ -1,0 +1,10 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./ModelConnectionDirection.json"
+    },
+    {
+      "type": "null"
+    }
+  ]
+}

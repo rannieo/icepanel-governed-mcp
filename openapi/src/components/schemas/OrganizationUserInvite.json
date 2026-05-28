@@ -1,0 +1,64 @@
+{
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "expiresAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "landscapePermissions": {
+      "additionalProperties": {
+        "type": "boolean"
+      },
+      "type": "object"
+    },
+    "permission": {
+      "$ref": "./PermissionType.json"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "revokedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "revokedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "revokedById": {
+      "type": "string"
+    },
+    "usedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "usedByUserId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "email",
+    "expiresAt",
+    "permission",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "id",
+    "organizationId"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "context": {
+      "$ref": "./ActionTagCreateContext.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "props": {
+      "$ref": "./TagRequired.json"
+    },
+    "type": {
+      "enum": [
+        "tag-create"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "context",
+    "id",
+    "props",
+    "type"
+  ],
+  "type": "object"
+}

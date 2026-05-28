@@ -1,0 +1,8 @@
+{
+  "enum": [
+    "initial-load",
+    "load",
+    "zoom"
+  ],
+  "type": "string"
+}

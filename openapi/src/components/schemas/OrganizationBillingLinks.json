@@ -1,0 +1,21 @@
+{
+  "properties": {
+    "paymentMethodsUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "updateSubscriptionPlanUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "url": {
+      "format": "uri",
+      "type": "string"
+    }
+  },
+  "required": [
+    "paymentMethodsUrl",
+    "url"
+  ],
+  "type": "object"
+}

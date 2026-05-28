@@ -1,0 +1,167 @@
+{
+  "properties": {
+    "model-connection-added": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerModelConnectionAddedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "model-connection-initial-value": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerModelConnectionInitialValueBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "model-connection-modified": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerModelConnectionModifiedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "model-connection-removed": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerModelConnectionRemovedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "model-connections-list-stream": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerModelConnectionsListStreamBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "model-object-added": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerModelObjectAddedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "model-object-initial-value": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerModelObjectInitialValueBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "model-object-modified": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerModelObjectModifiedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "model-object-removed": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerModelObjectRemovedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "model-objects-list-stream": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerModelObjectsListStreamBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "model-connection-added",
+    "model-connection-initial-value",
+    "model-connection-modified",
+    "model-connection-removed",
+    "model-connections-list-stream",
+    "model-object-added",
+    "model-object-initial-value",
+    "model-object-modified",
+    "model-object-removed",
+    "model-objects-list-stream"
+  ],
+  "type": "object"
+}

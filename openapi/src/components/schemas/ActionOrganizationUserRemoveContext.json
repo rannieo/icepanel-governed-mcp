@@ -1,0 +1,30 @@
+{
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "landscapeNames": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "landscapePermissions": {
+      "additionalProperties": {
+        "type": "boolean"
+      },
+      "type": "object"
+    },
+    "name": {
+      "type": "string"
+    },
+    "permission": {
+      "$ref": "./PermissionType.json"
+    }
+  },
+  "required": [
+    "email",
+    "permission"
+  ],
+  "type": "object"
+}

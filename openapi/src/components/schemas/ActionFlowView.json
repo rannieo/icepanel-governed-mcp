@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "context": {
+      "$ref": "./ActionFlowViewContext.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "flow-view"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "context",
+    "id",
+    "type"
+  ],
+  "type": "object"
+}

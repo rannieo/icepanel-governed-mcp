@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "commentBodyType": {
+      "$ref": "./CommentBodyType.json"
+    },
+    "commentHandleId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "commentHandleId",
+    "commentBodyType"
+  ],
+  "type": "object"
+}

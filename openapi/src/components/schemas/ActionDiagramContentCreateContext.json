@@ -1,0 +1,51 @@
+{
+  "properties": {
+    "comments": {
+      "additionalProperties": {
+        "$ref": "./ActionDiagramContentContextComment.json"
+      },
+      "type": "object"
+    },
+    "connections": {
+      "additionalProperties": {
+        "$ref": "./ActionDiagramContentContextConnection.json"
+      },
+      "type": "object"
+    },
+    "domainHandleId": {
+      "type": "string"
+    },
+    "domainName": {
+      "type": "string"
+    },
+    "groupHandleId": {
+      "type": "string"
+    },
+    "groupName": {
+      "type": "string"
+    },
+    "modelFamily": {
+      "items": {
+        "$ref": "./ActionContextModelObject.json"
+      },
+      "type": "array"
+    },
+    "name": {
+      "type": "string"
+    },
+    "objects": {
+      "additionalProperties": {
+        "$ref": "./ActionDiagramContentContextObject.json"
+      },
+      "type": "object"
+    },
+    "type": {
+      "$ref": "./DiagramType.json"
+    }
+  },
+  "required": [
+    "name",
+    "type"
+  ],
+  "type": "object"
+}

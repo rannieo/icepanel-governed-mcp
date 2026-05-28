@@ -1,0 +1,17 @@
+{
+  "enum": [
+    "blue",
+    "green",
+    "yellow",
+    "orange",
+    "red",
+    "beaver",
+    "dark-blue",
+    "purple",
+    "pink",
+    "white",
+    "grey",
+    "black"
+  ],
+  "type": "string"
+}

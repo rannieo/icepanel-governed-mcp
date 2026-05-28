@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "domains": {
+      "items": {
+        "$ref": "./Domain.json"
+      },
+      "type": "array"
+    },
+    "finalValue": {
+      "type": "boolean"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "domains",
+    "finalValue",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

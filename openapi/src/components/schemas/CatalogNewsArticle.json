@@ -1,0 +1,66 @@
+{
+  "properties": {
+    "body": {
+      "type": "string"
+    },
+    "catalogTechnologyIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "defaultSlug": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "provider": {
+      "$ref": "./CatalogProviderNullable.json"
+    },
+    "publishedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "slugs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "tags": {
+      "items": {
+        "$ref": "./CatalogNewsArticleTag.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "body",
+    "catalogTechnologyIds",
+    "createdAt",
+    "defaultSlug",
+    "description",
+    "id",
+    "link",
+    "provider",
+    "publishedAt",
+    "slugs",
+    "tags",
+    "title"
+  ],
+  "type": "object"
+}

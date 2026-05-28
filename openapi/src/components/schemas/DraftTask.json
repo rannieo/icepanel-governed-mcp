@@ -1,0 +1,88 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./DraftTaskCommentCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentDelete.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentReplyCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentReplyUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentReplyDelete.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramDelete.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramContentUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramGroupCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramGroupUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramGroupDelete.json"
+    },
+    {
+      "$ref": "./DraftTaskModelObjectCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskModelObjectUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskModelObjectDelete.json"
+    },
+    {
+      "$ref": "./DraftTaskModelConnectionCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskModelConnectionUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskModelConnectionDelete.json"
+    },
+    {
+      "$ref": "./DraftTaskFlowCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskFlowUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskFlowDelete.json"
+    },
+    {
+      "$ref": "./DraftTaskTagCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskTagUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskTagDelete.json"
+    },
+    {
+      "$ref": "./DraftTaskTagGroupCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskTagGroupUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskTagGroupDelete.json"
+    }
+  ]
+}

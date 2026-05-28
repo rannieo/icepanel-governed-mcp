@@ -1,0 +1,20 @@
+{
+  "properties": {
+    "serverUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "token": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "serverUrl",
+    "token",
+    "username"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,2530 @@
+{
+  "anyOf": [
+    {
+      "$ref": "./ADR.json"
+    },
+    {
+      "$ref": "./ADRFilter.json"
+    },
+    {
+      "$ref": "./ADRPartial.json"
+    },
+    {
+      "$ref": "./ADRRelatedItem.json"
+    },
+    {
+      "$ref": "./ADRRelatedItemType.json"
+    },
+    {
+      "$ref": "./ADRRequired.json"
+    },
+    {
+      "$ref": "./ADRStatus.json"
+    },
+    {
+      "$ref": "./ADRStatusChange.json"
+    },
+    {
+      "$ref": "./AIDescriptionType.json"
+    },
+    {
+      "$ref": "./Action.json"
+    },
+    {
+      "$ref": "./ActionApiKey.json"
+    },
+    {
+      "$ref": "./ActionApiKeyContext.json"
+    },
+    {
+      "$ref": "./ActionApiKeyCreate.json"
+    },
+    {
+      "$ref": "./ActionApiKeyDelete.json"
+    },
+    {
+      "$ref": "./ActionApiKeyUpdate.json"
+    },
+    {
+      "$ref": "./ActionCommentCreate.json"
+    },
+    {
+      "$ref": "./ActionCommentCreateContext.json"
+    },
+    {
+      "$ref": "./ActionCommentDelete.json"
+    },
+    {
+      "$ref": "./ActionCommentDeleteContext.json"
+    },
+    {
+      "$ref": "./ActionCommentReplyCreate.json"
+    },
+    {
+      "$ref": "./ActionCommentReplyCreateContext.json"
+    },
+    {
+      "$ref": "./ActionCommentReplyDelete.json"
+    },
+    {
+      "$ref": "./ActionCommentReplyDeleteContext.json"
+    },
+    {
+      "$ref": "./ActionCommentReplyUpdate.json"
+    },
+    {
+      "$ref": "./ActionCommentReplyUpdateContext.json"
+    },
+    {
+      "$ref": "./ActionCommentUpdate.json"
+    },
+    {
+      "$ref": "./ActionCommentUpdateContext.json"
+    },
+    {
+      "$ref": "./ActionContextModelObject.json"
+    },
+    {
+      "$ref": "./ActionDiagram.json"
+    },
+    {
+      "$ref": "./ActionDiagramContentContextComment.json"
+    },
+    {
+      "$ref": "./ActionDiagramContentContextConnection.json"
+    },
+    {
+      "$ref": "./ActionDiagramContentContextObject.json"
+    },
+    {
+      "$ref": "./ActionDiagramContentCreate.json"
+    },
+    {
+      "$ref": "./ActionDiagramContentCreateContext.json"
+    },
+    {
+      "$ref": "./ActionDiagramContentDelete.json"
+    },
+    {
+      "$ref": "./ActionDiagramContentDeleteContext.json"
+    },
+    {
+      "$ref": "./ActionDiagramContentUpdate.json"
+    },
+    {
+      "$ref": "./ActionDiagramContentUpdateContext.json"
+    },
+    {
+      "$ref": "./ActionDiagramContentView.json"
+    },
+    {
+      "$ref": "./ActionDiagramContentViewContext.json"
+    },
+    {
+      "$ref": "./ActionDiagramCreate.json"
+    },
+    {
+      "$ref": "./ActionDiagramCreateContext.json"
+    },
+    {
+      "$ref": "./ActionDiagramDelete.json"
+    },
+    {
+      "$ref": "./ActionDiagramDeleteContext.json"
+    },
+    {
+      "$ref": "./ActionDiagramExport.json"
+    },
+    {
+      "$ref": "./ActionDiagramExportContext.json"
+    },
+    {
+      "$ref": "./ActionDiagramExportProps.json"
+    },
+    {
+      "$ref": "./ActionDiagramGroupCreate.json"
+    },
+    {
+      "$ref": "./ActionDiagramGroupCreateContext.json"
+    },
+    {
+      "$ref": "./ActionDiagramGroupDelete.json"
+    },
+    {
+      "$ref": "./ActionDiagramGroupDeleteContext.json"
+    },
+    {
+      "$ref": "./ActionDiagramGroupUpdate.json"
+    },
+    {
+      "$ref": "./ActionDiagramGroupUpdateContext.json"
+    },
+    {
+      "$ref": "./ActionDiagramUpdate.json"
+    },
+    {
+      "$ref": "./ActionDiagramUpdateContext.json"
+    },
+    {
+      "$ref": "./ActionDomainCreate.json"
+    },
+    {
+      "$ref": "./ActionDomainDelete.json"
+    },
+    {
+      "$ref": "./ActionDomainDeleteContext.json"
+    },
+    {
+      "$ref": "./ActionDomainUpdate.json"
+    },
+    {
+      "$ref": "./ActionDomainUpdateContext.json"
+    },
+    {
+      "$ref": "./ActionDraft.json"
+    },
+    {
+      "$ref": "./ActionDraftCreate.json"
+    },
+    {
+      "$ref": "./ActionDraftCreateContext.json"
+    },
+    {
+      "$ref": "./ActionDraftDelete.json"
+    },
+    {
+      "$ref": "./ActionDraftDeleteContext.json"
+    },
+    {
+      "$ref": "./ActionDraftMerge.json"
+    },
+    {
+      "$ref": "./ActionDraftMergeContext.json"
+    },
+    {
+      "$ref": "./ActionDraftTask.json"
+    },
+    {
+      "$ref": "./ActionDraftTaskCreate.json"
+    },
+    {
+      "$ref": "./ActionDraftTaskCreateContext.json"
+    },
+    {
+      "$ref": "./ActionDraftUpdate.json"
+    },
+    {
+      "$ref": "./ActionDraftUpdateContext.json"
+    },
+    {
+      "$ref": "./ActionDraftView.json"
+    },
+    {
+      "$ref": "./ActionDraftViewContext.json"
+    },
+    {
+      "$ref": "./ActionFlowContextObject.json"
+    },
+    {
+      "$ref": "./ActionFlowCreate.json"
+    },
+    {
+      "$ref": "./ActionFlowCreateContext.json"
+    },
+    {
+      "$ref": "./ActionFlowDelete.json"
+    },
+    {
+      "$ref": "./ActionFlowDeleteContext.json"
+    },
+    {
+      "$ref": "./ActionFlowUpdate.json"
+    },
+    {
+      "$ref": "./ActionFlowUpdateContext.json"
+    },
+    {
+      "$ref": "./ActionFlowView.json"
+    },
+    {
+      "$ref": "./ActionFlowViewContext.json"
+    },
+    {
+      "$ref": "./ActionLandscape.json"
+    },
+    {
+      "$ref": "./ActionLandscapeCopy.json"
+    },
+    {
+      "$ref": "./ActionLandscapeCopyContext.json"
+    },
+    {
+      "$ref": "./ActionLandscapeCreate.json"
+    },
+    {
+      "$ref": "./ActionLandscapeCreateContext.json"
+    },
+    {
+      "$ref": "./ActionLandscapeDelete.json"
+    },
+    {
+      "$ref": "./ActionLandscapeDeleteContext.json"
+    },
+    {
+      "$ref": "./ActionLandscapeDuplicate.json"
+    },
+    {
+      "$ref": "./ActionLandscapeDuplicateContext.json"
+    },
+    {
+      "$ref": "./ActionLandscapeDuplicateProps.json"
+    },
+    {
+      "$ref": "./ActionLandscapeExport.json"
+    },
+    {
+      "$ref": "./ActionLandscapeExportContext.json"
+    },
+    {
+      "$ref": "./ActionLandscapeExportProps.json"
+    },
+    {
+      "$ref": "./ActionLandscapeImport.json"
+    },
+    {
+      "$ref": "./ActionLandscapeImportContext.json"
+    },
+    {
+      "$ref": "./ActionLandscapeImportProps.json"
+    },
+    {
+      "$ref": "./ActionLandscapeUpdate.json"
+    },
+    {
+      "$ref": "./ActionLandscapeUpdateContext.json"
+    },
+    {
+      "$ref": "./ActionLog.json"
+    },
+    {
+      "$ref": "./ActionLogFilter.json"
+    },
+    {
+      "$ref": "./ActionLogFilterActionType.json"
+    },
+    {
+      "$ref": "./ActionLogStatsContributor.json"
+    },
+    {
+      "$ref": "./ActionLogStatsDateByEntity.json"
+    },
+    {
+      "$ref": "./ActionLogStatsDateByType.json"
+    },
+    {
+      "$ref": "./ActionLogStatsFilter.json"
+    },
+    {
+      "$ref": "./ActionLogStatsItemByEntity.json"
+    },
+    {
+      "$ref": "./ActionLogStatsItemByType.json"
+    },
+    {
+      "$ref": "./ActionLogStatsListByEntity.json"
+    },
+    {
+      "$ref": "./ActionLogStatsListByType.json"
+    },
+    {
+      "$ref": "./ActionLogStatsPeriod.json"
+    },
+    {
+      "$ref": "./ActionModelConnection.json"
+    },
+    {
+      "$ref": "./ActionModelConnectionCreate.json"
+    },
+    {
+      "$ref": "./ActionModelConnectionCreateContext.json"
+    },
+    {
+      "$ref": "./ActionModelConnectionDelete.json"
+    },
+    {
+      "$ref": "./ActionModelConnectionDeleteContext.json"
+    },
+    {
+      "$ref": "./ActionModelConnectionUpdate.json"
+    },
+    {
+      "$ref": "./ActionModelConnectionUpdateContext.json"
+    },
+    {
+      "$ref": "./ActionModelConnectionsExport.json"
+    },
+    {
+      "$ref": "./ActionModelConnectionsExportContext.json"
+    },
+    {
+      "$ref": "./ActionModelConnectionsExportProps.json"
+    },
+    {
+      "$ref": "./ActionModelObject.json"
+    },
+    {
+      "$ref": "./ActionModelObjectCreate.json"
+    },
+    {
+      "$ref": "./ActionModelObjectCreateContext.json"
+    },
+    {
+      "$ref": "./ActionModelObjectDelete.json"
+    },
+    {
+      "$ref": "./ActionModelObjectDeleteContext.json"
+    },
+    {
+      "$ref": "./ActionModelObjectDependenciesExport.json"
+    },
+    {
+      "$ref": "./ActionModelObjectDependenciesExportContext.json"
+    },
+    {
+      "$ref": "./ActionModelObjectDependenciesExportProps.json"
+    },
+    {
+      "$ref": "./ActionModelObjectUpdate.json"
+    },
+    {
+      "$ref": "./ActionModelObjectUpdateContext.json"
+    },
+    {
+      "$ref": "./ActionModelObjectsExport.json"
+    },
+    {
+      "$ref": "./ActionModelObjectsExportContext.json"
+    },
+    {
+      "$ref": "./ActionModelObjectsExportProps.json"
+    },
+    {
+      "$ref": "./ActionOAuth.json"
+    },
+    {
+      "$ref": "./ActionOAuthConsentDeny.json"
+    },
+    {
+      "$ref": "./ActionOAuthConsentDenyProps.json"
+    },
+    {
+      "$ref": "./ActionOAuthConsentGrant.json"
+    },
+    {
+      "$ref": "./ActionOAuthConsentGrantProps.json"
+    },
+    {
+      "$ref": "./ActionOrganization.json"
+    },
+    {
+      "$ref": "./ActionOrganizationCreate.json"
+    },
+    {
+      "$ref": "./ActionOrganizationCreateContext.json"
+    },
+    {
+      "$ref": "./ActionOrganizationDelete.json"
+    },
+    {
+      "$ref": "./ActionOrganizationDeleteContext.json"
+    },
+    {
+      "$ref": "./ActionOrganizationDeleteProps.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUpdate.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUpdateContext.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUser.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUserAdd.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUserAddContext.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUserInvite.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUserInviteCreate.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUserInviteCreateContext.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUserInviteRevoke.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUserInviteRevokeContext.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUserRemove.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUserRemoveContext.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUserUpdate.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUserUpdateContext.json"
+    },
+    {
+      "$ref": "./ActionShareLink.json"
+    },
+    {
+      "$ref": "./ActionShareLinkCreate.json"
+    },
+    {
+      "$ref": "./ActionShareLinkCreateContext.json"
+    },
+    {
+      "$ref": "./ActionShareLinkDelete.json"
+    },
+    {
+      "$ref": "./ActionShareLinkDeleteContext.json"
+    },
+    {
+      "$ref": "./ActionShareLinkUpdate.json"
+    },
+    {
+      "$ref": "./ActionShareLinkUpdateContext.json"
+    },
+    {
+      "$ref": "./ActionTagCreate.json"
+    },
+    {
+      "$ref": "./ActionTagCreateContext.json"
+    },
+    {
+      "$ref": "./ActionTagDelete.json"
+    },
+    {
+      "$ref": "./ActionTagDeleteContext.json"
+    },
+    {
+      "$ref": "./ActionTagGroupCreate.json"
+    },
+    {
+      "$ref": "./ActionTagGroupDelete.json"
+    },
+    {
+      "$ref": "./ActionTagGroupDeleteContext.json"
+    },
+    {
+      "$ref": "./ActionTagGroupUpdate.json"
+    },
+    {
+      "$ref": "./ActionTagGroupUpdateContext.json"
+    },
+    {
+      "$ref": "./ActionTagUpdate.json"
+    },
+    {
+      "$ref": "./ActionTagUpdateContext.json"
+    },
+    {
+      "$ref": "./ActionTeam.json"
+    },
+    {
+      "$ref": "./ActionTeamCreate.json"
+    },
+    {
+      "$ref": "./ActionTeamCreateContext.json"
+    },
+    {
+      "$ref": "./ActionTeamDelete.json"
+    },
+    {
+      "$ref": "./ActionTeamDeleteContext.json"
+    },
+    {
+      "$ref": "./ActionTeamUpdate.json"
+    },
+    {
+      "$ref": "./ActionTeamUpdateContext.json"
+    },
+    {
+      "$ref": "./ActionType.json"
+    },
+    {
+      "$ref": "./ActionUser.json"
+    },
+    {
+      "$ref": "./ActionUserLogin.json"
+    },
+    {
+      "$ref": "./ActionUserLoginFailed.json"
+    },
+    {
+      "$ref": "./ActionUserLoginFailedProps.json"
+    },
+    {
+      "$ref": "./ActionUserLogout.json"
+    },
+    {
+      "$ref": "./ActionVersion.json"
+    },
+    {
+      "$ref": "./ActionVersionCreate.json"
+    },
+    {
+      "$ref": "./ActionVersionCreateContext.json"
+    },
+    {
+      "$ref": "./ActionVersionDelete.json"
+    },
+    {
+      "$ref": "./ActionVersionDeleteContext.json"
+    },
+    {
+      "$ref": "./ActionVersionRevertContext.json"
+    },
+    {
+      "$ref": "./ActionVersionRevertCreate.json"
+    },
+    {
+      "$ref": "./ApiKey.json"
+    },
+    {
+      "$ref": "./ApiKeyPartial.json"
+    },
+    {
+      "$ref": "./ApiKeyRequired.json"
+    },
+    {
+      "$ref": "./AuthType.json"
+    },
+    {
+      "$ref": "./AutomationRun.json"
+    },
+    {
+      "$ref": "./AutomationRunPartial.json"
+    },
+    {
+      "$ref": "./AutomationRunRequired.json"
+    },
+    {
+      "$ref": "./AutomationTrigger.json"
+    },
+    {
+      "$ref": "./AutomationTriggerCatalogTechnologyReviewApproved.json"
+    },
+    {
+      "$ref": "./AutomationTriggerCatalogTechnologyReviewRejected.json"
+    },
+    {
+      "$ref": "./AutomationTriggerCommentCreate.json"
+    },
+    {
+      "$ref": "./AutomationTriggerCommentReplyCreate.json"
+    },
+    {
+      "$ref": "./AutomationTriggerCommentStatusUpdate.json"
+    },
+    {
+      "$ref": "./AutomationTriggerExportPdfReady.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationBillingChargeRefunded.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationBillingCheckoutSessionCompleted.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationBillingInvoicePaid.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationBillingInvoicePaymentFailed.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationBillingPaymentMethodAttached.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationBillingPaymentMethodDetached.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationBillingSubscriptionChanged.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationCreate.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationUpdated.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationUserInviteCreate.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationUserInviteUsed.json"
+    },
+    {
+      "$ref": "./AutomationTriggerSchedule.json"
+    },
+    {
+      "$ref": "./AutomationTriggerSendC4ModelEbook.json"
+    },
+    {
+      "$ref": "./AutomationTriggerType.json"
+    },
+    {
+      "$ref": "./AutomationTriggerUserEmailVerification.json"
+    },
+    {
+      "$ref": "./AutomationTriggerUserRegister.json"
+    },
+    {
+      "$ref": "./AutomationTriggerUserRequestResetPassword.json"
+    },
+    {
+      "$ref": "./AutomationTriggerUserUpdate.json"
+    },
+    {
+      "$ref": "./AzureDevopsAuthorization.json"
+    },
+    {
+      "$ref": "./AzureDevopsAuthorizationPartial.json"
+    },
+    {
+      "$ref": "./BitbucketAuthorization.json"
+    },
+    {
+      "$ref": "./BitbucketAuthorizationPartial.json"
+    },
+    {
+      "$ref": "./BitbucketServerToken.json"
+    },
+    {
+      "$ref": "./BitbucketServerTokenPartial.json"
+    },
+    {
+      "$ref": "./BitbucketServerTokenRequired.json"
+    },
+    {
+      "$ref": "./CatalogIconType.json"
+    },
+    {
+      "$ref": "./CatalogIconVariant.json"
+    },
+    {
+      "$ref": "./CatalogNewsArticle.json"
+    },
+    {
+      "$ref": "./CatalogNewsArticleFilter.json"
+    },
+    {
+      "$ref": "./CatalogNewsArticleTag.json"
+    },
+    {
+      "$ref": "./CatalogProvider.json"
+    },
+    {
+      "$ref": "./CatalogProviderNullable.json"
+    },
+    {
+      "$ref": "./CatalogRestriction.json"
+    },
+    {
+      "$ref": "./CatalogRestrictionNullable.json"
+    },
+    {
+      "$ref": "./CatalogSuggestionBrand.json"
+    },
+    {
+      "$ref": "./CatalogSuggestionBrandColor.json"
+    },
+    {
+      "$ref": "./CatalogSuggestionBrandLogo.json"
+    },
+    {
+      "$ref": "./CatalogSuggestionBrandLogoFormat.json"
+    },
+    {
+      "$ref": "./CatalogSuggestionInformation.json"
+    },
+    {
+      "$ref": "./CatalogTechnology.json"
+    },
+    {
+      "$ref": "./CatalogTechnologyFilter.json"
+    },
+    {
+      "$ref": "./CatalogTechnologyPartial.json"
+    },
+    {
+      "$ref": "./CatalogTechnologyRequired.json"
+    },
+    {
+      "$ref": "./CatalogTechnologyReviewCreate.json"
+    },
+    {
+      "$ref": "./CatalogTechnologyReviewRejectionReason.json"
+    },
+    {
+      "$ref": "./CatalogTechnologyStatus.json"
+    },
+    {
+      "$ref": "./CatalogTechnologyStatusNullable.json"
+    },
+    {
+      "$ref": "./CatalogTechnologyType.json"
+    },
+    {
+      "$ref": "./CatalogTechnologyTypeNullable.json"
+    },
+    {
+      "$ref": "./CodeRepo.json"
+    },
+    {
+      "$ref": "./CodeRepoFilter.json"
+    },
+    {
+      "$ref": "./CodeRepoPartial.json"
+    },
+    {
+      "$ref": "./CodeRepoRef.json"
+    },
+    {
+      "$ref": "./CodeRepoRefType.json"
+    },
+    {
+      "$ref": "./CodeRepoRequired.json"
+    },
+    {
+      "$ref": "./CodeRepoTreeItem.json"
+    },
+    {
+      "$ref": "./CodeRepoTreeItemType.json"
+    },
+    {
+      "$ref": "./CodeRepoType.json"
+    },
+    {
+      "$ref": "./Comment.json"
+    },
+    {
+      "$ref": "./CommentBody.json"
+    },
+    {
+      "$ref": "./CommentBodyIdea.json"
+    },
+    {
+      "$ref": "./CommentBodyInaccuracy.json"
+    },
+    {
+      "$ref": "./CommentBodyNewIdea.json"
+    },
+    {
+      "$ref": "./CommentBodyNewInaccuracy.json"
+    },
+    {
+      "$ref": "./CommentBodyNewQuestion.json"
+    },
+    {
+      "$ref": "./CommentBodyQuestion.json"
+    },
+    {
+      "$ref": "./CommentBodyStatus.json"
+    },
+    {
+      "$ref": "./CommentBodyType.json"
+    },
+    {
+      "$ref": "./CommentDiagram.json"
+    },
+    {
+      "$ref": "./CommentPartial.json"
+    },
+    {
+      "$ref": "./CommentReply.json"
+    },
+    {
+      "$ref": "./CommentReplyPartial.json"
+    },
+    {
+      "$ref": "./CommentReplyRequired.json"
+    },
+    {
+      "$ref": "./CommentReplyUpsert.json"
+    },
+    {
+      "$ref": "./CommentRequired.json"
+    },
+    {
+      "$ref": "./CommentUpsert.json"
+    },
+    {
+      "$ref": "./Diagram.json"
+    },
+    {
+      "$ref": "./DiagramAction.json"
+    },
+    {
+      "$ref": "./DiagramComment.json"
+    },
+    {
+      "$ref": "./DiagramCommentPartial.json"
+    },
+    {
+      "$ref": "./DiagramConnection.json"
+    },
+    {
+      "$ref": "./DiagramConnectionPartial.json"
+    },
+    {
+      "$ref": "./DiagramContent.json"
+    },
+    {
+      "$ref": "./DiagramContentGenerateDescriptionFilter.json"
+    },
+    {
+      "$ref": "./DiagramContentPartial.json"
+    },
+    {
+      "$ref": "./DiagramContentRequired.json"
+    },
+    {
+      "$ref": "./DiagramCreate.json"
+    },
+    {
+      "$ref": "./DiagramExportImage.json"
+    },
+    {
+      "$ref": "./DiagramExportImageFileType.json"
+    },
+    {
+      "$ref": "./DiagramExportImageFileUrls.json"
+    },
+    {
+      "$ref": "./DiagramExportImageOptions.json"
+    },
+    {
+      "$ref": "./DiagramExportPngOptions.json"
+    },
+    {
+      "$ref": "./DiagramFilter.json"
+    },
+    {
+      "$ref": "./DiagramGroup.json"
+    },
+    {
+      "$ref": "./DiagramGroupFilter.json"
+    },
+    {
+      "$ref": "./DiagramGroupPartial.json"
+    },
+    {
+      "$ref": "./DiagramGroupRequired.json"
+    },
+    {
+      "$ref": "./DiagramGroupUpsert.json"
+    },
+    {
+      "$ref": "./DiagramObject.json"
+    },
+    {
+      "$ref": "./DiagramObjectConnector.json"
+    },
+    {
+      "$ref": "./DiagramObjectCount.json"
+    },
+    {
+      "$ref": "./DiagramObjectPartial.json"
+    },
+    {
+      "$ref": "./DiagramObjectShape.json"
+    },
+    {
+      "$ref": "./DiagramObjectType.json"
+    },
+    {
+      "$ref": "./DiagramPartial.json"
+    },
+    {
+      "$ref": "./DiagramRequired.json"
+    },
+    {
+      "$ref": "./DiagramStatus.json"
+    },
+    {
+      "$ref": "./DiagramThumbnail.json"
+    },
+    {
+      "$ref": "./DiagramType.json"
+    },
+    {
+      "$ref": "./DiagramUpsert.json"
+    },
+    {
+      "$ref": "./DiagramZoomOverrides.json"
+    },
+    {
+      "$ref": "./DiagramZoomOverridesNullable.json"
+    },
+    {
+      "$ref": "./Domain.json"
+    },
+    {
+      "$ref": "./DomainExport.json"
+    },
+    {
+      "$ref": "./DomainFilter.json"
+    },
+    {
+      "$ref": "./DomainPartial.json"
+    },
+    {
+      "$ref": "./DomainRequired.json"
+    },
+    {
+      "$ref": "./DomainUpsert.json"
+    },
+    {
+      "$ref": "./Draft.json"
+    },
+    {
+      "$ref": "./DraftChangeSummary.json"
+    },
+    {
+      "$ref": "./DraftConflict.json"
+    },
+    {
+      "$ref": "./DraftConflictType.json"
+    },
+    {
+      "$ref": "./DraftConflictsList.json"
+    },
+    {
+      "$ref": "./DraftFilter.json"
+    },
+    {
+      "$ref": "./DraftPartial.json"
+    },
+    {
+      "$ref": "./DraftRequired.json"
+    },
+    {
+      "$ref": "./DraftStatus.json"
+    },
+    {
+      "$ref": "./DraftTask.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentDelete.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentReplyCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentReplyCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentReplyDelete.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentReplyUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentReplyUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramContentUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramContentUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramDelete.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramGroupCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramGroupCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramGroupDelete.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramGroupUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramGroupUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskFilter.json"
+    },
+    {
+      "$ref": "./DraftTaskFlowCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskFlowCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskFlowDelete.json"
+    },
+    {
+      "$ref": "./DraftTaskFlowUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskFlowUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskJson.json"
+    },
+    {
+      "$ref": "./DraftTaskList.json"
+    },
+    {
+      "$ref": "./DraftTaskModelConnectionCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskModelConnectionCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskModelConnectionDelete.json"
+    },
+    {
+      "$ref": "./DraftTaskModelConnectionUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskModelConnectionUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskModelObjectCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskModelObjectCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskModelObjectDelete.json"
+    },
+    {
+      "$ref": "./DraftTaskModelObjectUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskModelObjectUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskProps.json"
+    },
+    {
+      "$ref": "./DraftTaskRequired.json"
+    },
+    {
+      "$ref": "./DraftTaskTagCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskTagCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskTagDelete.json"
+    },
+    {
+      "$ref": "./DraftTaskTagGroupCreate.json"
+    },
+    {
+      "$ref": "./DraftTaskTagGroupCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskTagGroupDelete.json"
+    },
+    {
+      "$ref": "./DraftTaskTagGroupUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskTagGroupUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskTagUpdate.json"
+    },
+    {
+      "$ref": "./DraftTaskTagUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskType.json"
+    },
+    {
+      "$ref": "./EditorLocation.json"
+    },
+    {
+      "$ref": "./EditorLocationUpdate.json"
+    },
+    {
+      "$ref": "./EditorTyping.json"
+    },
+    {
+      "$ref": "./EditorTypingUpdate.json"
+    },
+    {
+      "$ref": "./Error.json"
+    },
+    {
+      "$ref": "./Experiment.json"
+    },
+    {
+      "$ref": "./ExperimentStage.json"
+    },
+    {
+      "$ref": "./Flow.json"
+    },
+    {
+      "$ref": "./FlowExport.json"
+    },
+    {
+      "$ref": "./FlowFilter.json"
+    },
+    {
+      "$ref": "./FlowPartial.json"
+    },
+    {
+      "$ref": "./FlowRequired.json"
+    },
+    {
+      "$ref": "./FlowStep.json"
+    },
+    {
+      "$ref": "./FlowStepExport.json"
+    },
+    {
+      "$ref": "./FlowStepPartial.json"
+    },
+    {
+      "$ref": "./FlowStepPath.json"
+    },
+    {
+      "$ref": "./FlowStepPaths.json"
+    },
+    {
+      "$ref": "./FlowStepPathsNullable.json"
+    },
+    {
+      "$ref": "./FlowStepType.json"
+    },
+    {
+      "$ref": "./FlowThumbnail.json"
+    },
+    {
+      "$ref": "./GithubInstall.json"
+    },
+    {
+      "$ref": "./GithubInstallType.json"
+    },
+    {
+      "$ref": "./GitlabAuthorization.json"
+    },
+    {
+      "$ref": "./GitlabAuthorizationPartial.json"
+    },
+    {
+      "$ref": "./HealthCheck.json"
+    },
+    {
+      "$ref": "./HealthCheckService.json"
+    },
+    {
+      "$ref": "./HealthCheckStatus.json"
+    },
+    {
+      "$ref": "./ImportEntityType.json"
+    },
+    {
+      "$ref": "./ImportIcon.json"
+    },
+    {
+      "$ref": "./ImportIconNullable.json"
+    },
+    {
+      "$ref": "./ImportLink.json"
+    },
+    {
+      "$ref": "./ImportModelObjectType.json"
+    },
+    {
+      "$ref": "./Landscape.json"
+    },
+    {
+      "$ref": "./LandscapeAction.json"
+    },
+    {
+      "$ref": "./LandscapeActionType.json"
+    },
+    {
+      "$ref": "./LandscapeExport.json"
+    },
+    {
+      "$ref": "./LandscapeExportFilter.json"
+    },
+    {
+      "$ref": "./LandscapeExportOptions.json"
+    },
+    {
+      "$ref": "./LandscapeExportOrientation.json"
+    },
+    {
+      "$ref": "./LandscapeExportType.json"
+    },
+    {
+      "$ref": "./LandscapeImport.json"
+    },
+    {
+      "$ref": "./LandscapeImportData.json"
+    },
+    {
+      "$ref": "./LandscapeImportError.json"
+    },
+    {
+      "$ref": "./LandscapeImportStatus.json"
+    },
+    {
+      "$ref": "./LandscapeNullable.json"
+    },
+    {
+      "$ref": "./LandscapePartial.json"
+    },
+    {
+      "$ref": "./LandscapeRequired.json"
+    },
+    {
+      "$ref": "./LandscapeTemplate.json"
+    },
+    {
+      "$ref": "./LandscapeTemplatePartial.json"
+    },
+    {
+      "$ref": "./LandscapeTemplateRequired.json"
+    },
+    {
+      "$ref": "./LineShape.json"
+    },
+    {
+      "$ref": "./ModelConnection.json"
+    },
+    {
+      "$ref": "./ModelConnectionDiagram.json"
+    },
+    {
+      "$ref": "./ModelConnectionDirection.json"
+    },
+    {
+      "$ref": "./ModelConnectionDirectionNullable.json"
+    },
+    {
+      "$ref": "./ModelConnectionExpandKey.json"
+    },
+    {
+      "$ref": "./ModelConnectionExpanded.json"
+    },
+    {
+      "$ref": "./ModelConnectionExport.json"
+    },
+    {
+      "$ref": "./ModelConnectionFilter.json"
+    },
+    {
+      "$ref": "./ModelConnectionFlow.json"
+    },
+    {
+      "$ref": "./ModelConnectionImport.json"
+    },
+    {
+      "$ref": "./ModelConnectionPartial.json"
+    },
+    {
+      "$ref": "./ModelConnectionRequired.json"
+    },
+    {
+      "$ref": "./ModelConnectionStatus.json"
+    },
+    {
+      "$ref": "./ModelConnectionUpsert.json"
+    },
+    {
+      "$ref": "./ModelDependenciesFilter.json"
+    },
+    {
+      "$ref": "./ModelObject.json"
+    },
+    {
+      "$ref": "./ModelObjectDependenciesExport.json"
+    },
+    {
+      "$ref": "./ModelObjectDiagram.json"
+    },
+    {
+      "$ref": "./ModelObjectExpandKey.json"
+    },
+    {
+      "$ref": "./ModelObjectExpanded.json"
+    },
+    {
+      "$ref": "./ModelObjectExport.json"
+    },
+    {
+      "$ref": "./ModelObjectFilter.json"
+    },
+    {
+      "$ref": "./ModelObjectFlow.json"
+    },
+    {
+      "$ref": "./ModelObjectIcon.json"
+    },
+    {
+      "$ref": "./ModelObjectIconNullable.json"
+    },
+    {
+      "$ref": "./ModelObjectImport.json"
+    },
+    {
+      "$ref": "./ModelObjectPartial.json"
+    },
+    {
+      "$ref": "./ModelObjectRequired.json"
+    },
+    {
+      "$ref": "./ModelObjectStatus.json"
+    },
+    {
+      "$ref": "./ModelObjectType.json"
+    },
+    {
+      "$ref": "./ModelObjectUpsert.json"
+    },
+    {
+      "$ref": "./ModelStatus.json"
+    },
+    {
+      "$ref": "./ModelStatusType.json"
+    },
+    {
+      "$ref": "./OAuthScope.json"
+    },
+    {
+      "$ref": "./Organization.json"
+    },
+    {
+      "$ref": "./OrganizationAIFeatures.json"
+    },
+    {
+      "$ref": "./OrganizationAction.json"
+    },
+    {
+      "$ref": "./OrganizationActionType.json"
+    },
+    {
+      "$ref": "./OrganizationAiModel.json"
+    },
+    {
+      "$ref": "./OrganizationBillingCurrency.json"
+    },
+    {
+      "$ref": "./OrganizationBillingCycle.json"
+    },
+    {
+      "$ref": "./OrganizationBillingLinks.json"
+    },
+    {
+      "$ref": "./OrganizationBillingSubscriptionCreate.json"
+    },
+    {
+      "$ref": "./OrganizationBillingSubscriptionUpdate.json"
+    },
+    {
+      "$ref": "./OrganizationBrand.json"
+    },
+    {
+      "$ref": "./OrganizationCollectionMethod.json"
+    },
+    {
+      "$ref": "./OrganizationLanguage.json"
+    },
+    {
+      "$ref": "./OrganizationLog.json"
+    },
+    {
+      "$ref": "./OrganizationLogFilter.json"
+    },
+    {
+      "$ref": "./OrganizationLogFilterActionType.json"
+    },
+    {
+      "$ref": "./OrganizationLogStatsDateByType.json"
+    },
+    {
+      "$ref": "./OrganizationLogStatsFilter.json"
+    },
+    {
+      "$ref": "./OrganizationLogStatsItemByType.json"
+    },
+    {
+      "$ref": "./OrganizationLogStatsListByType.json"
+    },
+    {
+      "$ref": "./OrganizationPartial.json"
+    },
+    {
+      "$ref": "./OrganizationPlan.json"
+    },
+    {
+      "$ref": "./OrganizationRequired.json"
+    },
+    {
+      "$ref": "./OrganizationStatus.json"
+    },
+    {
+      "$ref": "./OrganizationUser.json"
+    },
+    {
+      "$ref": "./OrganizationUserInfo.json"
+    },
+    {
+      "$ref": "./OrganizationUserInvite.json"
+    },
+    {
+      "$ref": "./OrganizationUserInvitePartial.json"
+    },
+    {
+      "$ref": "./OrganizationUserInviteRequired.json"
+    },
+    {
+      "$ref": "./Partial.json"
+    },
+    {
+      "$ref": "./PermissionType.json"
+    },
+    {
+      "$ref": "./PubSubEditorLocation.json"
+    },
+    {
+      "$ref": "./PubSubEditorTyping.json"
+    },
+    {
+      "$ref": "./RealityConnector.json"
+    },
+    {
+      "$ref": "./RealityConnectorAzureDevopsBranch.json"
+    },
+    {
+      "$ref": "./RealityConnectorAzureDevopsFile.json"
+    },
+    {
+      "$ref": "./RealityConnectorAzureDevopsFolder.json"
+    },
+    {
+      "$ref": "./RealityConnectorAzureDevopsRepo.json"
+    },
+    {
+      "$ref": "./RealityConnectorBitbucketBranch.json"
+    },
+    {
+      "$ref": "./RealityConnectorBitbucketFile.json"
+    },
+    {
+      "$ref": "./RealityConnectorBitbucketFolder.json"
+    },
+    {
+      "$ref": "./RealityConnectorBitbucketRepo.json"
+    },
+    {
+      "$ref": "./RealityConnectorBitbucketServerBranch.json"
+    },
+    {
+      "$ref": "./RealityConnectorBitbucketServerFile.json"
+    },
+    {
+      "$ref": "./RealityConnectorBitbucketServerFolder.json"
+    },
+    {
+      "$ref": "./RealityConnectorBitbucketServerRepo.json"
+    },
+    {
+      "$ref": "./RealityConnectorGithubBranch.json"
+    },
+    {
+      "$ref": "./RealityConnectorGithubFile.json"
+    },
+    {
+      "$ref": "./RealityConnectorGithubFolder.json"
+    },
+    {
+      "$ref": "./RealityConnectorGithubRepo.json"
+    },
+    {
+      "$ref": "./RealityConnectorGitlabBranch.json"
+    },
+    {
+      "$ref": "./RealityConnectorGitlabFile.json"
+    },
+    {
+      "$ref": "./RealityConnectorGitlabFolder.json"
+    },
+    {
+      "$ref": "./RealityConnectorGitlabRepo.json"
+    },
+    {
+      "$ref": "./RealityConnectorType.json"
+    },
+    {
+      "$ref": "./RealityConnectorUrl.json"
+    },
+    {
+      "$ref": "./RealityLink.json"
+    },
+    {
+      "$ref": "./RealityLinkPartial.json"
+    },
+    {
+      "$ref": "./RealityLinkRequired.json"
+    },
+    {
+      "$ref": "./RealityLinkStatus.json"
+    },
+    {
+      "$ref": "./Required.json"
+    },
+    {
+      "$ref": "./SAMLProvider.json"
+    },
+    {
+      "$ref": "./SAMLProviderPartial.json"
+    },
+    {
+      "$ref": "./SAMLProviderRequired.json"
+    },
+    {
+      "$ref": "./SAMLRequest.json"
+    },
+    {
+      "$ref": "./SearchFilter.json"
+    },
+    {
+      "$ref": "./SearchIndexItem.json"
+    },
+    {
+      "$ref": "./SearchIndexType.json"
+    },
+    {
+      "$ref": "./SearchResult.json"
+    },
+    {
+      "$ref": "./SearchResultData.json"
+    },
+    {
+      "$ref": "./SendEbookRequired.json"
+    },
+    {
+      "$ref": "./ShareLink.json"
+    },
+    {
+      "$ref": "./ShareLinkFrameLocation.json"
+    },
+    {
+      "$ref": "./ShareLinkOptions.json"
+    },
+    {
+      "$ref": "./ShareLinkOptionsDrawer.json"
+    },
+    {
+      "$ref": "./ShareLinkOptionsDrawerObject.json"
+    },
+    {
+      "$ref": "./ShareLinkOptionsMode.json"
+    },
+    {
+      "$ref": "./ShareLinkOptionsObjectTab.json"
+    },
+    {
+      "$ref": "./ShareLinkOptionsOverlayTab.json"
+    },
+    {
+      "$ref": "./ShareLinkOptionsRequired.json"
+    },
+    {
+      "$ref": "./ShareLinkPartial.json"
+    },
+    {
+      "$ref": "./ShareLinkRequired.json"
+    },
+    {
+      "$ref": "./ShareLinkStats.json"
+    },
+    {
+      "$ref": "./SocketClientAdrsEvents.json"
+    },
+    {
+      "$ref": "./SocketClientAdrsListBody.json"
+    },
+    {
+      "$ref": "./SocketClientAdrsListReply.json"
+    },
+    {
+      "$ref": "./SocketClientAdrsSubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientAdrsSubscribeReply.json"
+    },
+    {
+      "$ref": "./SocketClientAdrsUnsubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientCommentEvents.json"
+    },
+    {
+      "$ref": "./SocketClientCommentsListBody.json"
+    },
+    {
+      "$ref": "./SocketClientCommentsListReply.json"
+    },
+    {
+      "$ref": "./SocketClientCommentsReplyListBody.json"
+    },
+    {
+      "$ref": "./SocketClientCommentsReplyListReply.json"
+    },
+    {
+      "$ref": "./SocketClientCommentsReplySubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientCommentsReplySubscribeReply.json"
+    },
+    {
+      "$ref": "./SocketClientCommentsReplyUnsubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientCommentsSubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientCommentsSubscribeReply.json"
+    },
+    {
+      "$ref": "./SocketClientCommentsUnsubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientDiagramContentsListBody.json"
+    },
+    {
+      "$ref": "./SocketClientDiagramContentsListReply.json"
+    },
+    {
+      "$ref": "./SocketClientDiagramContentsSubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientDiagramContentsSubscribeReply.json"
+    },
+    {
+      "$ref": "./SocketClientDiagramContentsUnsubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientDiagramEvents.json"
+    },
+    {
+      "$ref": "./SocketClientDiagramGroupsListBody.json"
+    },
+    {
+      "$ref": "./SocketClientDiagramGroupsListReply.json"
+    },
+    {
+      "$ref": "./SocketClientDiagramGroupsSubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientDiagramGroupsSubscribeReply.json"
+    },
+    {
+      "$ref": "./SocketClientDiagramGroupsUnsubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientDiagramsListBody.json"
+    },
+    {
+      "$ref": "./SocketClientDiagramsListReply.json"
+    },
+    {
+      "$ref": "./SocketClientDiagramsSubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientDiagramsSubscribeReply.json"
+    },
+    {
+      "$ref": "./SocketClientDiagramsUnsubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientDomainEvents.json"
+    },
+    {
+      "$ref": "./SocketClientDomainsListBody.json"
+    },
+    {
+      "$ref": "./SocketClientDomainsListReply.json"
+    },
+    {
+      "$ref": "./SocketClientDomainsSubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientDomainsSubscribeReply.json"
+    },
+    {
+      "$ref": "./SocketClientDomainsUnsubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientDraftEvents.json"
+    },
+    {
+      "$ref": "./SocketClientDraftsListBody.json"
+    },
+    {
+      "$ref": "./SocketClientDraftsListReply.json"
+    },
+    {
+      "$ref": "./SocketClientDraftsSubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientDraftsSubscribeReply.json"
+    },
+    {
+      "$ref": "./SocketClientDraftsUnsubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientEditorEvents.json"
+    },
+    {
+      "$ref": "./SocketClientEditorLocationUpdateBody.json"
+    },
+    {
+      "$ref": "./SocketClientEditorSubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientEditorSubscribeReply.json"
+    },
+    {
+      "$ref": "./SocketClientEditorTypingUpdateBody.json"
+    },
+    {
+      "$ref": "./SocketClientEditorUnsubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientEvents.json"
+    },
+    {
+      "$ref": "./SocketClientFlowEvents.json"
+    },
+    {
+      "$ref": "./SocketClientFlowsListBody.json"
+    },
+    {
+      "$ref": "./SocketClientFlowsListReply.json"
+    },
+    {
+      "$ref": "./SocketClientFlowsSubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientFlowsSubscribeReply.json"
+    },
+    {
+      "$ref": "./SocketClientFlowsUnsubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientLandscapeEvents.json"
+    },
+    {
+      "$ref": "./SocketClientLandscapeSubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientLandscapeSubscribeReply.json"
+    },
+    {
+      "$ref": "./SocketClientLandscapeUnsubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientModelConnectionsListBody.json"
+    },
+    {
+      "$ref": "./SocketClientModelConnectionsListReply.json"
+    },
+    {
+      "$ref": "./SocketClientModelConnectionsSubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientModelConnectionsSubscribeReply.json"
+    },
+    {
+      "$ref": "./SocketClientModelConnectionsUnsubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientModelEvents.json"
+    },
+    {
+      "$ref": "./SocketClientModelObjectsListBody.json"
+    },
+    {
+      "$ref": "./SocketClientModelObjectsListReply.json"
+    },
+    {
+      "$ref": "./SocketClientModelObjectsSubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientModelObjectsSubscribeReply.json"
+    },
+    {
+      "$ref": "./SocketClientModelObjectsUnsubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientTagEvents.json"
+    },
+    {
+      "$ref": "./SocketClientTagGroupsListBody.json"
+    },
+    {
+      "$ref": "./SocketClientTagGroupsListReply.json"
+    },
+    {
+      "$ref": "./SocketClientTagGroupsSubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientTagGroupsSubscribeReply.json"
+    },
+    {
+      "$ref": "./SocketClientTagGroupsUnsubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientTagsListBody.json"
+    },
+    {
+      "$ref": "./SocketClientTagsListReply.json"
+    },
+    {
+      "$ref": "./SocketClientTagsSubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientTagsSubscribeReply.json"
+    },
+    {
+      "$ref": "./SocketClientTagsUnsubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientVersionEvents.json"
+    },
+    {
+      "$ref": "./SocketClientVersionsListBody.json"
+    },
+    {
+      "$ref": "./SocketClientVersionsListReply.json"
+    },
+    {
+      "$ref": "./SocketClientVersionsSubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketClientVersionsSubscribeReply.json"
+    },
+    {
+      "$ref": "./SocketClientVersionsUnsubscribeBody.json"
+    },
+    {
+      "$ref": "./SocketServerAdrAddedBody.json"
+    },
+    {
+      "$ref": "./SocketServerAdrInitialValueBody.json"
+    },
+    {
+      "$ref": "./SocketServerAdrModifiedBody.json"
+    },
+    {
+      "$ref": "./SocketServerAdrRemovedBody.json"
+    },
+    {
+      "$ref": "./SocketServerAdrsEvents.json"
+    },
+    {
+      "$ref": "./SocketServerAdrsListStreamBody.json"
+    },
+    {
+      "$ref": "./SocketServerCommentAddedBody.json"
+    },
+    {
+      "$ref": "./SocketServerCommentEvents.json"
+    },
+    {
+      "$ref": "./SocketServerCommentInitialValueBody.json"
+    },
+    {
+      "$ref": "./SocketServerCommentModifiedBody.json"
+    },
+    {
+      "$ref": "./SocketServerCommentRemovedBody.json"
+    },
+    {
+      "$ref": "./SocketServerCommentReplyAddedBody.json"
+    },
+    {
+      "$ref": "./SocketServerCommentReplyInitialValueBody.json"
+    },
+    {
+      "$ref": "./SocketServerCommentReplyModifiedBody.json"
+    },
+    {
+      "$ref": "./SocketServerCommentReplyRemovedBody.json"
+    },
+    {
+      "$ref": "./SocketServerCommentsListStreamBody.json"
+    },
+    {
+      "$ref": "./SocketServerCommentsReplyListStreamBody.json"
+    },
+    {
+      "$ref": "./SocketServerDiagramAddedBody.json"
+    },
+    {
+      "$ref": "./SocketServerDiagramContentAddedBody.json"
+    },
+    {
+      "$ref": "./SocketServerDiagramContentInitialValueBody.json"
+    },
+    {
+      "$ref": "./SocketServerDiagramContentModifiedBody.json"
+    },
+    {
+      "$ref": "./SocketServerDiagramContentRemovedBody.json"
+    },
+    {
+      "$ref": "./SocketServerDiagramContentsListStreamBody.json"
+    },
+    {
+      "$ref": "./SocketServerDiagramEvents.json"
+    },
+    {
+      "$ref": "./SocketServerDiagramGroupAddedBody.json"
+    },
+    {
+      "$ref": "./SocketServerDiagramGroupInitialValueBody.json"
+    },
+    {
+      "$ref": "./SocketServerDiagramGroupModifiedBody.json"
+    },
+    {
+      "$ref": "./SocketServerDiagramGroupRemovedBody.json"
+    },
+    {
+      "$ref": "./SocketServerDiagramGroupsListStreamBody.json"
+    },
+    {
+      "$ref": "./SocketServerDiagramInitialValueBody.json"
+    },
+    {
+      "$ref": "./SocketServerDiagramModifiedBody.json"
+    },
+    {
+      "$ref": "./SocketServerDiagramRemovedBody.json"
+    },
+    {
+      "$ref": "./SocketServerDiagramsListStreamBody.json"
+    },
+    {
+      "$ref": "./SocketServerDomainAddedBody.json"
+    },
+    {
+      "$ref": "./SocketServerDomainEvents.json"
+    },
+    {
+      "$ref": "./SocketServerDomainInitialValueBody.json"
+    },
+    {
+      "$ref": "./SocketServerDomainModifiedBody.json"
+    },
+    {
+      "$ref": "./SocketServerDomainRemovedBody.json"
+    },
+    {
+      "$ref": "./SocketServerDomainsListStreamBody.json"
+    },
+    {
+      "$ref": "./SocketServerDraftAddedBody.json"
+    },
+    {
+      "$ref": "./SocketServerDraftEvents.json"
+    },
+    {
+      "$ref": "./SocketServerDraftInitialValueBody.json"
+    },
+    {
+      "$ref": "./SocketServerDraftModifiedBody.json"
+    },
+    {
+      "$ref": "./SocketServerDraftRemovedBody.json"
+    },
+    {
+      "$ref": "./SocketServerDraftTaskAddedBody.json"
+    },
+    {
+      "$ref": "./SocketServerDraftsListStreamBody.json"
+    },
+    {
+      "$ref": "./SocketServerEditorEvents.json"
+    },
+    {
+      "$ref": "./SocketServerEditorLocationAddedBody.json"
+    },
+    {
+      "$ref": "./SocketServerEditorLocationModifiedBody.json"
+    },
+    {
+      "$ref": "./SocketServerEditorLocationsBody.json"
+    },
+    {
+      "$ref": "./SocketServerEditorTypingAddedBody.json"
+    },
+    {
+      "$ref": "./SocketServerEditorTypingBody.json"
+    },
+    {
+      "$ref": "./SocketServerEditorTypingModifiedBody.json"
+    },
+    {
+      "$ref": "./SocketServerEvents.json"
+    },
+    {
+      "$ref": "./SocketServerFlowAddedBody.json"
+    },
+    {
+      "$ref": "./SocketServerFlowEvents.json"
+    },
+    {
+      "$ref": "./SocketServerFlowInitialValueBody.json"
+    },
+    {
+      "$ref": "./SocketServerFlowModifiedBody.json"
+    },
+    {
+      "$ref": "./SocketServerFlowRemovedBody.json"
+    },
+    {
+      "$ref": "./SocketServerFlowsListStreamBody.json"
+    },
+    {
+      "$ref": "./SocketServerLandscapeBody.json"
+    },
+    {
+      "$ref": "./SocketServerLandscapeEvents.json"
+    },
+    {
+      "$ref": "./SocketServerModelConnectionAddedBody.json"
+    },
+    {
+      "$ref": "./SocketServerModelConnectionInitialValueBody.json"
+    },
+    {
+      "$ref": "./SocketServerModelConnectionModifiedBody.json"
+    },
+    {
+      "$ref": "./SocketServerModelConnectionRemovedBody.json"
+    },
+    {
+      "$ref": "./SocketServerModelConnectionsListStreamBody.json"
+    },
+    {
+      "$ref": "./SocketServerModelEvents.json"
+    },
+    {
+      "$ref": "./SocketServerModelObjectAddedBody.json"
+    },
+    {
+      "$ref": "./SocketServerModelObjectInitialValueBody.json"
+    },
+    {
+      "$ref": "./SocketServerModelObjectModifiedBody.json"
+    },
+    {
+      "$ref": "./SocketServerModelObjectRemovedBody.json"
+    },
+    {
+      "$ref": "./SocketServerModelObjectsListStreamBody.json"
+    },
+    {
+      "$ref": "./SocketServerTagAddedBody.json"
+    },
+    {
+      "$ref": "./SocketServerTagEvents.json"
+    },
+    {
+      "$ref": "./SocketServerTagGroupAddedBody.json"
+    },
+    {
+      "$ref": "./SocketServerTagGroupInitialValueBody.json"
+    },
+    {
+      "$ref": "./SocketServerTagGroupModifiedBody.json"
+    },
+    {
+      "$ref": "./SocketServerTagGroupRemovedBody.json"
+    },
+    {
+      "$ref": "./SocketServerTagGroupsListStreamBody.json"
+    },
+    {
+      "$ref": "./SocketServerTagInitialValueBody.json"
+    },
+    {
+      "$ref": "./SocketServerTagModifiedBody.json"
+    },
+    {
+      "$ref": "./SocketServerTagRemovedBody.json"
+    },
+    {
+      "$ref": "./SocketServerTagsListStreamBody.json"
+    },
+    {
+      "$ref": "./SocketServerVersionAddedBody.json"
+    },
+    {
+      "$ref": "./SocketServerVersionEvents.json"
+    },
+    {
+      "$ref": "./SocketServerVersionInitialValueBody.json"
+    },
+    {
+      "$ref": "./SocketServerVersionModifiedBody.json"
+    },
+    {
+      "$ref": "./SocketServerVersionRemovedBody.json"
+    },
+    {
+      "$ref": "./SortDirection.json"
+    },
+    {
+      "$ref": "./SupportMessage.json"
+    },
+    {
+      "$ref": "./SupportMessageAttachment.json"
+    },
+    {
+      "$ref": "./SupportMessageBody.json"
+    },
+    {
+      "$ref": "./SupportMessageBodyBug.json"
+    },
+    {
+      "$ref": "./SupportMessageBodyGeneral.json"
+    },
+    {
+      "$ref": "./SupportMessageBodyPartnerships.json"
+    },
+    {
+      "$ref": "./SupportMessageBodySSOSamlRegistration.json"
+    },
+    {
+      "$ref": "./SupportMessageBodySales.json"
+    },
+    {
+      "$ref": "./SupportMessageBodySupport.json"
+    },
+    {
+      "$ref": "./SupportMessageRequired.json"
+    },
+    {
+      "$ref": "./SupportMessageType.json"
+    },
+    {
+      "$ref": "./Tag.json"
+    },
+    {
+      "$ref": "./TagColor.json"
+    },
+    {
+      "$ref": "./TagExport.json"
+    },
+    {
+      "$ref": "./TagFilter.json"
+    },
+    {
+      "$ref": "./TagGroup.json"
+    },
+    {
+      "$ref": "./TagGroupExport.json"
+    },
+    {
+      "$ref": "./TagGroupFilter.json"
+    },
+    {
+      "$ref": "./TagGroupIcon.json"
+    },
+    {
+      "$ref": "./TagGroupImport.json"
+    },
+    {
+      "$ref": "./TagGroupPartial.json"
+    },
+    {
+      "$ref": "./TagGroupRequired.json"
+    },
+    {
+      "$ref": "./TagGroupUpsert.json"
+    },
+    {
+      "$ref": "./TagImport.json"
+    },
+    {
+      "$ref": "./TagPartial.json"
+    },
+    {
+      "$ref": "./TagRequired.json"
+    },
+    {
+      "$ref": "./TagUpsert.json"
+    },
+    {
+      "$ref": "./Task.json"
+    },
+    {
+      "$ref": "./TaskAdrCreate.json"
+    },
+    {
+      "$ref": "./TaskAdrDelete.json"
+    },
+    {
+      "$ref": "./TaskAdrUpdate.json"
+    },
+    {
+      "$ref": "./TaskBatch.json"
+    },
+    {
+      "$ref": "./TaskCommentCreate.json"
+    },
+    {
+      "$ref": "./TaskCommentDelete.json"
+    },
+    {
+      "$ref": "./TaskCommentReplyCreate.json"
+    },
+    {
+      "$ref": "./TaskCommentReplyDelete.json"
+    },
+    {
+      "$ref": "./TaskCommentReplyUpdate.json"
+    },
+    {
+      "$ref": "./TaskCommentUpdate.json"
+    },
+    {
+      "$ref": "./TaskConcurrency.json"
+    },
+    {
+      "$ref": "./TaskDiagramContentUpdate.json"
+    },
+    {
+      "$ref": "./TaskDiagramCreate.json"
+    },
+    {
+      "$ref": "./TaskDiagramDelete.json"
+    },
+    {
+      "$ref": "./TaskDiagramGroupCreate.json"
+    },
+    {
+      "$ref": "./TaskDiagramGroupDelete.json"
+    },
+    {
+      "$ref": "./TaskDiagramGroupUpdate.json"
+    },
+    {
+      "$ref": "./TaskDiagramUpdate.json"
+    },
+    {
+      "$ref": "./TaskDomainCreate.json"
+    },
+    {
+      "$ref": "./TaskDomainDelete.json"
+    },
+    {
+      "$ref": "./TaskDomainUpdate.json"
+    },
+    {
+      "$ref": "./TaskDraftCreate.json"
+    },
+    {
+      "$ref": "./TaskDraftDelete.json"
+    },
+    {
+      "$ref": "./TaskDraftTaskCreate.json"
+    },
+    {
+      "$ref": "./TaskDraftUpdate.json"
+    },
+    {
+      "$ref": "./TaskFlowCreate.json"
+    },
+    {
+      "$ref": "./TaskFlowDelete.json"
+    },
+    {
+      "$ref": "./TaskFlowUpdate.json"
+    },
+    {
+      "$ref": "./TaskList.json"
+    },
+    {
+      "$ref": "./TaskListRevertable.json"
+    },
+    {
+      "$ref": "./TaskModelConnectionCreate.json"
+    },
+    {
+      "$ref": "./TaskModelConnectionDelete.json"
+    },
+    {
+      "$ref": "./TaskModelConnectionUpdate.json"
+    },
+    {
+      "$ref": "./TaskModelObjectCreate.json"
+    },
+    {
+      "$ref": "./TaskModelObjectDelete.json"
+    },
+    {
+      "$ref": "./TaskModelObjectUpdate.json"
+    },
+    {
+      "$ref": "./TaskNavigation.json"
+    },
+    {
+      "$ref": "./TaskNavigationRoute.json"
+    },
+    {
+      "$ref": "./TaskTagCreate.json"
+    },
+    {
+      "$ref": "./TaskTagDelete.json"
+    },
+    {
+      "$ref": "./TaskTagGroupCreate.json"
+    },
+    {
+      "$ref": "./TaskTagGroupDelete.json"
+    },
+    {
+      "$ref": "./TaskTagGroupUpdate.json"
+    },
+    {
+      "$ref": "./TaskTagUpdate.json"
+    },
+    {
+      "$ref": "./TaskTeamUpdate.json"
+    },
+    {
+      "$ref": "./TaskType.json"
+    },
+    {
+      "$ref": "./Team.json"
+    },
+    {
+      "$ref": "./TeamExport.json"
+    },
+    {
+      "$ref": "./TeamPartial.json"
+    },
+    {
+      "$ref": "./TeamRequired.json"
+    },
+    {
+      "$ref": "./TechnologyExport.json"
+    },
+    {
+      "$ref": "./Theme.json"
+    },
+    {
+      "$ref": "./User.json"
+    },
+    {
+      "$ref": "./UserGoal.json"
+    },
+    {
+      "$ref": "./UserGoalName.json"
+    },
+    {
+      "$ref": "./UserGoalStatus.json"
+    },
+    {
+      "$ref": "./UserNotifications.json"
+    },
+    {
+      "$ref": "./UserNotificationsPartial.json"
+    },
+    {
+      "$ref": "./UserPartial.json"
+    },
+    {
+      "$ref": "./UserRequired.json"
+    },
+    {
+      "$ref": "./UserSession.json"
+    },
+    {
+      "$ref": "./UserTheme.json"
+    },
+    {
+      "$ref": "./Version.json"
+    },
+    {
+      "$ref": "./VersionExport.json"
+    },
+    {
+      "$ref": "./VersionField.json"
+    },
+    {
+      "$ref": "./VersionFilter.json"
+    },
+    {
+      "$ref": "./VersionOptional.json"
+    },
+    {
+      "$ref": "./VersionRequired.json"
+    },
+    {
+      "$ref": "./VersionRevert.json"
+    },
+    {
+      "$ref": "./VersionRevertPartial.json"
+    },
+    {
+      "$ref": "./VersionRevertRequired.json"
+    },
+    {
+      "$ref": "./VersionUpdate.json"
+    }
+  ]
+}

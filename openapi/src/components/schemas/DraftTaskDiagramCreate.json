@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "entityId": {
+      "type": "string"
+    },
+    "props": {
+      "$ref": "./DraftTaskDiagramCreateProps.json"
+    },
+    "type": {
+      "enum": [
+        "draft-diagram-create"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "entityId",
+    "props",
+    "type"
+  ],
+  "type": "object"
+}

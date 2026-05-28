@@ -1,0 +1,6 @@
+{
+  "items": {
+    "$ref": "./Task.json"
+  },
+  "type": "array"
+}

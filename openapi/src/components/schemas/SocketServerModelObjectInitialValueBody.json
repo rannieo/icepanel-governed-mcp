@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "finalValue": {
+      "type": "boolean"
+    },
+    "modelObjects": {
+      "items": {
+        "$ref": "./ModelObject.json"
+      },
+      "type": "array"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "finalValue",
+    "modelObjects",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

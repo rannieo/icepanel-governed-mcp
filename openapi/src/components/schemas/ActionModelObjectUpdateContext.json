@@ -1,0 +1,51 @@
+{
+  "properties": {
+    "domainHandleId": {
+      "type": "string"
+    },
+    "domainName": {
+      "type": "string"
+    },
+    "groupNames": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "modelFamily": {
+      "items": {
+        "$ref": "./ActionContextModelObject.json"
+      },
+      "type": "array"
+    },
+    "name": {
+      "type": "string"
+    },
+    "tagNames": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "teamNames": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "technologyNames": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "type": {
+      "$ref": "./ModelObjectType.json"
+    }
+  },
+  "required": [
+    "name",
+    "type"
+  ],
+  "type": "object"
+}

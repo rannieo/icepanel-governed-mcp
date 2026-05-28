@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "props": {
+      "$ref": "./ModelConnectionRequired.json"
+    },
+    "type": {
+      "enum": [
+        "model-connection-create"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "props",
+    "type"
+  ],
+  "type": "object"
+}

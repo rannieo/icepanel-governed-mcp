@@ -1,0 +1,33 @@
+{
+  "enum": [
+    "draft-comment-create",
+    "draft-comment-delete",
+    "draft-comment-reply-create",
+    "draft-comment-reply-delete",
+    "draft-comment-reply-update",
+    "draft-comment-update",
+    "draft-diagram-content-update",
+    "draft-diagram-create",
+    "draft-diagram-delete",
+    "draft-diagram-group-create",
+    "draft-diagram-group-delete",
+    "draft-diagram-group-update",
+    "draft-diagram-update",
+    "draft-flow-create",
+    "draft-flow-delete",
+    "draft-flow-update",
+    "draft-model-connection-create",
+    "draft-model-connection-delete",
+    "draft-model-connection-update",
+    "draft-model-object-create",
+    "draft-model-object-delete",
+    "draft-model-object-update",
+    "draft-tag-create",
+    "draft-tag-delete",
+    "draft-tag-group-create",
+    "draft-tag-group-delete",
+    "draft-tag-group-update",
+    "draft-tag-update"
+  ],
+  "type": "string"
+}

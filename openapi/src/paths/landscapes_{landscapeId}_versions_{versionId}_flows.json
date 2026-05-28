@@ -1,0 +1,283 @@
+{
+  "get": {
+    "security": [
+      {
+        "ApiKeyAuth": []
+      },
+      {
+        "BearerAuth": []
+      }
+    ],
+    "tags": [
+      "Flows"
+    ],
+    "x-eov-operation-handler": "flows",
+    "x-fern-audiences": [
+      "public"
+    ],
+    "x-fern-sdk-group-name": "flows",
+    "operationId": "flowsList",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "landscapeId",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "in": "path",
+        "name": "versionId",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "in": "query",
+        "name": "filter",
+        "required": false,
+        "schema": {
+          "$ref": "../components/schemas/FlowFilter.json"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "properties": {
+                "flows": {
+                  "items": {
+                    "$ref": "../components/schemas/Flow.json"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "flows"
+              ],
+              "type": "object"
+            }
+          }
+        },
+        "description": "OK"
+      },
+      "400": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Bad Request"
+      },
+      "401": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Unauthorized"
+      },
+      "403": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Forbidden"
+      },
+      "404": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Not Found"
+      },
+      "422": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Unprocessable Entity"
+      },
+      "500": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Internal Server"
+      }
+    },
+    "summary": "List",
+    "x-fern-request-name": "FlowsListRequest",
+    "x-fern-sdk-method-name": "list"
+  },
+  "post": {
+    "security": [
+      {
+        "ApiKeyAuth": []
+      },
+      {
+        "BearerAuth": []
+      }
+    ],
+    "tags": [
+      "Flows"
+    ],
+    "x-eov-operation-handler": "flows",
+    "x-fern-audiences": [
+      "public"
+    ],
+    "x-fern-sdk-group-name": "flows",
+    "operationId": "flowCreate",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "landscapeId",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "in": "path",
+        "name": "versionId",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "../components/schemas/FlowRequired.json"
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "properties": {
+                "flow": {
+                  "$ref": "../components/schemas/Flow.json"
+                }
+              },
+              "required": [
+                "flow"
+              ],
+              "type": "object"
+            }
+          }
+        },
+        "description": "OK"
+      },
+      "400": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Bad Request"
+      },
+      "401": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Unauthorized"
+      },
+      "403": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Forbidden"
+      },
+      "404": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Not Found"
+      },
+      "422": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Unprocessable Entity"
+      },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
+      "500": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Internal Server"
+      },
+      "503": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Service Unavailable"
+      }
+    },
+    "summary": "Create",
+    "x-fern-request-name": "FlowCreateRequest",
+    "x-fern-sdk-method-name": "create"
+  }
+}

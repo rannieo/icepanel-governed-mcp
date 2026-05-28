@@ -1,0 +1,34 @@
+{
+  "properties": {
+    "commentId": {
+      "type": "string"
+    },
+    "commentReplyId": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "comment-reply-create"
+      ],
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "commentId",
+    "commentReplyId",
+    "landscapeId",
+    "organizationId",
+    "type",
+    "userId"
+  ],
+  "type": "object"
+}

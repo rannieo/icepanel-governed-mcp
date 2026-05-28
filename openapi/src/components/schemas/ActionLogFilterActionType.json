@@ -1,0 +1,34 @@
+{
+  "description": "type of action that was performed, eg: diagram-content-update or model-object-create",
+  "oneOf": [
+    {
+      "$ref": "./LandscapeActionType.json"
+    },
+    {
+      "items": {
+        "$ref": "./LandscapeActionType.json"
+      },
+      "maxItems": 100,
+      "type": "array"
+    },
+    {
+      "properties": {
+        "$not": {
+          "oneOf": [
+            {
+              "$ref": "./LandscapeActionType.json"
+            },
+            {
+              "items": {
+                "$ref": "./LandscapeActionType.json"
+              },
+              "maxItems": 100,
+              "type": "array"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    }
+  ]
+}

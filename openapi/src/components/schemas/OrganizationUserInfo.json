@@ -1,0 +1,24 @@
+{
+  "properties": {
+    "email": {
+      "format": "email",
+      "type": "string"
+    },
+    "jobRole": {
+      "type": "string"
+    },
+    "lastActiveAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    }
+  },
+  "required": [
+    "email",
+    "lastActiveAt"
+  ],
+  "type": "object"
+}

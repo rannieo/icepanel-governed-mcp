@@ -1,0 +1,10 @@
+{
+  "allOf": [
+    {
+      "$ref": "./TagGroupRequired.json"
+    },
+    {
+      "$ref": "./TagGroupPartial.json"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "enum": [
+    "app-diagram",
+    "component-diagram",
+    "context-diagram"
+  ],
+  "type": "string"
+}

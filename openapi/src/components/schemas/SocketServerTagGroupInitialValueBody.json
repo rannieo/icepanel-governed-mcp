@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "finalValue": {
+      "type": "boolean"
+    },
+    "subscriptionId": {
+      "type": "string"
+    },
+    "tagGroups": {
+      "items": {
+        "$ref": "./TagGroup.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "finalValue",
+    "subscriptionId",
+    "tagGroups"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,20 @@
+{
+  "properties": {
+    "caption": {
+      "maxLength": 50000,
+      "type": "string"
+    },
+    "imageUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,40 @@
+{
+  "properties": {
+    "caption": {
+      "maxLength": 50000,
+      "type": "string"
+    },
+    "imageUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "caption",
+    "imageUrl",
+    "landscapeId",
+    "name",
+    "createdAt",
+    "id",
+    "updatedAt"
+  ],
+  "type": "object"
+}

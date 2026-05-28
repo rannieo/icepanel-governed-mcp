@@ -1,0 +1,28 @@
+{
+  "enum": [
+    "catalog-technology-review-approved",
+    "catalog-technology-review-rejected",
+    "comment-create",
+    "comment-reply-create",
+    "comment-status-update",
+    "export-pdf-ready",
+    "organization-billing-charge-refunded",
+    "organization-billing-checkout-session-completed",
+    "organization-billing-invoice-paid",
+    "organization-billing-invoice-payment-failed",
+    "organization-billing-payment-method-attached",
+    "organization-billing-payment-method-detached",
+    "organization-billing-subscription-changed",
+    "organization-create",
+    "organization-updated",
+    "organization-user-invite-create",
+    "organization-user-invite-used",
+    "schedule",
+    "send-c4-model-ebook",
+    "user-email-verification",
+    "user-register",
+    "user-request-reset-password",
+    "user-update"
+  ],
+  "type": "string"
+}

@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "flows": {
+      "items": {
+        "$ref": "./Flow.json"
+      },
+      "type": "array"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "flows",
+    "requestId"
+  ],
+  "type": "object"
+}

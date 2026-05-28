@@ -1,0 +1,64 @@
+{
+  "properties": {
+    "color": {
+      "$ref": "./TagColor.json"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "userIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "modelObjectHandleIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "color",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "id",
+    "modelObjectHandleIds",
+    "organizationId",
+    "updatedAt",
+    "updatedBy",
+    "updatedById",
+    "userIds"
+  ],
+  "type": "object"
+}

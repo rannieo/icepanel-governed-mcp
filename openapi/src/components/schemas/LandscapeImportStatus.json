@@ -1,0 +1,8 @@
+{
+  "enum": [
+    "in-progress",
+    "completed",
+    "error"
+  ],
+  "type": "string"
+}

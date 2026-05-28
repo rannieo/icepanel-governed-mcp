@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "type": {
+      "enum": [
+        "user-register"
+      ],
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "type",
+    "userId"
+  ],
+  "type": "object"
+}

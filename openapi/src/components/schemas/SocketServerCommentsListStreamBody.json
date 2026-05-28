@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "comments": {
+      "items": {
+        "$ref": "./Comment.json"
+      },
+      "type": "array"
+    },
+    "lastBatch": {
+      "type": "boolean"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "comments",
+    "lastBatch",
+    "requestId"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,10 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./DiagramZoomOverrides.json"
+    },
+    {
+      "type": "null"
+    }
+  ]
+}

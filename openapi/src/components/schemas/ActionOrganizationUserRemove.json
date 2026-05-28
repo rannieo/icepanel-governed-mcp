@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "context": {
+      "$ref": "./ActionOrganizationUserRemoveContext.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "organization-user-remove"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "context",
+    "id",
+    "type"
+  ],
+  "type": "object"
+}

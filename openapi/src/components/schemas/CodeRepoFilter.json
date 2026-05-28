@@ -1,0 +1,32 @@
+{
+  "properties": {
+    "azureDevopsUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "bitbucketServerUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "bitbucketUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "githubUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "gitlabUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "type": {
+      "$ref": "./CodeRepoType.json"
+    },
+    "url": {
+      "format": "uri",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "props": {
+      "$ref": "./DomainRequired.json"
+    },
+    "type": {
+      "enum": [
+        "domain-create"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "props",
+    "type"
+  ],
+  "type": "object"
+}

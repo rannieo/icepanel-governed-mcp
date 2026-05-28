@@ -1,0 +1,41 @@
+{
+  "properties": {
+    "context": {
+      "$ref": "./ActionShareLinkUpdateContext.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "props": {
+      "allOf": [
+        {
+          "$ref": "./ShareLinkPartial.json"
+        },
+        {
+          "properties": {
+            "resetShortId": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "resetShortId"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "type": {
+      "enum": [
+        "share-link-update"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "context",
+    "id",
+    "props",
+    "type"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,127 @@
+{
+  "get": {
+    "security": [
+      {
+        "ApiKeyAuth": []
+      },
+      {
+        "BearerAuth": []
+      }
+    ],
+    "tags": [
+      "Organization Users"
+    ],
+    "x-eov-operation-handler": "organizationUsers",
+    "x-fern-audiences": [
+      "public"
+    ],
+    "x-fern-sdk-group-name": [
+      "organizations",
+      "users"
+    ],
+    "operationId": "organizationUsersList",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "organizationId",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "properties": {
+                "organizationUsers": {
+                  "additionalProperties": {
+                    "allOf": [
+                      {
+                        "$ref": "../components/schemas/OrganizationUser.json"
+                      },
+                      {
+                        "$ref": "../components/schemas/OrganizationUserInfo.json"
+                      }
+                    ]
+                  },
+                  "type": "object"
+                }
+              },
+              "required": [
+                "organizationUsers"
+              ],
+              "type": "object"
+            }
+          }
+        },
+        "description": "OK"
+      },
+      "400": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Bad Request"
+      },
+      "401": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Unauthorized"
+      },
+      "403": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Forbidden"
+      },
+      "404": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Not Found"
+      },
+      "422": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Unprocessable Entity"
+      },
+      "500": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Internal Server"
+      }
+    },
+    "summary": "List",
+    "x-fern-request-name": "OrganizationUsersListRequest",
+    "x-fern-sdk-method-name": "list"
+  }
+}

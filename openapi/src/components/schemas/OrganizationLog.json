@@ -1,0 +1,62 @@
+{
+  "properties": {
+    "action": {
+      "$ref": "./Action.json",
+      "description": "full description of the action that happened"
+    },
+    "actionIds": {
+      "description": "id of the action and any related ids that were part of the action",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "id": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "parentId": {
+      "description": "parent action log id that caused this action to happen, eg: update of a diagram caused by a model object delete",
+      "nullable": true,
+      "type": "string"
+    },
+    "performedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "performedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "performedByAuthProvider": {
+      "type": "string"
+    },
+    "performedByClientId": {
+      "type": "string"
+    },
+    "performedById": {
+      "type": "string"
+    },
+    "performedByIp": {
+      "description": "ip address of the user or api key who performed the action",
+      "type": "string"
+    },
+    "performedByName": {
+      "type": "string"
+    },
+    "performedByUserAgent": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "action",
+    "actionIds",
+    "id",
+    "parentId",
+    "performedAt",
+    "performedBy",
+    "performedById"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,24 @@
+{
+  "properties": {
+    "modelHandleId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "name": {
+      "maxLength": 4000,
+      "minLength": 1,
+      "type": "string"
+    },
+    "notes": {
+      "maxLength": 20000,
+      "minLength": 10,
+      "type": "string"
+    }
+  },
+  "required": [
+    "modelHandleId",
+    "name",
+    "notes"
+  ],
+  "type": "object"
+}

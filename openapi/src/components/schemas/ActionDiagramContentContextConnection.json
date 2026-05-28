@@ -1,0 +1,17 @@
+{
+  "properties": {
+    "modelHandleId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "modelName": {
+      "nullable": true,
+      "type": "string"
+    }
+  },
+  "required": [
+    "modelHandleId",
+    "modelName"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,7 @@
+{
+  "enum": [
+    "monthly",
+    "annually"
+  ],
+  "type": "string"
+}

@@ -1,0 +1,153 @@
+{
+  "properties": {
+    "aiFeatures": {
+      "$ref": "./OrganizationAIFeatures.json"
+    },
+    "aiFeaturesEnabled": {
+      "default": true,
+      "description": "Whether to enable all AI features for the organization",
+      "type": "boolean"
+    },
+    "aiModel": {
+      "$ref": "./OrganizationAiModel.json"
+    },
+    "billingCurrency": {
+      "$ref": "./OrganizationBillingCurrency.json"
+    },
+    "billingCycle": {
+      "$ref": "./OrganizationBillingCycle.json"
+    },
+    "billingEmail": {
+      "format": "email",
+      "type": "string"
+    },
+    "experiments": {
+      "additionalProperties": {
+        "type": "boolean"
+      },
+      "type": "object"
+    },
+    "language": {
+      "$ref": "./OrganizationLanguage.json"
+    },
+    "lineShapeDefault": {
+      "$ref": "./LineShape.json"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "oauthLandscapeWriteEnabled": {
+      "default": true,
+      "description": "Whether OAuth connections can make changes to landscape data",
+      "type": "boolean"
+    },
+    "shareLinkAuthDomains": {
+      "items": {
+        "type": "string"
+      },
+      "nullable": true,
+      "type": "array"
+    },
+    "shareLinksEnabled": {
+      "type": "boolean"
+    },
+    "autoInviteDomains": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "billingCollectionMethod": {
+      "$ref": "./OrganizationCollectionMethod.json"
+    },
+    "billingMonthlyCost": {
+      "type": "number"
+    },
+    "billingPaymentMethod": {
+      "type": "boolean"
+    },
+    "cancelAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "canceledAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "plan": {
+      "$ref": "./OrganizationPlan.json"
+    },
+    "planEndsAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "seats": {
+      "type": "number"
+    },
+    "status": {
+      "$ref": "./OrganizationStatus.json"
+    },
+    "trialEndsAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    },
+    "userIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "users": {
+      "additionalProperties": {
+        "$ref": "./OrganizationUser.json"
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "name",
+    "autoInviteDomains",
+    "billingPaymentMethod",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "id",
+    "lineShapeDefault",
+    "oauthLandscapeWriteEnabled",
+    "plan",
+    "seats",
+    "shareLinkAuthDomains",
+    "shareLinksEnabled",
+    "status",
+    "updatedAt",
+    "updatedBy",
+    "updatedById",
+    "userIds",
+    "users"
+  ],
+  "type": "object"
+}

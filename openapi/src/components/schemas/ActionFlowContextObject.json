@@ -1,0 +1,11 @@
+{
+  "properties": {
+    "type": {
+      "$ref": "./DiagramObjectType.json"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "type": "object"
+}

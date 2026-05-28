@@ -1,0 +1,33 @@
+{
+  "properties": {
+    "description": {
+      "type": "string"
+    },
+    "docsUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "flagKey": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "internal": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "string"
+    },
+    "stage": {
+      "$ref": "./ExperimentStage.json"
+    }
+  },
+  "required": [
+    "flagKey",
+    "id",
+    "name",
+    "stage"
+  ],
+  "type": "object"
+}

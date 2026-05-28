@@ -1,0 +1,7 @@
+{
+  "enum": [
+    "incomplete",
+    "complete"
+  ],
+  "type": "string"
+}

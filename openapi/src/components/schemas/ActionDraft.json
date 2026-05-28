@@ -1,0 +1,19 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./ActionDraftCreate.json"
+    },
+    {
+      "$ref": "./ActionDraftUpdate.json"
+    },
+    {
+      "$ref": "./ActionDraftView.json"
+    },
+    {
+      "$ref": "./ActionDraftMerge.json"
+    },
+    {
+      "$ref": "./ActionDraftDelete.json"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "enum": [
+    "announcement",
+    "breaking",
+    "change",
+    "deprecate",
+    "feature",
+    "fix",
+    "issue",
+    "library",
+    "security"
+  ],
+  "type": "string"
+}

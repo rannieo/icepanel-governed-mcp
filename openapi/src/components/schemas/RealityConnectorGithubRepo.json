@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "ownerId": {
+      "type": "number"
+    },
+    "repositoryId": {
+      "type": "number"
+    },
+    "type": {
+      "enum": [
+        "github-repo"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "ownerId",
+    "repositoryId",
+    "type"
+  ],
+  "type": "object"
+}

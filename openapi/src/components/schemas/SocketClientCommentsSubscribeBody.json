@@ -1,0 +1,24 @@
+{
+  "properties": {
+    "initialValue": {
+      "type": "boolean"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "status": {
+      "items": {
+        "$ref": "./CommentBodyStatus.json"
+      },
+      "type": "array"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "landscapeId",
+    "versionId"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "sha": {
+      "type": "string"
+    },
+    "type": {
+      "$ref": "./CodeRepoRefType.json"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "sha",
+    "type"
+  ],
+  "type": "object"
+}

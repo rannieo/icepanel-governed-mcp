@@ -1,0 +1,95 @@
+{
+  "properties": {
+    "azureDevopsAccountName": {
+      "type": "string"
+    },
+    "azureDevopsProjectId": {
+      "type": "string"
+    },
+    "azureDevopsRepositoryId": {
+      "type": "string"
+    },
+    "azureDevopsUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "bitbucketProjectId": {
+      "type": "string"
+    },
+    "bitbucketRepositoryId": {
+      "type": "string"
+    },
+    "bitbucketServerProjectId": {
+      "type": "number"
+    },
+    "bitbucketServerProjectKey": {
+      "type": "string"
+    },
+    "bitbucketServerRepositoryId": {
+      "type": "number"
+    },
+    "bitbucketServerRepositorySlug": {
+      "type": "string"
+    },
+    "bitbucketServerUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "bitbucketUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "bitbucketWorkspaceId": {
+      "type": "string"
+    },
+    "githubOwnerId": {
+      "type": "number"
+    },
+    "githubOwnerLogin": {
+      "type": "string"
+    },
+    "githubRepositoryId": {
+      "type": "number"
+    },
+    "githubRepositoryName": {
+      "type": "string"
+    },
+    "githubUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "gitlabGroupId": {
+      "type": "number"
+    },
+    "gitlabProjectId": {
+      "type": "number"
+    },
+    "gitlabUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "refs": {
+      "additionalProperties": {
+        "$ref": "./CodeRepoRef.json"
+      },
+      "type": "object"
+    },
+    "type": {
+      "$ref": "./CodeRepoType.json"
+    },
+    "url": {
+      "format": "uri",
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "type",
+    "url"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "flows": {
+      "items": {
+        "$ref": "./Flow.json"
+      },
+      "type": "array"
+    },
+    "lastBatch": {
+      "type": "boolean"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "flows",
+    "lastBatch",
+    "requestId"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,28 @@
+{
+  "properties": {
+    "brightness": {
+      "description": "Color brightness. Calculated based on the standard formula 0.2126R + 0.7152G + 0.0722*B",
+      "type": "number"
+    },
+    "hex": {
+      "description": "Hexadecimal color code",
+      "type": "string"
+    },
+    "type": {
+      "description": "Color type. For example, \"accent\" or \"dark\"",
+      "enum": [
+        "accent",
+        "dark",
+        "light",
+        "brand"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "hex",
+    "type",
+    "brightness"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "icepanel-custom-mcp": {
+      "type": "stdio",
+      "command": "npm",
+      "args": ["run", "mcp:start"],
+      "env": {}
+    }
+  }
+}

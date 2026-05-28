@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "workspaceId": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

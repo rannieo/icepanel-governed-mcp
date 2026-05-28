@@ -1,0 +1,73 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./AutomationTriggerSchedule.json"
+    },
+    {
+      "$ref": "./AutomationTriggerCatalogTechnologyReviewApproved.json"
+    },
+    {
+      "$ref": "./AutomationTriggerCatalogTechnologyReviewRejected.json"
+    },
+    {
+      "$ref": "./AutomationTriggerCommentCreate.json"
+    },
+    {
+      "$ref": "./AutomationTriggerCommentReplyCreate.json"
+    },
+    {
+      "$ref": "./AutomationTriggerCommentStatusUpdate.json"
+    },
+    {
+      "$ref": "./AutomationTriggerExportPdfReady.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationBillingChargeRefunded.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationBillingCheckoutSessionCompleted.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationBillingInvoicePaid.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationBillingInvoicePaymentFailed.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationBillingPaymentMethodAttached.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationBillingPaymentMethodDetached.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationBillingSubscriptionChanged.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationCreate.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationUpdated.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationUserInviteCreate.json"
+    },
+    {
+      "$ref": "./AutomationTriggerOrganizationUserInviteUsed.json"
+    },
+    {
+      "$ref": "./AutomationTriggerUserRegister.json"
+    },
+    {
+      "$ref": "./AutomationTriggerUserUpdate.json"
+    },
+    {
+      "$ref": "./AutomationTriggerUserEmailVerification.json"
+    },
+    {
+      "$ref": "./AutomationTriggerUserRequestResetPassword.json"
+    },
+    {
+      "$ref": "./AutomationTriggerSendC4ModelEbook.json"
+    }
+  ]
+}

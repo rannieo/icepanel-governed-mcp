@@ -1,0 +1,68 @@
+{
+  "properties": {
+    "c4ModelExperience": {
+      "type": "string"
+    },
+    "defaultOrganizationId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "defaultOrganizationLandscapeIds": {
+      "additionalProperties": {
+        "nullable": true,
+        "type": "string"
+      },
+      "nullable": true,
+      "type": "object"
+    },
+    "email": {
+      "format": "email",
+      "type": "string"
+    },
+    "jobRole": {
+      "type": "string"
+    },
+    "name": {
+      "maxLength": 128,
+      "minLength": 1,
+      "type": "string"
+    },
+    "referredBy": {
+      "type": "string"
+    },
+    "referredByOrganizationId": {
+      "type": "string"
+    },
+    "referredByUserId": {
+      "type": "string"
+    },
+    "theme": {
+      "$ref": "./UserTheme.json"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "lastActiveAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "notifications": {
+      "$ref": "./UserNotifications.json"
+    }
+  },
+  "required": [
+    "email",
+    "createdAt",
+    "defaultOrganizationId",
+    "defaultOrganizationLandscapeIds",
+    "id",
+    "lastActiveAt",
+    "notifications",
+    "theme"
+  ],
+  "type": "object"
+}

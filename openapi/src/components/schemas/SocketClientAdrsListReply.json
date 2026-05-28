@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "adrs": {
+      "items": {
+        "$ref": "./ADR.json"
+      },
+      "type": "array"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "adrs",
+    "requestId"
+  ],
+  "type": "object"
+}

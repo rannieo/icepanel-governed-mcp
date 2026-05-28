@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "commentId": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "commentId"
+  ],
+  "type": "object"
+}

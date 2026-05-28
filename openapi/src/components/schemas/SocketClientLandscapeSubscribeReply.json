@@ -1,0 +1,11 @@
+{
+  "properties": {
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "subscriptionId"
+  ],
+  "type": "object"
+}

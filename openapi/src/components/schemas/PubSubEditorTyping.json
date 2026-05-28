@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "socketId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "added",
+        "modified"
+      ],
+      "type": "string"
+    },
+    "typing": {
+      "$ref": "./EditorTyping.json"
+    }
+  },
+  "required": [
+    "socketId",
+    "type",
+    "typing"
+  ],
+  "type": "object"
+}

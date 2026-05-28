@@ -1,0 +1,35 @@
+{
+  "properties": {
+    "autoInvite": {
+      "type": "boolean"
+    },
+    "certificate": {
+      "type": "string"
+    },
+    "companyDomain": {
+      "type": "string"
+    },
+    "entityId": {
+      "type": "string"
+    },
+    "ssoUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "sso-saml-registration"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "autoInvite",
+    "certificate",
+    "companyDomain",
+    "entityId",
+    "ssoUrl",
+    "type"
+  ],
+  "type": "object"
+}

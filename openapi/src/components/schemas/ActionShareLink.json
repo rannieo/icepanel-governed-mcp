@@ -1,0 +1,13 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./ActionShareLinkCreate.json"
+    },
+    {
+      "$ref": "./ActionShareLinkUpdate.json"
+    },
+    {
+      "$ref": "./ActionShareLinkDelete.json"
+    }
+  ]
+}

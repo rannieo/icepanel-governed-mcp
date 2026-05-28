@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "bucketPath": {
+      "type": "string"
+    },
+    "filename": {
+      "type": "string"
+    },
+    "options": {
+      "$ref": "./DiagramExportImageOptions.json"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "bucketPath",
+    "filename",
+    "versionId"
+  ],
+  "type": "object"
+}

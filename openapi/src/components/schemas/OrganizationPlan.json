@@ -1,0 +1,11 @@
+{
+  "enum": [
+    "free",
+    "indie",
+    "pilot",
+    "growth",
+    "scale",
+    "isolation"
+  ],
+  "type": "string"
+}

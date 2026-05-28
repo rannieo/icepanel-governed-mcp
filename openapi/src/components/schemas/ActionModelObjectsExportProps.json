@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "type": {
+      "enum": [
+        "csv"
+      ],
+      "type": "string"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "type",
+    "versionId"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "props": {
+      "$ref": "./ActionUserLoginFailedProps.json"
+    },
+    "type": {
+      "enum": [
+        "user-login-failed"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "props",
+    "type"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,50 @@
+{
+  "properties": {
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "scheduledVersions": {
+      "type": "boolean"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "id",
+    "scheduledVersions",
+    "organizationId",
+    "updatedAt",
+    "updatedBy",
+    "updatedById"
+  ],
+  "type": "object"
+}

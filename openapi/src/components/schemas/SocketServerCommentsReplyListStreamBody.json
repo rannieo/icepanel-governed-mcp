@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "commentReplies": {
+      "items": {
+        "$ref": "./CommentReply.json"
+      },
+      "type": "array"
+    },
+    "lastBatch": {
+      "type": "boolean"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "commentReplies",
+    "lastBatch",
+    "requestId"
+  ],
+  "type": "object"
+}

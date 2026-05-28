@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "adr",
+    "diagram",
+    "draft",
+    "link"
+  ],
+  "type": "string"
+}

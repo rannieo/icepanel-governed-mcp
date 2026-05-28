@@ -1,0 +1,185 @@
+{
+  "properties": {
+    "category": {
+      "maxLength": 1000,
+      "type": "string"
+    },
+    "color": {
+      "$ref": "./TagColor.json",
+      "description": "Technology color used in diagrams"
+    },
+    "deprecatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "description": {
+      "description": "Technical description for the technology, avoid marketing language",
+      "maxLength": 10000,
+      "type": "string"
+    },
+    "docsUrl": {
+      "description": "Documentation or readme url",
+      "maxLength": 2048,
+      "type": "string"
+    },
+    "iconUrlDark": {
+      "description": "Icon that only works on dark backgrounds",
+      "example": [
+        "/organizations/{organizationId}/dark/{catalogTechnologyId}.png",
+        "/dark/{catalogTechnologyId}.png"
+      ],
+      "maxLength": 2048,
+      "nullable": true,
+      "type": "string"
+    },
+    "iconUrlLight": {
+      "description": "Icon that only works on light backgrounds",
+      "example": [
+        "/organizations/{organizationId}/light/{catalogTechnologyId}.png",
+        "/light/{catalogTechnologyId}.png"
+      ],
+      "maxLength": 2048,
+      "nullable": true,
+      "type": "string"
+    },
+    "name": {
+      "description": "Long verbose name",
+      "maxLength": 1000,
+      "type": "string"
+    },
+    "nameShort": {
+      "description": "Short one or two word name to show in places with limited space",
+      "maxLength": 1000,
+      "type": "string"
+    },
+    "provider": {
+      "$ref": "./CatalogProviderNullable.json",
+      "description": "Service provider that provides this technology"
+    },
+    "rejectionMessage": {
+      "description": "If rejected, detail description of why",
+      "maxLength": 5000,
+      "type": "string"
+    },
+    "rejectionReason": {
+      "$ref": "./CatalogTechnologyReviewRejectionReason.json",
+      "description": "If rejected, the reason why"
+    },
+    "restrictions": {
+      "description": "Restriction on which model object or connections this technology can be added to",
+      "items": {
+        "$ref": "./CatalogRestriction.json"
+      },
+      "nullable": true,
+      "type": "array"
+    },
+    "status": {
+      "$ref": "./CatalogTechnologyStatusNullable.json",
+      "description": "Current status of the technology, including pending review, approved, and rejected. Approved technologies are visible to all users. Set to null to make the technology private."
+    },
+    "type": {
+      "$ref": "./CatalogTechnologyTypeNullable.json",
+      "description": "Type or category of technology"
+    },
+    "updatesUrl": {
+      "description": "Release notes or changelog url",
+      "maxLength": 2048,
+      "type": "string"
+    },
+    "websiteUrl": {
+      "description": "Landing page website url",
+      "maxLength": 2048,
+      "type": "string"
+    },
+    "awsXmlSelector": {
+      "type": "string"
+    },
+    "azureUpdatesKeyword": {
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "defaultSlug": {
+      "description": "URL path name for the technology, used by stackfeed",
+      "type": "string"
+    },
+    "deletedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "deletedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "deletedById": {
+      "type": "string"
+    },
+    "disabled": {
+      "default": false,
+      "description": "Whether the technology is disabled and not visible to users",
+      "type": "boolean"
+    },
+    "iconUrl": {
+      "deprecated": true,
+      "description": "Use either iconUrlDark or iconUrlLight",
+      "maxLength": 2048,
+      "nullable": true,
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "organizationId": {
+      "description": "Organization that owns this technology, or null if its publicly accessible",
+      "nullable": true,
+      "type": "string"
+    },
+    "slugs": {
+      "description": "Current and historical url path names used for the technology, used by stackfeed",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    },
+    "updatesXmlUrl": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "color",
+    "name",
+    "provider",
+    "restrictions",
+    "type",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "disabled",
+    "iconUrl",
+    "iconUrlDark",
+    "iconUrlLight",
+    "id",
+    "organizationId",
+    "updatedAt",
+    "updatedBy",
+    "updatedById"
+  ],
+  "type": "object"
+}

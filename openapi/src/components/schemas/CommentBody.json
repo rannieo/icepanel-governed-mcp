@@ -1,0 +1,22 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./CommentBodyQuestion.json"
+    },
+    {
+      "$ref": "./CommentBodyInaccuracy.json"
+    },
+    {
+      "$ref": "./CommentBodyIdea.json"
+    },
+    {
+      "$ref": "./CommentBodyNewQuestion.json"
+    },
+    {
+      "$ref": "./CommentBodyNewInaccuracy.json"
+    },
+    {
+      "$ref": "./CommentBodyNewIdea.json"
+    }
+  ]
+}

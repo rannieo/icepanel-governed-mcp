@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "commentReplies": {
+      "items": {
+        "$ref": "./CommentReply.json"
+      },
+      "type": "array"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "commentReplies",
+    "requestId"
+  ],
+  "type": "object"
+}

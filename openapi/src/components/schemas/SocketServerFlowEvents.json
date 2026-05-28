@@ -1,0 +1,87 @@
+{
+  "properties": {
+    "flow-added": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerFlowAddedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "flow-initial-value": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerFlowInitialValueBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "flow-modified": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerFlowModifiedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "flow-removed": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerFlowRemovedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "flows-list-stream": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerFlowsListStreamBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "flow-added",
+    "flow-initial-value",
+    "flow-modified",
+    "flow-removed",
+    "flows-list-stream"
+  ],
+  "type": "object"
+}

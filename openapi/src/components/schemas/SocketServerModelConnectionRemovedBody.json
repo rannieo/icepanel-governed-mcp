@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "modelConnection": {
+      "$ref": "./ModelConnection.json"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "modelConnection",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

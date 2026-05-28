@@ -1,0 +1,7 @@
+{
+  "enum": [
+    "charge",
+    "invoice"
+  ],
+  "type": "string"
+}

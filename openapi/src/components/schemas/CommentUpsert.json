@@ -1,0 +1,10 @@
+{
+  "allOf": [
+    {
+      "$ref": "./CommentRequired.json"
+    },
+    {
+      "$ref": "./CommentPartial.json"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "properties": {
+    "billingCurrency": {
+      "$ref": "./OrganizationBillingCurrency.json"
+    },
+    "billingCycle": {
+      "$ref": "./OrganizationBillingCycle.json"
+    },
+    "plan": {
+      "$ref": "./OrganizationPlan.json"
+    },
+    "seats": {
+      "type": "number"
+    },
+    "trial": {
+      "type": "boolean"
+    }
+  },
+  "type": "object"
+}

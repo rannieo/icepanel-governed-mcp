@@ -1,0 +1,63 @@
+{
+  "properties": {
+    "password": {
+      "format": "password",
+      "maxLength": 64,
+      "minLength": 8,
+      "type": "string"
+    },
+    "protected": {
+      "type": "boolean"
+    },
+    "draftId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "shortId": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "protected",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "id",
+    "landscapeId",
+    "shortId",
+    "updatedAt",
+    "updatedBy",
+    "updatedById",
+    "versionId"
+  ],
+  "type": "object"
+}

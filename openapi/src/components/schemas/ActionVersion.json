@@ -1,0 +1,13 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./ActionVersionCreate.json"
+    },
+    {
+      "$ref": "./ActionVersionDelete.json"
+    },
+    {
+      "$ref": "./ActionVersionRevertCreate.json"
+    }
+  ]
+}

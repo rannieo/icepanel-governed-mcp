@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "duplicate",
+    "incomplete",
+    "invalid",
+    "other"
+  ],
+  "type": "string"
+}

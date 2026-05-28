@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "data": {
+      "$ref": "./SearchResultData.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "score": {
+      "type": "number"
+    },
+    "type": {
+      "$ref": "./SearchIndexType.json"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "score",
+    "type"
+  ],
+  "type": "object"
+}

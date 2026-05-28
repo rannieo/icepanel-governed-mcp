@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "finalValue": {
+      "type": "boolean"
+    },
+    "subscriptionId": {
+      "type": "string"
+    },
+    "versions": {
+      "items": {
+        "$ref": "./Version.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "finalValue",
+    "subscriptionId",
+    "versions"
+  ],
+  "type": "object"
+}

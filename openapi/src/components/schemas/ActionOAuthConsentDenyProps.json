@@ -1,0 +1,11 @@
+{
+  "properties": {
+    "clientName": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "clientName"
+  ],
+  "type": "object"
+}

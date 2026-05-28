@@ -1,0 +1,25 @@
+{
+  "properties": {
+    "connectionResolveUrl": {
+      "description": "Resolve the connector from a publicly accessible URL",
+      "type": "string"
+    },
+    "connector": {
+      "$ref": "./RealityConnector.json",
+      "description": "Links this to a resource in reality, if set periodic checks are performed and the status is updated"
+    },
+    "customName": {
+      "description": "Friendly name for the link set by the user",
+      "nullable": true,
+      "type": "string"
+    },
+    "index": {
+      "type": "number"
+    },
+    "url": {
+      "description": "Accessible link URL when not using a connector",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

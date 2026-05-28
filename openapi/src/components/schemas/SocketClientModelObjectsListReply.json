@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "modelObjects": {
+      "items": {
+        "$ref": "./ModelObject.json"
+      },
+      "type": "array"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "modelObjects",
+    "requestId"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,46 @@
+{
+  "properties": {
+    "background": {
+      "description": "Indicates if the file has a transparent background.",
+      "nullable": true,
+      "type": "string"
+    },
+    "format": {
+      "description": "File format of the logo",
+      "enum": [
+        "svg",
+        "png",
+        "webp",
+        "jpeg"
+      ],
+      "type": "string"
+    },
+    "height": {
+      "description": "Height of the logo in pixels",
+      "nullable": true,
+      "type": "number"
+    },
+    "size": {
+      "description": "File size in bytes",
+      "type": "number"
+    },
+    "src": {
+      "description": "File source url of the logo",
+      "type": "string"
+    },
+    "width": {
+      "description": "Width of the logo in pixels",
+      "nullable": true,
+      "type": "number"
+    }
+  },
+  "required": [
+    "background",
+    "format",
+    "height",
+    "size",
+    "src",
+    "width"
+  ],
+  "type": "object"
+}

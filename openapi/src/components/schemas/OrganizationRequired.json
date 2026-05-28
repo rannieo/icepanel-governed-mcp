@@ -1,0 +1,60 @@
+{
+  "properties": {
+    "aiFeatures": {
+      "$ref": "./OrganizationAIFeatures.json"
+    },
+    "aiFeaturesEnabled": {
+      "default": true,
+      "description": "Whether to enable all AI features for the organization",
+      "type": "boolean"
+    },
+    "aiModel": {
+      "$ref": "./OrganizationAiModel.json"
+    },
+    "billingCurrency": {
+      "$ref": "./OrganizationBillingCurrency.json"
+    },
+    "billingCycle": {
+      "$ref": "./OrganizationBillingCycle.json"
+    },
+    "billingEmail": {
+      "format": "email",
+      "type": "string"
+    },
+    "experiments": {
+      "additionalProperties": {
+        "type": "boolean"
+      },
+      "type": "object"
+    },
+    "language": {
+      "$ref": "./OrganizationLanguage.json"
+    },
+    "lineShapeDefault": {
+      "$ref": "./LineShape.json"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "oauthLandscapeWriteEnabled": {
+      "default": true,
+      "description": "Whether OAuth connections can make changes to landscape data",
+      "type": "boolean"
+    },
+    "shareLinkAuthDomains": {
+      "items": {
+        "type": "string"
+      },
+      "nullable": true,
+      "type": "array"
+    },
+    "shareLinksEnabled": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "type": "object"
+}

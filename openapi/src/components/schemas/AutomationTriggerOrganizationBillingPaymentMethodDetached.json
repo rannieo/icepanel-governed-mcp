@@ -1,0 +1,40 @@
+{
+  "properties": {
+    "card": {
+      "properties": {
+        "brand": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "brand"
+      ],
+      "type": "object"
+    },
+    "eventId": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "paymentMethodType": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "organization-billing-payment-method-detached"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "organizationId",
+    "paymentMethodType",
+    "eventId",
+    "type"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,10 @@
+{
+  "enum": [
+    "azure-devops",
+    "bitbucket",
+    "bitbucket-server",
+    "github",
+    "gitlab"
+  ],
+  "type": "string"
+}

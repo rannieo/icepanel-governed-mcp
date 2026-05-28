@@ -1,0 +1,16 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./ModelObject.json"
+    },
+    {
+      "$ref": "./ModelConnection.json"
+    },
+    {
+      "$ref": "./Diagram.json"
+    },
+    {
+      "$ref": "./Flow.json"
+    }
+  ]
+}

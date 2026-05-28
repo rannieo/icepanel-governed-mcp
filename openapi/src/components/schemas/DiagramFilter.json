@@ -1,0 +1,68 @@
+{
+  "properties": {
+    "empty": {
+      "description": "Filter diagrams that contain no objects",
+      "type": "boolean"
+    },
+    "handleId": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "modelId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "pinned": {
+      "type": "boolean"
+    },
+    "status": {
+      "oneOf": [
+        {
+          "$ref": "./DiagramStatus.json"
+        },
+        {
+          "items": {
+            "$ref": "./DiagramStatus.json"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "type": {
+      "oneOf": [
+        {
+          "$ref": "./DiagramType.json"
+        },
+        {
+          "items": {
+            "$ref": "./DiagramType.json"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    }
+  },
+  "type": "object"
+}

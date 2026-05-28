@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "type": {
+      "oneOf": [
+        {
+          "$ref": "./SearchIndexType.json"
+        },
+        {
+          "items": {
+            "$ref": "./SearchIndexType.json"
+          },
+          "maxItems": 50,
+          "type": "array"
+        }
+      ]
+    }
+  },
+  "type": "object"
+}

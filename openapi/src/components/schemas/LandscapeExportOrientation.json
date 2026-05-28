@@ -1,0 +1,7 @@
+{
+  "enum": [
+    "portrait",
+    "landscape"
+  ],
+  "type": "string"
+}

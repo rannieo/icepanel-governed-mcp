@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "organizationId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "organization-create"
+      ],
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "organizationId",
+    "type",
+    "userId"
+  ],
+  "type": "object"
+}

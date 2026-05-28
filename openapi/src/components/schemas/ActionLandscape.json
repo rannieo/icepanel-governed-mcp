@@ -1,0 +1,25 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./ActionLandscapeCreate.json"
+    },
+    {
+      "$ref": "./ActionLandscapeUpdate.json"
+    },
+    {
+      "$ref": "./ActionLandscapeDuplicate.json"
+    },
+    {
+      "$ref": "./ActionLandscapeCopy.json"
+    },
+    {
+      "$ref": "./ActionLandscapeDelete.json"
+    },
+    {
+      "$ref": "./ActionLandscapeExport.json"
+    },
+    {
+      "$ref": "./ActionLandscapeImport.json"
+    }
+  ]
+}

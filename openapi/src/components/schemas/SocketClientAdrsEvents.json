@@ -1,0 +1,55 @@
+{
+  "properties": {
+    "adrs-list": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientAdrsListBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientAdrsListReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "adrs-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientAdrsSubscribeBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientAdrsSubscribeReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "adrs-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientAdrsUnsubscribeBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "adrs-list",
+    "adrs-subscribe",
+    "adrs-unsubscribe"
+  ],
+  "type": "object"
+}

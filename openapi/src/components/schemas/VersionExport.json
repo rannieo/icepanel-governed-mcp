@@ -1,0 +1,63 @@
+{
+  "properties": {
+    "domains": {
+      "additionalProperties": {
+        "$ref": "./DomainExport.json"
+      },
+      "type": "object"
+    },
+    "flows": {
+      "additionalProperties": {
+        "$ref": "./FlowExport.json"
+      },
+      "type": "object"
+    },
+    "modelConnections": {
+      "additionalProperties": {
+        "$ref": "./ModelConnectionExport.json"
+      },
+      "type": "object"
+    },
+    "modelObjects": {
+      "additionalProperties": {
+        "$ref": "./ModelObjectExport.json"
+      },
+      "type": "object"
+    },
+    "tagGroups": {
+      "additionalProperties": {
+        "$ref": "./TagGroupExport.json"
+      },
+      "type": "object"
+    },
+    "tags": {
+      "additionalProperties": {
+        "$ref": "./TagExport.json"
+      },
+      "type": "object"
+    },
+    "teams": {
+      "additionalProperties": {
+        "$ref": "./TeamExport.json"
+      },
+      "type": "object"
+    },
+    "technologies": {
+      "additionalProperties": {
+        "$ref": "./TechnologyExport.json"
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "domains",
+    "flows",
+    "modelConnections",
+    "modelObjects",
+    "tagGroups",
+    "tags",
+    "teams",
+    "technologies"
+  ],
+  "type": "object"
+}

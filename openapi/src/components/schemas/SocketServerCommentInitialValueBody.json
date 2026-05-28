@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "comments": {
+      "items": {
+        "$ref": "./Comment.json"
+      },
+      "type": "array"
+    },
+    "finalValue": {
+      "type": "boolean"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "comments",
+    "finalValue",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

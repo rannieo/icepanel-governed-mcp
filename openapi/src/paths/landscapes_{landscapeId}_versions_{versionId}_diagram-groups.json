@@ -1,0 +1,289 @@
+{
+  "get": {
+    "security": [
+      {
+        "ApiKeyAuth": []
+      },
+      {
+        "BearerAuth": []
+      }
+    ],
+    "tags": [
+      "Diagram Groups"
+    ],
+    "x-eov-operation-handler": "diagramGroups",
+    "x-fern-audiences": [
+      "public"
+    ],
+    "x-fern-sdk-group-name": [
+      "diagrams",
+      "groups"
+    ],
+    "operationId": "diagramGroupsList",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "landscapeId",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "in": "path",
+        "name": "versionId",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "in": "query",
+        "name": "filter",
+        "required": false,
+        "schema": {
+          "$ref": "../components/schemas/DiagramGroupFilter.json"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "properties": {
+                "diagramGroups": {
+                  "items": {
+                    "$ref": "../components/schemas/DiagramGroup.json"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "diagramGroups"
+              ],
+              "type": "object"
+            }
+          }
+        },
+        "description": "OK"
+      },
+      "400": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Bad Request"
+      },
+      "401": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Unauthorized"
+      },
+      "403": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Forbidden"
+      },
+      "404": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Not Found"
+      },
+      "422": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Unprocessable Entity"
+      },
+      "500": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Internal Server"
+      }
+    },
+    "summary": "List",
+    "x-fern-request-name": "DiagramGroupsListRequest",
+    "x-fern-sdk-method-name": "list"
+  },
+  "post": {
+    "security": [
+      {
+        "ApiKeyAuth": []
+      },
+      {
+        "BearerAuth": []
+      }
+    ],
+    "tags": [
+      "Diagram Groups"
+    ],
+    "x-eov-operation-handler": "diagramGroups",
+    "x-fern-audiences": [
+      "public"
+    ],
+    "x-fern-sdk-group-name": [
+      "diagrams",
+      "groups"
+    ],
+    "operationId": "diagramGroupCreate",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "landscapeId",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "in": "path",
+        "name": "versionId",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "../components/schemas/DiagramGroupRequired.json"
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "properties": {
+                "diagramGroup": {
+                  "$ref": "../components/schemas/DiagramGroup.json"
+                }
+              },
+              "required": [
+                "diagramGroup"
+              ],
+              "type": "object"
+            }
+          }
+        },
+        "description": "OK"
+      },
+      "400": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Bad Request"
+      },
+      "401": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Unauthorized"
+      },
+      "403": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Forbidden"
+      },
+      "404": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Not Found"
+      },
+      "422": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Unprocessable Entity"
+      },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
+      "500": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Internal Server"
+      },
+      "503": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Service Unavailable"
+      }
+    },
+    "summary": "Create",
+    "x-fern-request-name": "DiagramGroupCreateRequest",
+    "x-fern-sdk-method-name": "create"
+  }
+}

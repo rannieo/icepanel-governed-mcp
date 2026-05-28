@@ -1,0 +1,11 @@
+{
+  "enum": [
+    "idea",
+    "inaccurate",
+    "new-idea",
+    "new-inaccurate",
+    "new-question",
+    "question"
+  ],
+  "type": "string"
+}

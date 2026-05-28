@@ -1,0 +1,247 @@
+{
+  "properties": {
+    "diagram-added": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDiagramAddedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-content-added": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDiagramContentAddedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-content-initial-value": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDiagramContentInitialValueBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-content-modified": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDiagramContentModifiedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-content-removed": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDiagramContentRemovedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-contents-list-stream": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDiagramContentsListStreamBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-group-added": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDiagramGroupAddedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-group-initial-value": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDiagramGroupInitialValueBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-group-modified": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDiagramGroupModifiedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-group-removed": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDiagramGroupRemovedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-groups-list-stream": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDiagramGroupsListStreamBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-initial-value": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDiagramInitialValueBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-modified": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDiagramModifiedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-removed": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDiagramRemovedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagrams-list-stream": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDiagramsListStreamBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "diagram-added",
+    "diagram-content-added",
+    "diagram-content-initial-value",
+    "diagram-content-modified",
+    "diagram-content-removed",
+    "diagram-contents-list-stream",
+    "diagram-group-added",
+    "diagram-group-initial-value",
+    "diagram-group-modified",
+    "diagram-group-removed",
+    "diagram-groups-list-stream",
+    "diagram-initial-value",
+    "diagram-modified",
+    "diagram-removed",
+    "diagrams-list-stream"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,36 @@
+{
+  "properties": {
+    "diagramId": {
+      "type": "string"
+    },
+    "handleId": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "name": {
+      "type": "string"
+    },
+    "pinned": {
+      "type": "boolean"
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,10 @@
+{
+  "enum": [
+    "notion",
+    "miro",
+    "confluence",
+    "sharepoint",
+    "powerpoint"
+  ],
+  "type": "string"
+}

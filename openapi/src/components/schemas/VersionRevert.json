@@ -1,0 +1,50 @@
+{
+  "properties": {
+    "notes": {
+      "minLength": 10,
+      "type": "string"
+    },
+    "versionId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "notes",
+    "versionId",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "id",
+    "landscapeId",
+    "updatedAt",
+    "updatedBy",
+    "updatedById"
+  ],
+  "type": "object"
+}

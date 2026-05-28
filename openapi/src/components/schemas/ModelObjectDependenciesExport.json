@@ -1,0 +1,41 @@
+{
+  "properties": {
+    "incomingConnectionObjects": {
+      "additionalProperties": {
+        "items": {
+          "$ref": "./ModelObjectExport.json"
+        },
+        "type": "array"
+      },
+      "type": "object"
+    },
+    "incomingConnections": {
+      "items": {
+        "$ref": "./ModelConnectionExport.json"
+      },
+      "type": "array"
+    },
+    "outgoingConnectionObjects": {
+      "additionalProperties": {
+        "items": {
+          "$ref": "./ModelObjectExport.json"
+        },
+        "type": "array"
+      },
+      "type": "object"
+    },
+    "outgoingConnections": {
+      "items": {
+        "$ref": "./ModelConnectionExport.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "incomingConnectionObjects",
+    "incomingConnections",
+    "outgoingConnectionObjects",
+    "outgoingConnections"
+  ],
+  "type": "object"
+}

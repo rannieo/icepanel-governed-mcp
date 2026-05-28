@@ -1,0 +1,12 @@
+{
+  "enum": [
+    "pdf",
+    "markdown",
+    "html",
+    "llms",
+    "json",
+    "object-csv",
+    "connection-csv"
+  ],
+  "type": "string"
+}

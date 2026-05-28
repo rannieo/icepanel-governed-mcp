@@ -1,0 +1,81 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "caption": {
+      "description": "Display description",
+      "type": "string"
+    },
+    "description": {
+      "description": "Detailed description",
+      "type": "string"
+    },
+    "external": {
+      "description": "Whether the model object is an external service",
+      "type": "boolean"
+    },
+    "groupIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "icon": {
+      "$ref": "./ImportIconNullable.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "links": {
+      "items": {
+        "$ref": "./ImportLink.json"
+      },
+      "type": "array"
+    },
+    "name": {
+      "type": "string"
+    },
+    "parentId": {
+      "description": "Parent model object ID, must follow the IcePanel hierarchy.\n\nDomain: parent must be missing/null\n\nActor/System: parent must be a domain\n\nGroup: parent must be a domain or another group\n\nApp/Store: parent must be a system\n\nComponent: parent must be an app or store",
+      "nullable": true,
+      "type": "string"
+    },
+    "status": {
+      "$ref": "./ModelObjectStatus.json"
+    },
+    "tagIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "teamIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "technologyIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "type": {
+      "$ref": "./ImportModelObjectType.json"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "type"
+  ],
+  "type": "object"
+}

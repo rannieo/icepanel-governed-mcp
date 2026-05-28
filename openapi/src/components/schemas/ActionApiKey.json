@@ -1,0 +1,13 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./ActionApiKeyCreate.json"
+    },
+    {
+      "$ref": "./ActionApiKeyUpdate.json"
+    },
+    {
+      "$ref": "./ActionApiKeyDelete.json"
+    }
+  ]
+}

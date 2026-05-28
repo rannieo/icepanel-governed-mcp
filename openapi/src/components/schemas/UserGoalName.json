@@ -1,0 +1,10 @@
+{
+  "enum": [
+    "create-comment",
+    "flows",
+    "model-objects",
+    "open-context-diagram",
+    "zoom-into-object"
+  ],
+  "type": "string"
+}

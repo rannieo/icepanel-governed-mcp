@@ -1,0 +1,55 @@
+{
+  "properties": {
+    "workspaceId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "senderEmail": {
+      "type": "string"
+    },
+    "senderId": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    },
+    "workspaceName": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "id",
+    "organizationId",
+    "senderEmail",
+    "senderId",
+    "updatedAt",
+    "updatedBy",
+    "updatedById"
+  ],
+  "type": "object"
+}

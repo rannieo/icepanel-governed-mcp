@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "comments": {
+      "additionalProperties": {
+        "$ref": "./DiagramComment.json"
+      },
+      "type": "object"
+    },
+    "commit": {
+      "type": "number"
+    },
+    "connections": {
+      "additionalProperties": {
+        "$ref": "./DiagramConnection.json"
+      },
+      "type": "object"
+    },
+    "objects": {
+      "additionalProperties": {
+        "$ref": "./DiagramObject.json"
+      },
+      "type": "object"
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "accountId": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

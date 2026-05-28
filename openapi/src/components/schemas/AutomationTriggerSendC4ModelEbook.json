@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "send-c4-model-ebook"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "email",
+    "type"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "showConnectionNames": {
+      "type": "boolean"
+    },
+    "steps": {
+      "additionalProperties": {
+        "$ref": "./FlowStepExport.json"
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "showConnectionNames",
+    "steps"
+  ],
+  "type": "object"
+}

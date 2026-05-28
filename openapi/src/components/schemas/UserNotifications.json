@@ -1,0 +1,33 @@
+{
+  "description": "Subscribe the user to specific types of notifications",
+  "properties": {
+    "catalogTechnology": {
+      "description": "Subscribe to updates about catalog technology interactions",
+      "type": "boolean"
+    },
+    "comments": {
+      "description": "Subscribe to comments, mentions, replies and resolutions",
+      "type": "boolean"
+    },
+    "exports": {
+      "description": "Subscribe to PDF export completions or failures",
+      "type": "boolean"
+    },
+    "invites": {
+      "description": "Subscribe to user invites to organizations",
+      "type": "boolean"
+    },
+    "onboarding": {
+      "description": "Subscribe to user registration onboarding help and tips",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "catalogTechnology",
+    "comments",
+    "exports",
+    "invites",
+    "onboarding"
+  ],
+  "type": "object"
+}

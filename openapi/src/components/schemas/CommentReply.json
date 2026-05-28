@@ -1,0 +1,74 @@
+{
+  "properties": {
+    "content": {
+      "maxLength": 950000,
+      "type": "string"
+    },
+    "mentionedUserIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "commentId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "deletedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "deletedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "deletedById": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "latestEntityId": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "content",
+    "commentId",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "id",
+    "landscapeId",
+    "mentionedUserIds",
+    "updatedAt",
+    "updatedBy",
+    "updatedById",
+    "versionId"
+  ],
+  "type": "object"
+}

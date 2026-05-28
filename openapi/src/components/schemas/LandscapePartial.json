@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "scheduledVersions": {
+      "type": "boolean"
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "domains": {
+      "items": {
+        "$ref": "./Domain.json"
+      },
+      "type": "array"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "domains",
+    "requestId"
+  ],
+  "type": "object"
+}

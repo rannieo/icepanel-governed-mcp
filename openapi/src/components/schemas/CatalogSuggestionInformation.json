@@ -1,0 +1,43 @@
+{
+  "properties": {
+    "description": {
+      "description": "Technical description for the technology",
+      "maxLength": 100000,
+      "type": "string"
+    },
+    "docsUrl": {
+      "description": "Documentation or readme url",
+      "maxLength": 2048,
+      "type": "string"
+    },
+    "githubUrl": {
+      "description": "GitHub repo url",
+      "maxLength": 2048,
+      "type": "string"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "nameShort": {
+      "description": "Short name to show in places with limited space",
+      "maxLength": 1000,
+      "type": "string"
+    },
+    "newsUrl": {
+      "description": "News url",
+      "maxLength": 2048,
+      "type": "string"
+    },
+    "type": {
+      "$ref": "./CatalogTechnologyTypeNullable.json",
+      "description": "Type or category of technology"
+    },
+    "updatesUrl": {
+      "description": "Release notes or changelog url",
+      "maxLength": 2048,
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

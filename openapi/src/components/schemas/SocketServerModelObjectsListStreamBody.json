@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "lastBatch": {
+      "type": "boolean"
+    },
+    "modelObjects": {
+      "items": {
+        "$ref": "./ModelObject.json"
+      },
+      "type": "array"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "modelObjects",
+    "lastBatch",
+    "requestId"
+  ],
+  "type": "object"
+}

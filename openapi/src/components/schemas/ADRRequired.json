@@ -1,0 +1,48 @@
+{
+  "properties": {
+    "commit": {
+      "type": "number"
+    },
+    "content": {
+      "description": "The markdown content of the ADR",
+      "maxLength": 100000,
+      "type": "string"
+    },
+    "description": {
+      "description": "The description of the ADR",
+      "maxLength": 100000,
+      "type": "string"
+    },
+    "name": {
+      "description": "The name of the ADR",
+      "maxLength": 1000,
+      "type": "string"
+    },
+    "relatedItems": {
+      "additionalProperties": {
+        "$ref": "./ADRRelatedItem.json"
+      },
+      "type": "object"
+    },
+    "status": {
+      "$ref": "./ADRStatus.json",
+      "description": "The status of the ADR"
+    },
+    "statusChanges": {
+      "items": {
+        "$ref": "./ADRStatusChange.json"
+      },
+      "type": "array"
+    },
+    "handleId": {
+      "description": "The handle id of the ADR",
+      "type": "string"
+    }
+  },
+  "required": [
+    "handleId",
+    "name",
+    "status"
+  ],
+  "type": "object"
+}

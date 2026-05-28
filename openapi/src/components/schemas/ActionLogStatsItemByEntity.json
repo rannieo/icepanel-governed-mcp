@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "contributors": {
+      "additionalProperties": {
+        "$ref": "./ActionLogStatsContributor.json"
+      },
+      "type": "object"
+    },
+    "count": {
+      "type": "number"
+    },
+    "entityId": {
+      "description": "id of the entity to lookup, eg: id of the tag being created, or id of the model object being updated",
+      "type": "string"
+    }
+  },
+  "required": [
+    "contributors",
+    "count",
+    "entityId"
+  ],
+  "type": "object"
+}

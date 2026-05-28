@@ -1,0 +1,55 @@
+{
+  "properties": {
+    "groupId": {
+      "type": "number"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "groupName": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "senderId": {
+      "type": "number"
+    },
+    "senderUsername": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "id",
+    "organizationId",
+    "senderId",
+    "senderUsername",
+    "updatedAt",
+    "updatedBy",
+    "updatedById"
+  ],
+  "type": "object"
+}

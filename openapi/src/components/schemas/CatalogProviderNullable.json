@@ -1,0 +1,15 @@
+{
+  "enum": [
+    "aws",
+    "azure",
+    "gcp",
+    "microsoft",
+    "salesforce",
+    "atlassian",
+    "apache",
+    "supabase",
+    null
+  ],
+  "nullable": true,
+  "type": "string"
+}

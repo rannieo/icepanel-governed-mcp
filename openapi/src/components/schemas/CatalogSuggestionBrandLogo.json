@@ -1,0 +1,45 @@
+{
+  "properties": {
+    "formats": {
+      "description": "A list of format objects containing files in different formats",
+      "items": {
+        "$ref": "./CatalogSuggestionBrandLogoFormat.json"
+      },
+      "type": "array"
+    },
+    "tags": {
+      "description": "A list of strings attached to the logo. For example, if the logo icon is \"photographic\" rather than a logomark.",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "theme": {
+      "description": "Theme of the logo. For example, \"dark\" or \"light\"",
+      "enum": [
+        "light",
+        "dark",
+        null
+      ],
+      "nullable": true,
+      "type": "string"
+    },
+    "type": {
+      "description": "Logo type. For example, \"icon\" or \"symbol\"",
+      "enum": [
+        "icon",
+        "logo",
+        "symbol",
+        "other"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "type",
+    "formats",
+    "theme",
+    "tags"
+  ],
+  "type": "object"
+}

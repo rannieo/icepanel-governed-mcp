@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "modelObjectIds": {
+      "description": "Filter any objects with these model object ids, if not provided, all objects in the diagram will be included",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "type": {
+      "$ref": "./AIDescriptionType.json",
+      "description": "Type description to generate: \"caption\" or \"detailed\""
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,28 @@
+{
+  "properties": {
+    "emailVerificationToken": {
+      "type": "string"
+    },
+    "linkParams": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "type": {
+      "enum": [
+        "user-email-verification"
+      ],
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "emailVerificationToken",
+    "type",
+    "userId"
+  ],
+  "type": "object"
+}

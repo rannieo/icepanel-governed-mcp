@@ -1,0 +1,103 @@
+{
+  "properties": {
+    "editor-location-added": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerEditorLocationAddedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "editor-location-modified": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerEditorLocationModifiedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "editor-locations": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerEditorLocationsBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "editor-typing": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerEditorTypingBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "editor-typing-added": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerEditorTypingAddedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "editor-typing-modified": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerEditorTypingModifiedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "editor-location-added",
+    "editor-location-modified",
+    "editor-locations",
+    "editor-typing-added",
+    "editor-typing-modified",
+    "editor-typing"
+  ],
+  "type": "object"
+}

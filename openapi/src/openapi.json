@@ -1,0 +1,315 @@
+{
+  "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "description": "API key authentication",
+        "in": "header",
+        "name": "X-API-Key",
+        "type": "apiKey"
+      },
+      "BearerAuth": {
+        "description": "Bearer token authentication",
+        "scheme": "bearer",
+        "type": "http"
+      }
+    }
+  },
+  "info": {
+    "description": "IcePanel API",
+    "summary": "IcePanel API documentation",
+    "title": "IcePanel API",
+    "version": "1.0.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/landscapes/{landscapeId}/action-logs": {
+      "$ref": "paths/landscapes_{landscapeId}_action-logs.json"
+    },
+    "/landscapes/{landscapeId}/action-logs/{actionLogId}": {
+      "$ref": "paths/landscapes_{landscapeId}_action-logs_{actionLogId}.json"
+    },
+    "/landscapes/{landscapeId}/action-logs/{actionLogId}/children": {
+      "$ref": "paths/landscapes_{landscapeId}_action-logs_{actionLogId}_children.json"
+    },
+    "/landscapes/{landscapeId}/action-logs/stats/by-type": {
+      "$ref": "paths/landscapes_{landscapeId}_action-logs_stats_by-type.json"
+    },
+    "/landscapes/{landscapeId}/action-logs/stats/by-entity": {
+      "$ref": "paths/landscapes_{landscapeId}_action-logs_stats_by-entity.json"
+    },
+    "/catalog/technologies": {
+      "$ref": "paths/catalog_technologies.json"
+    },
+    "/catalog/suggestion/information": {
+      "$ref": "paths/catalog_suggestion_information.json"
+    },
+    "/catalog/suggestion/brand": {
+      "$ref": "paths/catalog_suggestion_brand.json"
+    },
+    "/catalog/icons/signed-url": {
+      "$ref": "paths/catalog_icons_signed-url.json"
+    },
+    "/catalog/technologies/{catalogTechnologyId}": {
+      "$ref": "paths/catalog_technologies_{catalogTechnologyId}.json"
+    },
+    "/catalog/technologies/slugs/{catalogTechnologySlug}": {
+      "$ref": "paths/catalog_technologies_slugs_{catalogTechnologySlug}.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/comments/{commentId}/replies": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_comments_{commentId}_replies.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/comments/{commentId}/replies/{commentReplyId}": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_comments_{commentId}_replies_{commentReplyId}.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/comments": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_comments.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/comments/{commentId}": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_comments_{commentId}.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/content/generate-description": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams_{diagramId}_content_generate-description.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/content": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams_{diagramId}_content.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/diagram-groups": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagram-groups.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/diagram-groups/{diagramGroupId}": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagram-groups_{diagramGroupId}.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/diagrams": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams_{diagramId}.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/view": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams_{diagramId}_view.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/action": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams_{diagramId}_action.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/export/png": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams_{diagramId}_export_png.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/export/image/{diagramExportImageId}": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams_{diagramId}_export_image_{diagramExportImageId}.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/export/image": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams_{diagramId}_export_image.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/diagrams/thumbnails": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams_thumbnails.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/thumbnail": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams_{diagramId}_thumbnail.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/domains": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_domains.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/domains/{domainId}": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_domains_{domainId}.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/drafts": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_drafts.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/drafts/{draftId}": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_drafts_{draftId}.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/drafts/{draftId}/rebase": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_drafts_{draftId}_rebase.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/drafts/{draftId}/merge": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_drafts_{draftId}_merge.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/drafts/{draftId}/view": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_drafts_{draftId}_view.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/flows": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_flows.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/flows/{flowId}": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_flows_{flowId}.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/flows/{flowId}/view": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_flows_{flowId}_view.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/flows/thumbnails": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_flows_thumbnails.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/flows/{flowId}/thumbnail": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_flows_{flowId}_thumbnail.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/flows/{flowId}/export/text": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_flows_{flowId}_export_text.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/flows/{flowId}/export/code": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_flows_{flowId}_export_code.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/flows/{flowId}/export/mermaid": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_flows_{flowId}_export_mermaid.json"
+    },
+    "/landscapes/{landscapeId}": {
+      "$ref": "paths/landscapes_{landscapeId}.json"
+    },
+    "/landscapes/{landscapeId}/duplicate": {
+      "$ref": "paths/landscapes_{landscapeId}_duplicate.json"
+    },
+    "/landscapes/{landscapeId}/copy": {
+      "$ref": "paths/landscapes_{landscapeId}_copy.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/search": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_search.json"
+    },
+    "/landscapes/{landscapeId}/thumbnails/primary": {
+      "$ref": "paths/landscapes_{landscapeId}_thumbnails_primary.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/export/pdf": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_export_pdf.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/export": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_export.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/export/{landscapeExportId}": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_export_{landscapeExportId}.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/import": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_import.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/import/{landscapeImportId}": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_import_{landscapeImportId}.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/model/connections": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_model_connections.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/model/connections/{modelConnectionId}": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_model_connections_{modelConnectionId}.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/model/connections/export/csv": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_model_connections_export_csv.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/model/connections/{modelConnectionId}/generate-description": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_model_connections_{modelConnectionId}_generate-description.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/model/dependencies": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_model_dependencies.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/model/objects": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_model_objects.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/model/objects/{modelObjectId}": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_model_objects_{modelObjectId}.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/model/objects/{modelObjectId}/dependencies/export/json": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_model_objects_{modelObjectId}_dependencies_export_json.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/model/objects/export/csv": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_model_objects_export_csv.json"
+    },
+    "/organizations/{organizationId}/landscapes": {
+      "$ref": "paths/organizations_{organizationId}_landscapes.json"
+    },
+    "/organizations/{organizationId}/landscapes/{landscapeId}": {
+      "$ref": "paths/organizations_{organizationId}_landscapes_{landscapeId}.json"
+    },
+    "/organizations/{organizationId}/landscapes/{landscapeId}/duplicate": {
+      "$ref": "paths/organizations_{organizationId}_landscapes_{landscapeId}_duplicate.json"
+    },
+    "/organizations/{organizationId}/landscapes/{landscapeId}/copy": {
+      "$ref": "paths/organizations_{organizationId}_landscapes_{landscapeId}_copy.json"
+    },
+    "/organizations/{organizationId}/landscapes/{landscapeId}/versions/{versionId}/export/pdf": {
+      "$ref": "paths/organizations_{organizationId}_landscapes_{landscapeId}_versions_{versionId}_export_pdf.json"
+    },
+    "/organizations/{organizationId}/landscapes/{landscapeId}/thumbnails/primary": {
+      "$ref": "paths/organizations_{organizationId}_landscapes_{landscapeId}_thumbnails_primary.json"
+    },
+    "/organizations/{organizationId}/logs": {
+      "$ref": "paths/organizations_{organizationId}_logs.json"
+    },
+    "/organizations/{organizationId}/logs/{organizationLogId}": {
+      "$ref": "paths/organizations_{organizationId}_logs_{organizationLogId}.json"
+    },
+    "/organizations/{organizationId}/logs/stats/by-type": {
+      "$ref": "paths/organizations_{organizationId}_logs_stats_by-type.json"
+    },
+    "/organizations/{organizationId}/logs/stats/by-entity": {
+      "$ref": "paths/organizations_{organizationId}_logs_stats_by-entity.json"
+    },
+    "/organizations": {
+      "$ref": "paths/organizations.json"
+    },
+    "/organizations/{organizationId}": {
+      "$ref": "paths/organizations_{organizationId}.json"
+    },
+    "/organizations/{organizationId}/technologies": {
+      "$ref": "paths/organizations_{organizationId}_technologies.json"
+    },
+    "/organizations/{organizationId}/technologies/{catalogTechnologyId}": {
+      "$ref": "paths/organizations_{organizationId}_technologies_{catalogTechnologyId}.json"
+    },
+    "/organizations/{organizationId}/users/invites": {
+      "$ref": "paths/organizations_{organizationId}_users_invites.json"
+    },
+    "/organizations/{organizationId}/users/invites/{organizationUserInviteId}": {
+      "$ref": "paths/organizations_{organizationId}_users_invites_{organizationUserInviteId}.json"
+    },
+    "/organizations/{organizationId}/users": {
+      "$ref": "paths/organizations_{organizationId}_users.json"
+    },
+    "/organizations/{organizationId}/users/{userId}": {
+      "$ref": "paths/organizations_{organizationId}_users_{userId}.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/share-link": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_share-link.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/tag-groups": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_tag-groups.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/tag-groups/{tagGroupId}": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_tag-groups_{tagGroupId}.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/tags": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_tags.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/tags/{tagId}": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_tags_{tagId}.json"
+    },
+    "/organizations/{organizationId}/teams": {
+      "$ref": "paths/organizations_{organizationId}_teams.json"
+    },
+    "/organizations/{organizationId}/teams/{teamId}": {
+      "$ref": "paths/organizations_{organizationId}_teams_{teamId}.json"
+    },
+    "/organizations/{organizationId}/teams/{teamId}/landscapes": {
+      "$ref": "paths/organizations_{organizationId}_teams_{teamId}_landscapes.json"
+    },
+    "/organizations/{organizationId}/teams/{teamId}/model/objects": {
+      "$ref": "paths/organizations_{organizationId}_teams_{teamId}_model_objects.json"
+    },
+    "/landscapes/{landscapeId}/version/reverts": {
+      "$ref": "paths/landscapes_{landscapeId}_version_reverts.json"
+    },
+    "/landscapes/{landscapeId}/version/reverts/{versionRevertId}": {
+      "$ref": "paths/landscapes_{landscapeId}_version_reverts_{versionRevertId}.json"
+    },
+    "/landscapes/{landscapeId}/versions": {
+      "$ref": "paths/landscapes_{landscapeId}_versions.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/export/json": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_export_json.json"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.icepanel.io/v1",
+      "x-fern-server-name": "API V1"
+    }
+  ],
+  "webhooks": {}
+}

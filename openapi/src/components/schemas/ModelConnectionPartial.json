@@ -1,0 +1,134 @@
+{
+  "properties": {
+    "commit": {
+      "type": "number"
+    },
+    "description": {
+      "maxLength": 950000,
+      "type": "string"
+    },
+    "direction": {
+      "$ref": "./ModelConnectionDirectionNullable.json"
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "links": {
+      "properties": {
+        "$add": {
+          "additionalProperties": {
+            "$ref": "./RealityLinkRequired.json"
+          },
+          "type": "object"
+        },
+        "$remove": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "$replace": {
+          "additionalProperties": {
+            "$ref": "./RealityLinkRequired.json"
+          },
+          "type": "object"
+        },
+        "$update": {
+          "additionalProperties": {
+            "$ref": "./RealityLinkPartial.json"
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "originId": {
+      "description": "Model object that initiates the connection",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "./ModelConnectionStatus.json"
+    },
+    "tagIds": {
+      "oneOf": [
+        {
+          "description": "Tag IDs assigned to this model",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "description": "Update individual tag IDs",
+          "properties": {
+            "$add": {
+              "description": "Append tag IDs to the list",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "$remove": {
+              "description": "Remove tag IDs from the list",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "targetId": {
+      "description": "Model object that receives the message",
+      "type": "string"
+    },
+    "technologyIds": {
+      "oneOf": [
+        {
+          "description": "Technology IDs assigned to this model",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "description": "Update individual technology IDs",
+          "properties": {
+            "$add": {
+              "description": "Append technology IDs to the list",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "$remove": {
+              "description": "Remove technology IDs from the list",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        }
+      ]
+    },
+    "viaId": {
+      "description": "Model object that facilitates the connection, such as a Kafka topic, or RabbitMQ queue",
+      "nullable": true,
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

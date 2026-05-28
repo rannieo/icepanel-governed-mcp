@@ -1,0 +1,54 @@
+{
+  "properties": {
+    "serverUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "token": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "serverUrl",
+    "token",
+    "username",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "id",
+    "organizationId",
+    "updatedAt",
+    "updatedBy",
+    "updatedById"
+  ],
+  "type": "object"
+}

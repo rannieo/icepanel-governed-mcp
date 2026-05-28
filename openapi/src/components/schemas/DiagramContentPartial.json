@@ -1,0 +1,95 @@
+{
+  "properties": {
+    "comments": {
+      "properties": {
+        "$add": {
+          "additionalProperties": {
+            "$ref": "./DiagramComment.json"
+          },
+          "type": "object"
+        },
+        "$remove": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "$replace": {
+          "additionalProperties": {
+            "$ref": "./DiagramComment.json"
+          },
+          "type": "object"
+        },
+        "$update": {
+          "additionalProperties": {
+            "$ref": "./DiagramCommentPartial.json"
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "commit": {
+      "type": "number"
+    },
+    "connections": {
+      "properties": {
+        "$add": {
+          "additionalProperties": {
+            "$ref": "./DiagramConnection.json"
+          },
+          "type": "object"
+        },
+        "$remove": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "$replace": {
+          "additionalProperties": {
+            "$ref": "./DiagramConnection.json"
+          },
+          "type": "object"
+        },
+        "$update": {
+          "additionalProperties": {
+            "$ref": "./DiagramConnectionPartial.json"
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "objects": {
+      "properties": {
+        "$add": {
+          "additionalProperties": {
+            "$ref": "./DiagramObject.json"
+          },
+          "type": "object"
+        },
+        "$remove": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "$replace": {
+          "additionalProperties": {
+            "$ref": "./DiagramObject.json"
+          },
+          "type": "object"
+        },
+        "$update": {
+          "additionalProperties": {
+            "$ref": "./DiagramObjectPartial.json"
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "type": "object"
+}

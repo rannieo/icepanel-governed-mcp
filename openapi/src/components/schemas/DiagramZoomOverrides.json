@@ -1,0 +1,7 @@
+{
+  "additionalProperties": {
+    "type": "string"
+  },
+  "description": "Custom zoom levels for specific model objects within the diagram. The key is the modelObjectId and the value is the diagram id.",
+  "type": "object"
+}

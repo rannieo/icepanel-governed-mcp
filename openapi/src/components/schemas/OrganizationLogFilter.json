@@ -1,0 +1,83 @@
+{
+  "properties": {
+    "actionId": {
+      "description": "id of the entity to lookup, eg: id of the tag being created, or id of the model object being updated",
+      "type": "string"
+    },
+    "actionType": {
+      "$ref": "./OrganizationLogFilterActionType.json"
+    },
+    "endAtDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "endAtId": {
+      "type": "string"
+    },
+    "endBeforeDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "endBeforeId": {
+      "type": "string"
+    },
+    "includeActionsInContext": {
+      "description": "include actions from objects inside the context, eg: update of a model connection that is connected to a model object",
+      "type": "boolean"
+    },
+    "limit": {
+      "type": "number"
+    },
+    "order": {
+      "enum": [
+        "asc",
+        "desc"
+      ],
+      "type": "string"
+    },
+    "performedBy": {
+      "oneOf": [
+        {
+          "$ref": "./AuthType.json"
+        },
+        {
+          "items": {
+            "$ref": "./AuthType.json"
+          },
+          "maxItems": 100,
+          "type": "array"
+        }
+      ]
+    },
+    "performedById": {
+      "description": "id of the user or api key who performed the action",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100,
+          "type": "array"
+        }
+      ]
+    },
+    "startAfterDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "startAfterId": {
+      "type": "string"
+    },
+    "startAtDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "startAtId": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

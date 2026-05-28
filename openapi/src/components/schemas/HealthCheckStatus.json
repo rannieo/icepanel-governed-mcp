@@ -1,0 +1,8 @@
+{
+  "enum": [
+    "ok",
+    "degraded",
+    "down"
+  ],
+  "type": "string"
+}

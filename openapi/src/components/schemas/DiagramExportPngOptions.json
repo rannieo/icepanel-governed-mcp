@@ -1,0 +1,62 @@
+{
+  "properties": {
+    "filename": {
+      "type": "string"
+    },
+    "flowId": {
+      "type": "string"
+    },
+    "flowParentIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "flowPathIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "name": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "overlayGroupId": {
+      "type": "string"
+    },
+    "overlayIdsFocused": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "overlayIdsHidden": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "overlayIdsPinned": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "overlayTab": {
+      "enum": [
+        "tags",
+        "technology",
+        "status",
+        "teams"
+      ],
+      "type": "string"
+    },
+    "theme": {
+      "$ref": "./Theme.json"
+    }
+  },
+  "type": "object"
+}

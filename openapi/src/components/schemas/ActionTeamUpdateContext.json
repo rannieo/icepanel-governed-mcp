@@ -1,0 +1,17 @@
+{
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "userNames": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "type": "object"
+}

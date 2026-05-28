@@ -1,0 +1,16 @@
+{
+  "properties": {
+    "notes": {
+      "minLength": 10,
+      "type": "string"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "notes",
+    "versionId"
+  ],
+  "type": "object"
+}

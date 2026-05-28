@@ -1,0 +1,12 @@
+{
+  "properties": {
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "permission": {
+      "$ref": "./PermissionType.json"
+    }
+  },
+  "type": "object"
+}

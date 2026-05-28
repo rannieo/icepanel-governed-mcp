@@ -1,0 +1,29 @@
+{
+  "properties": {
+    "commit": {
+      "type": "number"
+    },
+    "index": {
+      "type": "number"
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "handleId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,25 @@
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "ok": {
+      "type": "boolean"
+    },
+    "services": {
+      "additionalProperties": {
+        "$ref": "./HealthCheckService.json"
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "id",
+    "ok",
+    "services"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,11 @@
+{
+  "properties": {
+    "catalogTechnologyId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "catalogTechnologyId"
+  ],
+  "type": "object"
+}

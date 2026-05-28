@@ -1,0 +1,71 @@
+{
+  "properties": {
+    "version-added": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerVersionAddedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "version-initial-value": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerVersionInitialValueBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "version-modified": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerVersionModifiedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "version-removed": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerVersionRemovedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "version-added",
+    "version-initial-value",
+    "version-modified",
+    "version-removed"
+  ],
+  "type": "object"
+}

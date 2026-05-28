@@ -1,0 +1,17 @@
+{
+  "enum": [
+    "modelHandleId",
+    "name",
+    "notes",
+    "completedAt",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "landscapeId",
+    "tags",
+    "updatedAt",
+    "updatedBy",
+    "updatedById"
+  ],
+  "type": "string"
+}

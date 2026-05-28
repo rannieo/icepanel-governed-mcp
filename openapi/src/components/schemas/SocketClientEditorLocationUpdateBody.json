@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "landscapeId": {
+      "type": "string"
+    },
+    "location": {
+      "$ref": "./EditorLocationUpdate.json"
+    }
+  },
+  "required": [
+    "landscapeId",
+    "location"
+  ],
+  "type": "object"
+}

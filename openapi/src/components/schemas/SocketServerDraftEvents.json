@@ -1,0 +1,103 @@
+{
+  "properties": {
+    "draft-added": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDraftAddedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "draft-initial-value": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDraftInitialValueBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "draft-modified": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDraftModifiedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "draft-removed": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDraftRemovedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "draft-task-added": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDraftTaskAddedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "drafts-list-stream": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDraftsListStreamBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "draft-added",
+    "draft-initial-value",
+    "draft-modified",
+    "draft-removed",
+    "draft-task-added",
+    "drafts-list-stream"
+  ],
+  "type": "object"
+}

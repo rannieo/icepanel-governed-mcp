@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "subscriptionId": {
+      "type": "string"
+    },
+    "tagGroup": {
+      "$ref": "./TagGroup.json"
+    }
+  },
+  "required": [
+    "subscriptionId",
+    "tagGroup"
+  ],
+  "type": "object"
+}

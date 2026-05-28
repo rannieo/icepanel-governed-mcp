@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "date": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "entities": {
+      "additionalProperties": {
+        "$ref": "./ActionLogStatsItemByEntity.json"
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "date",
+    "entities"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,27 @@
+{
+  "properties": {
+    "automationId": {
+      "type": "string"
+    },
+    "automationVersion": {
+      "type": "string"
+    },
+    "stepIndex": {
+      "type": "number"
+    },
+    "stepIndexCompletedAt": {
+      "items": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "trigger": {
+      "$ref": "./AutomationTrigger.json"
+    },
+    "uniqueKey": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

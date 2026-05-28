@@ -1,0 +1,13 @@
+{
+  "properties": {
+    "email": {
+      "description": "The email address to send the ebook to",
+      "format": "email",
+      "type": "string"
+    }
+  },
+  "required": [
+    "email"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,21 @@
+{
+  "properties": {
+    "data": {
+      "type": "string"
+    },
+    "filename": {
+      "type": "string"
+    },
+    "size": {
+      "type": "number"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "filename"
+  ],
+  "type": "object"
+}

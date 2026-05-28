@@ -1,0 +1,85 @@
+{
+  "additionalProperties": false,
+  "example": {
+    "modelConnections": [
+      {
+        "direction": "outgoing",
+        "id": "connection-1",
+        "name": "Connection",
+        "originId": "object-2",
+        "targetId": "object-3"
+      }
+    ],
+    "modelObjects": [
+      {
+        "id": "object-1",
+        "name": "Domain",
+        "type": "domain"
+      },
+      {
+        "groupIds": [
+          "object-3"
+        ],
+        "id": "object-2",
+        "name": "System",
+        "parentId": "object-1",
+        "type": "system"
+      },
+      {
+        "id": "object-3",
+        "name": "Group",
+        "parentId": "object-1",
+        "tagIds": [
+          "tag-1"
+        ],
+        "type": "group"
+      }
+    ],
+    "tagGroups": [
+      {
+        "icon": "bug",
+        "id": "tag-group-1",
+        "name": "Tag Group"
+      }
+    ],
+    "tags": [
+      {
+        "color": "beaver",
+        "groupId": "tag-group-1",
+        "id": "tag-1",
+        "name": "Tag"
+      }
+    ]
+  },
+  "properties": {
+    "modelConnections": {
+      "items": {
+        "$ref": "./ModelConnectionImport.json"
+      },
+      "type": "array"
+    },
+    "modelObjects": {
+      "items": {
+        "$ref": "./ModelObjectImport.json"
+      },
+      "type": "array"
+    },
+    "namespace": {
+      "description": "The namespace of the import, used for seperate operations when using multiple import sources",
+      "type": "string"
+    },
+    "tagGroups": {
+      "items": {
+        "$ref": "./TagGroupImport.json"
+      },
+      "type": "array"
+    },
+    "tags": {
+      "items": {
+        "$ref": "./TagImport.json"
+      },
+      "type": "array"
+    }
+  },
+  "type": "object"
+}

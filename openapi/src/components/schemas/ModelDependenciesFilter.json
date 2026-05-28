@@ -1,0 +1,54 @@
+{
+  "properties": {
+    "objectIds": {
+      "description": "Array of model object IDs to return dependency data for. Non-existent IDs are silently ignored.",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      ]
+    },
+    "objectLabels": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "Key-value label pairs used to select objects. Objects matching any of the provided pairs are returned (OR semantics).",
+      "type": "object"
+    },
+    "tagIds": {
+      "description": "Filter dependency objects to those matching any of the given tag IDs.",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      ]
+    },
+    "technologyIds": {
+      "description": "Filter dependency objects to those matching any of the given technology IDs.",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      ]
+    }
+  },
+  "type": "object"
+}

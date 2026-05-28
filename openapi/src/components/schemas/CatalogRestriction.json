@@ -1,0 +1,13 @@
+{
+  "enum": [
+    "actor",
+    "app",
+    "component",
+    "connection",
+    "group",
+    "store",
+    "system",
+    null
+  ],
+  "type": "string"
+}

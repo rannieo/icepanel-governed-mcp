@@ -1,0 +1,72 @@
+{
+  "properties": {
+    "actionType": {
+      "description": "type of action that was performed, eg: diagram-content-update or model-object-create",
+      "oneOf": [
+        {
+          "$ref": "./LandscapeActionType.json"
+        },
+        {
+          "items": {
+            "$ref": "./LandscapeActionType.json"
+          },
+          "maxItems": 100,
+          "type": "array"
+        }
+      ]
+    },
+    "endAtDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "entityId": {
+      "description": "id of the entity to lookup, eg: id of the tag being created, or id of the model object being updated",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100,
+          "type": "array"
+        }
+      ]
+    },
+    "performedBy": {
+      "oneOf": [
+        {
+          "$ref": "./AuthType.json"
+        },
+        {
+          "items": {
+            "$ref": "./AuthType.json"
+          },
+          "maxItems": 100,
+          "type": "array"
+        }
+      ]
+    },
+    "performedById": {
+      "description": "id of the user or api key who performed the action",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100,
+          "type": "array"
+        }
+      ]
+    },
+    "startAtDate": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

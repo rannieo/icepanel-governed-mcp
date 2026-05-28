@@ -1,0 +1,11 @@
+{
+  "properties": {
+    "landscapeId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "landscapeId"
+  ],
+  "type": "object"
+}

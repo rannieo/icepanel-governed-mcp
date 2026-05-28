@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "commentReplies": {
+      "items": {
+        "$ref": "./CommentReply.json"
+      },
+      "type": "array"
+    },
+    "finalValue": {
+      "type": "boolean"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "commentReplies",
+    "finalValue",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,69 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "description": {
+      "description": "Detailed description",
+      "type": "string"
+    },
+    "direction": {
+      "$ref": "./ModelConnectionDirection.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "links": {
+      "items": {
+        "$ref": "./ImportLink.json"
+      },
+      "type": "array"
+    },
+    "name": {
+      "type": "string"
+    },
+    "originId": {
+      "description": "Model object that initiates the connection",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "./ModelConnectionStatus.json"
+    },
+    "tagIds": {
+      "description": "Tag IDs assigned to this model",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "targetId": {
+      "description": "Model object that receives the message",
+      "type": "string"
+    },
+    "technologyIds": {
+      "description": "Technology IDs assigned to this model",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "viaId": {
+      "description": "Model object that facilitates the connection, such as a Kafka topic, or RabbitMQ queue",
+      "type": "string"
+    }
+  },
+  "required": [
+    "direction",
+    "id",
+    "name",
+    "originId",
+    "targetId"
+  ],
+  "type": "object"
+}

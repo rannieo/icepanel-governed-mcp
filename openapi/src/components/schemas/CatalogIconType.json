@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "svg",
+    "webp",
+    "png",
+    "jpeg"
+  ],
+  "type": "string"
+}

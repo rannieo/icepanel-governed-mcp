@@ -1,0 +1,33 @@
+{
+  "properties": {
+    "domainHandleId": {
+      "type": "string"
+    },
+    "domainName": {
+      "type": "string"
+    },
+    "groupHandleId": {
+      "type": "string"
+    },
+    "groupName": {
+      "type": "string"
+    },
+    "modelFamily": {
+      "items": {
+        "$ref": "./ActionContextModelObject.json"
+      },
+      "type": "array"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "$ref": "./DiagramType.json"
+    }
+  },
+  "required": [
+    "name",
+    "type"
+  ],
+  "type": "object"
+}

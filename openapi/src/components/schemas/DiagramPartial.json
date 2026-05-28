@@ -1,0 +1,55 @@
+{
+  "properties": {
+    "commit": {
+      "type": "number"
+    },
+    "description": {
+      "maxLength": 950000,
+      "type": "string"
+    },
+    "groupId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "index": {
+      "type": "number"
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "modelId": {
+      "description": "model object id this object belongs to",
+      "type": "string"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "parentId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "pinned": {
+      "type": "boolean"
+    },
+    "pinnedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "pinnedIndex": {
+      "type": "number"
+    },
+    "status": {
+      "$ref": "./DiagramStatus.json"
+    },
+    "zoomOverrides": {
+      "$ref": "./DiagramZoomOverridesNullable.json"
+    }
+  },
+  "type": "object"
+}

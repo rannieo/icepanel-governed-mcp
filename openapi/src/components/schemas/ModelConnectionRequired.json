@@ -1,0 +1,72 @@
+{
+  "properties": {
+    "commit": {
+      "type": "number"
+    },
+    "description": {
+      "maxLength": 950000,
+      "type": "string"
+    },
+    "direction": {
+      "$ref": "./ModelConnectionDirectionNullable.json"
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "links": {
+      "additionalProperties": {
+        "$ref": "./RealityLinkRequired.json"
+      },
+      "type": "object"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "originId": {
+      "description": "Model object that initiates the connection",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "./ModelConnectionStatus.json"
+    },
+    "tagIds": {
+      "description": "Tag IDs assigned to this model",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "targetId": {
+      "description": "Model object that receives the message",
+      "type": "string"
+    },
+    "technologyIds": {
+      "description": "Technology IDs assigned to this model",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "viaId": {
+      "description": "Model object that facilitates the connection, such as a Kafka topic, or RabbitMQ queue",
+      "nullable": true,
+      "type": "string"
+    },
+    "handleId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "direction",
+    "name",
+    "originId",
+    "targetId"
+  ],
+  "type": "object"
+}

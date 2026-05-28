@@ -1,0 +1,6 @@
+{
+  "additionalProperties": {
+    "$ref": "./FlowStepPath.json"
+  },
+  "type": "object"
+}

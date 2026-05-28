@@ -1,0 +1,61 @@
+{
+  "properties": {
+    "description": {
+      "description": "Descriptive name for the flow step",
+      "maxLength": 20000,
+      "type": "string"
+    },
+    "detailedDescription": {
+      "description": "Long description for the flow step",
+      "maxLength": 20000,
+      "type": "string"
+    },
+    "flowId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "index": {
+      "type": "number"
+    },
+    "originId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "parentId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "paths": {
+      "$ref": "./FlowStepPathsNullable.json"
+    },
+    "targetId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "type": {
+      "description": "Type of flow step - deprecated values: reply",
+      "enum": [
+        "alternate-path",
+        "subflow",
+        "outgoing",
+        "parallel-path",
+        "reply",
+        "self-action",
+        "introduction",
+        "information",
+        "conclusion",
+        null
+      ],
+      "nullable": true,
+      "type": "string"
+    },
+    "viaId": {
+      "nullable": true,
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

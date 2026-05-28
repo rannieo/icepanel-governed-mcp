@@ -1,0 +1,37 @@
+{
+  "allOf": [
+    {
+      "$ref": "./SocketClientAdrsEvents.json"
+    },
+    {
+      "$ref": "./SocketClientCommentEvents.json"
+    },
+    {
+      "$ref": "./SocketClientDiagramEvents.json"
+    },
+    {
+      "$ref": "./SocketClientDraftEvents.json"
+    },
+    {
+      "$ref": "./SocketClientDomainEvents.json"
+    },
+    {
+      "$ref": "./SocketClientEditorEvents.json"
+    },
+    {
+      "$ref": "./SocketClientFlowEvents.json"
+    },
+    {
+      "$ref": "./SocketClientLandscapeEvents.json"
+    },
+    {
+      "$ref": "./SocketClientModelEvents.json"
+    },
+    {
+      "$ref": "./SocketClientTagEvents.json"
+    },
+    {
+      "$ref": "./SocketClientVersionEvents.json"
+    }
+  ]
+}

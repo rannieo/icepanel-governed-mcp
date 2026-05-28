@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "user",
+    "api-key",
+    "notification-key",
+    "service"
+  ],
+  "type": "string"
+}

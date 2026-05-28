@@ -1,0 +1,31 @@
+{
+  "properties": {
+    "adrId": {
+      "type": "string"
+    },
+    "diagramId": {
+      "type": "string"
+    },
+    "draftId": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "index": {
+      "type": "number"
+    },
+    "link": {
+      "$ref": "./RealityLink.json"
+    },
+    "type": {
+      "$ref": "./ADRRelatedItemType.json"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "index"
+  ],
+  "type": "object"
+}

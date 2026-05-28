@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "content": {
+      "maxLength": 950000,
+      "type": "string"
+    },
+    "mentionedUserIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "type": "object"
+}

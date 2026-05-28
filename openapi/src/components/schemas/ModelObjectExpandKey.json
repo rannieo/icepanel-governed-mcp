@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "domain",
+    "flows",
+    "tags",
+    "technologies"
+  ],
+  "type": "string"
+}

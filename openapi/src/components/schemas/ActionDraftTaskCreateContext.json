@@ -1,0 +1,11 @@
+{
+  "properties": {
+    "draftName": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "draftName"
+  ],
+  "type": "object"
+}

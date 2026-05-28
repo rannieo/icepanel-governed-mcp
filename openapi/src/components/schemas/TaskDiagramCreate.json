@@ -1,0 +1,29 @@
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "props": {
+      "allOf": [
+        {
+          "$ref": "./DiagramRequired.json"
+        },
+        {
+          "$ref": "./DiagramContentRequired.json"
+        }
+      ]
+    },
+    "type": {
+      "enum": [
+        "diagram-create"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "props",
+    "type"
+  ],
+  "type": "object"
+}

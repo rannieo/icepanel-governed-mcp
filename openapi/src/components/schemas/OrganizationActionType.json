@@ -1,0 +1,24 @@
+{
+  "enum": [
+    "api-key-create",
+    "api-key-delete",
+    "api-key-update",
+    "oauth-consent-deny",
+    "oauth-consent-grant",
+    "organization-create",
+    "organization-delete",
+    "organization-update",
+    "organization-user-add",
+    "organization-user-invite-create",
+    "organization-user-invite-revoke",
+    "organization-user-remove",
+    "organization-user-update",
+    "team-create",
+    "team-delete",
+    "team-update",
+    "user-login",
+    "user-login-failed",
+    "user-logout"
+  ],
+  "type": "string"
+}

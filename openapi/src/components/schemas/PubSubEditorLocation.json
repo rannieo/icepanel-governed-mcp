@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "location": {
+      "$ref": "./EditorLocation.json"
+    },
+    "socketId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "added",
+        "modified"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "location",
+    "socketId",
+    "type"
+  ],
+  "type": "object"
+}

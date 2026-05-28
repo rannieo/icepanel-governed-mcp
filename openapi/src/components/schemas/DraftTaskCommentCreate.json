@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "entityId": {
+      "type": "string"
+    },
+    "props": {
+      "$ref": "./DraftTaskCommentCreateProps.json"
+    },
+    "type": {
+      "enum": [
+        "draft-comment-create"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "entityId",
+    "props",
+    "type"
+  ],
+  "type": "object"
+}

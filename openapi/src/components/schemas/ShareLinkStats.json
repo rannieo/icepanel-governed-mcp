@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "totalVisitorCount": {
+      "type": "number"
+    },
+    "viewedAt": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "totalVisitorCount"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "projectId": {
+      "type": "string"
+    },
+    "repositoryId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "bitbucket-repo"
+      ],
+      "type": "string"
+    },
+    "workspaceId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "projectId",
+    "repositoryId",
+    "type",
+    "workspaceId"
+  ],
+  "type": "object"
+}

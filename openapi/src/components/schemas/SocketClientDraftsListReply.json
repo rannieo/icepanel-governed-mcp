@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "drafts": {
+      "items": {
+        "$ref": "./Draft.json"
+      },
+      "type": "array"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "drafts",
+    "requestId"
+  ],
+  "type": "object"
+}

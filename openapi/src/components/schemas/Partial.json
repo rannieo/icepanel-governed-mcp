@@ -1,0 +1,112 @@
+{
+  "anyOf": [
+    {
+      "$ref": "./ADRPartial.json"
+    },
+    {
+      "$ref": "./ApiKeyPartial.json"
+    },
+    {
+      "$ref": "./AutomationRunPartial.json"
+    },
+    {
+      "$ref": "./AzureDevopsAuthorizationPartial.json"
+    },
+    {
+      "$ref": "./BitbucketAuthorizationPartial.json"
+    },
+    {
+      "$ref": "./BitbucketServerTokenPartial.json"
+    },
+    {
+      "$ref": "./CatalogTechnologyPartial.json"
+    },
+    {
+      "$ref": "./CodeRepoPartial.json"
+    },
+    {
+      "$ref": "./CommentPartial.json"
+    },
+    {
+      "$ref": "./CommentReplyPartial.json"
+    },
+    {
+      "$ref": "./DiagramCommentPartial.json"
+    },
+    {
+      "$ref": "./DiagramConnectionPartial.json"
+    },
+    {
+      "$ref": "./DiagramContentPartial.json"
+    },
+    {
+      "$ref": "./DiagramGroupPartial.json"
+    },
+    {
+      "$ref": "./DiagramObjectPartial.json"
+    },
+    {
+      "$ref": "./DiagramPartial.json"
+    },
+    {
+      "$ref": "./DomainPartial.json"
+    },
+    {
+      "$ref": "./DraftPartial.json"
+    },
+    {
+      "$ref": "./FlowPartial.json"
+    },
+    {
+      "$ref": "./FlowStepPartial.json"
+    },
+    {
+      "$ref": "./GitlabAuthorizationPartial.json"
+    },
+    {
+      "$ref": "./LandscapePartial.json"
+    },
+    {
+      "$ref": "./LandscapeTemplatePartial.json"
+    },
+    {
+      "$ref": "./ModelConnectionPartial.json"
+    },
+    {
+      "$ref": "./ModelObjectPartial.json"
+    },
+    {
+      "$ref": "./OrganizationPartial.json"
+    },
+    {
+      "$ref": "./OrganizationUserInvitePartial.json"
+    },
+    {
+      "$ref": "./RealityLinkPartial.json"
+    },
+    {
+      "$ref": "./SAMLProviderPartial.json"
+    },
+    {
+      "$ref": "./ShareLinkPartial.json"
+    },
+    {
+      "$ref": "./TagGroupPartial.json"
+    },
+    {
+      "$ref": "./TagPartial.json"
+    },
+    {
+      "$ref": "./TeamPartial.json"
+    },
+    {
+      "$ref": "./UserNotificationsPartial.json"
+    },
+    {
+      "$ref": "./UserPartial.json"
+    },
+    {
+      "$ref": "./VersionRevertPartial.json"
+    }
+  ]
+}

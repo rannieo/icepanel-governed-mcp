@@ -1,0 +1,26 @@
+{
+  "enum": [
+    "azure-devops-branch",
+    "azure-devops-file",
+    "azure-devops-folder",
+    "azure-devops-repo",
+    "bitbucket-branch",
+    "bitbucket-file",
+    "bitbucket-folder",
+    "bitbucket-repo",
+    "bitbucket-server-branch",
+    "bitbucket-server-file",
+    "bitbucket-server-folder",
+    "bitbucket-server-repo",
+    "github-branch",
+    "github-file",
+    "github-folder",
+    "github-repo",
+    "gitlab-branch",
+    "gitlab-file",
+    "gitlab-folder",
+    "gitlab-repo",
+    "url"
+  ],
+  "type": "string"
+}

@@ -1,0 +1,30 @@
+{
+  "properties": {
+    "content": {
+      "maxLength": 950000,
+      "type": "string"
+    },
+    "showContentPreview": {
+      "type": "boolean"
+    },
+    "status": {
+      "enum": [
+        "open",
+        "resolved"
+      ],
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "question"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "type",
+    "status",
+    "content"
+  ],
+  "type": "object"
+}

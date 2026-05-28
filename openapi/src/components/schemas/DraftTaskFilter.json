@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "active": {
+      "description": "Tasks which have not been superseded by subsequent tasks",
+      "type": "boolean"
+    },
+    "entityId": {
+      "type": "string"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "$ref": "./DraftTaskType.json"
+        },
+        {
+          "items": {
+            "$ref": "./DraftTaskType.json"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    }
+  },
+  "type": "object"
+}

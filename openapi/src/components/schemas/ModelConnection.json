@@ -1,0 +1,153 @@
+{
+  "properties": {
+    "commit": {
+      "type": "number"
+    },
+    "description": {
+      "maxLength": 950000,
+      "type": "string"
+    },
+    "direction": {
+      "$ref": "./ModelConnectionDirectionNullable.json"
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "links": {
+      "additionalProperties": {
+        "$ref": "./RealityLink.json"
+      },
+      "type": "object"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "originId": {
+      "description": "Model object that initiates the connection",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "./ModelConnectionStatus.json"
+    },
+    "tagIds": {
+      "description": "Tag IDs assigned to this model",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "targetId": {
+      "description": "Model object that receives the message",
+      "type": "string"
+    },
+    "technologyIds": {
+      "description": "Technology IDs assigned to this model",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "viaId": {
+      "description": "Model object that facilitates the connection, such as a Kafka topic, or RabbitMQ queue",
+      "nullable": true,
+      "type": "string"
+    },
+    "handleId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "deletedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "deletedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "deletedById": {
+      "type": "string"
+    },
+    "diagrams": {
+      "additionalProperties": {
+        "$ref": "./ModelConnectionDiagram.json"
+      },
+      "type": "object"
+    },
+    "flows": {
+      "additionalProperties": {
+        "$ref": "./ModelConnectionFlow.json"
+      },
+      "type": "object"
+    },
+    "id": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "latestEntityId": {
+      "type": "string"
+    },
+    "linked": {
+      "type": "boolean"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    },
+    "version": {
+      "type": "number"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "direction",
+    "name",
+    "originId",
+    "targetId",
+    "commit",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "diagrams",
+    "flows",
+    "handleId",
+    "id",
+    "labels",
+    "landscapeId",
+    "links",
+    "linked",
+    "status",
+    "tagIds",
+    "technologyIds",
+    "updatedAt",
+    "updatedBy",
+    "updatedById",
+    "version",
+    "versionId",
+    "viaId"
+  ],
+  "type": "object"
+}

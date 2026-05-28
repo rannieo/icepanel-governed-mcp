@@ -1,0 +1,20 @@
+{
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "landscapeNames": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "email"
+  ],
+  "type": "object"
+}

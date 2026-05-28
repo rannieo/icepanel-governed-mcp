@@ -1,0 +1,106 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./ActionCommentCreate.json"
+    },
+    {
+      "$ref": "./ActionCommentUpdate.json"
+    },
+    {
+      "$ref": "./ActionCommentDelete.json"
+    },
+    {
+      "$ref": "./ActionCommentReplyCreate.json"
+    },
+    {
+      "$ref": "./ActionCommentReplyUpdate.json"
+    },
+    {
+      "$ref": "./ActionCommentReplyDelete.json"
+    },
+    {
+      "$ref": "./ActionDiagramContentCreate.json"
+    },
+    {
+      "$ref": "./ActionDiagramContentUpdate.json"
+    },
+    {
+      "$ref": "./ActionDiagramContentDelete.json"
+    },
+    {
+      "$ref": "./ActionDiagramContentView.json"
+    },
+    {
+      "$ref": "./ActionDiagram.json"
+    },
+    {
+      "$ref": "./ActionDiagramGroupCreate.json"
+    },
+    {
+      "$ref": "./ActionDiagramGroupUpdate.json"
+    },
+    {
+      "$ref": "./ActionDiagramGroupDelete.json"
+    },
+    {
+      "$ref": "./ActionDomainCreate.json"
+    },
+    {
+      "$ref": "./ActionDomainUpdate.json"
+    },
+    {
+      "$ref": "./ActionDomainDelete.json"
+    },
+    {
+      "$ref": "./ActionDraft.json"
+    },
+    {
+      "$ref": "./ActionDraftTaskCreate.json"
+    },
+    {
+      "$ref": "./ActionLandscape.json"
+    },
+    {
+      "$ref": "./ActionModelObject.json"
+    },
+    {
+      "$ref": "./ActionModelConnection.json"
+    },
+    {
+      "$ref": "./ActionShareLink.json"
+    },
+    {
+      "$ref": "./ActionFlowCreate.json"
+    },
+    {
+      "$ref": "./ActionFlowUpdate.json"
+    },
+    {
+      "$ref": "./ActionFlowDelete.json"
+    },
+    {
+      "$ref": "./ActionFlowView.json"
+    },
+    {
+      "$ref": "./ActionTagCreate.json"
+    },
+    {
+      "$ref": "./ActionTagUpdate.json"
+    },
+    {
+      "$ref": "./ActionTagDelete.json"
+    },
+    {
+      "$ref": "./ActionTagGroupCreate.json"
+    },
+    {
+      "$ref": "./ActionTagGroupUpdate.json"
+    },
+    {
+      "$ref": "./ActionTagGroupDelete.json"
+    },
+    {
+      "$ref": "./ActionVersion.json"
+    }
+  ]
+}

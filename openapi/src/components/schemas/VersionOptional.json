@@ -1,0 +1,58 @@
+{
+  "properties": {
+    "modelHandleId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "name": {
+      "maxLength": 4000,
+      "minLength": 1,
+      "type": "string"
+    },
+    "notes": {
+      "maxLength": 20000,
+      "minLength": 10,
+      "type": "string"
+    },
+    "completedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "tags": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "type": "object"
+}

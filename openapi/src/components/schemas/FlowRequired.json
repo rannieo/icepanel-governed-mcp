@@ -1,0 +1,55 @@
+{
+  "properties": {
+    "commit": {
+      "type": "number"
+    },
+    "index": {
+      "type": "number"
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "pinned": {
+      "type": "boolean"
+    },
+    "pinnedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "pinnedIndex": {
+      "type": "number"
+    },
+    "showAllSteps": {
+      "type": "boolean"
+    },
+    "showConnectionNames": {
+      "type": "boolean"
+    },
+    "steps": {
+      "additionalProperties": {
+        "$ref": "./FlowStep.json"
+      },
+      "type": "object"
+    },
+    "diagramId": {
+      "type": "string"
+    },
+    "handleId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "diagramId",
+    "name"
+  ],
+  "type": "object"
+}

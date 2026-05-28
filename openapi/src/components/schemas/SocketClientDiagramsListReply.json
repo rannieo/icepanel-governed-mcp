@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "diagrams": {
+      "items": {
+        "$ref": "./Diagram.json"
+      },
+      "type": "array"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "diagrams",
+    "requestId"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,103 @@
+{
+  "properties": {
+    "model-connections-list": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientModelConnectionsListBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientModelConnectionsListReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "model-connections-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientModelConnectionsSubscribeBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientModelConnectionsSubscribeReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "model-connections-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientModelConnectionsUnsubscribeBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientModelObjectsListReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "model-objects-list": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientModelObjectsListBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientModelObjectsListReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "model-objects-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientModelObjectsSubscribeBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientModelObjectsSubscribeReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "model-objects-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientModelObjectsUnsubscribeBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "model-connections-list",
+    "model-connections-subscribe",
+    "model-connections-unsubscribe",
+    "model-objects-list",
+    "model-objects-subscribe",
+    "model-objects-unsubscribe"
+  ],
+  "type": "object"
+}

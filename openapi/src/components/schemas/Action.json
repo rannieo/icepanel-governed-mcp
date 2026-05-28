@@ -1,0 +1,10 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./OrganizationAction.json"
+    },
+    {
+      "$ref": "./LandscapeAction.json"
+    }
+  ]
+}

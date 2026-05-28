@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "lastBatch": {
+      "type": "boolean"
+    },
+    "modelConnections": {
+      "items": {
+        "$ref": "./ModelConnection.json"
+      },
+      "type": "array"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "modelConnections",
+    "lastBatch",
+    "requestId"
+  ],
+  "type": "object"
+}

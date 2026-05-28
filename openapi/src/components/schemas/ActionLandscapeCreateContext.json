@@ -1,0 +1,17 @@
+{
+  "properties": {
+    "backstageImport": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "string"
+    },
+    "structurizrImport": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "type": "object"
+}

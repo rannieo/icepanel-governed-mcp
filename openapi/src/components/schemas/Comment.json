@@ -1,0 +1,92 @@
+{
+  "properties": {
+    "body": {
+      "$ref": "./CommentBody.json"
+    },
+    "commit": {
+      "type": "number"
+    },
+    "mentionedUserIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "handleId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "deletedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "deletedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "deletedById": {
+      "type": "string"
+    },
+    "diagrams": {
+      "additionalProperties": {
+        "$ref": "./CommentDiagram.json"
+      },
+      "type": "object"
+    },
+    "id": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "latestEntityId": {
+      "type": "string"
+    },
+    "replyCount": {
+      "type": "number"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    },
+    "version": {
+      "type": "number"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "body",
+    "commit",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "diagrams",
+    "handleId",
+    "id",
+    "landscapeId",
+    "mentionedUserIds",
+    "replyCount",
+    "updatedAt",
+    "updatedBy",
+    "updatedById",
+    "version",
+    "versionId"
+  ],
+  "type": "object"
+}

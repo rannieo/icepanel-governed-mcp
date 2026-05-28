@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "comments": {
+      "items": {
+        "$ref": "./Comment.json"
+      },
+      "type": "array"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "comments",
+    "requestId"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,32 @@
+{
+  "properties": {
+    "context": {
+      "$ref": "./ActionDraftCreateContext.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "props": {
+      "$ref": "./DraftRequired.json"
+    },
+    "type": {
+      "enum": [
+        "draft-create"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "context",
+    "id",
+    "props",
+    "type"
+  ],
+  "type": "object"
+}

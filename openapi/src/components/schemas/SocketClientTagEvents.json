@@ -1,0 +1,103 @@
+{
+  "properties": {
+    "tag-groups-list": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientTagGroupsListBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientTagGroupsListReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "tag-groups-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientTagGroupsSubscribeBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientTagGroupsSubscribeReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "tag-groups-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientTagGroupsUnsubscribeBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientTagGroupsListReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "tags-list": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientTagsListBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientTagsListReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "tags-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientTagsSubscribeBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientTagsSubscribeReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "tags-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientTagsUnsubscribeBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "tag-groups-list",
+    "tag-groups-subscribe",
+    "tag-groups-unsubscribe",
+    "tags-list",
+    "tags-subscribe",
+    "tags-unsubscribe"
+  ],
+  "type": "object"
+}

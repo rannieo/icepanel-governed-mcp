@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "finalValue": {
+      "type": "boolean"
+    },
+    "modelConnections": {
+      "items": {
+        "$ref": "./ModelConnection.json"
+      },
+      "type": "array"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "finalValue",
+    "modelConnections",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

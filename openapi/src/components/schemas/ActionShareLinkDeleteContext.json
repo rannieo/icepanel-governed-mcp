@@ -1,0 +1,27 @@
+{
+  "properties": {
+    "draftHandleId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "draftName": {
+      "type": "string"
+    },
+    "shortId": {
+      "type": "string"
+    },
+    "versionModelHandleId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "versionName": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "shortId",
+    "versionName",
+    "versionModelHandleId"
+  ],
+  "type": "object"
+}

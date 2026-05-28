@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "status": {
+      "$ref": "./HealthCheckStatus.json"
+    }
+  },
+  "required": [
+    "id",
+    "status"
+  ],
+  "type": "object"
+}

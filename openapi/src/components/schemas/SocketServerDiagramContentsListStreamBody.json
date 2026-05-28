@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "diagramContents": {
+      "items": {
+        "$ref": "./DiagramContent.json"
+      },
+      "type": "array"
+    },
+    "lastBatch": {
+      "type": "boolean"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "diagramContents",
+    "lastBatch",
+    "requestId"
+  ],
+  "type": "object"
+}

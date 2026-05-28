@@ -1,0 +1,25 @@
+{
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "entityId": {
+      "description": "The id of the entity where the error occurred",
+      "type": "string"
+    },
+    "entityOriginalId": {
+      "description": "The not using the standard id format, this will be the original import identifier",
+      "type": "string"
+    },
+    "entityType": {
+      "$ref": "./ImportEntityType.json"
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "message"
+  ],
+  "type": "object"
+}

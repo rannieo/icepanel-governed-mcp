@@ -1,0 +1,33 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "color": {
+      "$ref": "./TagColor.json"
+    },
+    "groupId": {
+      "description": "Parent tag group ID",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "color",
+    "groupId",
+    "id",
+    "name"
+  ],
+  "type": "object"
+}

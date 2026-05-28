@@ -1,0 +1,10 @@
+{
+  "enum": [
+    "approved",
+    "pending-review",
+    "rejected",
+    null
+  ],
+  "nullable": true,
+  "type": "string"
+}

@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "location": {
+      "$ref": "./EditorLocation.json"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "location",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

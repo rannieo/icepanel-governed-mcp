@@ -1,0 +1,87 @@
+{
+  "properties": {
+    "domain-added": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDomainAddedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "domain-initial-value": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDomainInitialValueBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "domain-modified": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDomainModifiedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "domain-removed": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDomainRemovedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "domains-list-stream": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerDomainsListStreamBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "domain-added",
+    "domain-initial-value",
+    "domain-modified",
+    "domain-removed",
+    "domains-list-stream"
+  ],
+  "type": "object"
+}

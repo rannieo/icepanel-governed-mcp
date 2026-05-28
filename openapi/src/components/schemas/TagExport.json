@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "color": {
+      "$ref": "./TagColor.json"
+    },
+    "groupId": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "color",
+    "groupId",
+    "id",
+    "name"
+  ],
+  "type": "object"
+}

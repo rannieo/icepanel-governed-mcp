@@ -1,0 +1,17 @@
+{
+  "properties": {
+    "body": {
+      "$ref": "./CommentBody.json"
+    },
+    "commit": {
+      "type": "number"
+    },
+    "mentionedUserIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "type": "object"
+}

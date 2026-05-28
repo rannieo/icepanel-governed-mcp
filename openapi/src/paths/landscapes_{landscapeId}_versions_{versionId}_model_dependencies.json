@@ -1,0 +1,152 @@
+{
+  "get": {
+    "security": [
+      {
+        "ApiKeyAuth": []
+      },
+      {
+        "BearerAuth": []
+      }
+    ],
+    "tags": [
+      "Model Objects"
+    ],
+    "x-eov-operation-handler": "modelDependencies",
+    "x-fern-audiences": [
+      "public"
+    ],
+    "x-fern-sdk-group-name": [
+      "model",
+      "objects"
+    ],
+    "description": "Returns the incoming and outgoing dependencies for each requested object. Objects can be specified by ID or by label key-value pairs (or both): label pairs use OR semantics so an object matching any pair is included. Results are filtered by tags and/or technologies when provided: within each filter array the semantics are OR (any match passes), and between the two filter dimensions the semantics are AND (an object must satisfy both when both are specified).",
+    "operationId": "modelObjectDependenciesList",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "landscapeId",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "in": "path",
+        "name": "versionId",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "description": "Object selection and dependency filters.",
+        "in": "query",
+        "name": "filter",
+        "required": true,
+        "schema": {
+          "$ref": "../components/schemas/ModelDependenciesFilter.json"
+        },
+        "style": "deepObject"
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "additionalProperties": {
+                "properties": {
+                  "incoming": {
+                    "additionalProperties": {
+                      "$ref": "../components/schemas/ModelObject.json"
+                    },
+                    "description": "Objects that depend on this object (have a connection pointing to it).",
+                    "type": "object"
+                  },
+                  "outgoing": {
+                    "additionalProperties": {
+                      "$ref": "../components/schemas/ModelObject.json"
+                    },
+                    "description": "Objects that this object depends on (has a connection pointing to them).",
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "incoming",
+                  "outgoing"
+                ],
+                "type": "object"
+              },
+              "description": "Map of object ID to its resolved incoming and outgoing dependencies.",
+              "type": "object"
+            }
+          }
+        },
+        "description": "OK"
+      },
+      "400": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Bad Request"
+      },
+      "401": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Unauthorized"
+      },
+      "403": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Forbidden"
+      },
+      "404": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Not Found"
+      },
+      "422": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Unprocessable Entity"
+      },
+      "500": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Internal Server"
+      }
+    },
+    "summary": "List Dependencies",
+    "x-fern-request-name": "ModelObjectDependenciesListRequest",
+    "x-fern-sdk-method-name": "dependenciesList"
+  }
+}

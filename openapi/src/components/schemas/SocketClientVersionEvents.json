@@ -1,0 +1,55 @@
+{
+  "properties": {
+    "versions-list": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientVersionsListBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientVersionsListReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "versions-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientVersionsSubscribeBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientVersionsSubscribeReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "versions-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientVersionsUnsubscribeBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "versions-list",
+    "versions-subscribe",
+    "versions-unsubscribe"
+  ],
+  "type": "object"
+}

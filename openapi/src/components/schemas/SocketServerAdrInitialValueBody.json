@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "adrs": {
+      "items": {
+        "$ref": "./ADR.json"
+      },
+      "type": "array"
+    },
+    "finalValue": {
+      "type": "boolean"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "adrs",
+    "finalValue",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

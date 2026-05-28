@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "targetOrganizationId": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

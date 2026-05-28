@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "contributors": {
+      "additionalProperties": {
+        "$ref": "./ActionLogStatsContributor.json"
+      },
+      "type": "object"
+    },
+    "count": {
+      "type": "number"
+    },
+    "type": {
+      "$ref": "./ActionType.json",
+      "description": "type of action that was performed, eg: diagram-content-update or model-object-create"
+    }
+  },
+  "required": [
+    "contributors",
+    "count",
+    "type"
+  ],
+  "type": "object"
+}

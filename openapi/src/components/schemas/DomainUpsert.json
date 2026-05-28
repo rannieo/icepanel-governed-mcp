@@ -1,0 +1,10 @@
+{
+  "allOf": [
+    {
+      "$ref": "./DomainRequired.json"
+    },
+    {
+      "$ref": "./DomainPartial.json"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "properties": {
+    "draftId": {
+      "description": "Fetch and apply draft tasks before producing the export",
+      "type": "string"
+    },
+    "orientation": {
+      "$ref": "./LandscapeExportOrientation.json",
+      "default": "portrait",
+      "description": "Orientation to use when exporting to PDF"
+    }
+  },
+  "type": "object"
+}

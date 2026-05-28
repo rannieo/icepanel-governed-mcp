@@ -1,0 +1,22 @@
+{
+  "description": "AI features that are enabled for the organization",
+  "properties": {
+    "generateDetailedDescriptions": {
+      "description": "Whether to enable detailed descriptions for objects, connections, and diagrams",
+      "type": "boolean"
+    },
+    "generateDisplayDescriptions": {
+      "description": "Whether to enable display descriptions for objects",
+      "type": "boolean"
+    },
+    "generateDraftSummary": {
+      "description": "Whether to enable draft summaries for diagrams",
+      "type": "boolean"
+    },
+    "generateObjectSummary": {
+      "description": "Whether to enable object summaries for objects and connections in the right click context menu",
+      "type": "boolean"
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,22 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "customName": {
+      "description": "Friendly name for the link set by the user",
+      "type": "string"
+    },
+    "id": {
+      "description": "Random 20 character identifier",
+      "type": "string"
+    },
+    "url": {
+      "description": "Accessible link URL when not using a connector",
+      "format": "uri",
+      "type": "string"
+    }
+  },
+  "required": [
+    "url"
+  ],
+  "type": "object"
+}

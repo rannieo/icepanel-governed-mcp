@@ -1,0 +1,10 @@
+{
+  "allOf": [
+    {
+      "$ref": "./ModelObjectRequired.json"
+    },
+    {
+      "$ref": "./ModelObjectPartial.json"
+    }
+  ]
+}

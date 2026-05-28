@@ -1,0 +1,30 @@
+{
+  "properties": {
+    "attachments": {
+      "items": {
+        "$ref": "./SupportMessageAttachment.json"
+      },
+      "type": "array"
+    },
+    "message": {
+      "maxLength": 20000,
+      "type": "string"
+    },
+    "subject": {
+      "maxLength": 1000,
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "bug"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "message",
+    "subject",
+    "type"
+  ],
+  "type": "object"
+}

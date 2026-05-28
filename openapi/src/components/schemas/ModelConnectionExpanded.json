@@ -1,0 +1,24 @@
+{
+  "allOf": [
+    {
+      "$ref": "./ModelConnection.json"
+    },
+    {
+      "properties": {
+        "tags": {
+          "additionalProperties": {
+            "$ref": "./TagExport.json"
+          },
+          "type": "object"
+        },
+        "technologies": {
+          "additionalProperties": {
+            "$ref": "./TechnologyExport.json"
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "properties": {
+    "comments-list": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientCommentsListBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientCommentsListReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "comments-reply-list": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientCommentsReplyListBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientCommentsReplyListReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "comments-reply-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientCommentsReplySubscribeBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientCommentsReplySubscribeReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "comments-reply-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientCommentsReplyUnsubscribeBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "comments-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientCommentsSubscribeBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientCommentsSubscribeReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "comments-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientCommentsUnsubscribeBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "comments-list",
+    "comments-reply-list",
+    "comments-reply-subscribe",
+    "comments-reply-unsubscribe",
+    "comments-subscribe",
+    "comments-unsubscribe"
+  ],
+  "type": "object"
+}

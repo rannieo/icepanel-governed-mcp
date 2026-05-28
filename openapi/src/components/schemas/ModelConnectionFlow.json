@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "stepId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "stepId"
+  ],
+  "type": "object"
+}

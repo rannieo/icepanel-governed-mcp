@@ -1,0 +1,21 @@
+{
+  "properties": {
+    "password": {
+      "format": "password",
+      "maxLength": 64,
+      "minLength": 8,
+      "type": "string"
+    },
+    "protected": {
+      "type": "boolean"
+    },
+    "draftId": {
+      "nullable": true,
+      "type": "string"
+    }
+  },
+  "required": [
+    "protected"
+  ],
+  "type": "object"
+}

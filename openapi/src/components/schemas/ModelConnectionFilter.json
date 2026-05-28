@@ -1,0 +1,127 @@
+{
+  "properties": {
+    "direction": {
+      "$ref": "./ModelConnectionDirection.json"
+    },
+    "handleId": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "description": "Filter any connections with this handle id",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "linked": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "string"
+    },
+    "originId": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "description": "Filter any connections with this origin id",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "status": {
+      "oneOf": [
+        {
+          "$ref": "./ModelConnectionStatus.json"
+        },
+        {
+          "description": "Filter any connections with this status",
+          "items": {
+            "$ref": "./ModelConnectionStatus.json"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "tagIds": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "description": "Filter any connections with this tag id",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "targetId": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "description": "Filter any connections with this target id",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "technologyIds": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "description": "Filter any with this technology id",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "viaId": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "description": "Filter any connections with this via id",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    }
+  },
+  "type": "object"
+}

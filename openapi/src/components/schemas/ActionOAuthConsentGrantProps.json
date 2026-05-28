@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "clientName": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "clientName",
+    "landscapeId"
+  ],
+  "type": "object"
+}

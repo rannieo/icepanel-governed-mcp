@@ -1,0 +1,8 @@
+{
+  "enum": [
+    "concept",
+    "alpha",
+    "beta"
+  ],
+  "type": "string"
+}

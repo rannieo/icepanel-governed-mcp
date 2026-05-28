@@ -1,0 +1,128 @@
+{
+  "properties": {
+    "commit": {
+      "type": "number"
+    },
+    "index": {
+      "type": "number"
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "pinned": {
+      "type": "boolean"
+    },
+    "pinnedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "pinnedIndex": {
+      "type": "number"
+    },
+    "showAllSteps": {
+      "type": "boolean"
+    },
+    "showConnectionNames": {
+      "type": "boolean"
+    },
+    "steps": {
+      "additionalProperties": {
+        "$ref": "./FlowStep.json"
+      },
+      "type": "object"
+    },
+    "diagramId": {
+      "type": "string"
+    },
+    "handleId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "deletedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "deletedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "deletedById": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "latestEntityId": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    },
+    "version": {
+      "type": "number"
+    },
+    "versionId": {
+      "type": "string"
+    },
+    "viewedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "viewedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "viewedById": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "diagramId",
+    "name",
+    "commit",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "handleId",
+    "id",
+    "index",
+    "labels",
+    "landscapeId",
+    "pinned",
+    "showAllSteps",
+    "showConnectionNames",
+    "steps",
+    "updatedAt",
+    "updatedBy",
+    "updatedById",
+    "version",
+    "versionId"
+  ],
+  "type": "object"
+}

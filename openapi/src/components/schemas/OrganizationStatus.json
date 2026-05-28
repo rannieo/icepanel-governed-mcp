@@ -1,0 +1,13 @@
+{
+  "enum": [
+    "active",
+    "canceled",
+    "incomplete_expired",
+    "incomplete",
+    "past_due",
+    "paused",
+    "trialing",
+    "unpaid"
+  ],
+  "type": "string"
+}

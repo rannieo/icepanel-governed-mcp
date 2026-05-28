@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "diagram": {
+      "$ref": "./Diagram.json"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "diagram",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

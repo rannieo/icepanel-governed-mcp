@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "context": {
+      "$ref": "./ActionModelObjectsExportContext.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "props": {
+      "$ref": "./ActionModelObjectsExportProps.json"
+    },
+    "type": {
+      "enum": [
+        "model-objects-export"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "context",
+    "props",
+    "id",
+    "type"
+  ],
+  "type": "object"
+}

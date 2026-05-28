@@ -1,0 +1,14 @@
+{
+  "properties": {
+    "initialValue": {
+      "type": "boolean"
+    },
+    "landscapeId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "landscapeId"
+  ],
+  "type": "object"
+}

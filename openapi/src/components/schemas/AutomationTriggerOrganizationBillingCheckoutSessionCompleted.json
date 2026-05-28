@@ -1,0 +1,58 @@
+{
+  "properties": {
+    "currency": {
+      "$ref": "./OrganizationBillingCurrency.json"
+    },
+    "customFields": {
+      "additionalProperties": {
+        "nullable": true,
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "customer": {
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "eventId": {
+      "type": "string"
+    },
+    "invoiceId": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "paymentIntentId": {
+      "type": "string"
+    },
+    "paymentLinkId": {
+      "type": "string"
+    },
+    "subtotal": {
+      "type": "number"
+    },
+    "total": {
+      "type": "number"
+    },
+    "type": {
+      "enum": [
+        "organization-billing-checkout-session-completed"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "customer",
+    "eventId",
+    "type"
+  ],
+  "type": "object"
+}

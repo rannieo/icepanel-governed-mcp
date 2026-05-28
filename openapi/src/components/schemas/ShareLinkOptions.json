@@ -1,0 +1,242 @@
+{
+  "properties": {
+    "adrId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "connectionIds": {
+      "items": {
+        "type": "string"
+      },
+      "nullable": true,
+      "type": "array"
+    },
+    "diagramId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "domainId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "drawer": {
+      "enum": [
+        "expanded",
+        "collapsed",
+        null
+      ],
+      "nullable": true,
+      "type": "string"
+    },
+    "expandedIds": {
+      "items": {
+        "type": "string"
+      },
+      "nullable": true,
+      "type": "array"
+    },
+    "filterIds": {
+      "items": {
+        "type": "string"
+      },
+      "nullable": true,
+      "type": "array"
+    },
+    "filterIdsExcluded": {
+      "items": {
+        "type": "string"
+      },
+      "nullable": true,
+      "type": "array"
+    },
+    "filterIdsIncluded": {
+      "items": {
+        "type": "string"
+      },
+      "nullable": true,
+      "type": "array"
+    },
+    "flowId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "flowParentIds": {
+      "items": {
+        "type": "string"
+      },
+      "nullable": true,
+      "type": "array"
+    },
+    "flowPathIds": {
+      "items": {
+        "type": "string"
+      },
+      "nullable": true,
+      "type": "array"
+    },
+    "flowStepId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "mode": {
+      "$ref": "./ShareLinkOptionsMode.json"
+    },
+    "modelId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "objectIds": {
+      "items": {
+        "type": "string"
+      },
+      "nullable": true,
+      "type": "array"
+    },
+    "objectIdsFocused": {
+      "items": {
+        "type": "string"
+      },
+      "nullable": true,
+      "type": "array"
+    },
+    "objectTab": {
+      "enum": [
+        "details",
+        "connections",
+        "history",
+        null
+      ],
+      "nullable": true,
+      "type": "string"
+    },
+    "overlayGroupId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "overlayIdsFocused": {
+      "items": {
+        "type": "string"
+      },
+      "nullable": true,
+      "type": "array"
+    },
+    "overlayIdsHidden": {
+      "items": {
+        "type": "string"
+      },
+      "nullable": true,
+      "type": "array"
+    },
+    "overlayIdsPinned": {
+      "items": {
+        "type": "string"
+      },
+      "nullable": true,
+      "type": "array"
+    },
+    "overlayTab": {
+      "enum": [
+        "tags",
+        "technology",
+        "status",
+        null
+      ],
+      "nullable": true,
+      "type": "string"
+    },
+    "preventNavigation": {
+      "type": "boolean"
+    },
+    "search": {
+      "nullable": true,
+      "type": "string"
+    },
+    "viaId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "x1": {
+      "nullable": true,
+      "type": "number"
+    },
+    "x2": {
+      "nullable": true,
+      "type": "number"
+    },
+    "y": {
+      "nullable": true,
+      "type": "number"
+    },
+    "y1": {
+      "nullable": true,
+      "type": "number"
+    },
+    "y2": {
+      "nullable": true,
+      "type": "number"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "hash": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "shareLinkId": {
+      "type": "string"
+    },
+    "shortId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "adrId",
+    "connectionIds",
+    "diagramId",
+    "domainId",
+    "drawer",
+    "expandedIds",
+    "filterIds",
+    "filterIdsExcluded",
+    "filterIdsIncluded",
+    "flowId",
+    "flowParentIds",
+    "flowPathIds",
+    "flowStepId",
+    "mode",
+    "modelId",
+    "objectIds",
+    "objectIdsFocused",
+    "objectTab",
+    "overlayGroupId",
+    "overlayIdsFocused",
+    "overlayIdsHidden",
+    "overlayIdsPinned",
+    "overlayTab",
+    "preventNavigation",
+    "search",
+    "viaId",
+    "x1",
+    "x2",
+    "y",
+    "y1",
+    "y2",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "hash",
+    "id",
+    "shareLinkId",
+    "shortId"
+  ],
+  "type": "object"
+}

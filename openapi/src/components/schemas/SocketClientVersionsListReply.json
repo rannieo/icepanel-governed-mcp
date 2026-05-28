@@ -1,0 +1,14 @@
+{
+  "properties": {
+    "versions": {
+      "items": {
+        "$ref": "./Version.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "versions"
+  ],
+  "type": "object"
+}

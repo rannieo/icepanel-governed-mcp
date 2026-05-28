@@ -1,0 +1,8 @@
+{
+  "enum": [
+    "in-progress",
+    "merged",
+    "archived"
+  ],
+  "type": "string"
+}

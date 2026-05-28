@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "commentId": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "props": {
+      "$ref": "./CommentReplyPartial.json"
+    },
+    "type": {
+      "enum": [
+        "comment-reply-update"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "props",
+    "type",
+    "commentId"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,30 @@
+{
+  "properties": {
+    "commentId": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "comment-status-update"
+      ],
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "commentId",
+    "landscapeId",
+    "organizationId",
+    "type",
+    "userId"
+  ],
+  "type": "object"
+}

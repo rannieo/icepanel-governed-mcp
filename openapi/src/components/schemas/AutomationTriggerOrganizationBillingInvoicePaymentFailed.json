@@ -1,0 +1,77 @@
+{
+  "properties": {
+    "amountDue": {
+      "type": "number"
+    },
+    "amountPaid": {
+      "type": "number"
+    },
+    "collectionMethod": {
+      "$ref": "./OrganizationCollectionMethod.json"
+    },
+    "currency": {
+      "$ref": "./OrganizationBillingCurrency.json"
+    },
+    "cycle": {
+      "$ref": "./OrganizationBillingCycle.json"
+    },
+    "errors": {
+      "items": {
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "docUrl": {
+            "format": "uri",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "eventId": {
+      "type": "string"
+    },
+    "invoiceId": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "plan": {
+      "$ref": "./OrganizationPlan.json"
+    },
+    "seats": {
+      "type": "number"
+    },
+    "subtotal": {
+      "type": "number"
+    },
+    "total": {
+      "type": "number"
+    },
+    "type": {
+      "enum": [
+        "organization-billing-invoice-payment-failed"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "amountDue",
+    "amountPaid",
+    "collectionMethod",
+    "currency",
+    "cycle",
+    "invoiceId",
+    "organizationId",
+    "plan",
+    "seats",
+    "eventId",
+    "subtotal",
+    "total",
+    "type"
+  ],
+  "type": "object"
+}

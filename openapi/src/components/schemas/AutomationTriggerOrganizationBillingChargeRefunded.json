@@ -1,0 +1,45 @@
+{
+  "properties": {
+    "amount": {
+      "type": "number"
+    },
+    "amountRefunded": {
+      "type": "number"
+    },
+    "currency": {
+      "$ref": "./OrganizationBillingCurrency.json"
+    },
+    "description": {
+      "type": "string"
+    },
+    "eventId": {
+      "type": "string"
+    },
+    "invoiceId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "paymentIntentId": {
+      "type": "string"
+    },
+    "paymentMethodType": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "organization-billing-charge-refunded"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "amount",
+    "amountRefunded",
+    "eventId",
+    "type"
+  ],
+  "type": "object"
+}

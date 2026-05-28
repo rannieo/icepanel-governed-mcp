@@ -1,0 +1,39 @@
+{
+  "properties": {
+    "actor": {
+      "type": "number"
+    },
+    "app": {
+      "type": "number"
+    },
+    "group": {
+      "type": "number"
+    },
+    "component": {
+      "type": "number"
+    },
+    "store": {
+      "type": "number"
+    },
+    "system": {
+      "type": "number"
+    },
+    "area": {
+      "type": "number"
+    },
+    "box": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "actor",
+    "app",
+    "group",
+    "component",
+    "store",
+    "system",
+    "area",
+    "box"
+  ],
+  "type": "object"
+}

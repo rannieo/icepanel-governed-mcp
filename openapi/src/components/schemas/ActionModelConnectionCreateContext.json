@@ -1,0 +1,41 @@
+{
+  "properties": {
+    "domainHandleId": {
+      "type": "string"
+    },
+    "domainName": {
+      "type": "string"
+    },
+    "originModelFamily": {
+      "items": {
+        "$ref": "./ActionContextModelObject.json"
+      },
+      "type": "array"
+    },
+    "tagNames": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "targetModelFamily": {
+      "items": {
+        "$ref": "./ActionContextModelObject.json"
+      },
+      "type": "array"
+    },
+    "technologyNames": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "viaModelFamily": {
+      "items": {
+        "$ref": "./ActionContextModelObject.json"
+      },
+      "type": "array"
+    }
+  },
+  "type": "object"
+}

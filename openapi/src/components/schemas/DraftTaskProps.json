@@ -1,0 +1,61 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./DraftTaskCommentCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentReplyCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskCommentReplyUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramContentUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramGroupCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskDiagramGroupUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskModelObjectCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskModelObjectUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskModelConnectionCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskModelConnectionUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskFlowCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskFlowUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskTagCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskTagUpdateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskTagGroupCreateProps.json"
+    },
+    {
+      "$ref": "./DraftTaskTagGroupUpdateProps.json"
+    }
+  ]
+}

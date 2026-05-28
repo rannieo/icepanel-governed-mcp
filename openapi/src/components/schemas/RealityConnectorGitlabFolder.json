@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "branchName": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    },
+    "projectId": {
+      "type": "number"
+    },
+    "type": {
+      "enum": [
+        "gitlab-folder"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "branchName",
+    "path",
+    "projectId",
+    "type"
+  ],
+  "type": "object"
+}

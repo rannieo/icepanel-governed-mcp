@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "catalogTechnologyId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "catalog-technology-review-approved"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "catalogTechnologyId",
+    "type"
+  ],
+  "type": "object"
+}

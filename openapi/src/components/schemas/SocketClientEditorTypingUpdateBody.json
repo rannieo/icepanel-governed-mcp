@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "landscapeId": {
+      "type": "string"
+    },
+    "typing": {
+      "$ref": "./EditorTypingUpdate.json"
+    }
+  },
+  "required": [
+    "landscapeId",
+    "typing"
+  ],
+  "type": "object"
+}

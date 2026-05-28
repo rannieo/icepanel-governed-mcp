@@ -1,0 +1,47 @@
+{
+  "properties": {
+    "commit": {
+      "type": "number"
+    },
+    "task": {
+      "$ref": "./DraftTask.json"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "draftId": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "latestEntityId": {
+      "type": "string"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "task",
+    "commit",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "draftId",
+    "id",
+    "landscapeId",
+    "versionId"
+  ],
+  "type": "object"
+}

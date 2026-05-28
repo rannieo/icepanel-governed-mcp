@@ -1,0 +1,206 @@
+{
+  "properties": {
+    "caption": {
+      "description": "Short summary of the object shown as the display description",
+      "maxLength": 50000,
+      "type": "string"
+    },
+    "commit": {
+      "type": "number"
+    },
+    "description": {
+      "maxLength": 950000,
+      "type": "string"
+    },
+    "external": {
+      "type": "boolean"
+    },
+    "groupIds": {
+      "description": "IDs of the groups this model object belongs to",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "icon": {
+      "$ref": "./ModelObjectIconNullable.json"
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "description": "Generic key value store used for creating custom integrations",
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "links": {
+      "additionalProperties": {
+        "$ref": "./RealityLink.json"
+      },
+      "type": "object"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "parentId": {
+      "description": "Parent model object ID, null for the root level model object",
+      "nullable": true,
+      "type": "string"
+    },
+    "status": {
+      "$ref": "./ModelObjectStatus.json"
+    },
+    "tagIds": {
+      "description": "Tag IDs assigned to this model",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "teamIds": {
+      "description": "Team IDs that own this model object, does not propergate up or down",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "teamOnlyEditing": {
+      "description": "Model object (+child diagram, diagram groups and flows) can only be edited by owners and admins",
+      "type": "boolean"
+    },
+    "technologyIds": {
+      "description": "Technology IDs assigned to this model",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "type": {
+      "$ref": "./ModelObjectType.json"
+    },
+    "domainId": {
+      "type": "string"
+    },
+    "handleId": {
+      "type": "string"
+    },
+    "childDiagramIds": {
+      "description": "Child diagram IDs",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "childIds": {
+      "description": "Child model object IDs, only one level down",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "deletedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "deletedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "deletedById": {
+      "type": "string"
+    },
+    "diagrams": {
+      "additionalProperties": {
+        "$ref": "./ModelObjectDiagram.json"
+      },
+      "type": "object"
+    },
+    "flows": {
+      "additionalProperties": {
+        "$ref": "./ModelObjectFlow.json"
+      },
+      "type": "object"
+    },
+    "id": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "latestEntityId": {
+      "type": "string"
+    },
+    "linked": {
+      "type": "boolean"
+    },
+    "parentIds": {
+      "description": "Parent model object IDs for the whole hierarchy, ending with the root model object",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    },
+    "version": {
+      "type": "number"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "parentId",
+    "type",
+    "childDiagramIds",
+    "childIds",
+    "commit",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "diagrams",
+    "domainId",
+    "external",
+    "flows",
+    "groupIds",
+    "handleId",
+    "icon",
+    "id",
+    "labels",
+    "landscapeId",
+    "linked",
+    "links",
+    "parentIds",
+    "status",
+    "tagIds",
+    "teamIds",
+    "teamOnlyEditing",
+    "technologyIds",
+    "updatedAt",
+    "updatedBy",
+    "updatedById",
+    "version",
+    "versionId"
+  ],
+  "type": "object"
+}

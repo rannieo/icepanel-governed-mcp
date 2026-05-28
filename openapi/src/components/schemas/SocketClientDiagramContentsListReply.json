@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "diagramContents": {
+      "items": {
+        "$ref": "./DiagramContent.json"
+      },
+      "type": "array"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "diagramContents",
+    "requestId"
+  ],
+  "type": "object"
+}

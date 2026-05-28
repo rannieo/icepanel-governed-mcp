@@ -1,0 +1,8 @@
+{
+  "enum": [
+    "bot",
+    "user",
+    "organization"
+  ],
+  "type": "string"
+}

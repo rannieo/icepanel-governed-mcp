@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "billing",
+    "read",
+    "write",
+    "admin"
+  ],
+  "type": "string"
+}

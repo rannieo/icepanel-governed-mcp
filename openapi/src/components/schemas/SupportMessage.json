@@ -1,0 +1,46 @@
+{
+  "properties": {
+    "body": {
+      "$ref": "./SupportMessageBody.json"
+    },
+    "email": {
+      "description": "The email address of the user, preferrably this should be set by providing an authorization header, using this will mark the message as anonymous",
+      "format": "email",
+      "type": "string"
+    },
+    "landscapeId": {
+      "description": "The landscape that the message is regarding, only available when the user is authenticated",
+      "type": "string"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "organizationId": {
+      "description": "The organization that the message is regarding, only available when the user is authenticated",
+      "type": "string"
+    },
+    "url": {
+      "description": "The url of the page that was viewed when the message is created",
+      "format": "uri",
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "userId": {
+      "description": "The user that created the message if the request was authenticated",
+      "type": "string"
+    }
+  },
+  "required": [
+    "body",
+    "createdAt",
+    "id"
+  ],
+  "type": "object"
+}

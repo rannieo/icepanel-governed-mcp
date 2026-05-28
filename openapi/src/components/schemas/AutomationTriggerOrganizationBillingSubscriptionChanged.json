@@ -1,0 +1,113 @@
+{
+  "properties": {
+    "billingMonthlyRevenue": {
+      "type": "number"
+    },
+    "cancelAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "canceledAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "cancellationDetails": {
+      "properties": {
+        "comment": {
+          "type": "string"
+        },
+        "feedback": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "collectionMethod": {
+      "$ref": "./OrganizationCollectionMethod.json"
+    },
+    "currency": {
+      "$ref": "./OrganizationBillingCurrency.json"
+    },
+    "cycle": {
+      "$ref": "./OrganizationBillingCycle.json"
+    },
+    "eventId": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "plan": {
+      "$ref": "./OrganizationPlan.json"
+    },
+    "planEndsAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "seats": {
+      "type": "number"
+    },
+    "status": {
+      "$ref": "./OrganizationStatus.json"
+    },
+    "trialEndsAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "organization-billing-subscription-changed"
+      ],
+      "type": "string"
+    },
+    "updateBillingMonthlyRevenue": {
+      "type": "number"
+    },
+    "updateCancelAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updateCanceledAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updateCollectionMethod": {
+      "$ref": "./OrganizationCollectionMethod.json"
+    },
+    "updateCurrency": {
+      "$ref": "./OrganizationBillingCurrency.json"
+    },
+    "updateCycle": {
+      "$ref": "./OrganizationBillingCycle.json"
+    },
+    "updatePlan": {
+      "$ref": "./OrganizationPlan.json"
+    },
+    "updatePlanEndsAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updateSeats": {
+      "type": "number"
+    },
+    "updateStatus": {
+      "$ref": "./OrganizationStatus.json"
+    },
+    "updateTrialEndsAt": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "eventId",
+    "organizationId",
+    "plan",
+    "seats",
+    "status",
+    "type"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "date": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "schedule"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "date",
+    "type"
+  ],
+  "type": "object"
+}

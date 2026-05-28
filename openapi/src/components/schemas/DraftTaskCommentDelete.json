@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "entityId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "draft-comment-delete"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "entityId",
+    "type"
+  ],
+  "type": "object"
+}

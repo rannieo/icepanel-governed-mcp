@@ -1,0 +1,3 @@
+apis:
+  icepanel@v1:
+    root: openapi/src/openapi.json

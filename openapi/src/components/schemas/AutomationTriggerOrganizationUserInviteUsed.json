@@ -1,0 +1,30 @@
+{
+  "properties": {
+    "organizationId": {
+      "type": "string"
+    },
+    "organizationUserInviteId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "organization-user-invite-used"
+      ],
+      "type": "string"
+    },
+    "usedByUserId": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "organizationId",
+    "organizationUserInviteId",
+    "type",
+    "usedByUserId",
+    "userId"
+  ],
+  "type": "object"
+}

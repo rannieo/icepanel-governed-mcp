@@ -1,0 +1,130 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./TaskConcurrency.json"
+    },
+    {
+      "$ref": "./TaskBatch.json"
+    },
+    {
+      "$ref": "./TaskNavigation.json"
+    },
+    {
+      "$ref": "./TaskCommentCreate.json"
+    },
+    {
+      "$ref": "./TaskCommentUpdate.json"
+    },
+    {
+      "$ref": "./TaskCommentDelete.json"
+    },
+    {
+      "$ref": "./TaskCommentReplyCreate.json"
+    },
+    {
+      "$ref": "./TaskCommentReplyUpdate.json"
+    },
+    {
+      "$ref": "./TaskCommentReplyDelete.json"
+    },
+    {
+      "$ref": "./TaskDiagramCreate.json"
+    },
+    {
+      "$ref": "./TaskDiagramUpdate.json"
+    },
+    {
+      "$ref": "./TaskDiagramDelete.json"
+    },
+    {
+      "$ref": "./TaskDiagramContentUpdate.json"
+    },
+    {
+      "$ref": "./TaskDiagramGroupCreate.json"
+    },
+    {
+      "$ref": "./TaskDiagramGroupUpdate.json"
+    },
+    {
+      "$ref": "./TaskDiagramGroupDelete.json"
+    },
+    {
+      "$ref": "./TaskAdrCreate.json"
+    },
+    {
+      "$ref": "./TaskAdrUpdate.json"
+    },
+    {
+      "$ref": "./TaskAdrDelete.json"
+    },
+    {
+      "$ref": "./TaskDraftCreate.json"
+    },
+    {
+      "$ref": "./TaskDraftUpdate.json"
+    },
+    {
+      "$ref": "./TaskDraftDelete.json"
+    },
+    {
+      "$ref": "./TaskDraftTaskCreate.json"
+    },
+    {
+      "$ref": "./TaskDomainCreate.json"
+    },
+    {
+      "$ref": "./TaskDomainUpdate.json"
+    },
+    {
+      "$ref": "./TaskDomainDelete.json"
+    },
+    {
+      "$ref": "./TaskModelObjectCreate.json"
+    },
+    {
+      "$ref": "./TaskModelObjectUpdate.json"
+    },
+    {
+      "$ref": "./TaskModelObjectDelete.json"
+    },
+    {
+      "$ref": "./TaskModelConnectionCreate.json"
+    },
+    {
+      "$ref": "./TaskModelConnectionUpdate.json"
+    },
+    {
+      "$ref": "./TaskModelConnectionDelete.json"
+    },
+    {
+      "$ref": "./TaskFlowCreate.json"
+    },
+    {
+      "$ref": "./TaskFlowUpdate.json"
+    },
+    {
+      "$ref": "./TaskFlowDelete.json"
+    },
+    {
+      "$ref": "./TaskTagCreate.json"
+    },
+    {
+      "$ref": "./TaskTagUpdate.json"
+    },
+    {
+      "$ref": "./TaskTagDelete.json"
+    },
+    {
+      "$ref": "./TaskTagGroupCreate.json"
+    },
+    {
+      "$ref": "./TaskTagGroupUpdate.json"
+    },
+    {
+      "$ref": "./TaskTagGroupDelete.json"
+    },
+    {
+      "$ref": "./TaskTeamUpdate.json"
+    }
+  ]
+}

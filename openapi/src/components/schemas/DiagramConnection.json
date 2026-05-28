@@ -1,0 +1,62 @@
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "labelPosition": {
+      "description": "The percentage along the line where the label should be placed",
+      "type": "number"
+    },
+    "lineShape": {
+      "$ref": "./LineShape.json"
+    },
+    "modelId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "originConnector": {
+      "$ref": "./DiagramObjectConnector.json"
+    },
+    "originId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "points": {
+      "items": {
+        "properties": {
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "x",
+          "y"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "targetConnector": {
+      "$ref": "./DiagramObjectConnector.json"
+    },
+    "targetId": {
+      "nullable": true,
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "labelPosition",
+    "lineShape",
+    "modelId",
+    "originConnector",
+    "originId",
+    "points",
+    "targetConnector",
+    "targetId"
+  ],
+  "type": "object"
+}

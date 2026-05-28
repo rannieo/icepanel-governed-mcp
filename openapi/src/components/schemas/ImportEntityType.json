@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "model-object",
+    "model-connection",
+    "tag",
+    "tag-group"
+  ],
+  "type": "string"
+}

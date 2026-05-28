@@ -1,0 +1,14 @@
+{
+  "properties": {
+    "commentHandleId": {
+      "type": "string"
+    },
+    "domainHandleId": {
+      "type": "string"
+    },
+    "domainName": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

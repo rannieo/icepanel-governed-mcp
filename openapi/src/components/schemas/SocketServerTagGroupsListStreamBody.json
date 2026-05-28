@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "lastBatch": {
+      "type": "boolean"
+    },
+    "requestId": {
+      "type": "string"
+    },
+    "tagGroups": {
+      "items": {
+        "$ref": "./TagGroup.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "tagGroups",
+    "lastBatch",
+    "requestId"
+  ],
+  "type": "object"
+}

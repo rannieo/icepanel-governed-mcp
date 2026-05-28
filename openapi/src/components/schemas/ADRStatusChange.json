@@ -1,0 +1,24 @@
+{
+  "properties": {
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "status": {
+      "$ref": "./ADRStatus.json"
+    }
+  },
+  "required": [
+    "status",
+    "createdAt",
+    "createdBy",
+    "createdById"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,44 @@
+{
+  "properties": {
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "diagramId": {
+      "description": "diagram id this flow belongs to",
+      "type": "string"
+    },
+    "expires": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "handleId": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "url": {
+      "format": "uri",
+      "type": "string"
+    }
+  },
+  "required": [
+    "createdAt",
+    "diagramId",
+    "expires",
+    "handleId",
+    "id",
+    "name",
+    "updatedAt",
+    "url"
+  ],
+  "type": "object"
+}

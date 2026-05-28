@@ -1,0 +1,16 @@
+{
+  "enum": [
+    "overview",
+    "diagrams",
+    "flows",
+    "model-objects",
+    "model-viewer",
+    "model-connections",
+    "dependencies",
+    "technologies",
+    "diagram",
+    "flow",
+    "adrs"
+  ],
+  "type": "string"
+}

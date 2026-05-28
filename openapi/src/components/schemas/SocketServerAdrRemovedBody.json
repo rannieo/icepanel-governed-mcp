@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "adr": {
+      "$ref": "./ADR.json"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "adr",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,37 @@
+{
+  "allOf": [
+    {
+      "$ref": "./SocketServerAdrsEvents.json"
+    },
+    {
+      "$ref": "./SocketServerCommentEvents.json"
+    },
+    {
+      "$ref": "./SocketServerDiagramEvents.json"
+    },
+    {
+      "$ref": "./SocketServerDraftEvents.json"
+    },
+    {
+      "$ref": "./SocketServerDomainEvents.json"
+    },
+    {
+      "$ref": "./SocketServerEditorEvents.json"
+    },
+    {
+      "$ref": "./SocketServerFlowEvents.json"
+    },
+    {
+      "$ref": "./SocketServerLandscapeEvents.json"
+    },
+    {
+      "$ref": "./SocketServerModelEvents.json"
+    },
+    {
+      "$ref": "./SocketServerTagEvents.json"
+    },
+    {
+      "$ref": "./SocketServerVersionEvents.json"
+    }
+  ]
+}

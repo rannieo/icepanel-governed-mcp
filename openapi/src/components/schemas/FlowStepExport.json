@@ -1,0 +1,40 @@
+{
+  "properties": {
+    "description": {
+      "description": "Descriptive name for the flow step",
+      "type": "string"
+    },
+    "detailedDescription": {
+      "description": "Long description for the flow step",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "index": {
+      "type": "number"
+    },
+    "originId": {
+      "type": "string"
+    },
+    "targetId": {
+      "type": "string"
+    },
+    "type": {
+      "$ref": "./FlowStepType.json"
+    },
+    "viaId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "description",
+    "id",
+    "index",
+    "originId",
+    "targetId",
+    "type",
+    "viaId"
+  ],
+  "type": "object"
+}

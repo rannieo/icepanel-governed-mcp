@@ -1,0 +1,24 @@
+{
+  "properties": {
+    "diagramId": {
+      "type": "string"
+    },
+    "draftId": {
+      "type": "string"
+    },
+    "versionId": {
+      "type": "string"
+    },
+    "publishedAt": {
+      "type": "number"
+    },
+    "userId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "publishedAt",
+    "userId"
+  ],
+  "type": "object"
+}

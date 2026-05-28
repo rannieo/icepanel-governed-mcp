@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "comment": {
+      "$ref": "./Comment.json"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "comment",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

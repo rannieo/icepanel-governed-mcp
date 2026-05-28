@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "subscriptionId": {
+      "type": "string"
+    },
+    "typing": {
+      "$ref": "./EditorTyping.json"
+    }
+  },
+  "required": [
+    "subscriptionId",
+    "typing"
+  ],
+  "type": "object"
+}

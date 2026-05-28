@@ -1,0 +1,71 @@
+{
+  "properties": {
+    "editor-location-update": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientEditorLocationUpdateBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "editor-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientEditorSubscribeBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientEditorSubscribeReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "editor-typing-update": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientEditorTypingUpdateBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "editor-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientEditorUnsubscribeBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "editor-location-update",
+    "editor-subscribe",
+    "editor-typing-update",
+    "editor-unsubscribe"
+  ],
+  "type": "object"
+}

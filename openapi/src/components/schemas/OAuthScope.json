@@ -1,0 +1,7 @@
+{
+  "enum": [
+    "landscape.read",
+    "landscape.write"
+  ],
+  "type": "string"
+}

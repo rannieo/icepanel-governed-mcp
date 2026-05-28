@@ -1,0 +1,122 @@
+{
+  "properties": {
+    "comments": {
+      "additionalProperties": {
+        "$ref": "./DiagramComment.json"
+      },
+      "type": "object"
+    },
+    "commit": {
+      "type": "number"
+    },
+    "connections": {
+      "additionalProperties": {
+        "$ref": "./DiagramConnection.json"
+      },
+      "type": "object"
+    },
+    "objects": {
+      "additionalProperties": {
+        "$ref": "./DiagramObject.json"
+      },
+      "type": "object"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "deletedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "deletedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "deletedById": {
+      "type": "string"
+    },
+    "groupId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "handleId": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "latestEntityId": {
+      "type": "string"
+    },
+    "modelId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "$ref": "./DiagramStatus.json"
+    },
+    "type": {
+      "$ref": "./DiagramType.json"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "updatedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "updatedById": {
+      "type": "string"
+    },
+    "version": {
+      "type": "number"
+    },
+    "versionId": {
+      "type": "string"
+    },
+    "viewedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "viewedBy": {
+      "$ref": "./AuthType.json"
+    },
+    "viewedById": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "comments",
+    "commit",
+    "connections",
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "groupId",
+    "handleId",
+    "id",
+    "landscapeId",
+    "modelId",
+    "name",
+    "objects",
+    "status",
+    "type",
+    "updatedAt",
+    "updatedBy",
+    "updatedById",
+    "version",
+    "versionId"
+  ],
+  "type": "object"
+}

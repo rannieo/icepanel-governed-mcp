@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "landscape": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerLandscapeBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "landscape"
+  ],
+  "type": "object"
+}

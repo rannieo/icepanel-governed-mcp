@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "flow": {
+      "$ref": "./Flow.json"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "flow",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

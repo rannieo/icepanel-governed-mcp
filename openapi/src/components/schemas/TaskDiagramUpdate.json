@@ -1,0 +1,29 @@
+{
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "props": {
+      "allOf": [
+        {
+          "$ref": "./DiagramPartial.json"
+        },
+        {
+          "$ref": "./DiagramContentPartial.json"
+        }
+      ]
+    },
+    "type": {
+      "enum": [
+        "diagram-update"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "props",
+    "type"
+  ],
+  "type": "object"
+}

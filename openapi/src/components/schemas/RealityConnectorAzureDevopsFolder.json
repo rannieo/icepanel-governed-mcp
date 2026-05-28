@@ -1,0 +1,34 @@
+{
+  "properties": {
+    "accountName": {
+      "type": "string"
+    },
+    "branchName": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    },
+    "projectId": {
+      "type": "string"
+    },
+    "repositoryId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "azure-devops-folder"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "accountName",
+    "branchName",
+    "path",
+    "projectId",
+    "repositoryId",
+    "type"
+  ],
+  "type": "object"
+}

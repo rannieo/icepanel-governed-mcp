@@ -1,0 +1,41 @@
+{
+  "properties": {
+    "bucketPath": {
+      "type": "string"
+    },
+    "modelConnectionCount": {
+      "type": "number"
+    },
+    "modelObjectCount": {
+      "type": "number"
+    },
+    "modelObjectTypeCount": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "type": "object"
+    },
+    "prune": {
+      "type": "boolean"
+    },
+    "tagCount": {
+      "type": "number"
+    },
+    "tagGroupCount": {
+      "type": "number"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "bucketPath",
+    "modelConnectionCount",
+    "modelObjectCount",
+    "modelObjectTypeCount",
+    "tagCount",
+    "tagGroupCount",
+    "versionId"
+  ],
+  "type": "object"
+}

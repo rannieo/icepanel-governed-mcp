@@ -1,0 +1,29 @@
+{
+  "properties": {
+    "height": {
+      "type": "number"
+    },
+    "id": {
+      "type": "string"
+    },
+    "modelId": {
+      "type": "string"
+    },
+    "shape": {
+      "$ref": "./DiagramObjectShape.json"
+    },
+    "type": {
+      "$ref": "./DiagramObjectType.json"
+    },
+    "width": {
+      "type": "number"
+    },
+    "x": {
+      "type": "number"
+    },
+    "y": {
+      "type": "number"
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,51 @@
+{
+  "properties": {
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "expires": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "handleId": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "index": {
+      "type": "number"
+    },
+    "modelId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "$ref": "./DiagramType.json"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "url": {
+      "format": "uri",
+      "type": "string"
+    }
+  },
+  "required": [
+    "createdAt",
+    "expires",
+    "handleId",
+    "id",
+    "index",
+    "modelId",
+    "name",
+    "type",
+    "updatedAt",
+    "url"
+  ],
+  "type": "object"
+}

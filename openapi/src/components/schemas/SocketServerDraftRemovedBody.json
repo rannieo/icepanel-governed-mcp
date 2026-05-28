@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "draft": {
+      "$ref": "./Draft.json"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "draft",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

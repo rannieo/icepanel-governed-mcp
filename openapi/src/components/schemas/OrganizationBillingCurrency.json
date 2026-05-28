@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "usd",
+    "cad",
+    "eur",
+    "gbp"
+  ],
+  "type": "string"
+}

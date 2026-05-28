@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "context": {
+      "$ref": "./ActionLandscapeImportContext.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "props": {
+      "$ref": "./ActionLandscapeImportProps.json"
+    },
+    "type": {
+      "enum": [
+        "landscape-import"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "context",
+    "props",
+    "id",
+    "type"
+  ],
+  "type": "object"
+}

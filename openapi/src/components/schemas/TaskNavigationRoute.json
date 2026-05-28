@@ -1,0 +1,43 @@
+{
+  "properties": {
+    "name": {
+      "nullable": true,
+      "type": "string"
+    },
+    "params": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        ]
+      },
+      "type": "object"
+    },
+    "query": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "items": {
+              "nullable": true,
+              "type": "string"
+            },
+            "type": "array"
+          }
+        ]
+      },
+      "type": "object"
+    }
+  },
+  "type": "object"
+}

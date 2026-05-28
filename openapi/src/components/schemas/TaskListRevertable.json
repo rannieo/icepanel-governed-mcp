@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "revertTasks": {
+      "$ref": "./TaskList.json"
+    },
+    "tasks": {
+      "$ref": "./TaskList.json"
+    }
+  },
+  "required": [
+    "revertTasks",
+    "tasks"
+  ],
+  "type": "object"
+}

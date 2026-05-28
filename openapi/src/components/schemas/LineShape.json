@@ -1,0 +1,8 @@
+{
+  "enum": [
+    "curved",
+    "straight",
+    "square"
+  ],
+  "type": "string"
+}

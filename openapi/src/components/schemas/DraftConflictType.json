@@ -1,0 +1,8 @@
+{
+  "enum": [
+    "overwrite",
+    "invalid-entity",
+    "invalid-entity-reference"
+  ],
+  "type": "string"
+}

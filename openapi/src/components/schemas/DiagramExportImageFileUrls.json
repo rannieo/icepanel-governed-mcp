@@ -1,0 +1,17 @@
+{
+  "properties": {
+    "png": {
+      "format": "uri",
+      "type": "string"
+    },
+    "svg": {
+      "format": "uri",
+      "type": "string"
+    }
+  },
+  "required": [
+    "png",
+    "svg"
+  ],
+  "type": "object"
+}

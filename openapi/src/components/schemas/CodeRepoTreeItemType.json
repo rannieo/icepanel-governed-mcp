@@ -1,0 +1,7 @@
+{
+  "enum": [
+    "blob",
+    "tree"
+  ],
+  "type": "string"
+}

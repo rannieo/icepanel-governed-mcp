@@ -1,0 +1,9 @@
+{
+  "properties": {
+    "notes": {
+      "minLength": 10,
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

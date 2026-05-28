@@ -1,0 +1,57 @@
+{
+  "properties": {
+    "draftId": {
+      "description": "Fetch and apply draft tasks before producing the export",
+      "type": "string"
+    },
+    "flowId": {
+      "type": "string"
+    },
+    "flowPathIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "focusIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "groupId": {
+      "type": "string"
+    },
+    "hideIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "maxWidth": {
+      "description": "Maximum pixel width for the exported PNG. The image will be scaled down if the diagram exceeds this width. Defaults to no limit (up to 10240px).",
+      "maximum": 10240,
+      "minimum": 100,
+      "type": "integer"
+    },
+    "pinIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "tab": {
+      "enum": [
+        "tags",
+        "technology",
+        "status",
+        "teams"
+      ],
+      "type": "string"
+    },
+    "theme": {
+      "$ref": "./Theme.json"
+    }
+  },
+  "type": "object"
+}

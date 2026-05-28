@@ -1,0 +1,22 @@
+{
+  "requestedBy": "e2e-ai-agent",
+  "validatedBy": "e2e-dev-reviewer",
+  "operationIntent": "Attempt write with incomplete governance approvals.",
+  "impactedResources": [
+    "organization:test",
+    "resource:e2e"
+  ],
+  "skillsExecuted": [
+    "solutions-architect"
+  ],
+  "reviewers": [
+    {
+      "role": "solutions-architect",
+      "reviewer": "architect-bot",
+      "decision": "approved",
+      "summary": "Only one reviewer approved.",
+      "timestamp": "2026-05-29T00:00:00.000Z"
+    }
+  ],
+  "riskFlags": []
+}

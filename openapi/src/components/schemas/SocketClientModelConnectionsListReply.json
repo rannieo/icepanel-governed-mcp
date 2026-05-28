@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "modelConnections": {
+      "items": {
+        "$ref": "./ModelConnection.json"
+      },
+      "type": "array"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "modelConnections",
+    "requestId"
+  ],
+  "type": "object"
+}

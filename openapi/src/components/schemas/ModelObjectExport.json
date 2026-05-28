@@ -1,0 +1,96 @@
+{
+  "properties": {
+    "caption": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "domainId": {
+      "type": "string"
+    },
+    "external": {
+      "type": "boolean"
+    },
+    "groupIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "icon": {
+      "$ref": "./ModelObjectIconNullable.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "links": {
+      "additionalProperties": {
+        "$ref": "./RealityLink.json"
+      },
+      "type": "object"
+    },
+    "name": {
+      "type": "string"
+    },
+    "parentId": {
+      "nullable": true,
+      "type": "string"
+    },
+    "parentIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "status": {
+      "$ref": "./ModelObjectStatus.json"
+    },
+    "tagIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "teamIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "technologies": {
+      "additionalProperties": {
+        "$ref": "./TechnologyExport.json"
+      },
+      "type": "object"
+    },
+    "technologyIds": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "type": {
+      "$ref": "./ModelObjectType.json"
+    }
+  },
+  "required": [
+    "caption",
+    "description",
+    "domainId",
+    "external",
+    "icon",
+    "id",
+    "links",
+    "groupIds",
+    "name",
+    "parentId",
+    "parentIds",
+    "status",
+    "tagIds",
+    "teamIds",
+    "technologyIds",
+    "type"
+  ],
+  "type": "object"
+}

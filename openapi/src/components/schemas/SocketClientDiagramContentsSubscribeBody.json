@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "filter": {
+      "properties": {
+        "afterViewedAtDate": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "initialValue": {
+      "type": "boolean"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "landscapeId",
+    "versionId"
+  ],
+  "type": "object"
+}

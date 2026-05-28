@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "diagramGroups": {
+      "items": {
+        "$ref": "./DiagramGroup.json"
+      },
+      "type": "array"
+    },
+    "finalValue": {
+      "type": "boolean"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "diagramGroups",
+    "finalValue",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

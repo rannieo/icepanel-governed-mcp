@@ -1,0 +1,13 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./ActionOrganizationUserAdd.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUserUpdate.json"
+    },
+    {
+      "$ref": "./ActionOrganizationUserRemove.json"
+    }
+  ]
+}

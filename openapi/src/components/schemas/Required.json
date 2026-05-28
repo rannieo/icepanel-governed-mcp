@@ -1,0 +1,103 @@
+{
+  "anyOf": [
+    {
+      "$ref": "./ADRRequired.json"
+    },
+    {
+      "$ref": "./ApiKeyRequired.json"
+    },
+    {
+      "$ref": "./AutomationRunRequired.json"
+    },
+    {
+      "$ref": "./BitbucketServerTokenRequired.json"
+    },
+    {
+      "$ref": "./CatalogTechnologyRequired.json"
+    },
+    {
+      "$ref": "./CodeRepoRequired.json"
+    },
+    {
+      "$ref": "./CommentReplyRequired.json"
+    },
+    {
+      "$ref": "./CommentRequired.json"
+    },
+    {
+      "$ref": "./DiagramContentRequired.json"
+    },
+    {
+      "$ref": "./DiagramGroupRequired.json"
+    },
+    {
+      "$ref": "./DiagramRequired.json"
+    },
+    {
+      "$ref": "./DomainRequired.json"
+    },
+    {
+      "$ref": "./DraftRequired.json"
+    },
+    {
+      "$ref": "./DraftTaskRequired.json"
+    },
+    {
+      "$ref": "./FlowRequired.json"
+    },
+    {
+      "$ref": "./LandscapeRequired.json"
+    },
+    {
+      "$ref": "./LandscapeTemplateRequired.json"
+    },
+    {
+      "$ref": "./ModelConnectionRequired.json"
+    },
+    {
+      "$ref": "./ModelObjectRequired.json"
+    },
+    {
+      "$ref": "./OrganizationRequired.json"
+    },
+    {
+      "$ref": "./OrganizationUserInviteRequired.json"
+    },
+    {
+      "$ref": "./RealityLinkRequired.json"
+    },
+    {
+      "$ref": "./SAMLProviderRequired.json"
+    },
+    {
+      "$ref": "./SendEbookRequired.json"
+    },
+    {
+      "$ref": "./ShareLinkOptionsRequired.json"
+    },
+    {
+      "$ref": "./ShareLinkRequired.json"
+    },
+    {
+      "$ref": "./SupportMessageRequired.json"
+    },
+    {
+      "$ref": "./TagGroupRequired.json"
+    },
+    {
+      "$ref": "./TagRequired.json"
+    },
+    {
+      "$ref": "./TeamRequired.json"
+    },
+    {
+      "$ref": "./UserRequired.json"
+    },
+    {
+      "$ref": "./VersionRequired.json"
+    },
+    {
+      "$ref": "./VersionRevertRequired.json"
+    }
+  ]
+}

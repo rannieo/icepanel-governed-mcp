@@ -1,0 +1,75 @@
+{
+  "properties": {
+    "name": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "provider": {
+      "oneOf": [
+        {
+          "$ref": "./CatalogProviderNullable.json"
+        },
+        {
+          "items": {
+            "$ref": "./CatalogProviderNullable.json"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "restrictions": {
+      "oneOf": [
+        {
+          "$ref": "./CatalogRestrictionNullable.json"
+        },
+        {
+          "items": {
+            "$ref": "./CatalogRestrictionNullable.json"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "status": {
+      "oneOf": [
+        {
+          "$ref": "./CatalogTechnologyStatus.json"
+        },
+        {
+          "items": {
+            "$ref": "./CatalogTechnologyStatus.json"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    },
+    "type": {
+      "oneOf": [
+        {
+          "$ref": "./CatalogTechnologyTypeNullable.json"
+        },
+        {
+          "items": {
+            "$ref": "./CatalogTechnologyTypeNullable.json"
+          },
+          "maxItems": 30,
+          "type": "array"
+        }
+      ]
+    }
+  },
+  "type": "object"
+}

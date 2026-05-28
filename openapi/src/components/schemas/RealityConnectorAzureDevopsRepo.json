@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "accountName": {
+      "type": "string"
+    },
+    "projectId": {
+      "type": "string"
+    },
+    "repositoryId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "azure-devops-repo"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "accountName",
+    "projectId",
+    "repositoryId",
+    "type"
+  ],
+  "type": "object"
+}

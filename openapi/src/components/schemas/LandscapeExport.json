@@ -1,0 +1,54 @@
+{
+  "properties": {
+    "completedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "deleteAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "error": {
+      "nullable": true,
+      "type": "string"
+    },
+    "fileUrl": {
+      "format": "uri",
+      "nullable": true,
+      "type": "string"
+    },
+    "filter": {
+      "$ref": "./LandscapeExportFilter.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "landscapeId": {
+      "type": "string"
+    },
+    "options": {
+      "$ref": "./LandscapeExportOptions.json"
+    },
+    "type": {
+      "$ref": "./LandscapeExportType.json"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "createdAt",
+    "deleteAt",
+    "error",
+    "fileUrl",
+    "id",
+    "landscapeId",
+    "type",
+    "versionId"
+  ],
+  "type": "object"
+}

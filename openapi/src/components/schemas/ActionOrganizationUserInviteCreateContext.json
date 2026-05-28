@@ -1,0 +1,11 @@
+{
+  "properties": {
+    "landscapeNames": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    }
+  },
+  "type": "object"
+}

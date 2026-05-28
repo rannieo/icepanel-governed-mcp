@@ -1,0 +1,30 @@
+{
+  "properties": {
+    "branchName": {
+      "type": "string"
+    },
+    "ownerId": {
+      "type": "number"
+    },
+    "path": {
+      "type": "string"
+    },
+    "repositoryId": {
+      "type": "number"
+    },
+    "type": {
+      "enum": [
+        "github-file"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "branchName",
+    "ownerId",
+    "path",
+    "repositoryId",
+    "type"
+  ],
+  "type": "object"
+}

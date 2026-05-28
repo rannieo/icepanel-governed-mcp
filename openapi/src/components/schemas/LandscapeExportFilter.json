@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "diagramId": {
+      "type": "string"
+    },
+    "flowId": {
+      "type": "string"
+    },
+    "includeDiagrams": {
+      "description": "Whether or not to include diagrams in PDF exports, defaults to true",
+      "type": "boolean"
+    },
+    "includeFlows": {
+      "description": "Whether or not to include flows in PDF exports, defaults to true",
+      "type": "boolean"
+    },
+    "modelObjectId": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

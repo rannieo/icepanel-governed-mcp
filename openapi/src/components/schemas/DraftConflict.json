@@ -1,0 +1,76 @@
+{
+  "properties": {
+    "currentValue": {
+      "description": "Current value in the main landscape/version",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "draftTaskId": {
+      "description": "ID of the draft task that caused this conflict",
+      "type": "string"
+    },
+    "draftValue": {
+      "description": "New value proposed by the draft task",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "entityId": {
+      "type": "string"
+    },
+    "fieldName": {
+      "description": "Name of the conflicting field",
+      "type": "string"
+    },
+    "originalValue": {
+      "description": "Value captured in the draft task snapshot",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "taskToReplaceCurrent": {
+      "$ref": "./DraftTask.json"
+    },
+    "taskToReplaceDraft": {
+      "$ref": "./DraftTask.json"
+    },
+    "taskToReplaceOriginal": {
+      "$ref": "./DraftTask.json"
+    },
+    "type": {
+      "$ref": "./DraftConflictType.json"
+    }
+  },
+  "required": [
+    "draftTaskId",
+    "entityId",
+    "taskToReplaceCurrent",
+    "type"
+  ],
+  "type": "object"
+}

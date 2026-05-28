@@ -1,0 +1,21 @@
+{
+  "properties": {
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "summary",
+    "createdAt",
+    "updatedAt"
+  ],
+  "type": "object"
+}

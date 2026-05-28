@@ -1,0 +1,61 @@
+{
+  "properties": {
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdBy": {
+      "$ref": "./AuthType.json"
+    },
+    "createdById": {
+      "type": "string"
+    },
+    "githubId": {
+      "type": "number"
+    },
+    "id": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "ownerId": {
+      "type": "number"
+    },
+    "ownerLogin": {
+      "type": "string"
+    },
+    "ownerType": {
+      "$ref": "./GithubInstallType.json"
+    },
+    "senderId": {
+      "type": "number"
+    },
+    "senderLogin": {
+      "type": "string"
+    },
+    "senderType": {
+      "$ref": "./GithubInstallType.json"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "createdAt",
+    "createdBy",
+    "createdById",
+    "githubId",
+    "id",
+    "organizationId",
+    "ownerId",
+    "ownerLogin",
+    "ownerType",
+    "senderId",
+    "senderLogin",
+    "senderType",
+    "updatedAt"
+  ],
+  "type": "object"
+}

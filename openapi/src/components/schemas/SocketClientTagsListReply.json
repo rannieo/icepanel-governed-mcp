@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "requestId": {
+      "type": "string"
+    },
+    "tags": {
+      "items": {
+        "$ref": "./Tag.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "requestId",
+    "tags"
+  ],
+  "type": "object"
+}

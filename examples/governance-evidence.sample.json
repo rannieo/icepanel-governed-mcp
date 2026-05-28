@@ -1,0 +1,51 @@
+{
+  "requestedBy": "ai-agent",
+  "validatedBy": "dev-reviewer",
+  "operationIntent": "Create architecture draft diagram for payment flow update.",
+  "impactedResources": [
+    "landscape:landscape_123",
+    "version:version_456",
+    "diagram:new"
+  ],
+  "skillsExecuted": [
+    "solution-architect",
+    "network-engineer",
+    "security-auditor",
+    "grill-me",
+    "brainstorming",
+    "writing-plans",
+    "test-driven-development",
+    "verification-before-completion"
+  ],
+  "reviewers": [
+    {
+      "role": "solutions-architect",
+      "reviewer": "architect-bot",
+      "decision": "approved",
+      "summary": "Design aligns with domain boundaries and ADRs.",
+      "timestamp": "2026-05-28T12:00:00.000Z"
+    },
+    {
+      "role": "network-engineer",
+      "reviewer": "network-bot",
+      "decision": "approved",
+      "summary": "No east-west routing regressions expected.",
+      "timestamp": "2026-05-28T12:01:00.000Z"
+    },
+    {
+      "role": "security-auditor",
+      "reviewer": "security-bot",
+      "decision": "approved",
+      "summary": "No new trust boundaries without auth controls.",
+      "timestamp": "2026-05-28T12:02:00.000Z"
+    },
+    {
+      "role": "grill-me",
+      "reviewer": "challenge-bot",
+      "decision": "approved",
+      "summary": "No unaddressed architectural contradictions found.",
+      "timestamp": "2026-05-28T12:03:00.000Z"
+    }
+  ],
+  "riskFlags": []
+}

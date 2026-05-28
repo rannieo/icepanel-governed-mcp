@@ -1,0 +1,54 @@
+{
+  "properties": {
+    "completedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "$ref": "./UserGoalName.json"
+    },
+    "progress": {
+      "minimum": 0,
+      "type": "number"
+    },
+    "progressData": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "status": {
+      "$ref": "./UserGoalStatus.json"
+    },
+    "steps": {
+      "minimum": 1,
+      "type": "number"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "createdAt",
+    "id",
+    "name",
+    "progress",
+    "progressData",
+    "status",
+    "steps",
+    "updatedAt",
+    "userId"
+  ],
+  "type": "object"
+}

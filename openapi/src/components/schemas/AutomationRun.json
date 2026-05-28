@@ -1,0 +1,68 @@
+{
+  "properties": {
+    "automationId": {
+      "type": "string"
+    },
+    "automationVersion": {
+      "type": "string"
+    },
+    "stepIndex": {
+      "type": "number"
+    },
+    "stepIndexCompletedAt": {
+      "items": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "trigger": {
+      "$ref": "./AutomationTrigger.json"
+    },
+    "uniqueKey": {
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "error": {
+      "type": "string"
+    },
+    "executedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "idle",
+        "executing",
+        "error",
+        "exited",
+        "completed"
+      ],
+      "type": "string"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "automationId",
+    "automationVersion",
+    "stepIndex",
+    "stepIndexCompletedAt",
+    "trigger",
+    "uniqueKey",
+    "createdAt",
+    "executedAt",
+    "id",
+    "status",
+    "updatedAt"
+  ],
+  "type": "object"
+}

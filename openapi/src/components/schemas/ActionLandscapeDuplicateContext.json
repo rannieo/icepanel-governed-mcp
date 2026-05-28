@@ -1,0 +1,14 @@
+{
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "targetOrganizationName": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "type": "object"
+}

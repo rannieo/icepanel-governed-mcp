@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "commentReply": {
+      "$ref": "./CommentReply.json"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "commentReply",
+    "subscriptionId"
+  ],
+  "type": "object"
+}

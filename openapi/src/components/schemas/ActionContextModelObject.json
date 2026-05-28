@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "handleId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "$ref": "./ModelObjectType.json"
+    }
+  },
+  "required": [
+    "handleId",
+    "name",
+    "type"
+  ],
+  "type": "object"
+}

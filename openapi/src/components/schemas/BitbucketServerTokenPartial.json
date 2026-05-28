@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "serverUrl": {
+      "format": "uri",
+      "type": "string"
+    },
+    "token": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

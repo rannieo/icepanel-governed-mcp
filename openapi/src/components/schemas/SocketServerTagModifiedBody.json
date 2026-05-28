@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "subscriptionId": {
+      "type": "string"
+    },
+    "tag": {
+      "$ref": "./Tag.json"
+    }
+  },
+  "required": [
+    "subscriptionId",
+    "tag"
+  ],
+  "type": "object"
+}

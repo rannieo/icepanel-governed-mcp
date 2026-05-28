@@ -1,0 +1,14 @@
+{
+  "properties": {
+    "diagramId": {
+      "type": "string"
+    },
+    "draftId": {
+      "type": "string"
+    },
+    "versionId": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

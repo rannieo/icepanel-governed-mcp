@@ -1,0 +1,55 @@
+{
+  "properties": {
+    "drafts-list": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientDraftsListBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientDraftsListReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "drafts-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientDraftsSubscribeBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientDraftsSubscribeReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "drafts-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientDraftsUnsubscribeBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "drafts-list",
+    "drafts-subscribe",
+    "drafts-unsubscribe"
+  ],
+  "type": "object"
+}

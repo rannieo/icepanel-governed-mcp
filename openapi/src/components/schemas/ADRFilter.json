@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "oneOf": [
+        {
+          "$ref": "./ADRStatus.json"
+        },
+        {
+          "items": {
+            "$ref": "./ADRStatus.json"
+          },
+          "maxItems": 3,
+          "type": "array"
+        }
+      ]
+    }
+  },
+  "type": "object"
+}

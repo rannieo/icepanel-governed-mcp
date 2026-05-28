@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "organizationId": {
+      "type": "string"
+    },
+    "organizationUserInviteId": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "organization-user-invite-create"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "organizationId",
+    "organizationUserInviteId",
+    "type"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,33 @@
+{
+  "properties": {
+    "changeSummary": {
+      "$ref": "./DraftChangeSummary.json"
+    },
+    "commit": {
+      "type": "number"
+    },
+    "handleId": {
+      "type": "string"
+    },
+    "labels": {
+      "additionalProperties": {
+        "maxLength": 5000,
+        "type": "string"
+      },
+      "maxProperties": 50,
+      "type": "object"
+    },
+    "name": {
+      "maxLength": 4000,
+      "type": "string"
+    },
+    "status": {
+      "$ref": "./DraftStatus.json"
+    },
+    "summaryDirtiedAt": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

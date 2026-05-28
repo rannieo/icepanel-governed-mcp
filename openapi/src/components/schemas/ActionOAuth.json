@@ -1,0 +1,10 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./ActionOAuthConsentDeny.json"
+    },
+    {
+      "$ref": "./ActionOAuthConsentGrant.json"
+    }
+  ]
+}

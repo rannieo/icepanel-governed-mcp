@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "type": {
+      "enum": [
+        "url"
+      ],
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "type",
+    "url"
+  ],
+  "type": "object"
+}

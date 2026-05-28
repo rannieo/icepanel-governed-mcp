@@ -1,0 +1,39 @@
+{
+  "properties": {
+    "landscape-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientLandscapeSubscribeBody.json"
+        },
+        "reply": {
+          "$ref": "./SocketClientLandscapeSubscribeReply.json"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "landscape-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketClientLandscapeUnsubscribeBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "landscape-subscribe",
+    "landscape-unsubscribe"
+  ],
+  "type": "object"
+}

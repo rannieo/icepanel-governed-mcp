@@ -1,0 +1,15 @@
+{
+  "description": "Enum representing the types of flow steps",
+  "enum": [
+    "alternate-path",
+    "subflow",
+    "outgoing",
+    "parallel-path",
+    "reply",
+    "self-action",
+    "introduction",
+    "information",
+    "conclusion"
+  ],
+  "type": "string"
+}

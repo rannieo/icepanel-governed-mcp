@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "connectionId": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "originModelId": {
+      "type": "string"
+    },
+    "targetModelId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "connectionId",
+    "id",
+    "originModelId",
+    "targetModelId"
+  ],
+  "type": "object"
+}

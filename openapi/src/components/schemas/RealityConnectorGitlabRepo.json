@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "projectId": {
+      "type": "number"
+    },
+    "type": {
+      "enum": [
+        "gitlab-repo"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "projectId",
+    "type"
+  ],
+  "type": "object"
+}

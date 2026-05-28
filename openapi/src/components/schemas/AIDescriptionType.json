@@ -1,0 +1,7 @@
+{
+  "enum": [
+    "caption",
+    "detailed"
+  ],
+  "type": "string"
+}

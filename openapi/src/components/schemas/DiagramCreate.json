@@ -1,0 +1,10 @@
+{
+  "allOf": [
+    {
+      "$ref": "./DiagramRequired.json"
+    },
+    {
+      "$ref": "./DiagramContentRequired.json"
+    }
+  ]
+}

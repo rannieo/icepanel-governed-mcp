@@ -1,0 +1,20 @@
+{
+  "properties": {
+    "cancelAtPeriodEnd": {
+      "type": "boolean"
+    },
+    "plan": {
+      "$ref": "./OrganizationPlan.json"
+    },
+    "seats": {
+      "type": "number"
+    },
+    "trial": {
+      "type": "boolean"
+    },
+    "trialEnd": {
+      "type": "boolean"
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,6 @@
+{
+  "enum": [
+    "branch"
+  ],
+  "type": "string"
+}

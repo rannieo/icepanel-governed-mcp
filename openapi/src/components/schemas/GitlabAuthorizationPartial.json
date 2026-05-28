@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "groupId": {
+      "type": "number"
+    }
+  },
+  "type": "object"
+}

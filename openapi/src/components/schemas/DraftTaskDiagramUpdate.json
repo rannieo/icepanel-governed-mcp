@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "entityId": {
+      "type": "string"
+    },
+    "props": {
+      "$ref": "./DraftTaskDiagramUpdateProps.json"
+    },
+    "snapshot": {
+      "$ref": "./DraftTaskDiagramUpdateProps.json"
+    },
+    "type": {
+      "enum": [
+        "draft-diagram-update"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "entityId",
+    "props",
+    "snapshot",
+    "type"
+  ],
+  "type": "object"
+}

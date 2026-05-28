@@ -1,0 +1,87 @@
+{
+  "properties": {
+    "adr-added": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerAdrAddedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "adr-initial-value": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerAdrInitialValueBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "adr-modified": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerAdrModifiedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "adr-removed": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerAdrRemovedBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "adrs-list-stream": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketServerAdrsListStreamBody.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "adr-added",
+    "adr-initial-value",
+    "adr-modified",
+    "adr-removed",
+    "adrs-list-stream"
+  ],
+  "type": "object"
+}

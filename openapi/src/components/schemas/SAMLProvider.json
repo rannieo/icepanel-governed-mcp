@@ -1,0 +1,76 @@
+{
+  "properties": {
+    "certificates": {
+      "description": "IDP provided public X.509 signing certificate(s) or public key(s) in RFC7468 stricttextualmsg PEM format",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 5,
+      "type": "array"
+    },
+    "domains": {
+      "description": "Email domains that are bound to the provider",
+      "items": {
+        "format": "hostname",
+        "type": "string"
+      },
+      "maxItems": 30,
+      "minItems": 1,
+      "type": "array"
+    },
+    "enabled": {
+      "description": "Whether the provider is enabled",
+      "type": "boolean"
+    },
+    "entityId": {
+      "description": "Entity ID provided by the IDP",
+      "type": "string"
+    },
+    "loginUrl": {
+      "description": "Single sign-on login URL provided by the IDP",
+      "format": "uri",
+      "type": "string"
+    },
+    "name": {
+      "description": "Name for the provider, only for display purposes",
+      "maxLength": 1000,
+      "type": "string"
+    },
+    "acsUrl": {
+      "description": "Assertion Consumer Service URL provided by the SP",
+      "format": "uri",
+      "type": "string"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "format": "id",
+      "type": "string"
+    },
+    "issuerId": {
+      "description": "Entity/Issuer ID provided by the SP",
+      "type": "string"
+    },
+    "organizationId": {
+      "format": "id",
+      "nullable": true,
+      "type": "string"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "certificates",
+    "domains",
+    "acsUrl",
+    "createdAt",
+    "id",
+    "issuerId",
+    "organizationId"
+  ],
+  "type": "object"
+}

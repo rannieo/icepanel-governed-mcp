@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "drafts": {
+      "items": {
+        "$ref": "./Draft.json"
+      },
+      "type": "array"
+    },
+    "lastBatch": {
+      "type": "boolean"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "drafts",
+    "lastBatch",
+    "requestId"
+  ],
+  "type": "object"
+}

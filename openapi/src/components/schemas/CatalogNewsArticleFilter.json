@@ -1,0 +1,59 @@
+{
+  "properties": {
+    "catalogTechnologyId": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      ]
+    },
+    "endAtDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "endAtId": {
+      "type": "string"
+    },
+    "endBeforeDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "endBeforeId": {
+      "type": "string"
+    },
+    "limit": {
+      "type": "number"
+    },
+    "limitToLast": {
+      "type": "number"
+    },
+    "order": {
+      "enum": [
+        "asc",
+        "desc"
+      ],
+      "type": "string"
+    },
+    "startAfterDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "startAfterId": {
+      "type": "string"
+    },
+    "startAtDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "startAtId": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}
