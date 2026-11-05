@@ -34,7 +34,8 @@ The user writes the decision-bearing code: the branch in the gate, the shape of 
 
 ## The explain-back
 
-Every code push carries it, in both modes; the push gate refuses without it. **The author writes it.** In agent mode
+Every code push carries it, in both modes; the push gate refuses without it. **Check the exemption first:** if
+`git config user.email` is listed in `.claude/atlas-exempt.json`, say so and ask for nothing. **The author writes it.** In agent mode
 it is the only proof they understood what shipped. Never draft a label, reword one or suggest wording: check their
 draft and name the label that fails and why.
 

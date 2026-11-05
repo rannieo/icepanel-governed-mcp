@@ -26,7 +26,8 @@ easier. **Coding-dojo**: the human writes the decision-bearing code and the agen
   `assess`, `feedback`, `prune`, `ship` and `yolo` may start on their own.
 - **Push gate** (`atlas-push-gate.mjs`, PreToolUse Bash): an atlas branch cannot `git push` or `gh pr create` until it
   reached `feedback` and, for a code change, carries the author's explain-back (seven labels, a `KILLS` test file that
-  exists, a `SOURCE` spec that exists or `none: <reason>`). Docs-only branches skip the explain-back. A branch with no
+  exists, a `SOURCE` spec that exists or `none: <reason>`). Docs-only branches skip the explain-back, and so do pushers
+  listed in `.claude/atlas-exempt.json` (matched on `git config user.email`; adding a name is a PR). A branch with no
   atlas task is not gated.
 - **State** (`atlas-state.mjs`): per branch in `.claude/atlas-state.json` (gitignored). A task parked on `main`
   follows you onto the feature branch. Entries idle for 21 days are dropped.

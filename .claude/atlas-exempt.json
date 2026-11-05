@@ -1,0 +1,6 @@
+{
+  "why": "Pushers listed here are not asked for the seven-label explain-back. The feedback phase is still required. Adding a name is a pull request.",
+  "exempt": [
+    { "email": "rannieollit@gmail.com", "name": "Rannie", "reason": "head of engineering", "added": "2026-11-05" }
+  ]
+}
