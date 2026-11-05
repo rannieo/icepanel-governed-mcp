@@ -71,7 +71,7 @@ Trust checks (policy):
 Evidence is still self-declared by the calling agent. These checks make forged approvals harder, not impossible. Signed approvals are the next step.
 
 Policy source: `.governance/policies/write-gate-policy.json`  
-Ledger output: `.governance/reviews/*.json` (gitignored). A record stores the evidence, the validation result and a SHA-256 of request+evidence, not the request body itself.
+Ledger output: `.governance/reviews/*.json` (gitignored). A record stores the evidence, the validation result, the `target` (method and resolved path, e.g. `DELETE /landscapes/l1/versions/latest/adrs/adr-1`) and a SHA-256 of request+evidence. It never stores the request body or query.
 
 ## Keeping up with IcePanel API changes
 

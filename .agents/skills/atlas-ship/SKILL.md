@@ -93,7 +93,8 @@ pass. A check that could not run is said so in the PR.
 
 1. **A learning** when the change taught something: `docs/learnings/YYYY-MM-DD__slug.md` (format in `atlas-feedback`).
    Nothing learned: say so, never invent one.
-2. **The explain-back, written by the author** (the seven labels in `atlas-build`, *The explain-back*). Never draft
+2. **The explain-back, written by the author**, unless `git config user.email` is in `.claude/atlas-exempt.json` (then
+   say so and skip it) (the seven labels in `atlas-build`, *The explain-back*). Never draft
    them; run the push gate's rules over their draft and name the label that fails. Record:
    ```bash
    node .claude/hooks/atlas-state.mjs feedback - <<'NOTE'

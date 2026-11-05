@@ -43,6 +43,8 @@ export type GovernanceLedgerRecord = {
   evidence: GovernanceEvidence;
   validation: GovernanceValidationResult;
   dryRun?: boolean;
+  /** Endpoint the write was aimed at, from the built request. Never the body or query. Absent on older records. */
+  target?: { method: IcepanelRequestArgs["method"]; path: string };
 };
 
 export type IcepanelRequestArgs = {

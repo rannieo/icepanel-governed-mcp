@@ -155,6 +155,22 @@ describe("atlas-push-gate", () => {
     expect(push().code).toBe(0);
   });
 
+  it("skips the explain-back for an exempt pusher, but still requires feedback", () => {
+    commit("src/x.ts");
+    mkdirSync(join(repo, ".claude"), { recursive: true });
+    writeFileSync(
+      join(repo, ".claude/atlas-exempt.json"),
+      JSON.stringify({ exempt: [{ email: "T@T" }] }),
+    );
+    state("build");
+    expect(push().code).toBe(2); // exemption never skips the feedback phase
+    state("feedback");
+    expect(push().code).toBe(0);
+
+    sh("config", "user.email", "someone-else@t");
+    expect(push().err).toContain("missing: WHAT");
+  });
+
   it("accepts SOURCE none: <reason>", () => {
     commit("src/x.ts");
     commit("test/write-tools.test.ts");

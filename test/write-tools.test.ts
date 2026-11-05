@@ -1,4 +1,4 @@
-import { mkdtemp, readdir } from "node:fs/promises";
+import { mkdtemp, readdir, readFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
@@ -184,5 +184,83 @@ describe("registerWriteTools", () => {
     });
     expect(client.request).not.toHaveBeenCalled();
     expect(await readdir(ledgerDir)).toHaveLength(1);
+  });
+});
+
+describe("ledger target", () => {
+  const MARKER = "body-marker-7f3a";
+
+  async function onlyRecord(ledgerDir: string) {
+    const files = await readdir(ledgerDir);
+    expect(files).toHaveLength(1);
+    const raw = await readFile(join(ledgerDir, files[0]!), "utf8");
+    return { raw, record: JSON.parse(raw) as Record<string, unknown> };
+  }
+
+  it("records the resolved method and path of an approved write, from the built request", async () => {
+    const { server, ledgerDir } = await setup();
+
+    await getTool(server, "adr_create").handler({
+      body: { name: MARKER, status: "draft" },
+      evidence,
+    });
+
+    const { raw, record } = await onlyRecord(ledgerDir);
+    // landscapeId came from the env default and versionId from "latest", not from the args
+    expect(record.target).toEqual({ method: "POST", path: "/landscapes/l1/versions/latest/adrs" });
+    expect(raw).not.toContain(MARKER);
+  });
+
+  it("records the target of a blocked write", async () => {
+    const { server, client, ledgerDir } = await setup({ ...openPolicy, requiredSkills: ["spec"] });
+
+    await getTool(server, "model_object_update").handler({
+      modelObjectId: "a/b c",
+      body: { name: MARKER },
+      evidence,
+    });
+
+    expect(client.request).not.toHaveBeenCalled();
+    const { raw, record } = await onlyRecord(ledgerDir);
+    expect(record.approved).toBe(false);
+    // the encoded path exactly as it would be sent, never decoded or rebuilt from args
+    expect(record.target).toEqual({
+      method: "PATCH",
+      path: "/landscapes/l1/versions/latest/model/objects/a%2Fb%20c",
+    });
+    expect(raw).not.toContain(MARKER);
+  });
+
+  it("records the target of a dry run", async () => {
+    const { server, ledgerDir } = await setup();
+
+    await getTool(server, "organization_create").handler({
+      body: { name: MARKER },
+      evidence,
+      dryRun: true,
+    });
+
+    const { raw, record } = await onlyRecord(ledgerDir);
+    expect(record.dryRun).toBe(true);
+    expect(record.target).toEqual({ method: "POST", path: "/organizations" });
+    expect(raw).not.toContain(MARKER);
+  });
+
+  it("never records the query", async () => {
+    const { server, ledgerDir } = await setup();
+
+    await getTool(server, "diagram_content_update").handler({
+      diagramId: "d1",
+      updateViewedAt: true,
+      body: {},
+      evidence,
+    });
+
+    const { raw, record } = await onlyRecord(ledgerDir);
+    expect(record.target).toEqual({
+      method: "PATCH",
+      path: "/landscapes/l1/versions/latest/diagrams/d1/content",
+    });
+    expect(raw).not.toContain("updateViewedAt");
   });
 });

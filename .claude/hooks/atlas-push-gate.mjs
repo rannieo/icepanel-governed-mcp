@@ -4,8 +4,9 @@
 //   2. a code change carries the author's explain-back: all seven labels, a KILLS that
 //      names a test file that exists, and a SOURCE that names a spec that exists or
 //      says `none: <reason>`.
-// Docs-only branches skip step 2. Branches with no atlas task are not gated.
-import { existsSync } from "node:fs";
+// Docs-only branches, and pushers listed in .claude/atlas-exempt.json (by git user.email),
+// skip step 2. Branches with no atlas task are not gated.
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
 import {
@@ -54,6 +55,22 @@ function changedFiles() {
 const files = changedFiles();
 const docsOnly = files !== null && files.every((file) => file.startsWith("docs/") || file.endsWith(".md"));
 if (docsOnly) process.exit(0);
+
+// ponytail: identity is the local git user.email, which anyone can set. This list waives a
+// comprehension check, not a security control; signed commits would be the upgrade path.
+function isExempt() {
+  const file = join(dir, ".claude", "atlas-exempt.json");
+  if (!existsSync(file)) return false;
+  let email = "";
+  try {
+    email = git(dir, "config", "user.email").toLowerCase();
+  } catch {
+    return false;
+  }
+  const listed = JSON.parse(readFileSync(file, "utf8")).exempt ?? [];
+  return Boolean(email) && listed.some((entry) => String(entry.email).toLowerCase() === email);
+}
+if (isExempt()) process.exit(0);
 
 const note = task.explain_back ?? "";
 const missing = missingLabels(note);

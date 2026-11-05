@@ -42,6 +42,7 @@ export async function summarizeLedger(
     operation: string;
     approved: boolean;
     reason: string;
+    target: string | null;
   }>
 > {
   const records = await readLedgerRecords(ledgerDir);
@@ -51,6 +52,7 @@ export async function summarizeLedger(
     operation: record.operation,
     approved: record.approved,
     reason: record.reason,
+    target: record.target ? `${record.target.method} ${record.target.path}` : null,
   }));
 }
 

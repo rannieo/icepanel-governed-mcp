@@ -71,7 +71,8 @@ Ledger output:
 - Default path: `/atlas-ship`. Full loop for big or risky work: `/atlas-assess` → `spec` → `plan` → `build` →
   `review` → `feedback` → `prune`. Incidents: `/atlas-yolo`.
 - Gates live in `.claude/hooks/` (Node, tested by `test/atlas-hooks.test.ts`): phase order, and no push or PR before
-  `feedback` plus the author's seven-label explain-back for code changes. They run in Claude Code only; under Codex,
+  `feedback` plus the author's seven-label explain-back for code changes (waived for pushers in
+  `.claude/atlas-exempt.json`). They run in Claude Code only; under Codex,
   follow them by hand.
 - Skills: `.agents/skills/<name>/SKILL.md` (frontmatter `name`, `description`), linked as `.claude/skills`.
   Agents: `.agents/agents/`, linked as `.claude/agents`. Change a skill with `/skill-creator:skill-creator`.

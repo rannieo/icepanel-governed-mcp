@@ -87,8 +87,20 @@ describe("governance ledger", () => {
         operation: "diagram_create",
         approved: true,
         reason: "approved",
+        target: null, // written before records carried a target
       },
     ]);
+  });
+
+  it("summarizes the target as METHOD path", async () => {
+    const dir = await mkdtemp(join(tmpdir(), "ledger-"));
+    await writeLedgerRecord(
+      dir,
+      makeRecord({ target: { method: "DELETE", path: "/landscapes/l1/versions/latest/adrs/adr-1" } }),
+    );
+
+    const [summary] = await summarizeLedger(dir);
+    expect(summary?.target).toBe("DELETE /landscapes/l1/versions/latest/adrs/adr-1");
   });
 
   it("returns a deterministic ledger file name helper", () => {
