@@ -84,6 +84,7 @@ describe("inspectLedger cli", () => {
   it("returns summary output by default", async () => {
     const output = await runInspectLedgerCli(["node", "script"], makeDeps());
     expect(output).toContain('"file": "r1.json"');
+    expect(output).toContain('"target": "POST /organizations"');
     expect(output).not.toContain('"payloadHash"');
   });
 

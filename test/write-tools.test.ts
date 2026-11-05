@@ -215,16 +215,18 @@ describe("ledger target", () => {
     const { server, client, ledgerDir } = await setup({ ...openPolicy, requiredSkills: ["spec"] });
 
     await getTool(server, "model_object_update").handler({
-      modelObjectId: "obj-1",
+      modelObjectId: "a/b c",
       body: { name: MARKER },
       evidence,
     });
 
     expect(client.request).not.toHaveBeenCalled();
     const { raw, record } = await onlyRecord(ledgerDir);
-    expect(record).toMatchObject({
-      approved: false,
-      target: { method: "PATCH", path: "/landscapes/l1/versions/latest/model/objects/obj-1" },
+    expect(record.approved).toBe(false);
+    // the encoded path exactly as it would be sent, never decoded or rebuilt from args
+    expect(record.target).toEqual({
+      method: "PATCH",
+      path: "/landscapes/l1/versions/latest/model/objects/a%2Fb%20c",
     });
     expect(raw).not.toContain(MARKER);
   });
@@ -239,7 +241,26 @@ describe("ledger target", () => {
     });
 
     const { raw, record } = await onlyRecord(ledgerDir);
-    expect(record).toMatchObject({ dryRun: true, target: { method: "POST", path: "/organizations" } });
+    expect(record.dryRun).toBe(true);
+    expect(record.target).toEqual({ method: "POST", path: "/organizations" });
     expect(raw).not.toContain(MARKER);
+  });
+
+  it("never records the query", async () => {
+    const { server, ledgerDir } = await setup();
+
+    await getTool(server, "diagram_content_update").handler({
+      diagramId: "d1",
+      updateViewedAt: true,
+      body: {},
+      evidence,
+    });
+
+    const { raw, record } = await onlyRecord(ledgerDir);
+    expect(record.target).toEqual({
+      method: "PATCH",
+      path: "/landscapes/l1/versions/latest/diagrams/d1/content",
+    });
+    expect(raw).not.toContain("updateViewedAt");
   });
 });
