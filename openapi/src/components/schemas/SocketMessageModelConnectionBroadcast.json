@@ -1,0 +1,42 @@
+{
+  "properties": {
+    "body": {
+      "properties": {
+        "changes": {
+          "items": {
+            "properties": {
+              "id": {
+                "format": "id",
+                "type": "string"
+              },
+              "modelConnection": {
+                "$ref": "./ModelConnection.json"
+              },
+              "type": {
+                "$ref": "./QueryBroadcastType.json"
+              }
+            },
+            "required": [
+              "modelConnection",
+              "id",
+              "type"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "lastBatch": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "changes"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "body"
+  ],
+  "type": "object"
+}

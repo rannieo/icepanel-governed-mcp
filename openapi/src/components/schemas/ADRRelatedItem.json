@@ -1,18 +1,23 @@
 {
   "properties": {
     "adrId": {
+      "format": "id",
       "type": "string"
     },
     "diagramId": {
+      "format": "id",
       "type": "string"
     },
     "draftId": {
+      "format": "id",
       "type": "string"
     },
     "id": {
+      "format": "id",
       "type": "string"
     },
     "index": {
+      "minimum": 0,
       "type": "number"
     },
     "link": {

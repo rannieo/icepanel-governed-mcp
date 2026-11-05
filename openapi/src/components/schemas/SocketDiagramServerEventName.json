@@ -1,0 +1,7 @@
+{
+  "enum": [
+    "diagram-broadcast",
+    "diagram-group-broadcast"
+  ],
+  "type": "string"
+}

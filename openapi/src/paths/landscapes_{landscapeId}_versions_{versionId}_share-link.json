@@ -1,5 +1,6 @@
 {
   "get": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -120,6 +121,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -133,9 +144,12 @@
     },
     "summary": "Get",
     "x-fern-request-name": "ShareLinkFindRequest",
-    "x-fern-sdk-method-name": "get"
+    "x-fern-sdk-method-name": "get",
+    "x-ice-panel-operation-subject": "share-link",
+    "x-ice-panel-operation-type": "read"
   },
   "post": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -272,6 +286,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -295,9 +319,12 @@
     },
     "summary": "Create",
     "x-fern-request-name": "ShareLinkCreateRequest",
-    "x-fern-sdk-method-name": "create"
+    "x-fern-sdk-method-name": "create",
+    "x-ice-panel-operation-subject": "share-link",
+    "x-ice-panel-operation-type": "write"
   },
   "patch": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -420,6 +447,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -443,9 +480,12 @@
     },
     "summary": "Update",
     "x-fern-request-name": "ShareLinkUpdateRequest",
-    "x-fern-sdk-method-name": "update"
+    "x-fern-sdk-method-name": "update",
+    "x-ice-panel-operation-subject": "share-link",
+    "x-ice-panel-operation-type": "write"
   },
   "delete": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -542,6 +582,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -565,6 +615,8 @@
     },
     "summary": "Delete",
     "x-fern-request-name": "ShareLinkDeleteRequest",
-    "x-fern-sdk-method-name": "delete"
+    "x-fern-sdk-method-name": "delete",
+    "x-ice-panel-operation-subject": "share-link",
+    "x-ice-panel-operation-type": "write"
   }
 }

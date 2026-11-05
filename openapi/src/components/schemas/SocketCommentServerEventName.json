@@ -1,0 +1,7 @@
+{
+  "enum": [
+    "comment-broadcast",
+    "comment-reply-broadcast"
+  ],
+  "type": "string"
+}

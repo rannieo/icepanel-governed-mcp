@@ -1,0 +1,17 @@
+{
+  "properties": {
+    "landscapeId": {
+      "format": "id",
+      "type": "string"
+    },
+    "versionId": {
+      "format": "id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "landscapeId",
+    "versionId"
+  ],
+  "type": "object"
+}

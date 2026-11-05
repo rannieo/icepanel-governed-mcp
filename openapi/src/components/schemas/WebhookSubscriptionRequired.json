@@ -1,0 +1,20 @@
+{
+  "properties": {
+    "enabled": {
+      "type": "boolean"
+    },
+    "name": {
+      "maxLength": 100,
+      "minLength": 1,
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "url"
+  ],
+  "type": "object"
+}

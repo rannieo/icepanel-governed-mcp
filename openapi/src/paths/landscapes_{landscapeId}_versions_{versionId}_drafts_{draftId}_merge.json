@@ -1,5 +1,6 @@
 {
   "post": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -122,6 +123,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -145,6 +156,8 @@
     },
     "summary": "Merge",
     "x-fern-request-name": "DraftMergeRequest",
-    "x-fern-sdk-method-name": "merge"
+    "x-fern-sdk-method-name": "merge",
+    "x-ice-panel-operation-subject": "draft",
+    "x-ice-panel-operation-type": "write"
   }
 }

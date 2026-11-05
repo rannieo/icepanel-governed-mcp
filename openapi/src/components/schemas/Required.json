@@ -25,10 +25,16 @@
       "$ref": "./CommentRequired.json"
     },
     {
+      "$ref": "./DiagramConnectionRequired.json"
+    },
+    {
       "$ref": "./DiagramContentRequired.json"
     },
     {
       "$ref": "./DiagramGroupRequired.json"
+    },
+    {
+      "$ref": "./DiagramObjectRequired.json"
     },
     {
       "$ref": "./DiagramRequired.json"
@@ -98,6 +104,9 @@
     },
     {
       "$ref": "./VersionRevertRequired.json"
+    },
+    {
+      "$ref": "./WebhookSubscriptionRequired.json"
     }
   ]
 }

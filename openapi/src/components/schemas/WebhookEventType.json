@@ -1,0 +1,29 @@
+{
+  "enum": [
+    "adr:created",
+    "adr:deleted",
+    "adr:updated",
+    "diagram:created",
+    "diagram:deleted",
+    "diagram-group:created",
+    "diagram-group:deleted",
+    "diagram-group:updated",
+    "diagram:updated",
+    "flow:created",
+    "flow:deleted",
+    "flow:updated",
+    "model-connection:created",
+    "model-connection:deleted",
+    "model-connection:updated",
+    "model-object:created",
+    "model-object:deleted",
+    "model-object:updated",
+    "tag:created",
+    "tag:deleted",
+    "tag-group:created",
+    "tag-group:deleted",
+    "tag-group:updated",
+    "tag:updated"
+  ],
+  "type": "string"
+}

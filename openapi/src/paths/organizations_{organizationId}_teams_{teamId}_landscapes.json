@@ -97,6 +97,16 @@
         },
         "description": "Not Found"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -110,6 +120,8 @@
     },
     "summary": "List Landscapes",
     "x-fern-request-name": "TeamLandscapesListRequest",
-    "x-fern-sdk-method-name": "listLandscapes"
+    "x-fern-sdk-method-name": "listLandscapes",
+    "x-ice-panel-operation-subject": "team",
+    "x-ice-panel-operation-type": "read"
   }
 }

@@ -1,0 +1,151 @@
+{
+  "properties": {
+    "CommentBroadcast": {
+      "$ref": "./SocketMessageCommentBroadcast.json"
+    },
+    "CommentClientSubscribe": {
+      "$ref": "./SocketMessageCommentClientSubscribe.json"
+    },
+    "CommentClientUnsubscribe": {
+      "$ref": "./SocketMessageCommentClientUnsubscribe.json"
+    },
+    "CommentReplyBroadcast": {
+      "$ref": "./SocketMessageCommentReplyBroadcast.json"
+    },
+    "CommentReplyClientSubscribe": {
+      "$ref": "./SocketMessageCommentReplyClientSubscribe.json"
+    },
+    "CommentReplyClientUnsubscribe": {
+      "$ref": "./SocketMessageCommentReplyClientUnsubscribe.json"
+    },
+    "DiagramBroadcast": {
+      "$ref": "./SocketMessageDiagramBroadcast.json"
+    },
+    "DiagramClientSubscribe": {
+      "$ref": "./SocketMessageDiagramClientSubscribe.json"
+    },
+    "DiagramClientUnsubscribe": {
+      "$ref": "./SocketMessageDiagramClientUnsubscribe.json"
+    },
+    "DiagramContentBroadcast": {
+      "$ref": "./SocketMessageDiagramContentBroadcast.json"
+    },
+    "DiagramContentClientSubscribe": {
+      "$ref": "./SocketMessageDiagramContentClientSubscribe.json"
+    },
+    "DiagramContentClientUnsubscribe": {
+      "$ref": "./SocketMessageDiagramContentClientUnsubscribe.json"
+    },
+    "DiagramGroupBroadcast": {
+      "$ref": "./SocketMessageDiagramGroupBroadcast.json"
+    },
+    "DiagramGroupClientSubscribe": {
+      "$ref": "./SocketMessageDiagramGroupClientSubscribe.json"
+    },
+    "DiagramGroupClientUnsubscribe": {
+      "$ref": "./SocketMessageDiagramGroupClientUnsubscribe.json"
+    },
+    "DomainBroadcast": {
+      "$ref": "./SocketMessageDomainBroadcast.json"
+    },
+    "DomainClientSubscribe": {
+      "$ref": "./SocketMessageDomainClientSubscribe.json"
+    },
+    "DomainClientUnsubscribe": {
+      "$ref": "./SocketMessageDomainClientUnsubscribe.json"
+    },
+    "FlowBroadcast": {
+      "$ref": "./SocketMessageFlowBroadcast.json"
+    },
+    "FlowClientSubscribe": {
+      "$ref": "./SocketMessageFlowClientSubscribe.json"
+    },
+    "FlowClientUnsubscribe": {
+      "$ref": "./SocketMessageFlowClientUnsubscribe.json"
+    },
+    "FlowsBroadcast": {
+      "$ref": "./SocketMessageFlowsBroadcast.json"
+    },
+    "FlowsClientSubscribe": {
+      "$ref": "./SocketMessageFlowsClientSubscribe.json"
+    },
+    "FlowsClientUnsubscribe": {
+      "$ref": "./SocketMessageFlowsClientUnsubscribe.json"
+    },
+    "ModelConnectionBroadcast": {
+      "$ref": "./SocketMessageModelConnectionBroadcast.json"
+    },
+    "ModelConnectionClientSubscribe": {
+      "$ref": "./SocketMessageModelConnectionClientSubscribe.json"
+    },
+    "ModelConnectionClientUnsubscribe": {
+      "$ref": "./SocketMessageModelConnectionClientUnsubscribe.json"
+    },
+    "ModelObjectBroadcast": {
+      "$ref": "./SocketMessageModelObjectBroadcast.json"
+    },
+    "ModelObjectClientSubscribe": {
+      "$ref": "./SocketMessageModelObjectClientSubscribe.json"
+    },
+    "ModelObjectClientUnsubscribe": {
+      "$ref": "./SocketMessageModelObjectClientUnsubscribe.json"
+    },
+    "TagBroadcast": {
+      "$ref": "./SocketMessageTagBroadcast.json"
+    },
+    "TagClientSubscribe": {
+      "$ref": "./SocketMessageTagClientSubscribe.json"
+    },
+    "TagClientUnsubscribe": {
+      "$ref": "./SocketMessageTagClientUnsubscribe.json"
+    },
+    "TagGroupBroadcast": {
+      "$ref": "./SocketMessageTagGroupBroadcast.json"
+    },
+    "TagGroupClientSubscribe": {
+      "$ref": "./SocketMessageTagGroupClientSubscribe.json"
+    },
+    "TagGroupClientUnsubscribe": {
+      "$ref": "./SocketMessageTagGroupClientUnsubscribe.json"
+    }
+  },
+  "required": [
+    "CommentBroadcast",
+    "CommentClientSubscribe",
+    "CommentClientUnsubscribe",
+    "CommentReplyBroadcast",
+    "CommentReplyClientSubscribe",
+    "CommentReplyClientUnsubscribe",
+    "DiagramBroadcast",
+    "DiagramClientSubscribe",
+    "DiagramClientUnsubscribe",
+    "DiagramContentBroadcast",
+    "DiagramContentClientSubscribe",
+    "DiagramContentClientUnsubscribe",
+    "DiagramGroupBroadcast",
+    "DiagramGroupClientSubscribe",
+    "DiagramGroupClientUnsubscribe",
+    "DomainBroadcast",
+    "DomainClientSubscribe",
+    "DomainClientUnsubscribe",
+    "FlowBroadcast",
+    "FlowClientSubscribe",
+    "FlowClientUnsubscribe",
+    "FlowsBroadcast",
+    "FlowsClientSubscribe",
+    "FlowsClientUnsubscribe",
+    "ModelConnectionBroadcast",
+    "ModelConnectionClientSubscribe",
+    "ModelConnectionClientUnsubscribe",
+    "ModelObjectBroadcast",
+    "ModelObjectClientSubscribe",
+    "ModelObjectClientUnsubscribe",
+    "TagBroadcast",
+    "TagClientSubscribe",
+    "TagClientUnsubscribe",
+    "TagGroupBroadcast",
+    "TagGroupClientSubscribe",
+    "TagGroupClientUnsubscribe"
+  ],
+  "type": "object"
+}

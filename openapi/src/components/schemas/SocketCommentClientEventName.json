@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "comment-reply-subscribe",
+    "comment-reply-unsubscribe",
+    "comment-subscribe",
+    "comment-unsubscribe"
+  ],
+  "type": "string"
+}

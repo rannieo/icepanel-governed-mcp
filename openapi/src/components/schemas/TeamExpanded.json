@@ -1,0 +1,20 @@
+{
+  "allOf": [
+    {
+      "$ref": "./Team.json"
+    },
+    {
+      "properties": {
+        "modelObjectHandleIds": {
+          "deprecated": true,
+          "description": "use GET /organizations/{organizationId}/teams/{teamId}/model/objects instead",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    }
+  ]
+}

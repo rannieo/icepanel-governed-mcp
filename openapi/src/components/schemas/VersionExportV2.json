@@ -1,0 +1,57 @@
+{
+  "description": "Version export in the v2 schema, matching the import endpoint structure.",
+  "properties": {
+    "flows": {
+      "items": {
+        "$ref": "./FlowExport.json"
+      },
+      "type": "array"
+    },
+    "modelConnections": {
+      "items": {
+        "$ref": "./ModelConnectionImport.json"
+      },
+      "type": "array"
+    },
+    "modelObjects": {
+      "items": {
+        "$ref": "./ModelObjectImport.json"
+      },
+      "type": "array"
+    },
+    "tagGroups": {
+      "items": {
+        "$ref": "./TagGroupImport.json"
+      },
+      "type": "array"
+    },
+    "tags": {
+      "items": {
+        "$ref": "./TagImport.json"
+      },
+      "type": "array"
+    },
+    "teams": {
+      "items": {
+        "$ref": "./TeamExport.json"
+      },
+      "type": "array"
+    },
+    "technologies": {
+      "items": {
+        "$ref": "./TechnologyExport.json"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "flows",
+    "modelConnections",
+    "modelObjects",
+    "tagGroups",
+    "tags",
+    "teams",
+    "technologies"
+  ],
+  "type": "object"
+}

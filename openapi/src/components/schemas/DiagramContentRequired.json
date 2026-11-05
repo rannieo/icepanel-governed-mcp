@@ -4,21 +4,25 @@
       "additionalProperties": {
         "$ref": "./DiagramComment.json"
       },
+      "description": "The comments on the diagram, keyed by comment id",
       "type": "object"
     },
     "commit": {
+      "description": "The commit number of the diagram content, incremented on each change",
       "type": "number"
     },
     "connections": {
       "additionalProperties": {
-        "$ref": "./DiagramConnection.json"
+        "$ref": "./DiagramConnectionRequired.json"
       },
+      "description": "The connections on the diagram, keyed by connection id",
       "type": "object"
     },
     "objects": {
       "additionalProperties": {
-        "$ref": "./DiagramObject.json"
+        "$ref": "./DiagramObjectRequired.json"
       },
+      "description": "The objects on the diagram, keyed by object id",
       "type": "object"
     }
   },

@@ -1,6 +1,7 @@
 {
   "get": {
     "security": [
+      {},
       {
         "ApiKeyAuth": []
       },
@@ -12,11 +13,11 @@
       "Catalog Technologies"
     ],
     "x-eov-operation-handler": "catalogTechnologies",
-    "x-fern-audiences": [],
     "x-fern-sdk-group-name": [
       "catalog",
       "technologies"
     ],
+    "x-oauth-scope": "all",
     "description": "List technologies",
     "operationId": "catalogTechnologiesList",
     "parameters": [
@@ -34,6 +35,18 @@
         "name": "admin",
         "schema": {
           "type": "boolean"
+        },
+        "x-fern-audiences": [
+          "internal"
+        ]
+      },
+      {
+        "allowReserved": true,
+        "in": "query",
+        "name": "search",
+        "required": false,
+        "schema": {
+          "type": "string"
         }
       },
       {
@@ -45,10 +58,13 @@
         }
       },
       {
+        "description": "The maximum number of items to return, defaults to 1000",
         "in": "query",
         "name": "limit",
         "required": false,
         "schema": {
+          "maximum": 10000,
+          "minimum": 1,
           "type": "number"
         }
       }
@@ -128,6 +144,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -140,12 +166,17 @@
       }
     },
     "summary": "List",
+    "x-fern-audiences": [
+      "public"
+    ],
     "x-fern-pagination": {
       "cursor": "$request.cursor",
       "next_cursor": "$response.nextCursor",
       "results": "$response.catalogTechnologies"
     },
     "x-fern-request-name": "CatalogTechnologiesListRequest",
-    "x-fern-sdk-method-name": "list"
+    "x-fern-sdk-method-name": "list",
+    "x-ice-panel-operation-subject": "catalog",
+    "x-ice-panel-operation-type": "read"
   }
 }

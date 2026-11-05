@@ -1,0 +1,14 @@
+{
+  "properties": {
+    "prompt": {
+      "description": "Natural language instruction describing the changes to make to the diagram, e.g. \"add a Redis cache between the API and the database\"",
+      "maxLength": 4000,
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "prompt"
+  ],
+  "type": "object"
+}

@@ -4,7 +4,6 @@
       "$ref": "./OrganizationAIFeatures.json"
     },
     "aiFeaturesEnabled": {
-      "default": true,
       "description": "Whether to enable all AI features for the organization",
       "type": "boolean"
     },
@@ -25,6 +24,7 @@
       "additionalProperties": {
         "type": "boolean"
       },
+      "maxProperties": 50,
       "type": "object"
     },
     "language": {
@@ -38,7 +38,6 @@
       "type": "string"
     },
     "oauthLandscapeWriteEnabled": {
-      "default": true,
       "description": "Whether OAuth connections can make changes to landscape data",
       "type": "boolean"
     },

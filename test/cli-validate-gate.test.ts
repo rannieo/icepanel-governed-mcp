@@ -23,6 +23,7 @@ function makeDeps(
       requiredReviewerRoles: [],
       requireValidationActors: false,
       maxRiskFlagsBeforeBlock: 0,
+      requireSeparationOfDuties: false,
     }),
     validateGovernanceEvidenceFn: vi.fn(() => ({
       approved: validationApproved,
@@ -30,8 +31,10 @@ function makeDeps(
       missingReviewerRoles: [],
       rejectionReasons: [],
       riskFlags: [],
+      untrustedApprovals: [],
+      actorIssues: [],
     })),
-    readFileFn: vi.fn(async () => readJson),
+    readFileFn: vi.fn(async () => readJson) as unknown as ValidateGateCliDeps["readFileFn"],
   };
 }
 

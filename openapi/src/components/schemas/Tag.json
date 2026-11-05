@@ -56,18 +56,6 @@
     "latestEntityId": {
       "type": "string"
     },
-    "modelConnectionIds": {
-      "items": {
-        "type": "string"
-      },
-      "type": "array"
-    },
-    "modelObjectIds": {
-      "items": {
-        "type": "string"
-      },
-      "type": "array"
-    },
     "updatedAt": {
       "format": "date-time",
       "type": "string"
@@ -98,8 +86,6 @@
     "id",
     "labels",
     "landscapeId",
-    "modelConnectionIds",
-    "modelObjectIds",
     "updatedAt",
     "updatedBy",
     "updatedById",

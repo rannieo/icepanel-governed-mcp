@@ -86,6 +86,16 @@
         },
         "description": "Not Found"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -99,7 +109,9 @@
     },
     "summary": "Get",
     "x-fern-request-name": "OrganizationFindRequest",
-    "x-fern-sdk-method-name": "get"
+    "x-fern-sdk-method-name": "get",
+    "x-ice-panel-operation-subject": "organization",
+    "x-ice-panel-operation-type": "read"
   },
   "patch": {
     "security": [
@@ -208,6 +220,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -231,7 +253,9 @@
     },
     "summary": "Update",
     "x-fern-request-name": "OrganizationUpdateRequest",
-    "x-fern-sdk-method-name": "update"
+    "x-fern-sdk-method-name": "update",
+    "x-ice-panel-operation-subject": "organization",
+    "x-ice-panel-operation-type": "write"
   },
   "delete": {
     "security": [
@@ -322,6 +346,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -345,6 +379,8 @@
     },
     "summary": "Delete",
     "x-fern-request-name": "OrganizationDeleteRequest",
-    "x-fern-sdk-method-name": "delete"
+    "x-fern-sdk-method-name": "delete",
+    "x-ice-panel-operation-subject": "organization",
+    "x-ice-panel-operation-type": "write"
   }
 }

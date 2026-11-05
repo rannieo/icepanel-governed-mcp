@@ -20,6 +20,7 @@
       "type": "object"
     },
     "name": {
+      "maxLength": 4000,
       "type": "string"
     }
   },

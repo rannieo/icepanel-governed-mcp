@@ -12,28 +12,28 @@ const baseEvidence: GovernanceEvidence = {
   skillsExecuted: [...defaultPolicy.requiredSkills],
   reviewers: [
     {
-      role: "solutions-architect",
+      role: "architect",
       reviewer: "sa",
       decision: "approved",
       summary: "ok",
       timestamp: "t1",
     },
     {
-      role: "network-engineer",
+      role: "plan-validator",
       reviewer: "ne",
       decision: "approved",
       summary: "ok",
       timestamp: "t2",
     },
     {
-      role: "security-auditor",
+      role: "security-reviewer",
       reviewer: "sec",
       decision: "approved",
       summary: "ok",
       timestamp: "t3",
     },
     {
-      role: "grill-me",
+      role: "test-reviewer",
       reviewer: "gm",
       decision: "approved",
       summary: "ok",
@@ -64,7 +64,7 @@ describe("validateGovernanceEvidence", () => {
     const result = validateGovernanceEvidence(
       {
         ...baseEvidence,
-        skillsExecuted: ["solutions-architect", "solutions-architect"],
+        skillsExecuted: ["architect", "architect"],
       },
       defaultPolicy,
     );
@@ -77,7 +77,7 @@ describe("validateGovernanceEvidence", () => {
       {
         ...baseEvidence,
         reviewers: baseEvidence.reviewers.map((reviewer) =>
-          reviewer.role === "network-engineer"
+          reviewer.role === "plan-validator"
             ? { ...reviewer, decision: "rejected" as const }
             : reviewer,
         ),
@@ -85,8 +85,8 @@ describe("validateGovernanceEvidence", () => {
       defaultPolicy,
     );
     expect(result.approved).toBe(false);
-    expect(result.missingReviewerRoles).toContain("network-engineer");
-    expect(result.rejectionReasons[0]).toContain("network-engineer");
+    expect(result.missingReviewerRoles).toContain("plan-validator");
+    expect(result.rejectionReasons[0]).toContain("plan-validator");
   });
 
   it("rejects when risk flags exceed policy limit", () => {
@@ -116,5 +116,71 @@ describe("validateGovernanceEvidence", () => {
     );
     expect(result.approved).toBe(true);
     expect(result.riskFlags).toEqual([]);
+  });
+});
+
+describe("validateGovernanceEvidence trust checks", () => {
+  const fullEvidence: GovernanceEvidence = {
+    ...baseEvidence,
+    reviewers: defaultPolicy.requiredReviewerRoles.map((role) => ({
+      role,
+      reviewer: `${role}-bot`,
+      decision: "approved" as const,
+      summary: "ok",
+      timestamp: "t",
+    })),
+  };
+
+  it("approves complete evidence under the default policy", () => {
+    expect(validateGovernanceEvidence(fullEvidence, defaultPolicy)).toMatchObject({
+      approved: true,
+      untrustedApprovals: [],
+      actorIssues: [],
+    });
+  });
+
+  it("ignores self-approvals and self-validation when separation of duties is on", () => {
+    const result = validateGovernanceEvidence(
+      {
+        ...fullEvidence,
+        validatedBy: "req",
+        reviewers: fullEvidence.reviewers.map((r) =>
+          r.role === "security-reviewer" ? { ...r, reviewer: "req" } : r,
+        ),
+      },
+      defaultPolicy,
+    );
+    expect(result.approved).toBe(false);
+    expect(result.actorIssues).toEqual(["validatedBy must differ from requestedBy"]);
+    expect(result.untrustedApprovals).toEqual([
+      "security-reviewer: req cannot approve their own request",
+    ]);
+    expect(result.missingReviewerRoles).toEqual(["security-reviewer"]);
+  });
+
+  it("allows self-approval when separation of duties is off", () => {
+    const result = validateGovernanceEvidence(
+      { ...fullEvidence, validatedBy: "req" },
+      { ...defaultPolicy, requireSeparationOfDuties: false },
+    );
+    expect(result.approved).toBe(true);
+  });
+
+  it("only counts approvals from allowlisted reviewers for a role", () => {
+    const result = validateGovernanceEvidence(fullEvidence, {
+      ...defaultPolicy,
+      reviewerAllowlist: { "security-reviewer": ["alice"], "plan-validator": ["plan-validator-bot"] },
+    });
+    expect(result.approved).toBe(false);
+    expect(result.untrustedApprovals).toEqual(["security-reviewer: security-reviewer-bot is not on the allowlist"]);
+    expect(result.missingReviewerRoles).toEqual(["security-reviewer"]);
+  });
+
+  it("flags missing actors", () => {
+    const result = validateGovernanceEvidence(
+      { ...fullEvidence, requestedBy: " ", validatedBy: "" },
+      defaultPolicy,
+    );
+    expect(result.actorIssues).toEqual(["requestedBy and validatedBy are required"]);
   });
 });

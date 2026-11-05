@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "body": {
+      "$ref": "./SocketDiagramContentClientSubscription.json"
+    },
+    "reply": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "body",
+    "reply"
+  ],
+  "type": "object"
+}

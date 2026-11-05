@@ -42,26 +42,29 @@ export async function runServer(
   const server = new deps.createServer(
     {
       name: "icepanel-custom-mcp",
-      version: "0.1.0",
+      version: "0.2.0",
     },
     {
       instructions:
-        "Use read tools for architecture exploration. For any write tool, provide full governance evidence with required roles and skill stages.",
+        "Use read tools for architecture exploration; versionId defaults to \"latest\". For any write tool, provide full governance evidence with required roles and skill stages. Use dryRun: true to check evidence before a real write. Deletes also need confirm set to the target id.",
       capabilities: {
         logging: {},
       },
     },
   );
 
-  deps.registerReadToolsFn(server, {
-    client,
-    defaultOrganizationId: config.organizationId,
-  });
+  const defaults = {
+    organizationId: config.organizationId,
+    landscapeId: config.landscapeId,
+  };
+
+  deps.registerReadToolsFn(server, { client, defaults });
 
   deps.registerWriteToolsFn(server, {
     client,
     governancePolicy,
     governanceLedgerDir: config.governanceLedgerDir,
+    defaults,
   });
 
   const transport = new deps.createTransport();

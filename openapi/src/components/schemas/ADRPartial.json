@@ -1,6 +1,7 @@
 {
   "properties": {
     "commit": {
+      "minimum": 0,
       "type": "number"
     },
     "content": {

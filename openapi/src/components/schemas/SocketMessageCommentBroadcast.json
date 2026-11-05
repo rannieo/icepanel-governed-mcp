@@ -1,0 +1,42 @@
+{
+  "properties": {
+    "body": {
+      "properties": {
+        "changes": {
+          "items": {
+            "properties": {
+              "comment": {
+                "$ref": "./Comment.json"
+              },
+              "id": {
+                "format": "id",
+                "type": "string"
+              },
+              "type": {
+                "$ref": "./QueryBroadcastType.json"
+              }
+            },
+            "required": [
+              "comment",
+              "id",
+              "type"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "lastBatch": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "changes"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "body"
+  ],
+  "type": "object"
+}

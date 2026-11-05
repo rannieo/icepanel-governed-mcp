@@ -16,6 +16,7 @@
       "public"
     ],
     "x-fern-sdk-group-name": "teams",
+    "x-oauth-scope": "organization",
     "operationId": "teamFind",
     "parameters": [
       {
@@ -33,6 +34,17 @@
         "schema": {
           "type": "string"
         }
+      },
+      {
+        "in": "query",
+        "name": "expand",
+        "required": false,
+        "schema": {
+          "items": {
+            "$ref": "../components/schemas/TeamExpandKey.json"
+          },
+          "type": "array"
+        }
       }
     ],
     "responses": {
@@ -42,7 +54,7 @@
             "schema": {
               "properties": {
                 "team": {
-                  "$ref": "../components/schemas/Team.json"
+                  "$ref": "../components/schemas/TeamExpanded.json"
                 }
               },
               "required": [
@@ -94,6 +106,16 @@
         },
         "description": "Not Found"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -107,7 +129,9 @@
     },
     "summary": "Get",
     "x-fern-request-name": "TeamFindRequest",
-    "x-fern-sdk-method-name": "get"
+    "x-fern-sdk-method-name": "get",
+    "x-ice-panel-operation-subject": "team",
+    "x-ice-panel-operation-type": "read"
   },
   "patch": {
     "security": [
@@ -224,6 +248,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -247,7 +281,9 @@
     },
     "summary": "Update",
     "x-fern-request-name": "TeamUpdateRequest",
-    "x-fern-sdk-method-name": "update"
+    "x-fern-sdk-method-name": "update",
+    "x-ice-panel-operation-subject": "team",
+    "x-ice-panel-operation-type": "write"
   },
   "delete": {
     "security": [
@@ -346,6 +382,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -369,6 +415,8 @@
     },
     "summary": "Delete",
     "x-fern-request-name": "TeamDeleteRequest",
-    "x-fern-sdk-method-name": "delete"
+    "x-fern-sdk-method-name": "delete",
+    "x-ice-panel-operation-subject": "team",
+    "x-ice-panel-operation-type": "write"
   }
 }

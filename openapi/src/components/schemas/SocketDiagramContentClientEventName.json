@@ -1,0 +1,7 @@
+{
+  "enum": [
+    "diagram-content-subscribe",
+    "diagram-content-unsubscribe"
+  ],
+  "type": "string"
+}

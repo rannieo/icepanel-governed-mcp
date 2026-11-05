@@ -1,0 +1,42 @@
+{
+  "properties": {
+    "body": {
+      "properties": {
+        "changes": {
+          "items": {
+            "properties": {
+              "id": {
+                "format": "id",
+                "type": "string"
+              },
+              "tag": {
+                "$ref": "./Tag.json"
+              },
+              "type": {
+                "$ref": "./QueryBroadcastType.json"
+              }
+            },
+            "required": [
+              "tag",
+              "id",
+              "type"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "lastBatch": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "changes"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "body"
+  ],
+  "type": "object"
+}

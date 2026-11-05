@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "added",
+    "initial",
+    "modified",
+    "removed"
+  ],
+  "type": "string"
+}

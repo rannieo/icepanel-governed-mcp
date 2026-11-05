@@ -55,6 +55,9 @@
       "$ref": "./AutomationTriggerOrganizationUserInviteUsed.json"
     },
     {
+      "$ref": "./AutomationTriggerUserContinueOnDesktop.json"
+    },
+    {
       "$ref": "./AutomationTriggerUserRegister.json"
     },
     {

@@ -38,6 +38,8 @@ function makeDeps(): InspectLedgerCliDeps {
           missingReviewerRoles: [],
           rejectionReasons: [],
           riskFlags: [],
+          untrustedApprovals: [],
+          actorIssues: [],
         },
       },
     ],

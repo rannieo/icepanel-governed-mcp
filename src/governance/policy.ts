@@ -7,27 +7,20 @@ export type GovernancePolicy = {
   requiredReviewerRoles: ReviewRole[];
   requireValidationActors: boolean;
   maxRiskFlagsBeforeBlock: number;
+  /** Requester cannot validate or approve their own write. */
+  requireSeparationOfDuties: boolean;
+  /** If set for a role, only these reviewer names count as approvals for it. */
+  reviewerAllowlist?: Partial<Record<ReviewRole, string[]>>;
 };
 
 export const defaultPolicy: GovernancePolicy = {
-  requiredSkills: [
-    "solution-architect",
-    "network-engineer",
-    "security-auditor",
-    "grill-me",
-    "brainstorming",
-    "writing-plans",
-    "test-driven-development",
-    "verification-before-completion",
-  ],
-  requiredReviewerRoles: [
-    "solutions-architect",
-    "network-engineer",
-    "security-auditor",
-    "grill-me",
-  ],
+  // atlas stages that must have run before a write: the change was specified, then reviewed.
+  requiredSkills: ["spec", "review"],
+  // atlas reviewer agents (.agents/agents/) that must approve it.
+  requiredReviewerRoles: ["plan-validator", "security-reviewer"],
   requireValidationActors: true,
   maxRiskFlagsBeforeBlock: 0,
+  requireSeparationOfDuties: true,
 };
 
 export async function loadGovernancePolicy(
@@ -44,6 +37,9 @@ export async function loadGovernancePolicy(
         raw.requireValidationActors ?? defaultPolicy.requireValidationActors,
       maxRiskFlagsBeforeBlock:
         raw.maxRiskFlagsBeforeBlock ?? defaultPolicy.maxRiskFlagsBeforeBlock,
+      requireSeparationOfDuties:
+        raw.requireSeparationOfDuties ?? defaultPolicy.requireSeparationOfDuties,
+      reviewerAllowlist: raw.reviewerAllowlist,
     };
   } catch {
     return defaultPolicy;

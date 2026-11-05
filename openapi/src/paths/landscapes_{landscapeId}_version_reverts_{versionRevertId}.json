@@ -1,5 +1,6 @@
 {
   "get": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -107,6 +108,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -120,9 +131,12 @@
     },
     "summary": "Get",
     "x-fern-request-name": "VersionRevertFindRequest",
-    "x-fern-sdk-method-name": "get"
+    "x-fern-sdk-method-name": "get",
+    "x-ice-panel-operation-subject": "version",
+    "x-ice-panel-operation-type": "read"
   },
   "patch": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -240,6 +254,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -263,6 +287,8 @@
     },
     "summary": "Update",
     "x-fern-request-name": "VersionRevertUpdateRequest",
-    "x-fern-sdk-method-name": "update"
+    "x-fern-sdk-method-name": "update",
+    "x-ice-panel-operation-subject": "version",
+    "x-ice-panel-operation-type": "write"
   }
 }

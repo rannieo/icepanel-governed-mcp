@@ -1,5 +1,6 @@
 {
   "get": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -112,6 +113,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -125,167 +136,12 @@
     },
     "summary": "Get",
     "x-fern-request-name": "CommentFindRequest",
-    "x-fern-sdk-method-name": "get"
-  },
-  "put": {
-    "security": [
-      {
-        "ApiKeyAuth": []
-      },
-      {
-        "BearerAuth": []
-      }
-    ],
-    "tags": [
-      "Comments"
-    ],
-    "x-eov-operation-handler": "comments",
-    "x-fern-audiences": [
-      "public"
-    ],
-    "x-fern-sdk-group-name": "comments",
-    "operationId": "commentUpsert",
-    "parameters": [
-      {
-        "in": "path",
-        "name": "landscapeId",
-        "required": true,
-        "schema": {
-          "type": "string"
-        }
-      },
-      {
-        "in": "path",
-        "name": "versionId",
-        "required": true,
-        "schema": {
-          "type": "string"
-        }
-      },
-      {
-        "in": "path",
-        "name": "commentId",
-        "required": true,
-        "schema": {
-          "type": "string"
-        }
-      }
-    ],
-    "requestBody": {
-      "content": {
-        "application/json": {
-          "schema": {
-            "$ref": "../components/schemas/CommentUpsert.json"
-          }
-        }
-      },
-      "required": true
-    },
-    "responses": {
-      "200": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "properties": {
-                "comment": {
-                  "$ref": "../components/schemas/Comment.json"
-                }
-              },
-              "required": [
-                "comment"
-              ],
-              "type": "object"
-            }
-          }
-        },
-        "description": "OK"
-      },
-      "400": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "../components/schemas/Error.json"
-            }
-          }
-        },
-        "description": "Bad Request"
-      },
-      "401": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "../components/schemas/Error.json"
-            }
-          }
-        },
-        "description": "Unauthorized"
-      },
-      "403": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "../components/schemas/Error.json"
-            }
-          }
-        },
-        "description": "Forbidden"
-      },
-      "404": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "../components/schemas/Error.json"
-            }
-          }
-        },
-        "description": "Not Found"
-      },
-      "409": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "../components/schemas/Error.json"
-            }
-          }
-        },
-        "description": "Conflict"
-      },
-      "422": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "../components/schemas/Error.json"
-            }
-          }
-        },
-        "description": "Unprocessable Entity"
-      },
-      "500": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "../components/schemas/Error.json"
-            }
-          }
-        },
-        "description": "Internal Server"
-      },
-      "503": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "../components/schemas/Error.json"
-            }
-          }
-        },
-        "description": "Service Unavailable"
-      }
-    },
-    "summary": "Upsert",
-    "x-fern-request-name": "CommentUpsertRequest",
-    "x-fern-sdk-method-name": "upsert"
+    "x-fern-sdk-method-name": "get",
+    "x-ice-panel-operation-subject": "comment",
+    "x-ice-panel-operation-type": "read"
   },
   "patch": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -418,6 +274,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -441,9 +307,12 @@
     },
     "summary": "Update",
     "x-fern-request-name": "CommentUpdateRequest",
-    "x-fern-sdk-method-name": "update"
+    "x-fern-sdk-method-name": "update",
+    "x-ice-panel-operation-subject": "comment",
+    "x-ice-panel-operation-type": "write"
   },
   "delete": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -566,6 +435,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -589,6 +468,8 @@
     },
     "summary": "Delete",
     "x-fern-request-name": "CommentDeleteRequest",
-    "x-fern-sdk-method-name": "delete"
+    "x-fern-sdk-method-name": "delete",
+    "x-ice-panel-operation-subject": "comment",
+    "x-ice-panel-operation-type": "write"
   }
 }

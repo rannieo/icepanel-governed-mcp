@@ -1,0 +1,71 @@
+{
+  "properties": {
+    "model-object-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketModelClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "model-object-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketModelClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "model-connection-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketModelClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "model-connection-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketModelClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "model-connection-subscribe",
+    "model-connection-unsubscribe",
+    "model-object-subscribe",
+    "model-object-unsubscribe"
+  ],
+  "type": "object"
+}

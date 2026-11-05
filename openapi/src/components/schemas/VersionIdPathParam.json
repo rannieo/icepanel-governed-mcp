@@ -1,0 +1,14 @@
+{
+  "oneOf": [
+    {
+      "format": "id",
+      "type": "string"
+    },
+    {
+      "enum": [
+        "latest"
+      ],
+      "type": "string"
+    }
+  ]
+}

@@ -109,6 +109,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -122,6 +132,8 @@
     },
     "summary": "By Entity",
     "x-fern-request-name": "OrganizationLogStatsByEntityRequest",
-    "x-fern-sdk-method-name": "byEntity"
+    "x-fern-sdk-method-name": "byEntity",
+    "x-ice-panel-operation-subject": "action-log",
+    "x-ice-panel-operation-type": "read"
   }
 }

@@ -99,6 +99,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -122,7 +132,9 @@
     },
     "summary": "Delete",
     "x-fern-request-name": "OrganizationTechnologyDeleteRequest",
-    "x-fern-sdk-method-name": "delete"
+    "x-fern-sdk-method-name": "delete",
+    "x-ice-panel-operation-subject": "technologies",
+    "x-ice-panel-operation-type": "write"
   },
   "get": {
     "security": [
@@ -232,6 +244,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -245,7 +267,9 @@
     },
     "summary": "Get",
     "x-fern-request-name": "OrganizationTechnologyFindRequest",
-    "x-fern-sdk-method-name": "get"
+    "x-fern-sdk-method-name": "get",
+    "x-ice-panel-operation-subject": "technologies",
+    "x-ice-panel-operation-type": "read"
   },
   "patch": {
     "security": [
@@ -365,6 +389,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -388,6 +422,8 @@
     },
     "summary": "Update",
     "x-fern-request-name": "OrganizationTechnologyUpdateRequest",
-    "x-fern-sdk-method-name": "update"
+    "x-fern-sdk-method-name": "update",
+    "x-ice-panel-operation-subject": "technologies",
+    "x-ice-panel-operation-type": "write"
   }
 }

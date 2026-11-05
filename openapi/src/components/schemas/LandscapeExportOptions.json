@@ -6,8 +6,11 @@
     },
     "orientation": {
       "$ref": "./LandscapeExportOrientation.json",
-      "default": "portrait",
-      "description": "Orientation to use when exporting to PDF"
+      "description": "Orientation to use when exporting to PDF, defaults to portrait"
+    },
+    "schema": {
+      "$ref": "./LandscapeExportSchema.json",
+      "description": "Schema version to use for JSON exports, defaults to v1"
     }
   },
   "type": "object"

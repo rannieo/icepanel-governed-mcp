@@ -1,4 +1,5 @@
 {
+  "description": "The anchor point on the edge of an object where a connection attaches",
   "enum": [
     "top-left",
     "top-center",

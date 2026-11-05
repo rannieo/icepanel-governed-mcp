@@ -1,0 +1,8 @@
+{
+  "enum": [
+    "created",
+    "deleted",
+    "updated"
+  ],
+  "type": "string"
+}

@@ -26,12 +26,6 @@
     "id": {
       "type": "string"
     },
-    "modelObjectHandleIds": {
-      "items": {
-        "type": "string"
-      },
-      "type": "array"
-    },
     "organizationId": {
       "type": "string"
     },
@@ -53,7 +47,6 @@
     "createdBy",
     "createdById",
     "id",
-    "modelObjectHandleIds",
     "organizationId",
     "updatedAt",
     "updatedBy",

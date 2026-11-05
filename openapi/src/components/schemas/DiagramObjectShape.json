@@ -3,5 +3,13 @@
     "area",
     "box"
   ],
-  "type": "string"
+  "type": "string",
+  "x-fern-enum": {
+    "area": {
+      "description": "An automatically sized area that wraps around its child objects, used to draw parents and groups on the diagram"
+    },
+    "box": {
+      "description": "A manually positioned and sized box, used to draw objects in scope of the diagram"
+    }
+  }
 }

@@ -1,0 +1,6 @@
+{
+  "enum": [
+    "modelObjectHandleIds"
+  ],
+  "type": "string"
+}

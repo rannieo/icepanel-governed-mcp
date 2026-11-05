@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "flowId": {
+      "format": "id",
+      "type": "string"
+    },
+    "landscapeId": {
+      "format": "id",
+      "type": "string"
+    },
+    "versionId": {
+      "format": "id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "landscapeId",
+    "versionId",
+    "flowId"
+  ],
+  "type": "object"
+}

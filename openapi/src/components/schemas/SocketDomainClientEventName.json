@@ -1,0 +1,7 @@
+{
+  "enum": [
+    "domain-subscribe",
+    "domain-unsubscribe"
+  ],
+  "type": "string"
+}
