@@ -1,4 +1,4 @@
-import { mkdtemp, readdir } from "node:fs/promises";
+import { mkdtemp, readdir, readFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
@@ -184,5 +184,62 @@ describe("registerWriteTools", () => {
     });
     expect(client.request).not.toHaveBeenCalled();
     expect(await readdir(ledgerDir)).toHaveLength(1);
+  });
+});
+
+describe("ledger target", () => {
+  const MARKER = "body-marker-7f3a";
+
+  async function onlyRecord(ledgerDir: string) {
+    const files = await readdir(ledgerDir);
+    expect(files).toHaveLength(1);
+    const raw = await readFile(join(ledgerDir, files[0]!), "utf8");
+    return { raw, record: JSON.parse(raw) as Record<string, unknown> };
+  }
+
+  it("records the resolved method and path of an approved write, from the built request", async () => {
+    const { server, ledgerDir } = await setup();
+
+    await getTool(server, "adr_create").handler({
+      body: { name: MARKER, status: "draft" },
+      evidence,
+    });
+
+    const { raw, record } = await onlyRecord(ledgerDir);
+    // landscapeId came from the env default and versionId from "latest", not from the args
+    expect(record.target).toEqual({ method: "POST", path: "/landscapes/l1/versions/latest/adrs" });
+    expect(raw).not.toContain(MARKER);
+  });
+
+  it("records the target of a blocked write", async () => {
+    const { server, client, ledgerDir } = await setup({ ...openPolicy, requiredSkills: ["spec"] });
+
+    await getTool(server, "model_object_update").handler({
+      modelObjectId: "obj-1",
+      body: { name: MARKER },
+      evidence,
+    });
+
+    expect(client.request).not.toHaveBeenCalled();
+    const { raw, record } = await onlyRecord(ledgerDir);
+    expect(record).toMatchObject({
+      approved: false,
+      target: { method: "PATCH", path: "/landscapes/l1/versions/latest/model/objects/obj-1" },
+    });
+    expect(raw).not.toContain(MARKER);
+  });
+
+  it("records the target of a dry run", async () => {
+    const { server, ledgerDir } = await setup();
+
+    await getTool(server, "organization_create").handler({
+      body: { name: MARKER },
+      evidence,
+      dryRun: true,
+    });
+
+    const { raw, record } = await onlyRecord(ledgerDir);
+    expect(record).toMatchObject({ dryRun: true, target: { method: "POST", path: "/organizations" } });
+    expect(raw).not.toContain(MARKER);
   });
 });

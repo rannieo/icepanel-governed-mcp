@@ -127,6 +127,7 @@ export async function executeGovernedWrite(
     approved,
     reason: reason || "blocked",
     payloadHash,
+    target: { method: args.request.method, path: args.request.path },
     evidence: args.evidence,
     validation,
     ...(args.dryRun ? { dryRun: true } : {}),
