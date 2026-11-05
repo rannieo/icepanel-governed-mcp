@@ -19,3 +19,8 @@ coverage/
 # logs and OS files
 *.log
 .DS_Store
+
+# atlas loop state (per developer)
+.claude/atlas-state.json
+.claude/.atlas-clear-pending
+docs/HANDOFF.md
