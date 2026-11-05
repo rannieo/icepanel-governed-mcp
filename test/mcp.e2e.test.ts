@@ -270,7 +270,7 @@ suite("MCP stdio E2E", () => {
 
     if (result.isError) {
       const status = result.structuredContent?.status;
-      const baseUrl = process.env.ICEPANEL_API_BASE_URL ?? "https://api.icepanel.io";
+      const baseUrl = process.env.ICEPANEL_API_BASE_URL || "https://api.icepanel.io/v1";
       const hint =
         status === 404 && !baseUrl.endsWith("/v1")
           ? " Hint: ICEPANEL_API_BASE_URL may need a /v1 suffix."

@@ -1,3 +1,6 @@
+import { readFileSync } from "node:fs";
+
+import dotenv from "dotenv";
 import { afterEach, describe, expect, it } from "vitest";
 
 import { loadConfig } from "../src/config.js";
@@ -73,5 +76,17 @@ describe("loadConfig", () => {
       governancePolicyPath: ".governance/policies/write-gate-policy.json",
       governanceLedgerDir: ".governance/reviews",
     });
+  });
+
+  it("ships an .env.example that loads to no empty values and the /v1 base URL", () => {
+    const example = dotenv.parse(readFileSync(new URL("../.env.example", import.meta.url)));
+    for (const key of Object.keys(process.env)) {
+      if (key.startsWith("ICEPANEL_") || key.startsWith("GOVERNANCE_")) delete process.env[key];
+    }
+    Object.assign(process.env, example);
+
+    const config = loadConfig();
+    expect(config.apiBaseUrl).toBe("https://api.icepanel.io/v1");
+    expect(Object.values(config)).not.toContain("");
   });
 });

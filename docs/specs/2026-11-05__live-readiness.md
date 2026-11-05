@@ -20,7 +20,8 @@ an agent make a scratch landscape instead of writing into a real one.
 - [ ] With `ICEPANEL_API_BASE_URL=""`, the base URL is also `https://api.icepanel.io/v1`; the same empty-falls-back rule
       holds for `GOVERNANCE_POLICY_PATH` and `GOVERNANCE_LEDGER_DIR`.
 - [ ] An empty `ICEPANEL_API_KEY`, `ICEPANEL_BEARER_TOKEN`, `ICEPANEL_ORGANIZATION_ID` or `ICEPANEL_LANDSCAPE_ID`
-      counts as unset (`undefined`), so no empty `X-API-Key` header is sent and defaults are not `""`.
+      counts as unset (`undefined`), so id defaults are never `""`. (An empty key was already never sent as a header:
+      `src/icepanel/client.ts` only sets `X-API-Key` when the value is truthy. Corrected after security review.)
 - [ ] `.env.example` sets `ICEPANEL_API_BASE_URL=https://api.icepanel.io/v1`.
 - [ ] `landscape_create` exists as a governed write: `POST /organizations/{organizationId}/landscapes`, body validated
       against IcePanel's schema (`name` required), `organizationId` defaulting to `ICEPANEL_ORGANIZATION_ID`, blocked
