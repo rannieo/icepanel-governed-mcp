@@ -13,17 +13,21 @@ export type IcepanelServerConfig = {
   governanceLedgerDir: string;
 };
 
+/** A blank `.env` line (`KEY=`) reaches process.env as "", which must count as unset. */
+function env(name: string): string | undefined {
+  return process.env[name] || undefined;
+}
+
 export function loadConfig(): IcepanelServerConfig {
   return {
-    apiBaseUrl: process.env.ICEPANEL_API_BASE_URL ?? "https://api.icepanel.io",
-    apiKey: process.env.ICEPANEL_API_KEY,
-    bearerToken: process.env.ICEPANEL_BEARER_TOKEN,
-    organizationId: process.env.ICEPANEL_ORGANIZATION_ID,
-    landscapeId: process.env.ICEPANEL_LANDSCAPE_ID,
+    // IcePanel's OpenAPI spec declares its server as https://api.icepanel.io/v1.
+    apiBaseUrl: env("ICEPANEL_API_BASE_URL") ?? "https://api.icepanel.io/v1",
+    apiKey: env("ICEPANEL_API_KEY"),
+    bearerToken: env("ICEPANEL_BEARER_TOKEN"),
+    organizationId: env("ICEPANEL_ORGANIZATION_ID"),
+    landscapeId: env("ICEPANEL_LANDSCAPE_ID"),
     governancePolicyPath:
-      process.env.GOVERNANCE_POLICY_PATH ??
-      ".governance/policies/write-gate-policy.json",
-    governanceLedgerDir:
-      process.env.GOVERNANCE_LEDGER_DIR ?? ".governance/reviews",
+      env("GOVERNANCE_POLICY_PATH") ?? ".governance/policies/write-gate-policy.json",
+    governanceLedgerDir: env("GOVERNANCE_LEDGER_DIR") ?? ".governance/reviews",
   };
 }

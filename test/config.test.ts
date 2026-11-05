@@ -20,7 +20,7 @@ describe("loadConfig", () => {
 
     const result = loadConfig();
     expect(result).toEqual({
-      apiBaseUrl: "https://api.icepanel.io",
+      apiBaseUrl: "https://api.icepanel.io/v1",
       apiKey: undefined,
       bearerToken: undefined,
       organizationId: undefined,
@@ -48,6 +48,30 @@ describe("loadConfig", () => {
       landscapeId: "land",
       governancePolicyPath: "/tmp/policy.json",
       governanceLedgerDir: "/tmp/ledger",
+    });
+  });
+
+  it("treats empty env values as unset, as dotenv writes them from a blank .env line", () => {
+    for (const key of [
+      "ICEPANEL_API_BASE_URL",
+      "ICEPANEL_API_KEY",
+      "ICEPANEL_BEARER_TOKEN",
+      "ICEPANEL_ORGANIZATION_ID",
+      "ICEPANEL_LANDSCAPE_ID",
+      "GOVERNANCE_POLICY_PATH",
+      "GOVERNANCE_LEDGER_DIR",
+    ]) {
+      process.env[key] = "";
+    }
+
+    expect(loadConfig()).toEqual({
+      apiBaseUrl: "https://api.icepanel.io/v1",
+      apiKey: undefined,
+      bearerToken: undefined,
+      organizationId: undefined,
+      landscapeId: undefined,
+      governancePolicyPath: ".governance/policies/write-gate-policy.json",
+      governanceLedgerDir: ".governance/reviews",
     });
   });
 });

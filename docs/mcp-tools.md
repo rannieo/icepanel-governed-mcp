@@ -30,7 +30,7 @@ All tools are defined in one table, `src/tools/catalog.ts`. Input schemas (path 
 
 | Kind | Tools |
 |---|---|
-| Create | `organization_create`, `version_create`, `draft_create`, `diagram_create`, `model_object_create`, `model_connection_create`, `adr_create`, `comment_create`, `comment_reply_create` |
+| Create | `organization_create`, `landscape_create`, `version_create`, `draft_create`, `diagram_create`, `model_object_create`, `model_connection_create`, `adr_create`, `comment_create`, `comment_reply_create` |
 | Update | `model_object_update`, `model_connection_update`, `diagram_content_update`, `adr_update`, `draft_update`, `comment_resolve` |
 | Action | `draft_merge` |
 | Delete | `model_object_delete`, `model_connection_delete`, `adr_delete`, `comment_delete` |

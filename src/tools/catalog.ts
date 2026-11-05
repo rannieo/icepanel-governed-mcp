@@ -83,6 +83,7 @@ export const WRITE_TOOLS: ToolDef[] = [
   write("model_object_create", "Create Model Object", "POST", `${V}/model/objects`, "Create a model object in a version."),
   write("model_connection_create", "Create Model Connection", "POST", `${V}/model/connections`, "Create a model connection in a version."),
   write("organization_create", "Create Organization", "POST", "/organizations", "Create an organization."),
+  write("landscape_create", "Create Landscape", "POST", "/organizations/{organizationId}/landscapes", "Create a landscape in an organization, e.g. a scratch landscape for testing."),
   // Updates
   write("model_object_update", "Update Model Object", "PATCH", `${V}/model/objects/{modelObjectId}`, "Patch a model object."),
   write("model_connection_update", "Update Model Connection", "PATCH", `${V}/model/connections/{modelConnectionId}`, "Patch a model connection."),
