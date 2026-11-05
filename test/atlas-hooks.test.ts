@@ -127,6 +127,16 @@ describe("atlas-push-gate", () => {
     expect(push().code).toBe(0);
   });
 
+  it.each([
+    "git -c credential.helper= -c credential.helper='!f(){ echo u=x; echo p=y; }; f' push https://github.com/o/r.git b",
+    "git -C /tmp/repo push origin HEAD",
+    "git --no-pager push",
+    "GH_TOKEN=x gh --repo o/r pr create --fill",
+  ])("gates a push or PR whatever options come first: %s", (command) => {
+    state("build");
+    expect(push(command).code).toBe(2);
+  });
+
   it("blocks a push before feedback", () => {
     state("build");
     const result = push("gh pr create --fill");

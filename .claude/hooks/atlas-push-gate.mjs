@@ -26,7 +26,12 @@ failClosed("atlas-push-gate");
 const input = JSON.parse((await readStdin()) || "{}");
 if (input.tool_name !== "Bash") process.exit(0);
 const command = String(input.tool_input?.command ?? "");
-if (!/\bgit\s+push\b|\bgh\s+pr\s+create\b/.test(command)) process.exit(0);
+// Options can sit between `git` and `push` (`git -c k=v push`, `git -C dir push`), and quoted
+// option values can hold `;`, so match across the whole command rather than an adjacent pair.
+// ponytail: deliberately broad, so `echo "git push"` is gated too; failing closed beats a bypass.
+const isPush = /\bgit\b[\s\S]*\bpush\b/.test(command);
+const isPr = /\bgh\b[\s\S]*\bpr\s+create\b/.test(command);
+if (!isPush && !isPr) process.exit(0);
 
 const dir = projectDir();
 const branch = currentBranch(dir);
