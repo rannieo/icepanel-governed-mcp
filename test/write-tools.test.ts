@@ -262,6 +262,8 @@ describe("ledger target", () => {
       path: "/landscapes/l1/versions/latest/diagrams/d1/content",
     });
     expect(raw).not.toContain("updateViewedAt");
+  });
+});
 
 describe("landscape_create", () => {
   it("posts to the default organization's landscapes with a validated body", async () => {
