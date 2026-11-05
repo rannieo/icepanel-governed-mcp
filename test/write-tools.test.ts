@@ -264,3 +264,40 @@ describe("ledger target", () => {
     expect(raw).not.toContain("updateViewedAt");
   });
 });
+
+describe("landscape_create", () => {
+  it("posts to the default organization's landscapes with a validated body", async () => {
+    const ledgerDir = await mkdtemp(join(tmpdir(), "landscape-create-"));
+    const server = new FakeMcpServer();
+    const client = {
+      request: vi.fn(async () => ({ ok: true, status: 200, data: {} })),
+    } as unknown as MockClient;
+    registerWriteTools(server as never, {
+      client,
+      governancePolicy: openPolicy,
+      governanceLedgerDir: ledgerDir,
+      defaults: { organizationId: "org-1" },
+    });
+
+    const invalid = await getTool(server, "landscape_create").handler({ body: {}, evidence });
+    expect(textOf(invalid)).toContain('required property "name"');
+
+    await getTool(server, "landscape_create").handler({ body: { name: "MCP sandbox" }, evidence });
+    expect(client.request.mock.calls.map((call) => call[0])).toEqual([
+      { method: "POST", path: "/organizations/org-1/landscapes", query: undefined, body: { name: "MCP sandbox" } },
+    ]);
+  });
+
+  it("is blocked by the governance gate like every write", async () => {
+    const { server, client } = await setup({ ...openPolicy, requiredReviewerRoles: ["security-reviewer"] });
+
+    const result = await getTool(server, "landscape_create").handler({
+      organizationId: "org-1",
+      body: { name: "MCP sandbox" },
+      evidence,
+    });
+
+    expect(result).toMatchObject({ isError: true, structuredContent: { blocked: true } });
+    expect(client.request).not.toHaveBeenCalled();
+  });
+});

@@ -2,7 +2,7 @@
 
 This repo has two deliverables:
 
-1. A **custom MCP server** for IcePanel API access with governance-enforced writes (49 tools; see `docs/mcp-tools.md`).
+1. A **custom MCP server** for IcePanel API access with governance-enforced writes (50 tools; see `docs/mcp-tools.md`).
 2. An **OpenAPI workflow** for fetch/split/bundle/size operations, plus a generated spec index that drives tool schemas and body validation.
 
 Why not just the official IcePanel MCP? It has no draft, version or comment tools, and no evidence gate or audit ledger on writes. See `docs/mcp-tools.md`.
@@ -80,7 +80,7 @@ npm install
 Create `.env` from `.env.example`:
 
 ```bash
-ICEPANEL_API_BASE_URL=https://api.icepanel.io
+ICEPANEL_API_BASE_URL=https://api.icepanel.io/v1
 ICEPANEL_API_KEY=your_api_key_here
 ICEPANEL_BEARER_TOKEN=
 ICEPANEL_ORGANIZATION_ID=
