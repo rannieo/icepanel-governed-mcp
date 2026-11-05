@@ -7,12 +7,12 @@
     "resource:e2e"
   ],
   "skillsExecuted": [
-    "solutions-architect"
+    "spec"
   ],
   "reviewers": [
     {
-      "role": "solutions-architect",
-      "reviewer": "architect-bot",
+      "role": "plan-validator",
+      "reviewer": "plan-validator-bot",
       "decision": "approved",
       "summary": "Only one reviewer approved.",
       "timestamp": "2026-05-29T00:00:00.000Z"

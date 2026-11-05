@@ -1,7 +1,7 @@
 {
   "properties": {
     "batchSize": {
-      "default": 1000,
+      "description": "The number of items to return per batch, defaults to 1000",
       "maximum": 10000,
       "minimum": 1,
       "type": "number"

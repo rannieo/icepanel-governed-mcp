@@ -108,6 +108,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -131,6 +141,8 @@
     },
     "summary": "Revoke",
     "x-fern-request-name": "OrganizationUserInviteRevokeRequest",
-    "x-fern-sdk-method-name": "revoke"
+    "x-fern-sdk-method-name": "revoke",
+    "x-ice-panel-operation-subject": "invites",
+    "x-ice-panel-operation-type": "write"
   }
 }

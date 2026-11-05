@@ -1,5 +1,6 @@
 {
   "get": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -37,6 +38,33 @@
         "schema": {
           "$ref": "../components/schemas/ActionLogFilter.json"
         }
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "required": false,
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "description": "The maximum number of items to return, defaults to 1000",
+        "in": "query",
+        "name": "limit",
+        "required": false,
+        "schema": {
+          "maximum": 10000,
+          "minimum": 1,
+          "type": "number"
+        }
+      },
+      {
+        "in": "query",
+        "name": "order",
+        "required": false,
+        "schema": {
+          "$ref": "../components/schemas/SortDirection.json"
+        }
       }
     ],
     "responses": {
@@ -50,6 +78,9 @@
                     "$ref": "../components/schemas/ActionLog.json"
                   },
                   "type": "array"
+                },
+                "nextCursor": {
+                  "type": "string"
                 }
               },
               "required": [
@@ -111,6 +142,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -123,7 +164,14 @@
       }
     },
     "summary": "List",
+    "x-fern-pagination": {
+      "cursor": "$request.cursor",
+      "next_cursor": "$response.nextCursor",
+      "results": "$response.actionLogs"
+    },
     "x-fern-request-name": "ActionLogsListRequest",
-    "x-fern-sdk-method-name": "list"
+    "x-fern-sdk-method-name": "list",
+    "x-ice-panel-operation-subject": "action-log",
+    "x-ice-panel-operation-type": "read"
   }
 }

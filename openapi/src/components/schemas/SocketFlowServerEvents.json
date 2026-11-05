@@ -1,0 +1,79 @@
+{
+  "properties": {
+    "flows-broadcast": {
+      "properties": {
+        "body": {
+          "properties": {
+            "changes": {
+              "items": {
+                "properties": {
+                  "flow": {
+                    "$ref": "./Flow.json"
+                  },
+                  "id": {
+                    "format": "id",
+                    "type": "string"
+                  },
+                  "type": {
+                    "$ref": "./QueryBroadcastType.json"
+                  }
+                },
+                "required": [
+                  "flow",
+                  "id",
+                  "type"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "lastBatch": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "changes"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "body"
+      ],
+      "type": "object"
+    },
+    "flow-broadcast": {
+      "properties": {
+        "body": {
+          "properties": {
+            "flow": {
+              "$ref": "./Flow.json"
+            },
+            "id": {
+              "format": "id",
+              "type": "string"
+            },
+            "type": {
+              "$ref": "./DocumentBroadcastType.json"
+            }
+          },
+          "required": [
+            "flow",
+            "id",
+            "type"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "body"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "flow-broadcast",
+    "flows-broadcast"
+  ],
+  "type": "object"
+}

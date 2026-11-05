@@ -1,0 +1,71 @@
+{
+  "properties": {
+    "tag-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketTagClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "tag-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketTagClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "tag-group-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketTagClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "tag-group-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketTagClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "tag-group-subscribe",
+    "tag-group-unsubscribe",
+    "tag-subscribe",
+    "tag-unsubscribe"
+  ],
+  "type": "object"
+}

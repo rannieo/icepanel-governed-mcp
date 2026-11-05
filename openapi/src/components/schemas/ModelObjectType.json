@@ -8,5 +8,28 @@
     "store",
     "system"
   ],
-  "type": "string"
+  "type": "string",
+  "x-fern-enum": {
+    "actor": {
+      "description": "A person or role that interacts with your systems, e.g. a customer or support agent"
+    },
+    "app": {
+      "description": "An application that runs code or performs tasks within a system, e.g. a web app, API or microservice"
+    },
+    "component": {
+      "description": "A logical building block within an app or store, e.g. a module, controller or library"
+    },
+    "group": {
+      "description": "A collection of related objects, e.g. a team, department or business capability"
+    },
+    "root": {
+      "description": "The root object of a domain that all other objects descend from"
+    },
+    "store": {
+      "description": "A place where data or files are stored within a system, e.g. a database, file storage or message queue"
+    },
+    "system": {
+      "description": "A software system that delivers value to its users, e.g. an e-commerce platform or CRM"
+    }
+  }
 }

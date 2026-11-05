@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "model-connection-subscribe",
+    "model-connection-unsubscribe",
+    "model-object-subscribe",
+    "model-object-unsubscribe"
+  ],
+  "type": "string"
+}

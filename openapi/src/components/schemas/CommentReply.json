@@ -52,6 +52,9 @@
     "updatedById": {
       "type": "string"
     },
+    "version": {
+      "type": "number"
+    },
     "versionId": {
       "type": "string"
     }
@@ -68,6 +71,7 @@
     "updatedAt",
     "updatedBy",
     "updatedById",
+    "version",
     "versionId"
   ],
   "type": "object"

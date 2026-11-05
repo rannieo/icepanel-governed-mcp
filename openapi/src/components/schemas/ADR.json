@@ -1,6 +1,7 @@
 {
   "properties": {
     "commit": {
+      "minimum": 0,
       "type": "number"
     },
     "content": {
@@ -36,6 +37,7 @@
     },
     "handleId": {
       "description": "The handle id of the ADR",
+      "format": "handle-id",
       "type": "string"
     },
     "createdAt": {
@@ -60,13 +62,16 @@
     },
     "id": {
       "description": "The id of the ADR",
+      "format": "id",
       "type": "string"
     },
     "landscapeId": {
       "description": "The id of the landscape that the ADR belongs to",
+      "format": "id",
       "type": "string"
     },
     "latestEntityId": {
+      "format": "id",
       "type": "string"
     },
     "number": {
@@ -84,23 +89,25 @@
       "type": "string"
     },
     "version": {
+      "minimum": 0,
       "type": "number"
     },
     "versionId": {
+      "format": "id",
       "type": "string"
     }
   },
   "required": [
-    "handleId",
     "name",
     "status",
     "commit",
     "createdAt",
     "createdBy",
     "createdById",
+    "handleId",
     "id",
-    "number",
     "landscapeId",
+    "number",
     "updatedAt",
     "updatedBy",
     "updatedById",

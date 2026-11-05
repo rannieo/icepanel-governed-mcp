@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "body": {
+      "$ref": "./SocketFlowClientSubscription.json"
+    },
+    "reply": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "body",
+    "reply"
+  ],
+  "type": "object"
+}

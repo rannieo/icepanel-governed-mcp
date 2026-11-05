@@ -37,23 +37,23 @@
     "/landscapes/{landscapeId}/action-logs/stats/by-entity": {
       "$ref": "paths/landscapes_{landscapeId}_action-logs_stats_by-entity.json"
     },
+    "/landscapes/{landscapeId}/versions/{versionId}/adrs": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_adrs.json"
+    },
+    "/landscapes/{landscapeId}/versions/{versionId}/adrs/{adrId}": {
+      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_adrs_{adrId}.json"
+    },
     "/catalog/technologies": {
       "$ref": "paths/catalog_technologies.json"
     },
-    "/catalog/suggestion/information": {
-      "$ref": "paths/catalog_suggestion_information.json"
-    },
-    "/catalog/suggestion/brand": {
-      "$ref": "paths/catalog_suggestion_brand.json"
+    "/catalog/technologies/select": {
+      "$ref": "paths/catalog_technologies_select.json"
     },
     "/catalog/icons/signed-url": {
       "$ref": "paths/catalog_icons_signed-url.json"
     },
     "/catalog/technologies/{catalogTechnologyId}": {
       "$ref": "paths/catalog_technologies_{catalogTechnologyId}.json"
-    },
-    "/catalog/technologies/slugs/{catalogTechnologySlug}": {
-      "$ref": "paths/catalog_technologies_slugs_{catalogTechnologySlug}.json"
     },
     "/landscapes/{landscapeId}/versions/{versionId}/comments/{commentId}/replies": {
       "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_comments_{commentId}_replies.json"
@@ -66,9 +66,6 @@
     },
     "/landscapes/{landscapeId}/versions/{versionId}/comments/{commentId}": {
       "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_comments_{commentId}.json"
-    },
-    "/landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/content/generate-description": {
-      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams_{diagramId}_content_generate-description.json"
     },
     "/landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/content": {
       "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams_{diagramId}_content.json"
@@ -84,15 +81,6 @@
     },
     "/landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}": {
       "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams_{diagramId}.json"
-    },
-    "/landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/view": {
-      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams_{diagramId}_view.json"
-    },
-    "/landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/action": {
-      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams_{diagramId}_action.json"
-    },
-    "/landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/export/png": {
-      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams_{diagramId}_export_png.json"
     },
     "/landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/export/image/{diagramExportImageId}": {
       "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_diagrams_{diagramId}_export_image_{diagramExportImageId}.json"
@@ -118,23 +106,14 @@
     "/landscapes/{landscapeId}/versions/{versionId}/drafts/{draftId}": {
       "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_drafts_{draftId}.json"
     },
-    "/landscapes/{landscapeId}/versions/{versionId}/drafts/{draftId}/rebase": {
-      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_drafts_{draftId}_rebase.json"
-    },
     "/landscapes/{landscapeId}/versions/{versionId}/drafts/{draftId}/merge": {
       "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_drafts_{draftId}_merge.json"
-    },
-    "/landscapes/{landscapeId}/versions/{versionId}/drafts/{draftId}/view": {
-      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_drafts_{draftId}_view.json"
     },
     "/landscapes/{landscapeId}/versions/{versionId}/flows": {
       "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_flows.json"
     },
     "/landscapes/{landscapeId}/versions/{versionId}/flows/{flowId}": {
       "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_flows_{flowId}.json"
-    },
-    "/landscapes/{landscapeId}/versions/{versionId}/flows/{flowId}/view": {
-      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_flows_{flowId}_view.json"
     },
     "/landscapes/{landscapeId}/versions/{versionId}/flows/thumbnails": {
       "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_flows_thumbnails.json"
@@ -162,12 +141,6 @@
     },
     "/landscapes/{landscapeId}/versions/{versionId}/search": {
       "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_search.json"
-    },
-    "/landscapes/{landscapeId}/thumbnails/primary": {
-      "$ref": "paths/landscapes_{landscapeId}_thumbnails_primary.json"
-    },
-    "/landscapes/{landscapeId}/versions/{versionId}/export/pdf": {
-      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_export_pdf.json"
     },
     "/landscapes/{landscapeId}/versions/{versionId}/export": {
       "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_export.json"
@@ -210,21 +183,6 @@
     },
     "/organizations/{organizationId}/landscapes": {
       "$ref": "paths/organizations_{organizationId}_landscapes.json"
-    },
-    "/organizations/{organizationId}/landscapes/{landscapeId}": {
-      "$ref": "paths/organizations_{organizationId}_landscapes_{landscapeId}.json"
-    },
-    "/organizations/{organizationId}/landscapes/{landscapeId}/duplicate": {
-      "$ref": "paths/organizations_{organizationId}_landscapes_{landscapeId}_duplicate.json"
-    },
-    "/organizations/{organizationId}/landscapes/{landscapeId}/copy": {
-      "$ref": "paths/organizations_{organizationId}_landscapes_{landscapeId}_copy.json"
-    },
-    "/organizations/{organizationId}/landscapes/{landscapeId}/versions/{versionId}/export/pdf": {
-      "$ref": "paths/organizations_{organizationId}_landscapes_{landscapeId}_versions_{versionId}_export_pdf.json"
-    },
-    "/organizations/{organizationId}/landscapes/{landscapeId}/thumbnails/primary": {
-      "$ref": "paths/organizations_{organizationId}_landscapes_{landscapeId}_thumbnails_primary.json"
     },
     "/organizations/{organizationId}/logs": {
       "$ref": "paths/organizations_{organizationId}_logs.json"
@@ -300,9 +258,6 @@
     },
     "/landscapes/{landscapeId}/versions/{versionId}": {
       "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}.json"
-    },
-    "/landscapes/{landscapeId}/versions/{versionId}/export/json": {
-      "$ref": "paths/landscapes_{landscapeId}_versions_{versionId}_export_json.json"
     }
   },
   "servers": [
@@ -311,5 +266,45 @@
       "x-fern-server-name": "API V1"
     }
   ],
-  "webhooks": {}
+  "webhooks": {
+    "diagram": {
+      "$ref": "webhooks/diagram.json"
+    },
+    "diagram-group": {
+      "$ref": "webhooks/diagram-group.json"
+    },
+    "flow": {
+      "$ref": "webhooks/flow.json"
+    },
+    "model-connection": {
+      "$ref": "webhooks/model-connection.json"
+    },
+    "model-object": {
+      "$ref": "webhooks/model-object.json"
+    },
+    "tag": {
+      "$ref": "webhooks/tag.json"
+    },
+    "tag-group": {
+      "$ref": "webhooks/tag-group.json"
+    }
+  },
+  "x-fern-webhook-signature": {
+    "algorithm": "sha256",
+    "encoding": "hex",
+    "header": "X-IcePanel-Signature",
+    "payload-format": {
+      "components": [
+        "timestamp",
+        "body"
+      ],
+      "delimiter": "."
+    },
+    "timestamp": {
+      "format": "unix-seconds",
+      "header": "X-IcePanel-Timestamp",
+      "tolerance": 300
+    },
+    "type": "hmac"
+  }
 }

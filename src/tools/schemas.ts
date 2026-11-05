@@ -1,12 +1,8 @@
 import { z } from "zod";
 
 export const reviewerSchema = z.object({
-  role: z.enum([
-    "solutions-architect",
-    "network-engineer",
-    "security-auditor",
-    "grill-me",
-  ]),
+  // Any role name; the policy decides which ones a write needs.
+  role: z.string().min(1),
   reviewer: z.string().min(1),
   decision: z.enum(["approved", "rejected"]),
   summary: z.string().min(1),
@@ -23,15 +19,11 @@ export const governanceEvidenceSchema = z.object({
   riskFlags: z.array(z.string()).optional(),
 });
 
-export const baseWriteInputSchema = z.object({
-  evidence: governanceEvidenceSchema,
-  dryRunOnly: z.boolean().optional(),
-});
-
 export const outputResultSchema = z.object({
   ok: z.boolean(),
   status: z.number().optional(),
   blocked: z.boolean().optional(),
+  dryRun: z.boolean().optional(),
   reason: z.string().optional(),
   error: z.string().optional(),
   ledgerPath: z.string().optional(),

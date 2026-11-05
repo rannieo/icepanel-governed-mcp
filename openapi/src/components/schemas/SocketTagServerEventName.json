@@ -1,0 +1,7 @@
+{
+  "enum": [
+    "tag-broadcast",
+    "tag-group-broadcast"
+  ],
+  "type": "string"
+}

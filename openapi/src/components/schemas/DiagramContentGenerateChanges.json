@@ -1,0 +1,119 @@
+{
+  "properties": {
+    "connections": {
+      "description": "Operations applied to the connections on the diagram",
+      "properties": {
+        "$add": {
+          "additionalProperties": {
+            "$ref": "./DiagramConnectionRequired.json"
+          },
+          "description": "Create new connections on the diagram, keyed by id",
+          "type": "object"
+        },
+        "$remove": {
+          "description": "Delete connections on the diagram by id",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "$update": {
+          "additionalProperties": {
+            "$ref": "./DiagramConnectionPartial.json"
+          },
+          "description": "Update existing connections on the diagram, keyed by id",
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "modelConnections": {
+      "description": "Operations applied to the model connections in the landscape",
+      "properties": {
+        "$add": {
+          "additionalProperties": {
+            "$ref": "./ModelConnectionRequired.json"
+          },
+          "description": "Create new model connections in the landscape, keyed by id",
+          "type": "object"
+        },
+        "$remove": {
+          "description": "Delete model connections in the landscape by id",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "$update": {
+          "additionalProperties": {
+            "$ref": "./ModelConnectionPartial.json"
+          },
+          "description": "Update existing model connections in the landscape, keyed by id",
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "modelObjects": {
+      "description": "Operations applied to the model objects in the landscape",
+      "properties": {
+        "$add": {
+          "additionalProperties": {
+            "$ref": "./ModelObjectRequired.json"
+          },
+          "description": "Create new model objects in the landscape, keyed by id",
+          "type": "object"
+        },
+        "$remove": {
+          "description": "Delete model objects in the landscape by id",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "$update": {
+          "additionalProperties": {
+            "$ref": "./ModelObjectPartial.json"
+          },
+          "description": "Update existing model objects in the landscape, keyed by id",
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "objects": {
+      "description": "Operations applied to the objects on the diagram",
+      "properties": {
+        "$add": {
+          "additionalProperties": {
+            "$ref": "./DiagramObjectRequired.json"
+          },
+          "description": "Create new objects on the diagram, keyed by id",
+          "type": "object"
+        },
+        "$remove": {
+          "description": "Delete objects on the diagram by id",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "$update": {
+          "additionalProperties": {
+            "$ref": "./DiagramObjectPartial.json"
+          },
+          "description": "Update existing objects on the diagram, keyed by id",
+          "type": "object"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "connections",
+    "modelConnections",
+    "modelObjects",
+    "objects"
+  ],
+  "type": "object"
+}

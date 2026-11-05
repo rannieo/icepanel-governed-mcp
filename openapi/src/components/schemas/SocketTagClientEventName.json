@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "tag-group-subscribe",
+    "tag-group-unsubscribe",
+    "tag-subscribe",
+    "tag-unsubscribe"
+  ],
+  "type": "string"
+}

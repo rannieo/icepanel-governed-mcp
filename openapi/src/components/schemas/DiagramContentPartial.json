@@ -1,14 +1,17 @@
 {
   "properties": {
     "comments": {
+      "description": "Operations to apply to the comments on the diagram",
       "properties": {
         "$add": {
           "additionalProperties": {
             "$ref": "./DiagramComment.json"
           },
+          "description": "Add new comments to the diagram, keyed by comment id",
           "type": "object"
         },
         "$remove": {
+          "description": "Remove comments from the diagram by id",
           "items": {
             "type": "string"
           },
@@ -18,29 +21,35 @@
           "additionalProperties": {
             "$ref": "./DiagramComment.json"
           },
+          "description": "Replace all comments on the diagram, keyed by comment id",
           "type": "object"
         },
         "$update": {
           "additionalProperties": {
             "$ref": "./DiagramCommentPartial.json"
           },
+          "description": "Update existing comments on the diagram, keyed by comment id",
           "type": "object"
         }
       },
       "type": "object"
     },
     "commit": {
+      "description": "The commit number of the diagram content, incremented on each change",
       "type": "number"
     },
     "connections": {
+      "description": "Operations to apply to the connections on the diagram",
       "properties": {
         "$add": {
           "additionalProperties": {
-            "$ref": "./DiagramConnection.json"
+            "$ref": "./DiagramConnectionRequired.json"
           },
+          "description": "Add new connections to the diagram, keyed by connection id",
           "type": "object"
         },
         "$remove": {
+          "description": "Remove connections from the diagram by id",
           "items": {
             "type": "string"
           },
@@ -48,28 +57,33 @@
         },
         "$replace": {
           "additionalProperties": {
-            "$ref": "./DiagramConnection.json"
+            "$ref": "./DiagramConnectionRequired.json"
           },
+          "description": "Replace all connections on the diagram, keyed by connection id",
           "type": "object"
         },
         "$update": {
           "additionalProperties": {
             "$ref": "./DiagramConnectionPartial.json"
           },
+          "description": "Update existing connections on the diagram, keyed by connection id",
           "type": "object"
         }
       },
       "type": "object"
     },
     "objects": {
+      "description": "Operations to apply to the objects on the diagram",
       "properties": {
         "$add": {
           "additionalProperties": {
-            "$ref": "./DiagramObject.json"
+            "$ref": "./DiagramObjectRequired.json"
           },
+          "description": "Add new objects to the diagram, keyed by object id",
           "type": "object"
         },
         "$remove": {
+          "description": "Remove objects from the diagram by id",
           "items": {
             "type": "string"
           },
@@ -77,14 +91,16 @@
         },
         "$replace": {
           "additionalProperties": {
-            "$ref": "./DiagramObject.json"
+            "$ref": "./DiagramObjectRequired.json"
           },
+          "description": "Replace all objects on the diagram, keyed by object id",
           "type": "object"
         },
         "$update": {
           "additionalProperties": {
             "$ref": "./DiagramObjectPartial.json"
           },
+          "description": "Update existing objects on the diagram, keyed by object id",
           "type": "object"
         }
       },

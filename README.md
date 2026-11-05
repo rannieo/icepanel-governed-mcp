@@ -2,8 +2,10 @@
 
 This repo has two deliverables:
 
-1. A **custom MCP server** for IcePanel API access with governance-enforced writes.
-2. An **OpenAPI workflow** for fetch/split/bundle/size operations.
+1. A **custom MCP server** for IcePanel API access with governance-enforced writes (49 tools; see `docs/mcp-tools.md`).
+2. An **OpenAPI workflow** for fetch/split/bundle/size operations, plus a generated spec index that drives tool schemas and body validation.
+
+Why not just the official IcePanel MCP? It has no draft, version or comment tools, and no evidence gate or audit ledger on writes. See `docs/mcp-tools.md`.
 
 ## How It Works
 
@@ -11,11 +13,14 @@ This repo has two deliverables:
 
 1. MCP client connects via `stdio`.
 2. Server loads config and governance policy.
-3. Read tools proxy to IcePanel API.
-4. Write tools run governance validation first:
-   - validate evidence against policy,
+3. Tools are registered from one table (`src/tools/catalog.ts`); path/query inputs come from the OpenAPI spec index.
+4. Read tools proxy to IcePanel API.
+5. Write tools:
+   - validate `body` against the endpoint's OpenAPI schema,
+   - validate evidence against policy (incl. separation of duties / reviewer allowlist),
    - always write a ledger record,
-   - block the write or forward it to IcePanel.
+   - block, dry-run (`dryRun: true`), or forward to IcePanel.
+   - Deletes also require `confirm` equal to the target id.
 
 ### Governance gate behavior
 
@@ -27,21 +32,22 @@ Write tools require an `evidence` object with:
 - `skillsExecuted[]`
 - `reviewers[]`
 
-Default required skill stages:
+Default required atlas stages (`requiredSkills`):
 
-- `solution-architect`
-- `network-engineer`
-- `security-auditor`
-- `grill-me`
-- `brainstorming`
-- `writing-plans`
-- `test-driven-development`
-- `verification-before-completion`
+- `spec` (the change was specified: `atlas-spec` or `atlas-ship` step 2)
+- `review` (it was reviewed: `atlas-review` or `atlas-ship` step 4)
+
+Default required reviewer roles (`requiredReviewerRoles`):
+
+- `plan-validator` (checks intent and impacted resources against the live model)
+- `security-reviewer` (checks for gate bypass, secrets and destructive effect)
 
 Policy is loaded from `.governance/policies/write-gate-policy.json`.  
 Ledger records are written to `.governance/reviews` (or `GOVERNANCE_LEDGER_DIR`).
 
 ### OpenAPI flow
+
+`openapi:index` regenerates `src/generated/icepanel-spec.json` (operations + request-body schemas) from `openapi/source/openapi.json`. `openapi:check` fetches the live spec, regenerates the index, and runs the drift test.
 
 `openapi:build` runs:
 
@@ -50,6 +56,10 @@ Ledger records are written to `.governance/reviews` (or `GOVERNANCE_LEDGER_DIR`)
 3. bundle full spec
 4. bundle slim spec (`--remove-unused-components`)
 5. print size report
+
+## Workflow (atlas)
+
+Changes to this repo go through the atlas loop: `/atlas-ship` by default, the full `/atlas-assess` → `prune` loop for big or risky work. Claude Code hooks in `.claude/hooks/` gate phase order and pushes. See `.agents/skills/atlas-README.md`.
 
 ## Local Setup
 
@@ -192,6 +202,8 @@ npm run openapi:split
 npm run openapi:bundle
 npm run openapi:bundle:slim
 npm run openapi:size
+npm run openapi:index
+npm run openapi:check
 ```
 
 Output artifacts:
@@ -208,6 +220,8 @@ Unit + integration tests:
 ```bash
 npm test
 ```
+
+Both `npm test` and `npm run test:coverage` type-check first (`tsc --noEmit`).
 
 Coverage (strict 100% on `src/**`):
 

@@ -20,3 +20,16 @@ export function getTool(server: FakeMcpServer, name: string): RegisteredTool {
   }
   return tool;
 }
+
+import type { CallToolResult } from "@modelcontextprotocol/server";
+import type { Mock } from "vitest";
+
+import type { IcepanelClient } from "../src/icepanel/client.js";
+
+/** IcepanelClient whose `request` is a vitest mock, so tests can read `.mock.calls`. */
+export type MockClient = IcepanelClient & { request: Mock };
+
+export function textOf(result: unknown): string {
+  const first = (result as CallToolResult).content[0];
+  return first?.type === "text" ? first.text : "";
+}

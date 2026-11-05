@@ -1,0 +1,319 @@
+{
+  "post": {
+    "x-oauth-scope": "landscape",
+    "security": [
+      {
+        "ApiKeyAuth": []
+      },
+      {
+        "BearerAuth": []
+      }
+    ],
+    "tags": [
+      "ADRs"
+    ],
+    "x-eov-operation-handler": "adrs",
+    "x-fern-audiences": [
+      "public"
+    ],
+    "x-fern-sdk-group-name": "adrs",
+    "operationId": "adrCreate",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "landscapeId",
+        "required": true,
+        "schema": {
+          "format": "id",
+          "type": "string"
+        }
+      },
+      {
+        "in": "path",
+        "name": "versionId",
+        "required": true,
+        "schema": {
+          "$ref": "../components/schemas/VersionIdPathParam.json"
+        }
+      }
+    ],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "../components/schemas/ADRRequired.json"
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "properties": {
+                "adr": {
+                  "$ref": "../components/schemas/ADR.json"
+                }
+              },
+              "required": [
+                "adr"
+              ],
+              "type": "object"
+            }
+          }
+        },
+        "description": "OK"
+      },
+      "400": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Bad Request"
+      },
+      "401": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Unauthorized"
+      },
+      "403": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Forbidden"
+      },
+      "404": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Not Found"
+      },
+      "422": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Unprocessable Entity"
+      },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
+      "500": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Internal Server"
+      },
+      "503": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Service Unavailable"
+      }
+    },
+    "summary": "Create",
+    "x-fern-request-name": "AdrCreateRequest",
+    "x-fern-sdk-method-name": "create",
+    "x-ice-panel-operation-subject": "decision-record",
+    "x-ice-panel-operation-type": "write"
+  },
+  "get": {
+    "x-oauth-scope": "landscape",
+    "security": [
+      {
+        "ApiKeyAuth": []
+      },
+      {
+        "BearerAuth": []
+      }
+    ],
+    "tags": [
+      "ADRs"
+    ],
+    "x-eov-operation-handler": "adrs",
+    "x-fern-audiences": [
+      "public"
+    ],
+    "x-fern-sdk-group-name": "adrs",
+    "operationId": "adrsList",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "landscapeId",
+        "required": true,
+        "schema": {
+          "format": "id",
+          "type": "string"
+        }
+      },
+      {
+        "in": "path",
+        "name": "versionId",
+        "required": true,
+        "schema": {
+          "$ref": "../components/schemas/VersionIdPathParam.json"
+        }
+      },
+      {
+        "in": "query",
+        "name": "filter",
+        "required": false,
+        "schema": {
+          "$ref": "../components/schemas/ADRFilter.json"
+        },
+        "style": "deepObject"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "required": false,
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "description": "The maximum number of items to return, defaults to 1000",
+        "in": "query",
+        "name": "limit",
+        "required": false,
+        "schema": {
+          "maximum": 10000,
+          "minimum": 1,
+          "type": "number"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "properties": {
+                "adrs": {
+                  "items": {
+                    "$ref": "../components/schemas/ADR.json"
+                  },
+                  "type": "array"
+                },
+                "nextCursor": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "adrs"
+              ],
+              "type": "object"
+            }
+          }
+        },
+        "description": "OK"
+      },
+      "400": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Bad Request"
+      },
+      "401": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Unauthorized"
+      },
+      "403": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Forbidden"
+      },
+      "404": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Not Found"
+      },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
+      "500": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Internal Server"
+      }
+    },
+    "summary": "List",
+    "x-fern-pagination": {
+      "cursor": "$request.cursor",
+      "next_cursor": "$response.nextCursor",
+      "results": "$response.adrs"
+    },
+    "x-fern-request-name": "AdrsListRequest",
+    "x-fern-sdk-method-name": "list",
+    "x-ice-panel-operation-subject": "decision-record",
+    "x-ice-panel-operation-type": "read"
+  }
+}

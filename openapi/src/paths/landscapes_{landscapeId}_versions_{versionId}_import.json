@@ -1,5 +1,6 @@
 {
   "post": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -132,6 +133,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -155,6 +166,8 @@
     },
     "summary": "Import",
     "x-fern-request-name": "LandscapeImportRequest",
-    "x-fern-sdk-method-name": "create"
+    "x-fern-sdk-method-name": "create",
+    "x-ice-panel-operation-subject": "landscape",
+    "x-ice-panel-operation-type": "import"
   }
 }

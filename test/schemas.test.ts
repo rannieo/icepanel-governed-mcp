@@ -1,7 +1,6 @@
 import { describe, expect, it } from "vitest";
 
 import {
-  baseWriteInputSchema,
   governanceEvidenceSchema,
   outputResultSchema,
   reviewerSchema,
@@ -10,13 +9,13 @@ import {
 describe("tool schemas", () => {
   it("parses valid reviewer and evidence payloads", () => {
     const reviewer = reviewerSchema.parse({
-      role: "grill-me",
+      role: "test-reviewer",
       reviewer: "peer",
       decision: "approved",
       summary: "good",
       timestamp: "2026-01-01T00:00:00.000Z",
     });
-    expect(reviewer.role).toBe("grill-me");
+    expect(reviewer.role).toBe("test-reviewer");
 
     const evidence = governanceEvidenceSchema.parse({
       requestedBy: "ai-agent",
@@ -28,12 +27,6 @@ describe("tool schemas", () => {
       riskFlags: ["none"],
     });
     expect(evidence.reviewers).toHaveLength(1);
-
-    const writeInput = baseWriteInputSchema.parse({
-      evidence,
-      dryRunOnly: true,
-    });
-    expect(writeInput.dryRunOnly).toBe(true);
   });
 
   it("parses output payload and rejects invalid evidence", () => {

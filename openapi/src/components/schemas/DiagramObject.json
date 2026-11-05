@@ -1,12 +1,11 @@
 {
   "properties": {
     "height": {
+      "description": "The height of the object. Calculated automatically for area shapes, set to 0 when creating an area, defaults to 128",
       "type": "number"
     },
-    "id": {
-      "type": "string"
-    },
     "modelId": {
+      "description": "The id of the model object this object represents",
       "type": "string"
     },
     "shape": {
@@ -16,13 +15,20 @@
       "$ref": "./DiagramObjectType.json"
     },
     "width": {
+      "description": "The width of the object. Calculated automatically for area shapes, set to 0 when creating an area, defaults to 256",
       "type": "number"
     },
     "x": {
+      "description": "The x position of the object. Calculated automatically for area shapes, set to 0 when creating an area",
       "type": "number"
     },
     "y": {
+      "description": "The y position of the object. Calculated automatically for area shapes, set to 0 when creating an area",
       "type": "number"
+    },
+    "id": {
+      "description": "The id of the object, unique within the diagram",
+      "type": "string"
     }
   },
   "required": [

@@ -1,3 +1,4 @@
+import type { GovernancePolicy } from "../src/governance/policy.js";
 import { describe, expect, it, vi } from "vitest";
 
 import {
@@ -48,11 +49,12 @@ describe("server", () => {
       governanceLedgerDir: "/tmp/ledger",
     };
 
-    const policy = {
+    const policy: GovernancePolicy = {
       requiredSkills: ["a"],
       requiredReviewerRoles: ["solutions-architect"],
       requireValidationActors: true,
       maxRiskFlagsBeforeBlock: 0,
+      requireSeparationOfDuties: false,
     };
 
     await runServer({
@@ -77,7 +79,7 @@ describe("server", () => {
 
     const readCall = readToolsCalls[0] as {
       server: FakeServer;
-      ctx: { client: FakeClient; defaultOrganizationId: string };
+      ctx: { client: FakeClient; defaults: { organizationId?: string; landscapeId?: string } };
     };
     const writeCall = writeToolsCalls[0] as {
       server: FakeServer;
@@ -85,7 +87,7 @@ describe("server", () => {
     };
 
     expect(readCall.server).toBe(writeCall.server);
-    expect(readCall.ctx.defaultOrganizationId).toBe("org-1");
+    expect(readCall.ctx.defaults.organizationId).toBe("org-1");
     expect(readCall.ctx.client.config).toMatchObject({
       apiBaseUrl: "https://api.example.test",
       apiKey: "k",
@@ -161,6 +163,7 @@ describe("server", () => {
           requiredReviewerRoles: [],
           requireValidationActors: false,
           maxRiskFlagsBeforeBlock: 0,
+          requireSeparationOfDuties: false,
         }),
         createClient: NoopClient as never,
         createServer: NoopServer as never,
@@ -184,6 +187,7 @@ describe("server", () => {
         requiredReviewerRoles: [],
         requireValidationActors: false,
         maxRiskFlagsBeforeBlock: 0,
+        requireSeparationOfDuties: false,
       }),
       createClient: class {
         constructor(_: unknown) {}

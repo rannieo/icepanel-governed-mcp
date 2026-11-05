@@ -1,0 +1,32 @@
+{
+  "properties": {
+    "collection": {
+      "$ref": "./WebhookEventCollection.json"
+    },
+    "createdAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "operation": {
+      "$ref": "./WebhookEventOperation.json"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "resourceId": {
+      "type": "string"
+    },
+    "subscriptionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "createdAt",
+    "operation",
+    "collection",
+    "organizationId",
+    "subscriptionId",
+    "resourceId"
+  ],
+  "type": "object"
+}

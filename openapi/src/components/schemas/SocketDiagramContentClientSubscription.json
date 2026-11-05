@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "diagramId": {
+      "format": "id",
+      "type": "string"
+    },
+    "landscapeId": {
+      "format": "id",
+      "type": "string"
+    },
+    "versionId": {
+      "format": "id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "landscapeId",
+    "versionId",
+    "diagramId"
+  ],
+  "type": "object"
+}

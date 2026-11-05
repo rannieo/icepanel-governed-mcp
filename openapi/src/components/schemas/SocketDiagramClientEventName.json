@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "diagram-group-subscribe",
+    "diagram-group-unsubscribe",
+    "diagram-subscribe",
+    "diagram-unsubscribe"
+  ],
+  "type": "string"
+}

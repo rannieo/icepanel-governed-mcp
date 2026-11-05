@@ -1,0 +1,5419 @@
+{
+  "openapi": "3.1.0",
+  "operations": {
+    "GET /landscapes/{landscapeId}/action-logs": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        },
+        {
+          "name": "cursor",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "order",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/action-logs/{actionLogId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/action-logs/{actionLogId}/children": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        },
+        {
+          "name": "cursor",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "order",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/action-logs/stats/by-type": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        },
+        {
+          "name": "period",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/action-logs/stats/by-entity": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        },
+        {
+          "name": "period",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/adrs": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        },
+        {
+          "name": "cursor",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/adrs": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/ADRRequired"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/adrs/{adrId}": {
+      "query": [],
+      "body": null
+    },
+    "PATCH /landscapes/{landscapeId}/versions/{versionId}/adrs/{adrId}": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/ADRPartial"
+      }
+    },
+    "DELETE /landscapes/{landscapeId}/versions/{versionId}/adrs/{adrId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /catalog/technologies": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        },
+        {
+          "name": "admin",
+          "type": "boolean",
+          "required": false
+        },
+        {
+          "name": "search",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "cursor",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "GET /catalog/technologies/select": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        },
+        {
+          "name": "admin",
+          "type": "boolean",
+          "required": false
+        },
+        {
+          "name": "search",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "cursor",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "fields",
+          "type": "array",
+          "required": true
+        }
+      ],
+      "body": null
+    },
+    "POST /catalog/icons/signed-url": {
+      "query": [],
+      "body": null
+    },
+    "GET /catalog/technologies/{catalogTechnologyId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/comments/{commentId}/replies": {
+      "query": [],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/comments/{commentId}/replies": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/CommentReplyRequired"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/comments/{commentId}/replies/{commentReplyId}": {
+      "query": [],
+      "body": null
+    },
+    "PATCH /landscapes/{landscapeId}/versions/{versionId}/comments/{commentId}/replies/{commentReplyId}": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/CommentReplyPartial"
+      }
+    },
+    "DELETE /landscapes/{landscapeId}/versions/{versionId}/comments/{commentId}/replies/{commentReplyId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/comments": {
+      "query": [
+        {
+          "name": "status",
+          "type": "array",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/comments": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/CommentRequired"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/comments/{commentId}": {
+      "query": [],
+      "body": null
+    },
+    "PATCH /landscapes/{landscapeId}/versions/{versionId}/comments/{commentId}": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/CommentPartial"
+      }
+    },
+    "DELETE /landscapes/{landscapeId}/versions/{versionId}/comments/{commentId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/content": {
+      "query": [
+        {
+          "name": "updateViewedAt",
+          "type": "boolean",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "PATCH /landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/content": {
+      "query": [
+        {
+          "name": "updateViewedAt",
+          "type": "boolean",
+          "required": false
+        }
+      ],
+      "body": {
+        "$ref": "#/components/schemas/DiagramContentPartial"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/diagram-groups": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/diagram-groups": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/DiagramGroupRequired"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/diagram-groups/{diagramGroupId}": {
+      "query": [],
+      "body": null
+    },
+    "PATCH /landscapes/{landscapeId}/versions/{versionId}/diagram-groups/{diagramGroupId}": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/DiagramGroupPartial"
+      }
+    },
+    "DELETE /landscapes/{landscapeId}/versions/{versionId}/diagram-groups/{diagramGroupId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/diagrams": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/diagrams": {
+      "query": [
+        {
+          "name": "updateViewedAt",
+          "type": "boolean",
+          "required": false
+        }
+      ],
+      "body": {
+        "$ref": "#/components/schemas/DiagramCreate"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}": {
+      "query": [
+        {
+          "name": "updateViewedAt",
+          "type": "boolean",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "PATCH /landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}": {
+      "query": [
+        {
+          "name": "updateViewedAt",
+          "type": "boolean",
+          "required": false
+        }
+      ],
+      "body": {
+        "$ref": "#/components/schemas/DiagramUpsert"
+      }
+    },
+    "DELETE /landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}": {
+      "query": [
+        {
+          "name": "updateViewedAt",
+          "type": "boolean",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/export/image/{diagramExportImageId}": {
+      "query": [],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/export/image": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/DiagramExportImageOptions"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/diagrams/thumbnails": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/diagrams/{diagramId}/thumbnail": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/domains": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/domains": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/DomainRequired"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/domains/{domainId}": {
+      "query": [],
+      "body": null
+    },
+    "PATCH /landscapes/{landscapeId}/versions/{versionId}/domains/{domainId}": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/DomainPartial"
+      }
+    },
+    "DELETE /landscapes/{landscapeId}/versions/{versionId}/domains/{domainId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/drafts": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/drafts": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/DraftRequired"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/drafts/{draftId}": {
+      "query": [],
+      "body": null
+    },
+    "PATCH /landscapes/{landscapeId}/versions/{versionId}/drafts/{draftId}": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/DraftPartial"
+      }
+    },
+    "DELETE /landscapes/{landscapeId}/versions/{versionId}/drafts/{draftId}": {
+      "query": [],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/drafts/{draftId}/merge": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/flows": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/flows": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/FlowRequired"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/flows/{flowId}": {
+      "query": [],
+      "body": null
+    },
+    "PATCH /landscapes/{landscapeId}/versions/{versionId}/flows/{flowId}": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/FlowPartial"
+      }
+    },
+    "DELETE /landscapes/{landscapeId}/versions/{versionId}/flows/{flowId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/flows/thumbnails": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/flows/{flowId}/thumbnail": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/flows/{flowId}/export/text": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/flows/{flowId}/export/code": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/flows/{flowId}/export/mermaid": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}": {
+      "query": [],
+      "body": null
+    },
+    "PATCH /landscapes/{landscapeId}": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/LandscapePartial"
+      }
+    },
+    "DELETE /landscapes/{landscapeId}": {
+      "query": [],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/duplicate": {
+      "query": [
+        {
+          "name": "targetOrganizationId",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": {
+        "$ref": "#/components/schemas/LandscapeRequired"
+      }
+    },
+    "POST /landscapes/{landscapeId}/copy": {
+      "query": [
+        {
+          "name": "targetLandscapeId",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/search": {
+      "query": [
+        {
+          "name": "search",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        },
+        {
+          "name": "includeData",
+          "type": "boolean",
+          "required": false
+        },
+        {
+          "name": "maxResults",
+          "type": "number",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/export": {
+      "query": [
+        {
+          "name": "type",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        }
+      ],
+      "body": {
+        "$ref": "#/components/schemas/LandscapeExportOptions"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/export/{landscapeExportId}": {
+      "query": [],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/import": {
+      "query": [
+        {
+          "name": "prune",
+          "type": "boolean",
+          "required": false
+        }
+      ],
+      "body": {
+        "$ref": "#/components/schemas/LandscapeImportData"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/import/{landscapeImportId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/model/connections": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        },
+        {
+          "name": "expand",
+          "type": "array",
+          "required": false
+        },
+        {
+          "name": "cursor",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/model/connections": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/ModelConnectionRequired"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/model/connections/{modelConnectionId}": {
+      "query": [
+        {
+          "name": "expand",
+          "type": "array",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "PATCH /landscapes/{landscapeId}/versions/{versionId}/model/connections/{modelConnectionId}": {
+      "query": [
+        {
+          "name": "updateDiagrams",
+          "type": "boolean",
+          "required": false
+        }
+      ],
+      "body": {
+        "$ref": "#/components/schemas/ModelConnectionPartial"
+      }
+    },
+    "DELETE /landscapes/{landscapeId}/versions/{versionId}/model/connections/{modelConnectionId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/model/connections/export/csv": {
+      "query": [],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/model/connections/{modelConnectionId}/generate-description": {
+      "query": [],
+      "body": {
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/AIDescriptionType",
+            "description": "Type of description to generate: \"caption\" for a short caption(50-70 characters), or \"detailed\" for a detailed description (max 2000 characters)"
+          }
+        },
+        "required": [
+          "type"
+        ],
+        "type": "object"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/model/dependencies": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": true
+        }
+      ],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/model/objects": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        },
+        {
+          "name": "expand",
+          "type": "array",
+          "required": false
+        },
+        {
+          "name": "cursor",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/model/objects": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/ModelObjectRequired"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/model/objects/{modelObjectId}": {
+      "query": [
+        {
+          "name": "expand",
+          "type": "array",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "PATCH /landscapes/{landscapeId}/versions/{versionId}/model/objects/{modelObjectId}": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/ModelObjectPartial"
+      }
+    },
+    "DELETE /landscapes/{landscapeId}/versions/{versionId}/model/objects/{modelObjectId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/model/objects/{modelObjectId}/dependencies/export/json": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/model/objects/export/csv": {
+      "query": [],
+      "body": null
+    },
+    "GET /organizations/{organizationId}/landscapes": {
+      "query": [],
+      "body": null
+    },
+    "POST /organizations/{organizationId}/landscapes": {
+      "query": [],
+      "body": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/LandscapeRequired"
+          },
+          {
+            "properties": {
+              "templateId": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        ]
+      }
+    },
+    "GET /organizations/{organizationId}/logs": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        },
+        {
+          "name": "cursor",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        },
+        {
+          "name": "order",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "GET /organizations/{organizationId}/logs/{organizationLogId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /organizations/{organizationId}/logs/stats/by-type": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        },
+        {
+          "name": "period",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "GET /organizations/{organizationId}/logs/stats/by-entity": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        },
+        {
+          "name": "period",
+          "type": "string",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "GET /organizations": {
+      "query": [
+        {
+          "name": "admin",
+          "type": "boolean",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "POST /organizations": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/OrganizationRequired"
+      }
+    },
+    "GET /organizations/{organizationId}": {
+      "query": [],
+      "body": null
+    },
+    "PATCH /organizations/{organizationId}": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/OrganizationPartial"
+      }
+    },
+    "DELETE /organizations/{organizationId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /organizations/{organizationId}/technologies": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "POST /organizations/{organizationId}/technologies": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/CatalogTechnologyRequired"
+      }
+    },
+    "GET /organizations/{organizationId}/technologies/{catalogTechnologyId}": {
+      "query": [],
+      "body": null
+    },
+    "PATCH /organizations/{organizationId}/technologies/{catalogTechnologyId}": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/CatalogTechnologyPartial"
+      }
+    },
+    "DELETE /organizations/{organizationId}/technologies/{catalogTechnologyId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /organizations/{organizationId}/users/invites": {
+      "query": [],
+      "body": null
+    },
+    "POST /organizations/{organizationId}/users/invites": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/OrganizationUserInviteRequired"
+      }
+    },
+    "POST /organizations/{organizationId}/users/invites/{organizationUserInviteId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /organizations/{organizationId}/users": {
+      "query": [],
+      "body": null
+    },
+    "PATCH /organizations/{organizationId}/users/{userId}": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/OrganizationUser"
+      }
+    },
+    "DELETE /organizations/{organizationId}/users/{userId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/share-link": {
+      "query": [],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/share-link": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/ShareLinkRequired"
+      }
+    },
+    "PATCH /landscapes/{landscapeId}/versions/{versionId}/share-link": {
+      "query": [
+        {
+          "name": "resetShortId",
+          "type": "boolean",
+          "required": false
+        }
+      ],
+      "body": {
+        "$ref": "#/components/schemas/ShareLinkPartial"
+      }
+    },
+    "DELETE /landscapes/{landscapeId}/versions/{versionId}/share-link": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/tag-groups": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/tag-groups": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/TagGroupRequired"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/tag-groups/{tagGroupId}": {
+      "query": [],
+      "body": null
+    },
+    "PATCH /landscapes/{landscapeId}/versions/{versionId}/tag-groups/{tagGroupId}": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/TagGroupPartial"
+      }
+    },
+    "DELETE /landscapes/{landscapeId}/versions/{versionId}/tag-groups/{tagGroupId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/tags": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        },
+        {
+          "name": "expand",
+          "type": "array",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions/{versionId}/tags": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/TagRequired"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}/tags/{tagId}": {
+      "query": [
+        {
+          "name": "expand",
+          "type": "array",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "PATCH /landscapes/{landscapeId}/versions/{versionId}/tags/{tagId}": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/TagPartial"
+      }
+    },
+    "DELETE /landscapes/{landscapeId}/versions/{versionId}/tags/{tagId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /organizations/{organizationId}/teams": {
+      "query": [
+        {
+          "name": "expand",
+          "type": "array",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "POST /organizations/{organizationId}/teams": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/TeamRequired"
+      }
+    },
+    "GET /organizations/{organizationId}/teams/{teamId}": {
+      "query": [
+        {
+          "name": "expand",
+          "type": "array",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "PATCH /organizations/{organizationId}/teams/{teamId}": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/TeamPartial"
+      }
+    },
+    "DELETE /organizations/{organizationId}/teams/{teamId}": {
+      "query": [],
+      "body": null
+    },
+    "GET /organizations/{organizationId}/teams/{teamId}/landscapes": {
+      "query": [],
+      "body": null
+    },
+    "GET /organizations/{organizationId}/teams/{teamId}/model/objects": {
+      "query": [],
+      "body": null
+    },
+    "GET /landscapes/{landscapeId}/version/reverts": {
+      "query": [],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/version/reverts": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/VersionRevertRequired"
+      }
+    },
+    "GET /landscapes/{landscapeId}/version/reverts/{versionRevertId}": {
+      "query": [],
+      "body": null
+    },
+    "PATCH /landscapes/{landscapeId}/version/reverts/{versionRevertId}": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/VersionRevertPartial"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions": {
+      "query": [
+        {
+          "name": "filter",
+          "type": "object",
+          "required": false
+        },
+        {
+          "name": "cursor",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "number",
+          "required": false
+        }
+      ],
+      "body": null
+    },
+    "POST /landscapes/{landscapeId}/versions": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/VersionRequired"
+      }
+    },
+    "GET /landscapes/{landscapeId}/versions/{versionId}": {
+      "query": [],
+      "body": null
+    },
+    "PATCH /landscapes/{landscapeId}/versions/{versionId}": {
+      "query": [],
+      "body": {
+        "$ref": "#/components/schemas/VersionUpdate"
+      }
+    },
+    "DELETE /landscapes/{landscapeId}/versions/{versionId}": {
+      "query": [],
+      "body": null
+    }
+  },
+  "components": {
+    "schemas": {
+      "ADRPartial": {
+        "properties": {
+          "commit": {
+            "minimum": 0,
+            "type": "number"
+          },
+          "content": {
+            "description": "The markdown content of the ADR",
+            "maxLength": 100000,
+            "type": "string"
+          },
+          "description": {
+            "description": "The description of the ADR",
+            "maxLength": 100000,
+            "type": "string"
+          },
+          "name": {
+            "description": "The name of the ADR",
+            "maxLength": 1000,
+            "type": "string"
+          },
+          "relatedItems": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ADRRelatedItem"
+            },
+            "type": "object"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ADRStatus",
+            "description": "The status of the ADR"
+          },
+          "statusChanges": {
+            "items": {
+              "$ref": "#/components/schemas/ADRStatusChange"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "ADRRelatedItem": {
+        "properties": {
+          "adrId": {
+            "format": "id",
+            "type": "string"
+          },
+          "diagramId": {
+            "format": "id",
+            "type": "string"
+          },
+          "draftId": {
+            "format": "id",
+            "type": "string"
+          },
+          "id": {
+            "format": "id",
+            "type": "string"
+          },
+          "index": {
+            "minimum": 0,
+            "type": "number"
+          },
+          "link": {
+            "$ref": "#/components/schemas/RealityLink"
+          },
+          "type": {
+            "$ref": "#/components/schemas/ADRRelatedItemType"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "index"
+        ],
+        "type": "object"
+      },
+      "ADRRelatedItemType": {
+        "enum": [
+          "adr",
+          "diagram",
+          "draft",
+          "link"
+        ],
+        "type": "string"
+      },
+      "ADRRequired": {
+        "properties": {
+          "commit": {
+            "minimum": 0,
+            "type": "number"
+          },
+          "content": {
+            "description": "The markdown content of the ADR",
+            "maxLength": 100000,
+            "type": "string"
+          },
+          "description": {
+            "description": "The description of the ADR",
+            "maxLength": 100000,
+            "type": "string"
+          },
+          "name": {
+            "description": "The name of the ADR",
+            "maxLength": 1000,
+            "type": "string"
+          },
+          "relatedItems": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ADRRelatedItem"
+            },
+            "type": "object"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ADRStatus",
+            "description": "The status of the ADR"
+          },
+          "statusChanges": {
+            "items": {
+              "$ref": "#/components/schemas/ADRStatusChange"
+            },
+            "type": "array"
+          },
+          "handleId": {
+            "description": "The handle id of the ADR",
+            "format": "handle-id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "status"
+        ],
+        "type": "object"
+      },
+      "ADRStatus": {
+        "enum": [
+          "accepted",
+          "draft",
+          "rejected"
+        ],
+        "type": "string"
+      },
+      "ADRStatusChange": {
+        "properties": {
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "createdBy": {
+            "$ref": "#/components/schemas/AuthType"
+          },
+          "createdById": {
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ADRStatus"
+          }
+        },
+        "required": [
+          "status",
+          "createdAt",
+          "createdBy",
+          "createdById"
+        ],
+        "type": "object"
+      },
+      "AIDescriptionType": {
+        "enum": [
+          "caption",
+          "detailed"
+        ],
+        "type": "string"
+      },
+      "AuthType": {
+        "enum": [
+          "user",
+          "api-key",
+          "notification-key",
+          "service"
+        ],
+        "type": "string"
+      },
+      "CatalogProviderNullable": {
+        "enum": [
+          "aws",
+          "azure",
+          "gcp",
+          "microsoft",
+          "salesforce",
+          "atlassian",
+          "apache",
+          "supabase",
+          null
+        ],
+        "nullable": true,
+        "type": "string"
+      },
+      "CatalogRestriction": {
+        "enum": [
+          "actor",
+          "app",
+          "component",
+          "connection",
+          "group",
+          "store",
+          "system",
+          null
+        ],
+        "type": "string"
+      },
+      "CatalogTechnologyPartial": {
+        "properties": {
+          "category": {
+            "maxLength": 1000,
+            "type": "string"
+          },
+          "color": {
+            "$ref": "#/components/schemas/TagColor",
+            "description": "Technology color used in diagrams"
+          },
+          "deprecatedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "description": {
+            "description": "Technical description for the technology, avoid marketing language",
+            "maxLength": 10000,
+            "type": "string"
+          },
+          "docsUrl": {
+            "description": "Documentation or readme url",
+            "maxLength": 2048,
+            "type": "string"
+          },
+          "iconUrlDark": {
+            "description": "Icon that only works on dark backgrounds",
+            "example": [
+              "/organizations/{organizationId}/dark/{catalogTechnologyId}.png",
+              "/dark/{catalogTechnologyId}.png"
+            ],
+            "maxLength": 2048,
+            "nullable": true,
+            "type": "string"
+          },
+          "iconUrlLight": {
+            "description": "Icon that only works on light backgrounds",
+            "example": [
+              "/organizations/{organizationId}/light/{catalogTechnologyId}.png",
+              "/light/{catalogTechnologyId}.png"
+            ],
+            "maxLength": 2048,
+            "nullable": true,
+            "type": "string"
+          },
+          "name": {
+            "description": "Long verbose name",
+            "maxLength": 1000,
+            "type": "string"
+          },
+          "nameShort": {
+            "description": "Short one or two word name to show in places with limited space",
+            "maxLength": 1000,
+            "type": "string"
+          },
+          "provider": {
+            "$ref": "#/components/schemas/CatalogProviderNullable",
+            "description": "Service provider that provides this technology"
+          },
+          "rejectionMessage": {
+            "description": "If rejected, detail description of why",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "rejectionReason": {
+            "$ref": "#/components/schemas/CatalogTechnologyReviewRejectionReason",
+            "description": "If rejected, the reason why"
+          },
+          "restrictions": {
+            "description": "Restriction on which model object or connections this technology can be added to",
+            "items": {
+              "$ref": "#/components/schemas/CatalogRestriction"
+            },
+            "nullable": true,
+            "type": "array"
+          },
+          "status": {
+            "$ref": "#/components/schemas/CatalogTechnologyStatusNullable",
+            "description": "Current status of the technology, including pending review, approved, and rejected. Approved technologies are visible to all users. Set to null to make the technology private."
+          },
+          "type": {
+            "$ref": "#/components/schemas/CatalogTechnologyTypeNullable",
+            "description": "Type or category of technology"
+          },
+          "updatesUrl": {
+            "description": "Release notes or changelog url",
+            "maxLength": 2048,
+            "type": "string"
+          },
+          "websiteUrl": {
+            "description": "Landing page website url",
+            "maxLength": 2048,
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "CatalogTechnologyRequired": {
+        "properties": {
+          "category": {
+            "maxLength": 1000,
+            "type": "string"
+          },
+          "color": {
+            "$ref": "#/components/schemas/TagColor",
+            "description": "Technology color used in diagrams"
+          },
+          "deprecatedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "description": {
+            "description": "Technical description for the technology, avoid marketing language",
+            "maxLength": 10000,
+            "type": "string"
+          },
+          "docsUrl": {
+            "description": "Documentation or readme url",
+            "maxLength": 2048,
+            "type": "string"
+          },
+          "iconUrlDark": {
+            "description": "Icon that only works on dark backgrounds",
+            "example": [
+              "/organizations/{organizationId}/dark/{catalogTechnologyId}.png",
+              "/dark/{catalogTechnologyId}.png"
+            ],
+            "maxLength": 2048,
+            "nullable": true,
+            "type": "string"
+          },
+          "iconUrlLight": {
+            "description": "Icon that only works on light backgrounds",
+            "example": [
+              "/organizations/{organizationId}/light/{catalogTechnologyId}.png",
+              "/light/{catalogTechnologyId}.png"
+            ],
+            "maxLength": 2048,
+            "nullable": true,
+            "type": "string"
+          },
+          "name": {
+            "description": "Long verbose name",
+            "maxLength": 1000,
+            "type": "string"
+          },
+          "nameShort": {
+            "description": "Short one or two word name to show in places with limited space",
+            "maxLength": 1000,
+            "type": "string"
+          },
+          "provider": {
+            "$ref": "#/components/schemas/CatalogProviderNullable",
+            "description": "Service provider that provides this technology"
+          },
+          "rejectionMessage": {
+            "description": "If rejected, detail description of why",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "rejectionReason": {
+            "$ref": "#/components/schemas/CatalogTechnologyReviewRejectionReason",
+            "description": "If rejected, the reason why"
+          },
+          "restrictions": {
+            "description": "Restriction on which model object or connections this technology can be added to",
+            "items": {
+              "$ref": "#/components/schemas/CatalogRestriction"
+            },
+            "nullable": true,
+            "type": "array"
+          },
+          "status": {
+            "$ref": "#/components/schemas/CatalogTechnologyStatusNullable",
+            "description": "Current status of the technology, including pending review, approved, and rejected. Approved technologies are visible to all users. Set to null to make the technology private."
+          },
+          "type": {
+            "$ref": "#/components/schemas/CatalogTechnologyTypeNullable",
+            "description": "Type or category of technology"
+          },
+          "updatesUrl": {
+            "description": "Release notes or changelog url",
+            "maxLength": 2048,
+            "type": "string"
+          },
+          "websiteUrl": {
+            "description": "Landing page website url",
+            "maxLength": 2048,
+            "type": "string"
+          }
+        },
+        "required": [
+          "color",
+          "name",
+          "provider",
+          "restrictions",
+          "type"
+        ],
+        "type": "object"
+      },
+      "CatalogTechnologyReviewRejectionReason": {
+        "enum": [
+          "duplicate",
+          "incomplete",
+          "invalid",
+          "other"
+        ],
+        "type": "string"
+      },
+      "CatalogTechnologyStatusNullable": {
+        "enum": [
+          "approved",
+          "pending-review",
+          "rejected",
+          null
+        ],
+        "nullable": true,
+        "type": "string"
+      },
+      "CatalogTechnologyTypeNullable": {
+        "enum": [
+          "data-storage",
+          "deployment",
+          "framework-library",
+          "gateway",
+          "other",
+          "language",
+          "message-broker",
+          "network",
+          "protocol",
+          "runtime",
+          "service-tool",
+          null
+        ],
+        "nullable": true,
+        "type": "string"
+      },
+      "CommentBody": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/CommentBodyQuestion"
+          },
+          {
+            "$ref": "#/components/schemas/CommentBodyInaccuracy"
+          },
+          {
+            "$ref": "#/components/schemas/CommentBodyIdea"
+          },
+          {
+            "$ref": "#/components/schemas/CommentBodyNewQuestion"
+          },
+          {
+            "$ref": "#/components/schemas/CommentBodyNewInaccuracy"
+          },
+          {
+            "$ref": "#/components/schemas/CommentBodyNewIdea"
+          }
+        ]
+      },
+      "CommentBodyIdea": {
+        "properties": {
+          "content": {
+            "maxLength": 950000,
+            "type": "string"
+          },
+          "showContentPreview": {
+            "type": "boolean"
+          },
+          "status": {
+            "enum": [
+              "active",
+              "dismissed"
+            ],
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "idea"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "status",
+          "content"
+        ],
+        "type": "object"
+      },
+      "CommentBodyInaccuracy": {
+        "properties": {
+          "content": {
+            "maxLength": 950000,
+            "type": "string"
+          },
+          "showContentPreview": {
+            "type": "boolean"
+          },
+          "status": {
+            "enum": [
+              "open",
+              "resolved"
+            ],
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "inaccurate"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "status",
+          "content"
+        ],
+        "type": "object"
+      },
+      "CommentBodyNewIdea": {
+        "properties": {
+          "content": {
+            "maxLength": 950000,
+            "type": "string"
+          },
+          "showContentPreview": {
+            "type": "boolean"
+          },
+          "status": {
+            "enum": [
+              "create"
+            ],
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "new-idea"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "status",
+          "content"
+        ],
+        "type": "object"
+      },
+      "CommentBodyNewInaccuracy": {
+        "properties": {
+          "content": {
+            "maxLength": 950000,
+            "type": "string"
+          },
+          "showContentPreview": {
+            "type": "boolean"
+          },
+          "status": {
+            "enum": [
+              "create"
+            ],
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "new-inaccurate"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "status",
+          "content"
+        ],
+        "type": "object"
+      },
+      "CommentBodyNewQuestion": {
+        "properties": {
+          "content": {
+            "maxLength": 950000,
+            "type": "string"
+          },
+          "showContentPreview": {
+            "type": "boolean"
+          },
+          "status": {
+            "enum": [
+              "create"
+            ],
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "new-question"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "status",
+          "content"
+        ],
+        "type": "object"
+      },
+      "CommentBodyQuestion": {
+        "properties": {
+          "content": {
+            "maxLength": 950000,
+            "type": "string"
+          },
+          "showContentPreview": {
+            "type": "boolean"
+          },
+          "status": {
+            "enum": [
+              "open",
+              "resolved"
+            ],
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "question"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "status",
+          "content"
+        ],
+        "type": "object"
+      },
+      "CommentPartial": {
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/CommentBody"
+          },
+          "commit": {
+            "type": "number"
+          },
+          "mentionedUserIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "CommentReplyPartial": {
+        "properties": {
+          "content": {
+            "maxLength": 950000,
+            "type": "string"
+          },
+          "mentionedUserIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "CommentReplyRequired": {
+        "properties": {
+          "content": {
+            "maxLength": 950000,
+            "type": "string"
+          },
+          "mentionedUserIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "content"
+        ],
+        "type": "object"
+      },
+      "CommentRequired": {
+        "properties": {
+          "body": {
+            "$ref": "#/components/schemas/CommentBody"
+          },
+          "commit": {
+            "type": "number"
+          },
+          "mentionedUserIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "handleId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "body"
+        ],
+        "type": "object"
+      },
+      "DiagramComment": {
+        "properties": {
+          "commentId": {
+            "description": "The id of the comment this marker displays",
+            "type": "string"
+          },
+          "id": {
+            "description": "The id of the comment marker, unique within the diagram",
+            "type": "string"
+          },
+          "x": {
+            "description": "The x position of the comment on the diagram",
+            "type": "number"
+          },
+          "y": {
+            "description": "The y position of the comment on the diagram",
+            "type": "number"
+          }
+        },
+        "required": [
+          "commentId",
+          "id",
+          "x",
+          "y"
+        ],
+        "type": "object"
+      },
+      "DiagramCommentPartial": {
+        "properties": {
+          "commentId": {
+            "description": "The id of the comment this marker displays",
+            "type": "string"
+          },
+          "id": {
+            "description": "The id of the comment marker, unique within the diagram",
+            "type": "string"
+          },
+          "x": {
+            "description": "The x position of the comment on the diagram",
+            "type": "number"
+          },
+          "y": {
+            "description": "The y position of the comment on the diagram",
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "DiagramConnectionPartial": {
+        "properties": {
+          "breakpoints": {
+            "description": "User-controlled corner waypoints the connection routes through, ordered origin to target. Only valid on square connections, breakpoints are not stored on any other line shape and setting them on one is rejected. The path must be a valid orthogonal L-shape: consecutive breakpoints share an x or a y (no diagonals), no two are identical, and every interior breakpoint is a right-angle corner (segments alternate horizontal/vertical, no collinear or backtracking points).",
+            "items": {
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ],
+              "type": "object"
+            },
+            "maxItems": 100,
+            "type": "array"
+          },
+          "labelPosition": {
+            "description": "The percentage along the line where the label should be placed, defaults to 50",
+            "maximum": 100,
+            "minimum": 0,
+            "type": "number"
+          },
+          "lineShape": {
+            "$ref": "#/components/schemas/LineShape"
+          },
+          "modelId": {
+            "description": "The id of the model connection this connection represents",
+            "nullable": true,
+            "type": "string"
+          },
+          "originConnector": {
+            "$ref": "#/components/schemas/DiagramObjectConnector",
+            "description": "The anchor point on the edge of the origin object where the connection attaches"
+          },
+          "originId": {
+            "description": "The id of the diagram object the connection starts from",
+            "nullable": true,
+            "type": "string"
+          },
+          "points": {
+            "deprecated": true,
+            "description": "Deprecated: points are now computed automatically",
+            "items": {
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "targetConnector": {
+            "$ref": "#/components/schemas/DiagramObjectConnector",
+            "description": "The anchor point on the edge of the target object where the connection attaches"
+          },
+          "targetId": {
+            "description": "The id of the diagram object the connection ends at",
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "DiagramConnectionRequired": {
+        "properties": {
+          "breakpoints": {
+            "description": "User-controlled corner waypoints the connection routes through, ordered origin to target. Only valid on square connections, breakpoints are not stored on any other line shape and setting them on one is rejected. The path must be a valid orthogonal L-shape: consecutive breakpoints share an x or a y (no diagonals), no two are identical, and every interior breakpoint is a right-angle corner (segments alternate horizontal/vertical, no collinear or backtracking points).",
+            "items": {
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ],
+              "type": "object"
+            },
+            "maxItems": 100,
+            "type": "array"
+          },
+          "labelPosition": {
+            "description": "The percentage along the line where the label should be placed, defaults to 50",
+            "maximum": 100,
+            "minimum": 0,
+            "type": "number"
+          },
+          "lineShape": {
+            "$ref": "#/components/schemas/LineShape"
+          },
+          "modelId": {
+            "description": "The id of the model connection this connection represents",
+            "nullable": true,
+            "type": "string"
+          },
+          "originConnector": {
+            "$ref": "#/components/schemas/DiagramObjectConnector",
+            "description": "The anchor point on the edge of the origin object where the connection attaches"
+          },
+          "originId": {
+            "description": "The id of the diagram object the connection starts from",
+            "nullable": true,
+            "type": "string"
+          },
+          "points": {
+            "deprecated": true,
+            "description": "Deprecated: points are now computed automatically",
+            "items": {
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "targetConnector": {
+            "$ref": "#/components/schemas/DiagramObjectConnector",
+            "description": "The anchor point on the edge of the target object where the connection attaches"
+          },
+          "targetId": {
+            "description": "The id of the diagram object the connection ends at",
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "required": [
+          "modelId",
+          "originId",
+          "targetId"
+        ],
+        "type": "object"
+      },
+      "DiagramContentPartial": {
+        "properties": {
+          "comments": {
+            "description": "Operations to apply to the comments on the diagram",
+            "properties": {
+              "$add": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/DiagramComment"
+                },
+                "description": "Add new comments to the diagram, keyed by comment id",
+                "type": "object"
+              },
+              "$remove": {
+                "description": "Remove comments from the diagram by id",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "$replace": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/DiagramComment"
+                },
+                "description": "Replace all comments on the diagram, keyed by comment id",
+                "type": "object"
+              },
+              "$update": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/DiagramCommentPartial"
+                },
+                "description": "Update existing comments on the diagram, keyed by comment id",
+                "type": "object"
+              }
+            },
+            "type": "object"
+          },
+          "commit": {
+            "description": "The commit number of the diagram content, incremented on each change",
+            "type": "number"
+          },
+          "connections": {
+            "description": "Operations to apply to the connections on the diagram",
+            "properties": {
+              "$add": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/DiagramConnectionRequired"
+                },
+                "description": "Add new connections to the diagram, keyed by connection id",
+                "type": "object"
+              },
+              "$remove": {
+                "description": "Remove connections from the diagram by id",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "$replace": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/DiagramConnectionRequired"
+                },
+                "description": "Replace all connections on the diagram, keyed by connection id",
+                "type": "object"
+              },
+              "$update": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/DiagramConnectionPartial"
+                },
+                "description": "Update existing connections on the diagram, keyed by connection id",
+                "type": "object"
+              }
+            },
+            "type": "object"
+          },
+          "objects": {
+            "description": "Operations to apply to the objects on the diagram",
+            "properties": {
+              "$add": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/DiagramObjectRequired"
+                },
+                "description": "Add new objects to the diagram, keyed by object id",
+                "type": "object"
+              },
+              "$remove": {
+                "description": "Remove objects from the diagram by id",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "$replace": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/DiagramObjectRequired"
+                },
+                "description": "Replace all objects on the diagram, keyed by object id",
+                "type": "object"
+              },
+              "$update": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/DiagramObjectPartial"
+                },
+                "description": "Update existing objects on the diagram, keyed by object id",
+                "type": "object"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "type": "object"
+      },
+      "DiagramContentRequired": {
+        "properties": {
+          "comments": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/DiagramComment"
+            },
+            "description": "The comments on the diagram, keyed by comment id",
+            "type": "object"
+          },
+          "commit": {
+            "description": "The commit number of the diagram content, incremented on each change",
+            "type": "number"
+          },
+          "connections": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/DiagramConnectionRequired"
+            },
+            "description": "The connections on the diagram, keyed by connection id",
+            "type": "object"
+          },
+          "objects": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/DiagramObjectRequired"
+            },
+            "description": "The objects on the diagram, keyed by object id",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      },
+      "DiagramCreate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/DiagramRequired"
+          },
+          {
+            "$ref": "#/components/schemas/DiagramContentRequired"
+          }
+        ]
+      },
+      "DiagramExportImageOptions": {
+        "properties": {
+          "draftId": {
+            "description": "Fetch and apply draft tasks before producing the export",
+            "type": "string"
+          },
+          "flowId": {
+            "type": "string"
+          },
+          "flowPathIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "focusIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "groupId": {
+            "type": "string"
+          },
+          "hideIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "maxWidth": {
+            "description": "Maximum pixel width for the exported PNG. The image will be scaled down if the diagram exceeds this width. Defaults to no limit (up to 10240px).",
+            "maximum": 10240,
+            "minimum": 100,
+            "type": "integer"
+          },
+          "pinIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "tab": {
+            "enum": [
+              "tags",
+              "technology",
+              "status",
+              "teams"
+            ],
+            "type": "string"
+          },
+          "theme": {
+            "$ref": "#/components/schemas/Theme"
+          }
+        },
+        "type": "object"
+      },
+      "DiagramGroupPartial": {
+        "properties": {
+          "commit": {
+            "type": "number"
+          },
+          "index": {
+            "type": "number"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "modelId": {
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "DiagramGroupRequired": {
+        "properties": {
+          "commit": {
+            "type": "number"
+          },
+          "index": {
+            "type": "number"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "modelId": {
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "handleId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "modelId",
+          "name"
+        ],
+        "type": "object"
+      },
+      "DiagramObjectConnector": {
+        "description": "The anchor point on the edge of an object where a connection attaches",
+        "enum": [
+          "top-left",
+          "top-center",
+          "top-right",
+          "right-top",
+          "right-middle",
+          "right-bottom",
+          "bottom-right",
+          "bottom-center",
+          "bottom-left",
+          "left-bottom",
+          "left-middle",
+          "left-top"
+        ],
+        "nullable": true,
+        "type": "string"
+      },
+      "DiagramObjectPartial": {
+        "description": "An object placed on a diagram",
+        "properties": {
+          "height": {
+            "description": "The height of the object. Calculated automatically for area shapes, set to 0 when creating an area, defaults to 128",
+            "type": "number"
+          },
+          "modelId": {
+            "description": "The id of the model object this object represents",
+            "type": "string"
+          },
+          "shape": {
+            "$ref": "#/components/schemas/DiagramObjectShape"
+          },
+          "type": {
+            "$ref": "#/components/schemas/DiagramObjectType"
+          },
+          "width": {
+            "description": "The width of the object. Calculated automatically for area shapes, set to 0 when creating an area, defaults to 256",
+            "type": "number"
+          },
+          "x": {
+            "description": "The x position of the object. Calculated automatically for area shapes, set to 0 when creating an area",
+            "type": "number"
+          },
+          "y": {
+            "description": "The y position of the object. Calculated automatically for area shapes, set to 0 when creating an area",
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "DiagramObjectRequired": {
+        "properties": {
+          "height": {
+            "description": "The height of the object. Calculated automatically for area shapes, set to 0 when creating an area, defaults to 128",
+            "type": "number"
+          },
+          "modelId": {
+            "description": "The id of the model object this object represents",
+            "type": "string"
+          },
+          "shape": {
+            "$ref": "#/components/schemas/DiagramObjectShape"
+          },
+          "type": {
+            "$ref": "#/components/schemas/DiagramObjectType"
+          },
+          "width": {
+            "description": "The width of the object. Calculated automatically for area shapes, set to 0 when creating an area, defaults to 256",
+            "type": "number"
+          },
+          "x": {
+            "description": "The x position of the object. Calculated automatically for area shapes, set to 0 when creating an area",
+            "type": "number"
+          },
+          "y": {
+            "description": "The y position of the object. Calculated automatically for area shapes, set to 0 when creating an area",
+            "type": "number"
+          }
+        },
+        "required": [
+          "modelId",
+          "shape",
+          "type",
+          "x",
+          "y"
+        ],
+        "type": "object"
+      },
+      "DiagramObjectShape": {
+        "enum": [
+          "area",
+          "box"
+        ],
+        "type": "string",
+        "x-fern-enum": {
+          "area": {
+            "description": "An automatically sized area that wraps around its child objects, used to draw parents and groups on the diagram"
+          },
+          "box": {
+            "description": "A manually positioned and sized box, used to draw objects in scope of the diagram"
+          }
+        }
+      },
+      "DiagramObjectType": {
+        "enum": [
+          "actor",
+          "app",
+          "component",
+          "group",
+          "store",
+          "system"
+        ],
+        "type": "string",
+        "x-fern-enum": {
+          "actor": {
+            "description": "A person or role that interacts with your systems, e.g. a customer or support agent"
+          },
+          "app": {
+            "description": "An application that runs code or performs tasks within a system, e.g. a web app, API or microservice"
+          },
+          "component": {
+            "description": "A logical building block within an app or store, e.g. a module, controller or library"
+          },
+          "group": {
+            "description": "A collection of related objects, e.g. a team, department or business capability"
+          },
+          "store": {
+            "description": "A place where data or files are stored within a system, e.g. a database, file storage or message queue"
+          },
+          "system": {
+            "description": "A software system that delivers value to its users, e.g. an e-commerce platform or CRM"
+          }
+        }
+      },
+      "DiagramPartial": {
+        "properties": {
+          "commit": {
+            "type": "number"
+          },
+          "description": {
+            "maxLength": 950000,
+            "type": "string"
+          },
+          "groupId": {
+            "nullable": true,
+            "type": "string"
+          },
+          "index": {
+            "type": "number"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "modelId": {
+            "description": "model object id this object belongs to",
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "parentId": {
+            "nullable": true,
+            "type": "string"
+          },
+          "pinned": {
+            "type": "boolean"
+          },
+          "pinnedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "pinnedIndex": {
+            "type": "number"
+          },
+          "status": {
+            "$ref": "#/components/schemas/DiagramStatus"
+          },
+          "zoomOverrides": {
+            "$ref": "#/components/schemas/DiagramZoomOverridesNullable"
+          }
+        },
+        "type": "object"
+      },
+      "DiagramRequired": {
+        "properties": {
+          "commit": {
+            "type": "number"
+          },
+          "description": {
+            "maxLength": 950000,
+            "type": "string"
+          },
+          "groupId": {
+            "nullable": true,
+            "type": "string"
+          },
+          "index": {
+            "type": "number"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "modelId": {
+            "description": "model object id this object belongs to",
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "parentId": {
+            "nullable": true,
+            "type": "string"
+          },
+          "pinned": {
+            "type": "boolean"
+          },
+          "pinnedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "pinnedIndex": {
+            "type": "number"
+          },
+          "status": {
+            "$ref": "#/components/schemas/DiagramStatus"
+          },
+          "zoomOverrides": {
+            "$ref": "#/components/schemas/DiagramZoomOverridesNullable"
+          },
+          "handleId": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/DiagramType"
+          }
+        },
+        "required": [
+          "index",
+          "modelId",
+          "name",
+          "type"
+        ],
+        "type": "object"
+      },
+      "DiagramStatus": {
+        "enum": [
+          "current"
+        ],
+        "type": "string"
+      },
+      "DiagramType": {
+        "enum": [
+          "app-diagram",
+          "component-diagram",
+          "context-diagram"
+        ],
+        "type": "string"
+      },
+      "DiagramUpsert": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/DiagramPartial"
+          },
+          {
+            "$ref": "#/components/schemas/DiagramContentPartial"
+          }
+        ]
+      },
+      "DiagramZoomOverrides": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "Custom zoom levels for specific model objects within the diagram. The key is the modelObjectId and the value is the diagram id.",
+        "type": "object"
+      },
+      "DiagramZoomOverridesNullable": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/DiagramZoomOverrides"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "DomainPartial": {
+        "properties": {
+          "commit": {
+            "type": "number"
+          },
+          "index": {
+            "type": "number"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "DomainRequired": {
+        "properties": {
+          "commit": {
+            "type": "number"
+          },
+          "index": {
+            "type": "number"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "handleId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "type": "object"
+      },
+      "DraftChangeSummary": {
+        "properties": {
+          "createdAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "required": [
+          "summary",
+          "createdAt",
+          "updatedAt"
+        ],
+        "type": "object"
+      },
+      "DraftPartial": {
+        "properties": {
+          "changeSummary": {
+            "$ref": "#/components/schemas/DraftChangeSummary"
+          },
+          "commit": {
+            "type": "number"
+          },
+          "handleId": {
+            "type": "string"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/DraftStatus"
+          },
+          "summaryDirtiedAt": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "DraftRequired": {
+        "properties": {
+          "changeSummary": {
+            "$ref": "#/components/schemas/DraftChangeSummary"
+          },
+          "commit": {
+            "type": "number"
+          },
+          "handleId": {
+            "type": "string"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/DraftStatus"
+          },
+          "summaryDirtiedAt": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "status"
+        ],
+        "type": "object"
+      },
+      "DraftStatus": {
+        "enum": [
+          "in-progress",
+          "merged",
+          "archived"
+        ],
+        "type": "string"
+      },
+      "FlowPartial": {
+        "properties": {
+          "commit": {
+            "type": "number"
+          },
+          "index": {
+            "type": "number"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "pinned": {
+            "type": "boolean"
+          },
+          "pinnedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "pinnedIndex": {
+            "type": "number"
+          },
+          "showAllSteps": {
+            "type": "boolean"
+          },
+          "showConnectionNames": {
+            "type": "boolean"
+          },
+          "steps": {
+            "properties": {
+              "$add": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/FlowStep"
+                },
+                "type": "object"
+              },
+              "$remove": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "$replace": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/FlowStep"
+                },
+                "type": "object"
+              },
+              "$update": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/FlowStepPartial"
+                },
+                "type": "object"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "type": "object"
+      },
+      "FlowRequired": {
+        "properties": {
+          "commit": {
+            "type": "number"
+          },
+          "index": {
+            "type": "number"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "pinned": {
+            "type": "boolean"
+          },
+          "pinnedAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "pinnedIndex": {
+            "type": "number"
+          },
+          "showAllSteps": {
+            "type": "boolean"
+          },
+          "showConnectionNames": {
+            "type": "boolean"
+          },
+          "steps": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/FlowStep"
+            },
+            "type": "object"
+          },
+          "diagramId": {
+            "type": "string"
+          },
+          "handleId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "diagramId",
+          "name"
+        ],
+        "type": "object"
+      },
+      "FlowStep": {
+        "properties": {
+          "description": {
+            "description": "Descriptive name for the flow step",
+            "maxLength": 20000,
+            "type": "string"
+          },
+          "detailedDescription": {
+            "description": "Long description for the flow step",
+            "maxLength": 20000,
+            "type": "string"
+          },
+          "flowId": {
+            "nullable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "index": {
+            "type": "number"
+          },
+          "originId": {
+            "nullable": true,
+            "type": "string"
+          },
+          "parentId": {
+            "nullable": true,
+            "type": "string"
+          },
+          "paths": {
+            "$ref": "#/components/schemas/FlowStepPathsNullable"
+          },
+          "targetId": {
+            "nullable": true,
+            "type": "string"
+          },
+          "type": {
+            "description": "Type of flow step - deprecated values: reply",
+            "enum": [
+              "alternate-path",
+              "subflow",
+              "outgoing",
+              "parallel-path",
+              "reply",
+              "self-action",
+              "introduction",
+              "information",
+              "conclusion",
+              null
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "viaId": {
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "required": [
+          "description",
+          "id",
+          "index",
+          "originId",
+          "parentId",
+          "paths",
+          "flowId",
+          "targetId",
+          "type",
+          "viaId"
+        ],
+        "type": "object"
+      },
+      "FlowStepPartial": {
+        "properties": {
+          "description": {
+            "description": "Descriptive name for the flow step",
+            "maxLength": 20000,
+            "type": "string"
+          },
+          "detailedDescription": {
+            "description": "Long description for the flow step",
+            "maxLength": 20000,
+            "type": "string"
+          },
+          "flowId": {
+            "nullable": true,
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "index": {
+            "type": "number"
+          },
+          "originId": {
+            "nullable": true,
+            "type": "string"
+          },
+          "parentId": {
+            "nullable": true,
+            "type": "string"
+          },
+          "paths": {
+            "$ref": "#/components/schemas/FlowStepPathsNullable"
+          },
+          "targetId": {
+            "nullable": true,
+            "type": "string"
+          },
+          "type": {
+            "description": "Type of flow step - deprecated values: reply",
+            "enum": [
+              "alternate-path",
+              "subflow",
+              "outgoing",
+              "parallel-path",
+              "reply",
+              "self-action",
+              "introduction",
+              "information",
+              "conclusion",
+              null
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "viaId": {
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "FlowStepPath": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "index": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "index",
+          "name"
+        ],
+        "type": "object"
+      },
+      "FlowStepPaths": {
+        "additionalProperties": {
+          "$ref": "#/components/schemas/FlowStepPath"
+        },
+        "type": "object"
+      },
+      "FlowStepPathsNullable": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/FlowStepPaths"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "ImportIcon": {
+        "additionalProperties": false,
+        "properties": {
+          "technologyId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "technologyId"
+        ],
+        "type": "object"
+      },
+      "ImportIconNullable": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/ImportIcon"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "ImportLink": {
+        "additionalProperties": false,
+        "properties": {
+          "customName": {
+            "description": "Friendly name for the link set by the user",
+            "type": "string"
+          },
+          "id": {
+            "description": "Random 20 character identifier",
+            "type": "string"
+          },
+          "url": {
+            "description": "Accessible link URL when not using a connector",
+            "format": "uri",
+            "type": "string"
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "type": "object"
+      },
+      "ImportModelObjectType": {
+        "enum": [
+          "domain",
+          "actor",
+          "app",
+          "component",
+          "group",
+          "store",
+          "system"
+        ],
+        "type": "string"
+      },
+      "LandscapeExportOptions": {
+        "properties": {
+          "draftId": {
+            "description": "Fetch and apply draft tasks before producing the export",
+            "type": "string"
+          },
+          "orientation": {
+            "$ref": "#/components/schemas/LandscapeExportOrientation",
+            "description": "Orientation to use when exporting to PDF, defaults to portrait"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/LandscapeExportSchema",
+            "description": "Schema version to use for JSON exports, defaults to v1"
+          }
+        },
+        "type": "object"
+      },
+      "LandscapeExportOrientation": {
+        "enum": [
+          "portrait",
+          "landscape"
+        ],
+        "type": "string"
+      },
+      "LandscapeExportSchema": {
+        "description": "Schema version to use for JSON exports.\n\n`v1` (default) produces the legacy format where entities are keyed objects.\n\n`v2` produces the same structure as the `LandscapeImportData` used by the import endpoint, so an export can be imported directly.",
+        "enum": [
+          "v1",
+          "v2"
+        ],
+        "type": "string"
+      },
+      "LandscapeImportData": {
+        "additionalProperties": true,
+        "example": {
+          "modelConnections": [
+            {
+              "direction": "outgoing",
+              "id": "connection-1",
+              "name": "Connection",
+              "originId": "object-2",
+              "targetId": "object-3"
+            }
+          ],
+          "modelObjects": [
+            {
+              "id": "object-1",
+              "name": "Domain",
+              "type": "domain"
+            },
+            {
+              "groupIds": [
+                "object-3"
+              ],
+              "id": "object-2",
+              "name": "System",
+              "parentId": "object-1",
+              "type": "system"
+            },
+            {
+              "id": "object-3",
+              "name": "Group",
+              "parentId": "object-1",
+              "tagIds": [
+                "tag-1"
+              ],
+              "type": "group"
+            }
+          ],
+          "tagGroups": [
+            {
+              "icon": "bug",
+              "id": "tag-group-1",
+              "name": "Tag Group"
+            }
+          ],
+          "tags": [
+            {
+              "color": "beaver",
+              "groupId": "tag-group-1",
+              "id": "tag-1",
+              "name": "Tag"
+            }
+          ]
+        },
+        "properties": {
+          "modelConnections": {
+            "items": {
+              "$ref": "#/components/schemas/ModelConnectionImport"
+            },
+            "type": "array"
+          },
+          "modelObjects": {
+            "items": {
+              "$ref": "#/components/schemas/ModelObjectImport"
+            },
+            "type": "array"
+          },
+          "namespace": {
+            "description": "The namespace of the import, used for seperate operations when using multiple import sources",
+            "type": "string"
+          },
+          "tagGroups": {
+            "items": {
+              "$ref": "#/components/schemas/TagGroupImport"
+            },
+            "type": "array"
+          },
+          "tags": {
+            "items": {
+              "$ref": "#/components/schemas/TagImport"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "LandscapePartial": {
+        "properties": {
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "organizationId": {
+            "type": "string"
+          },
+          "scheduledVersions": {
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "LandscapeRequired": {
+        "properties": {
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "scheduledVersions": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "type": "object"
+      },
+      "LineShape": {
+        "description": "The visual style of a connection line",
+        "enum": [
+          "curved",
+          "square",
+          "straight"
+        ],
+        "type": "string"
+      },
+      "ModelConnectionDirection": {
+        "enum": [
+          "outgoing",
+          "bidirectional"
+        ],
+        "type": "string"
+      },
+      "ModelConnectionDirectionNullable": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/ModelConnectionDirection"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "ModelConnectionImport": {
+        "additionalProperties": false,
+        "properties": {
+          "description": {
+            "description": "Detailed description",
+            "maxLength": 950000,
+            "type": "string"
+          },
+          "direction": {
+            "$ref": "#/components/schemas/ModelConnectionDirection"
+          },
+          "id": {
+            "type": "string"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "links": {
+            "items": {
+              "$ref": "#/components/schemas/ImportLink"
+            },
+            "type": "array"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "originId": {
+            "description": "Model object that initiates the connection",
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ModelConnectionStatus"
+          },
+          "tagIds": {
+            "description": "Tag IDs assigned to this model",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "targetId": {
+            "description": "Model object that receives the message",
+            "type": "string"
+          },
+          "technologyIds": {
+            "description": "Technology IDs assigned to this model",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "viaId": {
+            "description": "Model object that facilitates the connection, such as a Kafka topic, or RabbitMQ queue",
+            "type": "string"
+          }
+        },
+        "required": [
+          "direction",
+          "id",
+          "name",
+          "originId",
+          "targetId"
+        ],
+        "type": "object"
+      },
+      "ModelConnectionPartial": {
+        "properties": {
+          "commit": {
+            "type": "number"
+          },
+          "description": {
+            "maxLength": 950000,
+            "type": "string"
+          },
+          "direction": {
+            "$ref": "#/components/schemas/ModelConnectionDirectionNullable"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "links": {
+            "properties": {
+              "$add": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/RealityLinkRequired"
+                },
+                "type": "object"
+              },
+              "$remove": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "$replace": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/RealityLinkRequired"
+                },
+                "type": "object"
+              },
+              "$update": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/RealityLinkPartial"
+                },
+                "type": "object"
+              }
+            },
+            "type": "object"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "originId": {
+            "description": "Model object that initiates the connection",
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ModelConnectionStatus"
+          },
+          "tagIds": {
+            "oneOf": [
+              {
+                "description": "Tag IDs assigned to this model",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "description": "Update individual tag IDs",
+                "properties": {
+                  "$add": {
+                    "description": "Append tag IDs to the list",
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "$remove": {
+                    "description": "Remove tag IDs from the list",
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  }
+                },
+                "type": "object"
+              }
+            ]
+          },
+          "targetId": {
+            "description": "Model object that receives the message",
+            "type": "string"
+          },
+          "technologyIds": {
+            "oneOf": [
+              {
+                "description": "Technology IDs assigned to this model",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "description": "Update individual technology IDs",
+                "properties": {
+                  "$add": {
+                    "description": "Append technology IDs to the list",
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "$remove": {
+                    "description": "Remove technology IDs from the list",
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  }
+                },
+                "type": "object"
+              }
+            ]
+          },
+          "viaId": {
+            "description": "Model object that facilitates the connection, such as a Kafka topic, or RabbitMQ queue",
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "ModelConnectionRequired": {
+        "properties": {
+          "commit": {
+            "type": "number"
+          },
+          "description": {
+            "maxLength": 950000,
+            "type": "string"
+          },
+          "direction": {
+            "$ref": "#/components/schemas/ModelConnectionDirectionNullable"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "links": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/RealityLinkRequired"
+            },
+            "type": "object"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "originId": {
+            "description": "Model object that initiates the connection",
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ModelConnectionStatus"
+          },
+          "tagIds": {
+            "description": "Tag IDs assigned to this model",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "targetId": {
+            "description": "Model object that receives the message",
+            "type": "string"
+          },
+          "technologyIds": {
+            "description": "Technology IDs assigned to this model",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "viaId": {
+            "description": "Model object that facilitates the connection, such as a Kafka topic, or RabbitMQ queue",
+            "nullable": true,
+            "type": "string"
+          },
+          "handleId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "direction",
+          "name",
+          "originId",
+          "targetId"
+        ],
+        "type": "object"
+      },
+      "ModelConnectionStatus": {
+        "enum": [
+          "deprecated",
+          "future",
+          "live",
+          "removed"
+        ],
+        "type": "string"
+      },
+      "ModelObjectIcon": {
+        "properties": {
+          "catalogTechnologyId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "deprecated": true,
+            "description": "Use either urlDark or urlLight",
+            "type": "string"
+          },
+          "urlDark": {
+            "description": "Icon that only works on dark backgrounds",
+            "example": [
+              "/organizations/{organizationId}/dark/{catalogTechnologyId}.png",
+              "/dark/{catalogTechnologyId}.png"
+            ],
+            "type": "string"
+          },
+          "urlLight": {
+            "description": "Icon that only works on light backgrounds",
+            "example": [
+              "/organizations/{organizationId}/light/{catalogTechnologyId}.png",
+              "/light/{catalogTechnologyId}.png"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "catalogTechnologyId",
+          "name"
+        ],
+        "type": "object"
+      },
+      "ModelObjectIconNullable": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/ModelObjectIcon"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "ModelObjectImport": {
+        "additionalProperties": false,
+        "properties": {
+          "caption": {
+            "description": "Display description",
+            "maxLength": 50000,
+            "type": "string"
+          },
+          "description": {
+            "description": "Detailed description",
+            "maxLength": 950000,
+            "type": "string"
+          },
+          "external": {
+            "description": "Whether the model object is an external service",
+            "type": "boolean"
+          },
+          "groupIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "icon": {
+            "$ref": "#/components/schemas/ImportIconNullable"
+          },
+          "id": {
+            "type": "string"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "links": {
+            "items": {
+              "$ref": "#/components/schemas/ImportLink"
+            },
+            "type": "array"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "parentId": {
+            "description": "Parent model object ID, must follow the IcePanel hierarchy.\n\nDomain: parent must be missing/null\n\nActor/System: parent must be a domain\n\nGroup: parent must be a domain or another group\n\nApp/Store: parent must be a system\n\nComponent: parent must be an app or store",
+            "nullable": true,
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ModelObjectStatus"
+          },
+          "tagIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "teamIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "technologyIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "type": {
+            "$ref": "#/components/schemas/ImportModelObjectType"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "type"
+        ],
+        "type": "object"
+      },
+      "ModelObjectPartial": {
+        "properties": {
+          "caption": {
+            "description": "Short summary of the object shown as the display description",
+            "maxLength": 50000,
+            "type": "string"
+          },
+          "commit": {
+            "type": "number"
+          },
+          "description": {
+            "maxLength": 950000,
+            "type": "string"
+          },
+          "external": {
+            "type": "boolean"
+          },
+          "groupIds": {
+            "oneOf": [
+              {
+                "description": "IDs of the groups this model object belongs to",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "description": "Update individual group ids",
+                "properties": {
+                  "$add": {
+                    "description": "Append group ids to the list",
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "$remove": {
+                    "description": "Remove group ids from the list",
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  }
+                },
+                "type": "object"
+              }
+            ]
+          },
+          "icon": {
+            "$ref": "#/components/schemas/ModelObjectIconNullable"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "description": "Generic key value store used for creating custom integrations",
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "links": {
+            "properties": {
+              "$add": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/RealityLinkRequired"
+                },
+                "type": "object"
+              },
+              "$remove": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "$replace": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/RealityLinkRequired"
+                },
+                "type": "object"
+              },
+              "$update": {
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/RealityLinkPartial"
+                },
+                "type": "object"
+              }
+            },
+            "type": "object"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "parentId": {
+            "description": "Parent model object ID, null for the root level model object",
+            "minLength": 1,
+            "nullable": true,
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ModelObjectStatus"
+          },
+          "tagIds": {
+            "oneOf": [
+              {
+                "description": "Tag IDs assigned to this model",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "description": "Update individual tag ids",
+                "properties": {
+                  "$add": {
+                    "description": "Append tag ids to the list",
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "$remove": {
+                    "description": "Remove tag ids from the list",
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  }
+                },
+                "type": "object"
+              }
+            ]
+          },
+          "teamIds": {
+            "oneOf": [
+              {
+                "description": "Team IDs that own this model object, does not propergate up or down",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "description": "Update individual team ids",
+                "properties": {
+                  "$add": {
+                    "description": "Append team ids to the list",
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "$remove": {
+                    "description": "Remove team ids from the list",
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  }
+                },
+                "type": "object"
+              }
+            ]
+          },
+          "teamOnlyEditing": {
+            "description": "Model object (+child diagram, diagram groups and flows) can only be edited by owners and admins",
+            "type": "boolean"
+          },
+          "technologyIds": {
+            "oneOf": [
+              {
+                "description": "Technology ids assigned to this model",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "description": "Update individual technology ids",
+                "properties": {
+                  "$add": {
+                    "description": "Append technology ids to the list",
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "$remove": {
+                    "description": "Remove technology ids from the list",
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  }
+                },
+                "type": "object"
+              }
+            ]
+          },
+          "type": {
+            "$ref": "#/components/schemas/ModelObjectType"
+          }
+        },
+        "type": "object"
+      },
+      "ModelObjectRequired": {
+        "properties": {
+          "caption": {
+            "description": "Short summary of the object shown as the display description",
+            "maxLength": 50000,
+            "type": "string"
+          },
+          "commit": {
+            "type": "number"
+          },
+          "description": {
+            "maxLength": 950000,
+            "type": "string"
+          },
+          "external": {
+            "type": "boolean"
+          },
+          "groupIds": {
+            "description": "IDs of the groups this model object belongs to",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "icon": {
+            "$ref": "#/components/schemas/ModelObjectIconNullable"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "description": "Generic key value store used for creating custom integrations",
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "links": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/RealityLinkRequired"
+            },
+            "type": "object"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "parentId": {
+            "description": "Parent model object ID, null for the root level model object",
+            "minLength": 1,
+            "nullable": true,
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ModelObjectStatus"
+          },
+          "tagIds": {
+            "description": "Tag IDs assigned to this model",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "teamIds": {
+            "description": "Team IDs that own this model object, does not propergate up or down",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "teamOnlyEditing": {
+            "description": "Model object (+child diagram, diagram groups and flows) can only be edited by owners and admins",
+            "type": "boolean"
+          },
+          "technologyIds": {
+            "description": "Technology IDs assigned to this model",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "type": {
+            "$ref": "#/components/schemas/ModelObjectType"
+          },
+          "domainId": {
+            "type": "string"
+          },
+          "handleId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "parentId",
+          "type"
+        ],
+        "type": "object"
+      },
+      "ModelObjectStatus": {
+        "enum": [
+          "deprecated",
+          "future",
+          "live",
+          "removed"
+        ],
+        "type": "string"
+      },
+      "ModelObjectType": {
+        "enum": [
+          "actor",
+          "app",
+          "component",
+          "group",
+          "root",
+          "store",
+          "system"
+        ],
+        "type": "string",
+        "x-fern-enum": {
+          "actor": {
+            "description": "A person or role that interacts with your systems, e.g. a customer or support agent"
+          },
+          "app": {
+            "description": "An application that runs code or performs tasks within a system, e.g. a web app, API or microservice"
+          },
+          "component": {
+            "description": "A logical building block within an app or store, e.g. a module, controller or library"
+          },
+          "group": {
+            "description": "A collection of related objects, e.g. a team, department or business capability"
+          },
+          "root": {
+            "description": "The root object of a domain that all other objects descend from"
+          },
+          "store": {
+            "description": "A place where data or files are stored within a system, e.g. a database, file storage or message queue"
+          },
+          "system": {
+            "description": "A software system that delivers value to its users, e.g. an e-commerce platform or CRM"
+          }
+        }
+      },
+      "OrganizationAIFeatures": {
+        "description": "AI features that are enabled for the organization",
+        "properties": {
+          "generateDetailedDescriptions": {
+            "description": "Whether to enable detailed descriptions for objects, connections, and diagrams",
+            "type": "boolean"
+          },
+          "generateDisplayDescriptions": {
+            "description": "Whether to enable display descriptions for objects",
+            "type": "boolean"
+          },
+          "generateDraftSummary": {
+            "description": "Whether to enable draft summaries for diagrams",
+            "type": "boolean"
+          },
+          "generateObjectSummary": {
+            "description": "Whether to enable object summaries for objects and connections in the right click context menu",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "OrganizationAiModel": {
+        "enum": [
+          "gpt-5",
+          "gpt-5-mini",
+          "gpt-5-nano"
+        ],
+        "type": "string"
+      },
+      "OrganizationBillingCurrency": {
+        "enum": [
+          "usd",
+          "cad",
+          "eur",
+          "gbp"
+        ],
+        "type": "string"
+      },
+      "OrganizationBillingCycle": {
+        "enum": [
+          "monthly",
+          "annually"
+        ],
+        "type": "string"
+      },
+      "OrganizationLanguage": {
+        "enum": [
+          "en-US",
+          "en-GB",
+          "fr-FR",
+          "es-ES",
+          "es-419"
+        ],
+        "type": "string"
+      },
+      "OrganizationPartial": {
+        "properties": {
+          "aiFeatures": {
+            "$ref": "#/components/schemas/OrganizationAIFeatures"
+          },
+          "aiFeaturesEnabled": {
+            "description": "Whether to enable all AI features for the organization",
+            "type": "boolean"
+          },
+          "aiModel": {
+            "$ref": "#/components/schemas/OrganizationAiModel"
+          },
+          "billingCurrency": {
+            "$ref": "#/components/schemas/OrganizationBillingCurrency"
+          },
+          "billingCycle": {
+            "$ref": "#/components/schemas/OrganizationBillingCycle"
+          },
+          "billingEmail": {
+            "format": "email",
+            "type": "string"
+          },
+          "experiments": {
+            "additionalProperties": {
+              "type": "boolean"
+            },
+            "type": "object"
+          },
+          "language": {
+            "$ref": "#/components/schemas/OrganizationLanguage"
+          },
+          "lineShapeDefault": {
+            "$ref": "#/components/schemas/LineShape"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "oauthLandscapeWriteEnabled": {
+            "description": "Whether OAuth connections can make changes to landscape data",
+            "type": "boolean"
+          },
+          "shareLinkAuthDomains": {
+            "items": {
+              "type": "string"
+            },
+            "nullable": true,
+            "type": "array"
+          },
+          "shareLinksEnabled": {
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "OrganizationRequired": {
+        "properties": {
+          "aiFeatures": {
+            "$ref": "#/components/schemas/OrganizationAIFeatures"
+          },
+          "aiFeaturesEnabled": {
+            "description": "Whether to enable all AI features for the organization",
+            "type": "boolean"
+          },
+          "aiModel": {
+            "$ref": "#/components/schemas/OrganizationAiModel"
+          },
+          "billingCurrency": {
+            "$ref": "#/components/schemas/OrganizationBillingCurrency"
+          },
+          "billingCycle": {
+            "$ref": "#/components/schemas/OrganizationBillingCycle"
+          },
+          "billingEmail": {
+            "format": "email",
+            "type": "string"
+          },
+          "experiments": {
+            "additionalProperties": {
+              "type": "boolean"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "language": {
+            "$ref": "#/components/schemas/OrganizationLanguage"
+          },
+          "lineShapeDefault": {
+            "$ref": "#/components/schemas/LineShape"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "oauthLandscapeWriteEnabled": {
+            "description": "Whether OAuth connections can make changes to landscape data",
+            "type": "boolean"
+          },
+          "shareLinkAuthDomains": {
+            "items": {
+              "type": "string"
+            },
+            "nullable": true,
+            "type": "array"
+          },
+          "shareLinksEnabled": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "type": "object"
+      },
+      "OrganizationUser": {
+        "properties": {
+          "landscapePermissions": {
+            "additionalProperties": {
+              "type": "boolean"
+            },
+            "type": "object"
+          },
+          "permission": {
+            "$ref": "#/components/schemas/PermissionType"
+          }
+        },
+        "required": [
+          "permission"
+        ],
+        "type": "object"
+      },
+      "OrganizationUserInviteRequired": {
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "expiresAt": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "landscapePermissions": {
+            "additionalProperties": {
+              "type": "boolean"
+            },
+            "type": "object"
+          },
+          "permission": {
+            "$ref": "#/components/schemas/PermissionType"
+          }
+        },
+        "required": [
+          "email",
+          "expiresAt",
+          "permission"
+        ],
+        "type": "object"
+      },
+      "PermissionType": {
+        "enum": [
+          "billing",
+          "read",
+          "write",
+          "admin"
+        ],
+        "type": "string"
+      },
+      "RealityConnector": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/RealityConnectorUrl"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorAzureDevopsRepo"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorAzureDevopsBranch"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorAzureDevopsFolder"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorAzureDevopsFile"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorBitbucketRepo"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorBitbucketBranch"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorBitbucketFolder"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorBitbucketFile"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorBitbucketServerRepo"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorBitbucketServerBranch"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorBitbucketServerFolder"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorBitbucketServerFile"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorGithubRepo"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorGithubBranch"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorGithubFolder"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorGithubFile"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorGitlabRepo"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorGitlabBranch"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorGitlabFolder"
+          },
+          {
+            "$ref": "#/components/schemas/RealityConnectorGitlabFile"
+          }
+        ]
+      },
+      "RealityConnectorAzureDevopsBranch": {
+        "properties": {
+          "accountName": {
+            "type": "string"
+          },
+          "branchName": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "repositoryId": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "azure-devops-branch"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "accountName",
+          "branchName",
+          "projectId",
+          "repositoryId",
+          "type"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorAzureDevopsFile": {
+        "properties": {
+          "accountName": {
+            "type": "string"
+          },
+          "branchName": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "repositoryId": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "azure-devops-file"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "accountName",
+          "branchName",
+          "path",
+          "projectId",
+          "repositoryId",
+          "type"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorAzureDevopsFolder": {
+        "properties": {
+          "accountName": {
+            "type": "string"
+          },
+          "branchName": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "repositoryId": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "azure-devops-folder"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "accountName",
+          "branchName",
+          "path",
+          "projectId",
+          "repositoryId",
+          "type"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorAzureDevopsRepo": {
+        "properties": {
+          "accountName": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "repositoryId": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "azure-devops-repo"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "accountName",
+          "projectId",
+          "repositoryId",
+          "type"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorBitbucketBranch": {
+        "properties": {
+          "branchName": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "repositoryId": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "bitbucket-branch"
+            ],
+            "type": "string"
+          },
+          "workspaceId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "branchName",
+          "projectId",
+          "repositoryId",
+          "type",
+          "workspaceId"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorBitbucketFile": {
+        "properties": {
+          "branchName": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "repositoryId": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "bitbucket-file"
+            ],
+            "type": "string"
+          },
+          "workspaceId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "branchName",
+          "path",
+          "projectId",
+          "repositoryId",
+          "type",
+          "workspaceId"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorBitbucketFolder": {
+        "properties": {
+          "branchName": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "string"
+          },
+          "repositoryId": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "bitbucket-folder"
+            ],
+            "type": "string"
+          },
+          "workspaceId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "branchName",
+          "path",
+          "projectId",
+          "repositoryId",
+          "type",
+          "workspaceId"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorBitbucketRepo": {
+        "properties": {
+          "projectId": {
+            "type": "string"
+          },
+          "repositoryId": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "bitbucket-repo"
+            ],
+            "type": "string"
+          },
+          "workspaceId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "projectId",
+          "repositoryId",
+          "type",
+          "workspaceId"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorBitbucketServerBranch": {
+        "properties": {
+          "branchName": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "number"
+          },
+          "repositoryId": {
+            "type": "number"
+          },
+          "serverUrl": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "bitbucket-server-branch"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "branchName",
+          "projectId",
+          "repositoryId",
+          "serverUrl",
+          "type"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorBitbucketServerFile": {
+        "properties": {
+          "branchName": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "number"
+          },
+          "repositoryId": {
+            "type": "number"
+          },
+          "serverUrl": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "bitbucket-server-file"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "branchName",
+          "path",
+          "projectId",
+          "repositoryId",
+          "serverUrl",
+          "type"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorBitbucketServerFolder": {
+        "properties": {
+          "branchName": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "number"
+          },
+          "repositoryId": {
+            "type": "number"
+          },
+          "serverUrl": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "bitbucket-server-folder"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "branchName",
+          "path",
+          "projectId",
+          "repositoryId",
+          "serverUrl",
+          "type"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorBitbucketServerRepo": {
+        "properties": {
+          "projectId": {
+            "type": "number"
+          },
+          "repositoryId": {
+            "type": "number"
+          },
+          "serverUrl": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "bitbucket-server-repo"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "projectId",
+          "repositoryId",
+          "serverUrl",
+          "type"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorGithubBranch": {
+        "properties": {
+          "branchName": {
+            "type": "string"
+          },
+          "ownerId": {
+            "type": "number"
+          },
+          "repositoryId": {
+            "type": "number"
+          },
+          "type": {
+            "enum": [
+              "github-branch"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "branchName",
+          "ownerId",
+          "repositoryId",
+          "type"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorGithubFile": {
+        "properties": {
+          "branchName": {
+            "type": "string"
+          },
+          "ownerId": {
+            "type": "number"
+          },
+          "path": {
+            "type": "string"
+          },
+          "repositoryId": {
+            "type": "number"
+          },
+          "type": {
+            "enum": [
+              "github-file"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "branchName",
+          "ownerId",
+          "path",
+          "repositoryId",
+          "type"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorGithubFolder": {
+        "properties": {
+          "branchName": {
+            "type": "string"
+          },
+          "ownerId": {
+            "type": "number"
+          },
+          "path": {
+            "type": "string"
+          },
+          "repositoryId": {
+            "type": "number"
+          },
+          "type": {
+            "enum": [
+              "github-folder"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "branchName",
+          "ownerId",
+          "path",
+          "repositoryId",
+          "type"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorGithubRepo": {
+        "properties": {
+          "ownerId": {
+            "type": "number"
+          },
+          "repositoryId": {
+            "type": "number"
+          },
+          "type": {
+            "enum": [
+              "github-repo"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "ownerId",
+          "repositoryId",
+          "type"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorGitlabBranch": {
+        "properties": {
+          "branchName": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "number"
+          },
+          "type": {
+            "enum": [
+              "gitlab-branch"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "branchName",
+          "projectId",
+          "type"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorGitlabFile": {
+        "properties": {
+          "branchName": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "number"
+          },
+          "type": {
+            "enum": [
+              "gitlab-file"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "branchName",
+          "path",
+          "projectId",
+          "type"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorGitlabFolder": {
+        "properties": {
+          "branchName": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "projectId": {
+            "type": "number"
+          },
+          "type": {
+            "enum": [
+              "gitlab-folder"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "branchName",
+          "path",
+          "projectId",
+          "type"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorGitlabRepo": {
+        "properties": {
+          "projectId": {
+            "type": "number"
+          },
+          "type": {
+            "enum": [
+              "gitlab-repo"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "projectId",
+          "type"
+        ],
+        "type": "object"
+      },
+      "RealityConnectorUrl": {
+        "properties": {
+          "type": {
+            "enum": [
+              "url"
+            ],
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "url"
+        ],
+        "type": "object"
+      },
+      "RealityLink": {
+        "properties": {
+          "connectionResolveUrl": {
+            "description": "Resolve the connector from a publicly accessible URL",
+            "type": "string"
+          },
+          "connector": {
+            "$ref": "#/components/schemas/RealityConnector",
+            "description": "Links this to a resource in reality, if set periodic checks are performed and the status is updated"
+          },
+          "customName": {
+            "description": "Friendly name for the link set by the user",
+            "nullable": true,
+            "type": "string"
+          },
+          "index": {
+            "type": "number"
+          },
+          "url": {
+            "description": "URL pointing to the resource in reality, resolved from the last sync",
+            "type": "string"
+          },
+          "errorMessage": {
+            "description": "Error message that was received during the last sync",
+            "type": "string"
+          },
+          "id": {
+            "description": "Random 20 character identifier",
+            "type": "string"
+          },
+          "name": {
+            "description": "Friendly name describing the resource in reality, resolved from the last sync",
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/RealityLinkStatus",
+            "description": "Response that was received from the last sync with reality"
+          }
+        },
+        "required": [
+          "id",
+          "index"
+        ],
+        "type": "object"
+      },
+      "RealityLinkPartial": {
+        "properties": {
+          "connectionResolveUrl": {
+            "description": "Resolve the connector from a publicly accessible URL",
+            "type": "string"
+          },
+          "connector": {
+            "$ref": "#/components/schemas/RealityConnector",
+            "description": "Links this to a resource in reality, if set periodic checks are performed and the status is updated"
+          },
+          "customName": {
+            "description": "Friendly name for the link set by the user",
+            "nullable": true,
+            "type": "string"
+          },
+          "index": {
+            "type": "number"
+          },
+          "url": {
+            "description": "Accessible link URL when not using a connector",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "RealityLinkRequired": {
+        "properties": {
+          "connectionResolveUrl": {
+            "description": "Resolve the connector from a publicly accessible URL",
+            "type": "string"
+          },
+          "connector": {
+            "$ref": "#/components/schemas/RealityConnector",
+            "description": "Links this to a resource in reality, if set periodic checks are performed and the status is updated"
+          },
+          "customName": {
+            "description": "Friendly name for the link set by the user",
+            "nullable": true,
+            "type": "string"
+          },
+          "index": {
+            "type": "number"
+          },
+          "url": {
+            "description": "Accessible link URL when not using a connector",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "RealityLinkStatus": {
+        "enum": [
+          "valid",
+          "invalid"
+        ],
+        "type": "string"
+      },
+      "ShareLinkPartial": {
+        "properties": {
+          "password": {
+            "format": "password",
+            "maxLength": 64,
+            "minLength": 8,
+            "type": "string"
+          },
+          "protected": {
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "ShareLinkRequired": {
+        "properties": {
+          "password": {
+            "format": "password",
+            "maxLength": 64,
+            "minLength": 8,
+            "type": "string"
+          },
+          "protected": {
+            "type": "boolean"
+          },
+          "draftId": {
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "required": [
+          "protected"
+        ],
+        "type": "object"
+      },
+      "TagColor": {
+        "enum": [
+          "blue",
+          "green",
+          "yellow",
+          "orange",
+          "red",
+          "beaver",
+          "dark-blue",
+          "purple",
+          "pink",
+          "white",
+          "grey",
+          "black"
+        ],
+        "type": "string"
+      },
+      "TagGroupIcon": {
+        "enum": [
+          "bug",
+          "calendar-check",
+          "calendar-times",
+          "cloud",
+          "cog",
+          "database",
+          "exclamation-triangle",
+          "file",
+          "globe",
+          "laptop-code",
+          "lightbulb",
+          "lock",
+          "microchip",
+          "minus",
+          "mobile",
+          "network-wired",
+          "plus",
+          "poo",
+          "robot",
+          "rocket",
+          "sack-dollar",
+          "server",
+          "sledding",
+          "snowman",
+          "star",
+          "times",
+          "toolbox",
+          "trash",
+          "users",
+          "wifi"
+        ],
+        "type": "string"
+      },
+      "TagGroupImport": {
+        "additionalProperties": false,
+        "properties": {
+          "icon": {
+            "$ref": "#/components/schemas/TagGroupIcon"
+          },
+          "id": {
+            "type": "string"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          }
+        },
+        "required": [
+          "icon",
+          "id",
+          "name"
+        ],
+        "type": "object"
+      },
+      "TagGroupPartial": {
+        "properties": {
+          "commit": {
+            "type": "number"
+          },
+          "icon": {
+            "$ref": "#/components/schemas/TagGroupIcon"
+          },
+          "index": {
+            "type": "number"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "TagGroupRequired": {
+        "properties": {
+          "commit": {
+            "type": "number"
+          },
+          "icon": {
+            "$ref": "#/components/schemas/TagGroupIcon"
+          },
+          "index": {
+            "type": "number"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "handleId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "icon",
+          "index",
+          "name"
+        ],
+        "type": "object"
+      },
+      "TagImport": {
+        "additionalProperties": false,
+        "properties": {
+          "color": {
+            "$ref": "#/components/schemas/TagColor"
+          },
+          "groupId": {
+            "description": "Parent tag group ID",
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          }
+        },
+        "required": [
+          "color",
+          "groupId",
+          "id",
+          "name"
+        ],
+        "type": "object"
+      },
+      "TagPartial": {
+        "properties": {
+          "color": {
+            "$ref": "#/components/schemas/TagColor"
+          },
+          "commit": {
+            "type": "number"
+          },
+          "groupId": {
+            "type": "string"
+          },
+          "index": {
+            "type": "number"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "TagRequired": {
+        "properties": {
+          "color": {
+            "$ref": "#/components/schemas/TagColor"
+          },
+          "commit": {
+            "type": "number"
+          },
+          "groupId": {
+            "type": "string"
+          },
+          "index": {
+            "type": "number"
+          },
+          "labels": {
+            "additionalProperties": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "maxProperties": 50,
+            "type": "object"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "handleId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "color",
+          "groupId",
+          "index",
+          "name"
+        ],
+        "type": "object"
+      },
+      "TeamPartial": {
+        "properties": {
+          "color": {
+            "$ref": "#/components/schemas/TagColor"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "userIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "TeamRequired": {
+        "properties": {
+          "color": {
+            "$ref": "#/components/schemas/TagColor"
+          },
+          "name": {
+            "maxLength": 4000,
+            "type": "string"
+          },
+          "userIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "type": "object"
+      },
+      "Theme": {
+        "enum": [
+          "light",
+          "dark"
+        ],
+        "type": "string"
+      },
+      "VersionRequired": {
+        "properties": {
+          "modelHandleId": {
+            "nullable": true,
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "notes": {
+            "maxLength": 20000,
+            "minLength": 10,
+            "type": "string"
+          }
+        },
+        "required": [
+          "modelHandleId",
+          "name",
+          "notes"
+        ],
+        "type": "object"
+      },
+      "VersionRevertPartial": {
+        "properties": {
+          "notes": {
+            "minLength": 10,
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "VersionRevertRequired": {
+        "properties": {
+          "notes": {
+            "minLength": 10,
+            "type": "string"
+          },
+          "versionId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "notes",
+          "versionId"
+        ],
+        "type": "object"
+      },
+      "VersionUpdate": {
+        "properties": {
+          "modelHandleId": {
+            "nullable": true,
+            "type": "string"
+          },
+          "name": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "notes": {
+            "maxLength": 20000,
+            "minLength": 10,
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    }
+  }
+}

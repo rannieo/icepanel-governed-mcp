@@ -1,5 +1,6 @@
 {
   "post": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -147,6 +148,8 @@
     },
     "summary": "Duplicate",
     "x-fern-request-name": "LandscapeDuplicateRequest",
-    "x-fern-sdk-method-name": "duplicate"
+    "x-fern-sdk-method-name": "duplicate",
+    "x-ice-panel-operation-subject": "landscape",
+    "x-ice-panel-operation-type": "write"
   }
 }

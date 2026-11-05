@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "requestedAt": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "user-continue-on-desktop"
+      ],
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "requestedAt",
+    "type",
+    "userId"
+  ],
+  "type": "object"
+}

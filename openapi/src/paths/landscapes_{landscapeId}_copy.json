@@ -1,5 +1,6 @@
 {
   "post": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -139,6 +140,8 @@
     },
     "summary": "Copy",
     "x-fern-request-name": "LandscapeCopyRequest",
-    "x-fern-sdk-method-name": "copy"
+    "x-fern-sdk-method-name": "copy",
+    "x-ice-panel-operation-subject": "landscape",
+    "x-ice-panel-operation-type": "write"
   }
 }

@@ -1,0 +1,71 @@
+{
+  "properties": {
+    "diagram-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketDiagramClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketDiagramClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-group-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketDiagramClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-group-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketDiagramClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "diagram-group-subscribe",
+    "diagram-group-unsubscribe",
+    "diagram-subscribe",
+    "diagram-unsubscribe"
+  ],
+  "type": "object"
+}

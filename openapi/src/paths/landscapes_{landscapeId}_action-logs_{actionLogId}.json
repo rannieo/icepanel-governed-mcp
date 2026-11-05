@@ -1,5 +1,6 @@
 {
   "get": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -19,6 +20,7 @@
       "landscapes",
       "logs"
     ],
+    "deprecated": true,
     "description": "Find an action log",
     "operationId": "actionLogFind",
     "parameters": [
@@ -108,6 +110,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -120,7 +132,10 @@
       }
     },
     "summary": "Get",
+    "x-fern-availability": "deprecated",
     "x-fern-request-name": "ActionLogFindRequest",
-    "x-fern-sdk-method-name": "get"
+    "x-fern-sdk-method-name": "get",
+    "x-ice-panel-operation-subject": "action-log",
+    "x-ice-panel-operation-type": "read"
   }
 }

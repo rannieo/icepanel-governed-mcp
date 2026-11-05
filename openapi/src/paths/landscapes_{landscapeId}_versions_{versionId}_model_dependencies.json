@@ -1,5 +1,6 @@
 {
   "get": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -134,6 +135,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -147,6 +158,8 @@
     },
     "summary": "List Dependencies",
     "x-fern-request-name": "ModelObjectDependenciesListRequest",
-    "x-fern-sdk-method-name": "dependenciesList"
+    "x-fern-sdk-method-name": "dependenciesList",
+    "x-ice-panel-operation-subject": "model-object",
+    "x-ice-panel-operation-type": "read"
   }
 }

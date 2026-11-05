@@ -42,6 +42,8 @@ function makeRecord(overrides: Partial<GovernanceLedgerRecord> = {}): Governance
       missingReviewerRoles: [],
       rejectionReasons: [],
       riskFlags: [],
+      untrustedApprovals: [],
+      actorIssues: [],
     },
     ...overrides,
   };

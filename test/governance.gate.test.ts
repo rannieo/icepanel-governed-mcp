@@ -17,28 +17,28 @@ const approvedEvidence: GovernanceEvidence = {
   skillsExecuted: [...defaultPolicy.requiredSkills],
   reviewers: [
     {
-      role: "solutions-architect",
+      role: "architect",
       reviewer: "architect",
       decision: "approved",
       summary: "Looks good",
       timestamp: "2026-05-28T10:00:00.000Z",
     },
     {
-      role: "network-engineer",
+      role: "plan-validator",
       reviewer: "network",
       decision: "approved",
       summary: "No networking concerns",
       timestamp: "2026-05-28T10:01:00.000Z",
     },
     {
-      role: "security-auditor",
+      role: "security-reviewer",
       reviewer: "security",
       decision: "approved",
       summary: "No security concerns",
       timestamp: "2026-05-28T10:02:00.000Z",
     },
     {
-      role: "grill-me",
+      role: "test-reviewer",
       reviewer: "challenge",
       decision: "approved",
       summary: "Stress test passed",
@@ -54,14 +54,14 @@ describe("governance gate", () => {
       {
         ...approvedEvidence,
         skillsExecuted: approvedEvidence.skillsExecuted.filter(
-          (skill) => skill !== "grill-me",
+          (skill) => skill !== "review",
         ),
       },
       defaultPolicy,
     );
 
     expect(result.approved).toBe(false);
-    expect(result.missingSkills).toContain("grill-me");
+    expect(result.missingSkills).toContain("review");
   });
 
   it("approves evidence when all policy requirements are satisfied", () => {
@@ -76,7 +76,7 @@ describe("governance gate", () => {
     const blockingEvidence: GovernanceEvidence = {
       ...approvedEvidence,
       reviewers: approvedEvidence.reviewers.filter(
-        (reviewer) => reviewer.role !== "security-auditor",
+        (reviewer) => reviewer.role !== "security-reviewer",
       ),
     };
 
@@ -112,6 +112,6 @@ describe("governance gate", () => {
       validation: { missingReviewerRoles: string[] };
     };
     expect(ledger.approved).toBe(false);
-    expect(ledger.validation.missingReviewerRoles).toContain("security-auditor");
+    expect(ledger.validation.missingReviewerRoles).toContain("security-reviewer");
   });
 });

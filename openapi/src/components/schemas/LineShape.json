@@ -1,8 +1,9 @@
 {
+  "description": "The visual style of a connection line",
   "enum": [
     "curved",
-    "straight",
-    "square"
+    "square",
+    "straight"
   ],
   "type": "string"
 }

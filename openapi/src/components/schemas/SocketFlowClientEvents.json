@@ -1,0 +1,71 @@
+{
+  "properties": {
+    "flows-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketFlowsClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "flows-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketFlowsClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "flow-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketFlowClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "flow-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketFlowClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "flow-subscribe",
+    "flow-unsubscribe",
+    "flows-subscribe",
+    "flows-unsubscribe"
+  ],
+  "type": "object"
+}

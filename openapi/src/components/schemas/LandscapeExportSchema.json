@@ -1,0 +1,8 @@
+{
+  "description": "Schema version to use for JSON exports.\n\n`v1` (default) produces the legacy format where entities are keyed objects.\n\n`v2` produces the same structure as the `LandscapeImportData` used by the import endpoint, so an export can be imported directly.",
+  "enum": [
+    "v1",
+    "v2"
+  ],
+  "type": "string"
+}

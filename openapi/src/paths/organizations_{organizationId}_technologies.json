@@ -19,6 +19,7 @@
       "organizations",
       "technologies"
     ],
+    "x-oauth-scope": "organization",
     "operationId": "organizationTechnologiesList",
     "parameters": [
       {
@@ -110,6 +111,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -123,7 +134,9 @@
     },
     "summary": "List",
     "x-fern-request-name": "OrganizationTechnologiesListRequest",
-    "x-fern-sdk-method-name": "list"
+    "x-fern-sdk-method-name": "list",
+    "x-ice-panel-operation-subject": "technologies",
+    "x-ice-panel-operation-type": "read"
   },
   "post": {
     "security": [
@@ -235,6 +248,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -258,6 +281,8 @@
     },
     "summary": "Create",
     "x-fern-request-name": "OrganizationTechnologyCreateRequest",
-    "x-fern-sdk-method-name": "create"
+    "x-fern-sdk-method-name": "create",
+    "x-ice-panel-operation-subject": "technologies",
+    "x-ice-panel-operation-type": "write"
   }
 }

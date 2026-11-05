@@ -682,6 +682,9 @@
       "$ref": "./AutomationTriggerType.json"
     },
     {
+      "$ref": "./AutomationTriggerUserContinueOnDesktop.json"
+    },
+    {
       "$ref": "./AutomationTriggerUserEmailVerification.json"
     },
     {
@@ -760,7 +763,13 @@
       "$ref": "./CatalogTechnology.json"
     },
     {
+      "$ref": "./CatalogTechnologyField.json"
+    },
+    {
       "$ref": "./CatalogTechnologyFilter.json"
+    },
+    {
+      "$ref": "./CatalogTechnologyOptional.json"
     },
     {
       "$ref": "./CatalogTechnologyPartial.json"
@@ -886,10 +895,22 @@
       "$ref": "./DiagramConnectionPartial.json"
     },
     {
+      "$ref": "./DiagramConnectionRequired.json"
+    },
+    {
       "$ref": "./DiagramContent.json"
     },
     {
+      "$ref": "./DiagramContentGenerate.json"
+    },
+    {
+      "$ref": "./DiagramContentGenerateChanges.json"
+    },
+    {
       "$ref": "./DiagramContentGenerateDescriptionFilter.json"
+    },
+    {
+      "$ref": "./DiagramContentNullable.json"
     },
     {
       "$ref": "./DiagramContentPartial.json"
@@ -946,6 +967,9 @@
       "$ref": "./DiagramObjectPartial.json"
     },
     {
+      "$ref": "./DiagramObjectRequired.json"
+    },
+    {
       "$ref": "./DiagramObjectShape.json"
     },
     {
@@ -974,6 +998,9 @@
     },
     {
       "$ref": "./DiagramZoomOverridesNullable.json"
+    },
+    {
+      "$ref": "./DocumentBroadcastType.json"
     },
     {
       "$ref": "./Domain.json"
@@ -1300,6 +1327,9 @@
       "$ref": "./LandscapeExportOrientation.json"
     },
     {
+      "$ref": "./LandscapeExportSchema.json"
+    },
+    {
       "$ref": "./LandscapeExportType.json"
     },
     {
@@ -1535,6 +1565,9 @@
     },
     {
       "$ref": "./PubSubEditorTyping.json"
+    },
+    {
+      "$ref": "./QueryBroadcastType.json"
     },
     {
       "$ref": "./RealityConnector.json"
@@ -1957,6 +1990,213 @@
       "$ref": "./SocketClientVersionsUnsubscribeBody.json"
     },
     {
+      "$ref": "./SocketCommentClientEventName.json"
+    },
+    {
+      "$ref": "./SocketCommentClientEvents.json"
+    },
+    {
+      "$ref": "./SocketCommentClientSubscription.json"
+    },
+    {
+      "$ref": "./SocketCommentServerEventName.json"
+    },
+    {
+      "$ref": "./SocketCommentServerEvents.json"
+    },
+    {
+      "$ref": "./SocketDiagramClientEventName.json"
+    },
+    {
+      "$ref": "./SocketDiagramClientEvents.json"
+    },
+    {
+      "$ref": "./SocketDiagramClientSubscription.json"
+    },
+    {
+      "$ref": "./SocketDiagramContentClientEventName.json"
+    },
+    {
+      "$ref": "./SocketDiagramContentClientEvents.json"
+    },
+    {
+      "$ref": "./SocketDiagramContentClientSubscription.json"
+    },
+    {
+      "$ref": "./SocketDiagramContentServerEventName.json"
+    },
+    {
+      "$ref": "./SocketDiagramContentServerEvents.json"
+    },
+    {
+      "$ref": "./SocketDiagramServerEventName.json"
+    },
+    {
+      "$ref": "./SocketDiagramServerEvents.json"
+    },
+    {
+      "$ref": "./SocketDomainClientEventName.json"
+    },
+    {
+      "$ref": "./SocketDomainClientEvents.json"
+    },
+    {
+      "$ref": "./SocketDomainClientSubscription.json"
+    },
+    {
+      "$ref": "./SocketDomainServerEventName.json"
+    },
+    {
+      "$ref": "./SocketDomainServerEvents.json"
+    },
+    {
+      "$ref": "./SocketFlowClientEventName.json"
+    },
+    {
+      "$ref": "./SocketFlowClientEvents.json"
+    },
+    {
+      "$ref": "./SocketFlowClientSubscription.json"
+    },
+    {
+      "$ref": "./SocketFlowServerEventName.json"
+    },
+    {
+      "$ref": "./SocketFlowServerEvents.json"
+    },
+    {
+      "$ref": "./SocketFlowsClientSubscription.json"
+    },
+    {
+      "$ref": "./SocketMessageCommentBroadcast.json"
+    },
+    {
+      "$ref": "./SocketMessageCommentClientSubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageCommentClientUnsubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageCommentReplyBroadcast.json"
+    },
+    {
+      "$ref": "./SocketMessageCommentReplyClientSubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageCommentReplyClientUnsubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageDiagramBroadcast.json"
+    },
+    {
+      "$ref": "./SocketMessageDiagramClientSubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageDiagramClientUnsubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageDiagramContentBroadcast.json"
+    },
+    {
+      "$ref": "./SocketMessageDiagramContentClientSubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageDiagramContentClientUnsubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageDiagramGroupBroadcast.json"
+    },
+    {
+      "$ref": "./SocketMessageDiagramGroupClientSubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageDiagramGroupClientUnsubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageDomainBroadcast.json"
+    },
+    {
+      "$ref": "./SocketMessageDomainClientSubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageDomainClientUnsubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageFlowBroadcast.json"
+    },
+    {
+      "$ref": "./SocketMessageFlowClientSubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageFlowClientUnsubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageFlowsBroadcast.json"
+    },
+    {
+      "$ref": "./SocketMessageFlowsClientSubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageFlowsClientUnsubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageModelConnectionBroadcast.json"
+    },
+    {
+      "$ref": "./SocketMessageModelConnectionClientSubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageModelConnectionClientUnsubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageModelObjectBroadcast.json"
+    },
+    {
+      "$ref": "./SocketMessageModelObjectClientSubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageModelObjectClientUnsubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageTagBroadcast.json"
+    },
+    {
+      "$ref": "./SocketMessageTagClientSubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageTagClientUnsubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageTagGroupBroadcast.json"
+    },
+    {
+      "$ref": "./SocketMessageTagGroupClientSubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageTagGroupClientUnsubscribe.json"
+    },
+    {
+      "$ref": "./SocketMessageType.json"
+    },
+    {
+      "$ref": "./SocketMessages.json"
+    },
+    {
+      "$ref": "./SocketModelClientEventName.json"
+    },
+    {
+      "$ref": "./SocketModelClientEvents.json"
+    },
+    {
+      "$ref": "./SocketModelClientSubscription.json"
+    },
+    {
+      "$ref": "./SocketModelServerEventName.json"
+    },
+    {
+      "$ref": "./SocketModelServerEvents.json"
+    },
+    {
       "$ref": "./SocketServerAdrAddedBody.json"
     },
     {
@@ -2224,6 +2464,21 @@
       "$ref": "./SocketServerVersionRemovedBody.json"
     },
     {
+      "$ref": "./SocketTagClientEventName.json"
+    },
+    {
+      "$ref": "./SocketTagClientEvents.json"
+    },
+    {
+      "$ref": "./SocketTagClientSubscription.json"
+    },
+    {
+      "$ref": "./SocketTagServerEventName.json"
+    },
+    {
+      "$ref": "./SocketTagServerEvents.json"
+    },
+    {
       "$ref": "./SortDirection.json"
     },
     {
@@ -2264,6 +2519,12 @@
     },
     {
       "$ref": "./TagColor.json"
+    },
+    {
+      "$ref": "./TagExpandKey.json"
+    },
+    {
+      "$ref": "./TagExpanded.json"
     },
     {
       "$ref": "./TagExport.json"
@@ -2452,6 +2713,12 @@
       "$ref": "./Team.json"
     },
     {
+      "$ref": "./TeamExpandKey.json"
+    },
+    {
+      "$ref": "./TeamExpanded.json"
+    },
+    {
       "$ref": "./TeamExport.json"
     },
     {
@@ -2503,10 +2770,16 @@
       "$ref": "./VersionExport.json"
     },
     {
+      "$ref": "./VersionExportV2.json"
+    },
+    {
       "$ref": "./VersionField.json"
     },
     {
       "$ref": "./VersionFilter.json"
+    },
+    {
+      "$ref": "./VersionIdPathParam.json"
     },
     {
       "$ref": "./VersionOptional.json"
@@ -2525,6 +2798,27 @@
     },
     {
       "$ref": "./VersionUpdate.json"
+    },
+    {
+      "$ref": "./WebhookEvent.json"
+    },
+    {
+      "$ref": "./WebhookEventCollection.json"
+    },
+    {
+      "$ref": "./WebhookEventOperation.json"
+    },
+    {
+      "$ref": "./WebhookEventType.json"
+    },
+    {
+      "$ref": "./WebhookSubscription.json"
+    },
+    {
+      "$ref": "./WebhookSubscriptionPartial.json"
+    },
+    {
+      "$ref": "./WebhookSubscriptionRequired.json"
     }
   ]
 }

@@ -1,0 +1,39 @@
+{
+  "properties": {
+    "diagram-content-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketDiagramContentClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "diagram-content-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketDiagramContentClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "diagram-content-subscribe",
+    "diagram-content-unsubscribe"
+  ],
+  "type": "object"
+}

@@ -6,6 +6,7 @@ import { describe, expect, it, vi } from "vitest";
 
 import { executeGovernedWrite, executeReadRequest } from "../src/tools/common.js";
 import type { GovernanceEvidence } from "../src/types.js";
+import { type MockClient, textOf } from "./helpers.js";
 
 describe("executeReadRequest", () => {
   it("returns success result when API request succeeds", async () => {
@@ -15,7 +16,7 @@ describe("executeReadRequest", () => {
         status: 200,
         data: { id: "x" },
       })),
-    } as never;
+    } as unknown as MockClient;
 
     const result = await executeReadRequest(client, {
       method: "GET",
@@ -38,7 +39,7 @@ describe("executeReadRequest", () => {
         error: undefined,
         data: { raw: "x" },
       })),
-    } as never;
+    } as unknown as MockClient;
 
     const result = await executeReadRequest(client, {
       method: "GET",
@@ -47,7 +48,7 @@ describe("executeReadRequest", () => {
 
     expect(result.isError).toBe(true);
     expect(result.content[0]?.type).toBe("text");
-    expect(result.content[0]?.text).toContain("unknown error");
+    expect(textOf(result)).toContain("unknown error");
     expect(result.structuredContent).toEqual({
       ok: false,
       status: 500,
@@ -86,16 +87,17 @@ describe("executeGovernedWrite", () => {
         ok: true,
         status: 200,
       })),
-    } as never;
+    } as unknown as MockClient;
 
     const result = await executeGovernedWrite(
       {
         client,
         governancePolicy: {
           requiredSkills: ["required-skill"],
-          requiredReviewerRoles: ["security-auditor"],
+          requiredReviewerRoles: ["security-reviewer"],
           requireValidationActors: false,
           maxRiskFlagsBeforeBlock: 0,
+          requireSeparationOfDuties: false,
         },
         governanceLedgerDir: ledgerDir,
       },
@@ -110,7 +112,7 @@ describe("executeGovernedWrite", () => {
           skillsExecuted: ["different-skill"],
           reviewers: [
             {
-              role: "network-engineer",
+              role: "plan-validator",
               reviewer: "net",
               decision: "rejected",
               summary: "need more detail",
@@ -130,8 +132,8 @@ describe("executeGovernedWrite", () => {
     });
     const reason = String((result.structuredContent as Record<string, unknown>).reason);
     expect(reason).toContain("missing skills: required-skill");
-    expect(reason).toContain("missing reviewer roles: security-auditor");
-    expect(reason).toContain("review rejections: network-engineer: need more detail");
+    expect(reason).toContain("missing reviewer roles: security-reviewer");
+    expect(reason).toContain("review rejections: plan-validator: need more detail");
     expect(reason).toContain("risk flags: high-risk");
 
     const files = await readdir(ledgerDir);
@@ -148,12 +150,13 @@ describe("executeGovernedWrite", () => {
             ok: true,
             status: 200,
           })),
-        } as never,
+        } as unknown as MockClient,
         governancePolicy: {
           requiredSkills: [],
           requiredReviewerRoles: [],
           requireValidationActors: false,
           maxRiskFlagsBeforeBlock: -1,
+          requireSeparationOfDuties: false,
         },
         governanceLedgerDir: ledgerDir,
       },
@@ -173,7 +176,7 @@ describe("executeGovernedWrite", () => {
     );
 
     expect(result.isError).toBe(true);
-    expect(result.content[0]?.text).toContain("Write blocked by governance gate: blocked.");
+    expect(textOf(result)).toContain("Write blocked by governance gate: blocked.");
     expect((result.structuredContent as Record<string, unknown>).reason).toBe("blocked");
   });
 
@@ -186,7 +189,7 @@ describe("executeGovernedWrite", () => {
         error: undefined,
         data: { message: "conflict" },
       })),
-    } as never;
+    } as unknown as MockClient;
 
     const result = await executeGovernedWrite(
       {
@@ -196,6 +199,7 @@ describe("executeGovernedWrite", () => {
           requiredReviewerRoles: [],
           requireValidationActors: false,
           maxRiskFlagsBeforeBlock: 0,
+          requireSeparationOfDuties: false,
         },
         governanceLedgerDir: ledgerDir,
       },
@@ -215,7 +219,7 @@ describe("executeGovernedWrite", () => {
 
     expect(client.request).toHaveBeenCalledTimes(1);
     expect(result.isError).toBe(true);
-    expect(result.content[0]?.text).toContain("unknown error");
+    expect(textOf(result)).toContain("unknown error");
     expect(result.structuredContent).toMatchObject({
       ok: false,
       blocked: false,
@@ -231,7 +235,7 @@ describe("executeGovernedWrite", () => {
         status: 201,
         data: { id: "created" },
       })),
-    } as never;
+    } as unknown as MockClient;
 
     const result = await executeGovernedWrite(
       {
@@ -241,6 +245,7 @@ describe("executeGovernedWrite", () => {
           requiredReviewerRoles: [],
           requireValidationActors: false,
           maxRiskFlagsBeforeBlock: 0,
+          requireSeparationOfDuties: false,
         },
         governanceLedgerDir: ledgerDir,
       },
@@ -259,7 +264,7 @@ describe("executeGovernedWrite", () => {
     );
 
     expect(result.isError).toBeUndefined();
-    expect(result.content[0]?.text).toContain("Write succeeded.");
+    expect(textOf(result)).toContain("Write succeeded.");
     expect(result.structuredContent).toMatchObject({
       ok: true,
       status: 201,

@@ -1,5 +1,6 @@
 {
   "get": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -119,6 +120,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -132,9 +143,12 @@
     },
     "summary": "List",
     "x-fern-request-name": "CommentRepliesListRequest",
-    "x-fern-sdk-method-name": "list"
+    "x-fern-sdk-method-name": "list",
+    "x-ice-panel-operation-subject": "comment",
+    "x-ice-panel-operation-type": "read"
   },
   "post": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -261,6 +275,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -284,6 +308,8 @@
     },
     "summary": "Create",
     "x-fern-request-name": "CommentReplyCreateRequest",
-    "x-fern-sdk-method-name": "create"
+    "x-fern-sdk-method-name": "create",
+    "x-ice-panel-operation-subject": "comment",
+    "x-ice-panel-operation-type": "write"
   }
 }

@@ -56,7 +56,7 @@ describe("IcepanelClient", () => {
       body: { hello: "world" },
     });
 
-    const [url, init] = fetchImpl.mock.calls[0] as [string, RequestInit];
+    const [url, init] = fetchImpl.mock.calls[0] as unknown as [string, RequestInit];
     expect(url).toContain("https://api.example.test/resource?");
     expect(url).toContain("scalar=1");
     expect(url).toContain("bool=true");
@@ -100,7 +100,7 @@ describe("IcepanelClient", () => {
       query: { onlyNull: null },
     });
 
-    const [url, init] = fetchImpl.mock.calls[0] as [string, RequestInit];
+    const [url, init] = fetchImpl.mock.calls[0] as unknown as [string, RequestInit];
     expect(url).toBe("https://api.example.test/resource");
     expect(init.headers).toEqual({ Accept: "application/json" });
     expect(result).toEqual({

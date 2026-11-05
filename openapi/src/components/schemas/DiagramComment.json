@@ -1,15 +1,19 @@
 {
   "properties": {
     "commentId": {
+      "description": "The id of the comment this marker displays",
       "type": "string"
     },
     "id": {
+      "description": "The id of the comment marker, unique within the diagram",
       "type": "string"
     },
     "x": {
+      "description": "The x position of the comment on the diagram",
       "type": "number"
     },
     "y": {
+      "description": "The y position of the comment on the diagram",
       "type": "number"
     }
   },

@@ -1,0 +1,93 @@
+{
+  "properties": {
+    "tag-broadcast": {
+      "properties": {
+        "body": {
+          "properties": {
+            "changes": {
+              "items": {
+                "properties": {
+                  "id": {
+                    "format": "id",
+                    "type": "string"
+                  },
+                  "tag": {
+                    "$ref": "./Tag.json"
+                  },
+                  "type": {
+                    "$ref": "./QueryBroadcastType.json"
+                  }
+                },
+                "required": [
+                  "tag",
+                  "id",
+                  "type"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "lastBatch": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "changes"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "body"
+      ],
+      "type": "object"
+    },
+    "tag-group-broadcast": {
+      "properties": {
+        "body": {
+          "properties": {
+            "changes": {
+              "items": {
+                "properties": {
+                  "id": {
+                    "format": "id",
+                    "type": "string"
+                  },
+                  "tagGroup": {
+                    "$ref": "./TagGroup.json"
+                  },
+                  "type": {
+                    "$ref": "./QueryBroadcastType.json"
+                  }
+                },
+                "required": [
+                  "tagGroup",
+                  "id",
+                  "type"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "lastBatch": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "changes"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "body"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "tag-broadcast",
+    "tag-group-broadcast"
+  ],
+  "type": "object"
+}

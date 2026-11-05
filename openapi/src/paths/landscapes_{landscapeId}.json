@@ -1,5 +1,6 @@
 {
   "get": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -86,6 +87,16 @@
         },
         "description": "Not Found"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -99,9 +110,12 @@
     },
     "summary": "Get",
     "x-fern-request-name": "LandscapeFindRequest",
-    "x-fern-sdk-method-name": "get"
+    "x-fern-sdk-method-name": "get",
+    "x-ice-panel-operation-subject": "landscape",
+    "x-ice-panel-operation-type": "read"
   },
   "patch": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -208,6 +222,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -231,9 +255,12 @@
     },
     "summary": "Update",
     "x-fern-request-name": "LandscapeUpdateRequest",
-    "x-fern-sdk-method-name": "update"
+    "x-fern-sdk-method-name": "update",
+    "x-ice-panel-operation-subject": "landscape",
+    "x-ice-panel-operation-type": "write"
   },
   "delete": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -322,6 +349,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -345,6 +382,8 @@
     },
     "summary": "Delete",
     "x-fern-request-name": "LandscapeDeleteRequest",
-    "x-fern-sdk-method-name": "delete"
+    "x-fern-sdk-method-name": "delete",
+    "x-ice-panel-operation-subject": "landscape",
+    "x-ice-panel-operation-type": "write"
   }
 }

@@ -1,8 +1,5 @@
-export type ReviewRole =
-  | "solutions-architect"
-  | "network-engineer"
-  | "security-auditor"
-  | "grill-me";
+/** A reviewer role, e.g. an atlas reviewer agent name. The policy lists which are required. */
+export type ReviewRole = string;
 
 export type Decision = "approved" | "rejected";
 
@@ -30,6 +27,10 @@ export type GovernanceValidationResult = {
   missingReviewerRoles: ReviewRole[];
   rejectionReasons: string[];
   riskFlags: string[];
+  /** Approvals ignored: self-approval or reviewer not on the role's allowlist. */
+  untrustedApprovals: string[];
+  /** Actor problems: missing requestedBy/validatedBy, or self-validation. */
+  actorIssues: string[];
 };
 
 export type GovernanceLedgerRecord = {
@@ -41,10 +42,11 @@ export type GovernanceLedgerRecord = {
   payloadHash: string;
   evidence: GovernanceEvidence;
   validation: GovernanceValidationResult;
+  dryRun?: boolean;
 };
 
 export type IcepanelRequestArgs = {
-  method: "GET" | "POST" | "PUT" | "DELETE";
+  method: "GET" | "POST" | "PATCH" | "DELETE";
   path: string;
   query?: Record<string, unknown>;
   body?: unknown;

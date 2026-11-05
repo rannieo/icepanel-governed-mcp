@@ -19,6 +19,7 @@
       "organizations",
       "logs"
     ],
+    "deprecated": true,
     "description": "Find an organization log (only available on the scale plan and above)",
     "operationId": "organizationLogFind",
     "parameters": [
@@ -108,6 +109,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -120,7 +131,10 @@
       }
     },
     "summary": "Get",
+    "x-fern-availability": "deprecated",
     "x-fern-request-name": "OrganizationLogFindRequest",
-    "x-fern-sdk-method-name": "get"
+    "x-fern-sdk-method-name": "get",
+    "x-ice-panel-operation-subject": "action-log",
+    "x-ice-panel-operation-type": "read"
   }
 }

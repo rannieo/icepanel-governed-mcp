@@ -1,0 +1,28 @@
+{
+  "properties": {
+    "body": {
+      "properties": {
+        "flow": {
+          "$ref": "./Flow.json"
+        },
+        "id": {
+          "format": "id",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "./DocumentBroadcastType.json"
+        }
+      },
+      "required": [
+        "flow",
+        "id",
+        "type"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "body"
+  ],
+  "type": "object"
+}

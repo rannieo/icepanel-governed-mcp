@@ -1,0 +1,13 @@
+{
+  "enum": [
+    "adr",
+    "diagram",
+    "diagram-group",
+    "flow",
+    "model-connection",
+    "model-object",
+    "tag",
+    "tag-group"
+  ],
+  "type": "string"
+}

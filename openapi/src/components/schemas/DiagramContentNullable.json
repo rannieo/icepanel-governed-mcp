@@ -1,0 +1,10 @@
+{
+  "oneOf": [
+    {
+      "$ref": "./DiagramContent.json"
+    },
+    {
+      "type": "null"
+    }
+  ]
+}

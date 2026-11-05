@@ -3,6 +3,7 @@ import { randomUUID } from "node:crypto";
 import type { CallToolResult } from "@modelcontextprotocol/server";
 
 import type { IcepanelClient } from "../icepanel/client.js";
+import type { ToolDefaults } from "./build.js";
 import { writeLedgerRecord } from "../governance/ledger.js";
 import { validateGovernanceEvidence } from "../governance/gate.js";
 import type { GovernancePolicy } from "../governance/policy.js";
@@ -17,13 +18,27 @@ export type WriteExecutionContext = {
   client: IcepanelClient;
   governancePolicy: GovernancePolicy;
   governanceLedgerDir: string;
+  defaults?: ToolDefaults;
 };
 
 export type WriteOperationArgs = {
   operation: string;
   request: IcepanelRequestArgs;
   evidence: GovernanceEvidence;
+  /** Gate + ledger only; never forwards to IcePanel. */
+  dryRun?: boolean;
 };
+
+export function toolError(
+  text: string,
+  structuredContent: Record<string, unknown>,
+): CallToolResult {
+  return {
+    content: [{ type: "text", text }],
+    structuredContent,
+    isError: true,
+  };
+}
 
 export async function executeReadRequest(
   client: IcepanelClient,
@@ -83,6 +98,12 @@ export async function executeGovernedWrite(
   const reason = approved
     ? "approved"
     : [
+        validation.actorIssues.length
+          ? `actor issues: ${validation.actorIssues.join(", ")}`
+          : undefined,
+        validation.untrustedApprovals.length
+          ? `untrusted approvals: ${validation.untrustedApprovals.join(" | ")}`
+          : undefined,
         validation.missingSkills.length
           ? `missing skills: ${validation.missingSkills.join(", ")}`
           : undefined,
@@ -108,6 +129,7 @@ export async function executeGovernedWrite(
     payloadHash,
     evidence: args.evidence,
     validation,
+    ...(args.dryRun ? { dryRun: true } : {}),
   };
 
   const ledgerPath = await writeLedgerRecord(ctx.governanceLedgerDir, record);
@@ -128,6 +150,23 @@ export async function executeGovernedWrite(
         ledgerPath,
       },
       isError: true,
+    };
+  }
+
+  if (args.dryRun) {
+    return {
+      content: [
+        {
+          type: "text",
+          text: `Dry run: governance gate approved; IcePanel not called. Ledger: ${ledgerPath}`,
+        },
+      ],
+      structuredContent: {
+        ok: true,
+        dryRun: true,
+        data: { request: args.request },
+        ledgerPath,
+      },
     };
   }
 

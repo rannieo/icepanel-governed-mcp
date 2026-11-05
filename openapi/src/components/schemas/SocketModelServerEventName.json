@@ -1,0 +1,7 @@
+{
+  "enum": [
+    "model-connection-broadcast",
+    "model-object-broadcast"
+  ],
+  "type": "string"
+}

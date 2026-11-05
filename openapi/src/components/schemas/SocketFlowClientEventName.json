@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "flow-subscribe",
+    "flow-unsubscribe",
+    "flows-subscribe",
+    "flows-unsubscribe"
+  ],
+  "type": "string"
+}

@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 6 * * 1" # weekly: catch IcePanel API drift
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test:coverage
+
+  spec-drift:
+    # Re-fetches the live IcePanel OpenAPI spec and fails if any tool's endpoint
+    # disappeared, or if the generated index is stale.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run openapi:fetch && npm run openapi:index
+      - run: npx vitest run --coverage.enabled=false test/catalog.test.ts
+      - name: Generated spec index is up to date
+        run: git diff --exit-code -- src/generated

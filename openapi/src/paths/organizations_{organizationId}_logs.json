@@ -37,6 +37,33 @@
         "schema": {
           "$ref": "../components/schemas/OrganizationLogFilter.json"
         }
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "required": false,
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "description": "The maximum number of items to return, defaults to 1000",
+        "in": "query",
+        "name": "limit",
+        "required": false,
+        "schema": {
+          "maximum": 10000,
+          "minimum": 1,
+          "type": "number"
+        }
+      },
+      {
+        "in": "query",
+        "name": "order",
+        "required": false,
+        "schema": {
+          "$ref": "../components/schemas/SortDirection.json"
+        }
       }
     ],
     "responses": {
@@ -45,6 +72,9 @@
           "application/json": {
             "schema": {
               "properties": {
+                "nextCursor": {
+                  "type": "string"
+                },
                 "organizationLogs": {
                   "items": {
                     "$ref": "../components/schemas/OrganizationLog.json"
@@ -111,6 +141,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -123,7 +163,14 @@
       }
     },
     "summary": "List",
+    "x-fern-pagination": {
+      "cursor": "$request.cursor",
+      "next_cursor": "$response.nextCursor",
+      "results": "$response.organizationLogs"
+    },
     "x-fern-request-name": "OrganizationLogsListRequest",
-    "x-fern-sdk-method-name": "list"
+    "x-fern-sdk-method-name": "list",
+    "x-ice-panel-operation-subject": "action-log",
+    "x-ice-panel-operation-type": "read"
   }
 }

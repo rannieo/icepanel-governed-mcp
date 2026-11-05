@@ -46,6 +46,7 @@
     },
     "parentId": {
       "description": "Parent model object ID, null for the root level model object",
+      "minLength": 1,
       "nullable": true,
       "type": "string"
     },

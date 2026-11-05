@@ -1,5 +1,6 @@
 {
   "get": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -41,6 +42,17 @@
         "schema": {
           "$ref": "../components/schemas/TagFilter.json"
         }
+      },
+      {
+        "in": "query",
+        "name": "expand",
+        "required": false,
+        "schema": {
+          "items": {
+            "$ref": "../components/schemas/TagExpandKey.json"
+          },
+          "type": "array"
+        }
       }
     ],
     "responses": {
@@ -51,7 +63,7 @@
               "properties": {
                 "tags": {
                   "items": {
-                    "$ref": "../components/schemas/Tag.json"
+                    "$ref": "../components/schemas/TagExpanded.json"
                   },
                   "type": "array"
                 }
@@ -115,6 +127,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -128,9 +150,12 @@
     },
     "summary": "List",
     "x-fern-request-name": "TagsListRequest",
-    "x-fern-sdk-method-name": "list"
+    "x-fern-sdk-method-name": "list",
+    "x-ice-panel-operation-subject": "tag",
+    "x-ice-panel-operation-type": "read"
   },
   "post": {
+    "x-oauth-scope": "landscape",
     "security": [
       {
         "ApiKeyAuth": []
@@ -183,7 +208,7 @@
             "schema": {
               "properties": {
                 "tag": {
-                  "$ref": "../components/schemas/Tag.json"
+                  "$ref": "../components/schemas/TagExpanded.json"
                 }
               },
               "required": [
@@ -245,6 +270,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -268,6 +303,8 @@
     },
     "summary": "Create",
     "x-fern-request-name": "TagCreateRequest",
-    "x-fern-sdk-method-name": "create"
+    "x-fern-sdk-method-name": "create",
+    "x-ice-panel-operation-subject": "tag",
+    "x-ice-panel-operation-type": "write"
   }
 }

@@ -107,6 +107,9 @@
     },
     {
       "$ref": "./VersionRevertPartial.json"
+    },
+    {
+      "$ref": "./WebhookSubscriptionPartial.json"
     }
   ]
 }

@@ -92,6 +92,16 @@
         },
         "description": "Not Found"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -105,7 +115,9 @@
     },
     "summary": "List",
     "x-fern-request-name": "OrganizationLandscapesListRequest",
-    "x-fern-sdk-method-name": "list"
+    "x-fern-sdk-method-name": "list",
+    "x-ice-panel-operation-subject": "landscape",
+    "x-ice-panel-operation-type": "read"
   },
   "post": {
     "security": [
@@ -256,6 +268,8 @@
     },
     "summary": "Create",
     "x-fern-request-name": "OrganizationLandscapeCreateRequest",
-    "x-fern-sdk-method-name": "create"
+    "x-fern-sdk-method-name": "create",
+    "x-ice-panel-operation-subject": "landscape",
+    "x-ice-panel-operation-type": "write"
   }
 }

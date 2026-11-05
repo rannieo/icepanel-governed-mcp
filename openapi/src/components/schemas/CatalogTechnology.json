@@ -122,8 +122,7 @@
       "type": "string"
     },
     "disabled": {
-      "default": false,
-      "description": "Whether the technology is disabled and not visible to users",
+      "description": "Whether the technology is disabled and not visible to users, defaults to false",
       "type": "boolean"
     },
     "iconUrl": {

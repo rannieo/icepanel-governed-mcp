@@ -1,0 +1,24 @@
+{
+  "allOf": [
+    {
+      "$ref": "./Tag.json"
+    },
+    {
+      "properties": {
+        "modelConnectionIds": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "modelObjectIds": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    }
+  ]
+}

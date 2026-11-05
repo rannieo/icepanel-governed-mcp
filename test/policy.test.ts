@@ -45,16 +45,32 @@ describe("loadGovernancePolicy", () => {
     await writeFile(
       path,
       JSON.stringify({
-        requiredReviewerRoles: ["grill-me"],
+        requiredReviewerRoles: ["test-reviewer"],
         maxRiskFlagsBeforeBlock: 3,
+        requireSeparationOfDuties: false,
       }),
       "utf8",
     );
 
     const result = await loadGovernancePolicy(path);
     expect(result.requiredSkills).toEqual(defaultPolicy.requiredSkills);
-    expect(result.requiredReviewerRoles).toEqual(["grill-me"]);
+    expect(result.requiredReviewerRoles).toEqual(["test-reviewer"]);
     expect(result.requireValidationActors).toBe(defaultPolicy.requireValidationActors);
     expect(result.maxRiskFlagsBeforeBlock).toBe(3);
+  });
+});
+
+describe("loadGovernancePolicy trust fields", () => {
+  it("loads separation of duties and reviewer allowlist", async () => {
+    const dir = await mkdtemp(join(tmpdir(), "policy-"));
+    const path = join(dir, "policy.json");
+    await writeFile(
+      path,
+      JSON.stringify({ requireSeparationOfDuties: false, reviewerAllowlist: { "test-reviewer": ["alice"] } }),
+      "utf8",
+    );
+    const result = await loadGovernancePolicy(path);
+    expect(result.requireSeparationOfDuties).toBe(false);
+    expect(result.reviewerAllowlist).toEqual({ "test-reviewer": ["alice"] });
   });
 });

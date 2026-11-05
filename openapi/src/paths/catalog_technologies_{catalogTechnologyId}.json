@@ -5,13 +5,11 @@
       "Catalog Technologies"
     ],
     "x-eov-operation-handler": "catalogTechnologies",
-    "x-fern-audiences": [
-      "public"
-    ],
     "x-fern-sdk-group-name": [
       "catalog",
       "technologies"
     ],
+    "x-oauth-scope": "all",
     "description": "Find a technology",
     "operationId": "catalogTechnologyFind",
     "parameters": [
@@ -83,6 +81,16 @@
         },
         "description": "Unprocessable Entity"
       },
+      "429": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "../components/schemas/Error.json"
+            }
+          }
+        },
+        "description": "Resource Exhausted"
+      },
       "500": {
         "content": {
           "application/json": {
@@ -95,7 +103,12 @@
       }
     },
     "summary": "Get",
+    "x-fern-audiences": [
+      "public"
+    ],
     "x-fern-request-name": "CatalogTechnologyFindRequest",
-    "x-fern-sdk-method-name": "get"
+    "x-fern-sdk-method-name": "get",
+    "x-ice-panel-operation-subject": "catalog",
+    "x-ice-panel-operation-type": "read"
   }
 }

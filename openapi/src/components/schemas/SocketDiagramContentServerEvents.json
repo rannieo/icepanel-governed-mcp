@@ -1,0 +1,36 @@
+{
+  "properties": {
+    "diagram-content-broadcast": {
+      "properties": {
+        "body": {
+          "properties": {
+            "diagramContent": {
+              "$ref": "./DiagramContent.json"
+            },
+            "id": {
+              "format": "id",
+              "type": "string"
+            },
+            "type": {
+              "$ref": "./DocumentBroadcastType.json"
+            }
+          },
+          "required": [
+            "diagramContent",
+            "id",
+            "type"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "body"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "diagram-content-broadcast"
+  ],
+  "type": "object"
+}

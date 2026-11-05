@@ -1,0 +1,39 @@
+{
+  "properties": {
+    "domain-subscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketDomainClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    },
+    "domain-unsubscribe": {
+      "properties": {
+        "body": {
+          "$ref": "./SocketDomainClientSubscription.json"
+        },
+        "reply": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "body",
+        "reply"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "domain-subscribe",
+    "domain-unsubscribe"
+  ],
+  "type": "object"
+}

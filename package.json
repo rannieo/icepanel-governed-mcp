@@ -1,6 +1,6 @@
 {
   "name": "icepanel-openapi-workflow",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "private": true,
   "scripts": {
@@ -12,13 +12,16 @@
     "openapi:build": "bash scripts/openapi-build.sh build",
     "mcp:start": "node --import tsx -e \"import('./src/server.ts').then((m)=>m.startServerCli())\"",
     "mcp:dev": "node --watch --import tsx --eval \"import('./src/server.ts').then((m)=>m.startServerCli())\"",
-    "governance:validate": "node --import tsx -e \"import('./src/cli/validateGate.ts').then((m)=>m.startValidateGateCli(process.argv))\"",
-    "governance:inspect": "node --import tsx -e \"import('./src/cli/inspectLedger.ts').then((m)=>m.startInspectLedgerCli(process.argv))\"",
-    "test": "vitest run",
+    "governance:validate": "node --import tsx -e \"import('./src/cli/validateGate.ts').then((m)=>m.startValidateGateCli(['node','validate',...process.argv.slice(1)]))\"",
+    "governance:inspect": "node --import tsx -e \"import('./src/cli/inspectLedger.ts').then((m)=>m.startInspectLedgerCli(['node','inspect',...process.argv.slice(1)]))\"",
+    "test": "tsc --noEmit && vitest run",
     "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage",
+    "test:coverage": "tsc --noEmit && vitest run --coverage",
     "test:e2e": "RUN_E2E=true vitest run --coverage.enabled=false test/mcp.e2e.test.ts",
-    "test:e2e:write": "RUN_E2E=true E2E_ALLOW_WRITES=true vitest run --coverage.enabled=false test/mcp.e2e.test.ts"
+    "test:e2e:write": "RUN_E2E=true E2E_ALLOW_WRITES=true vitest run --coverage.enabled=false test/mcp.e2e.test.ts",
+    "openapi:index": "node scripts/openapi-index.mjs",
+    "openapi:check": "npm run openapi:fetch && npm run openapi:index && vitest run --coverage.enabled=false test/catalog.test.ts && git diff --stat -- src/generated",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@redocly/cli": "^2.0.0",

@@ -3,12 +3,24 @@
     "c4ModelExperience": {
       "type": "string"
     },
+    "defaultDomainHandleIds": {
+      "additionalProperties": {
+        "format": "short-id",
+        "nullable": true,
+        "type": "string"
+      },
+      "description": "Map of landscape id to the default domain handle id for that landscape",
+      "nullable": true,
+      "type": "object"
+    },
     "defaultOrganizationId": {
+      "format": "id",
       "nullable": true,
       "type": "string"
     },
     "defaultOrganizationLandscapeIds": {
       "additionalProperties": {
+        "format": "id",
         "nullable": true,
         "type": "string"
       },

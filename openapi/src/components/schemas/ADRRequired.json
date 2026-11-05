@@ -1,6 +1,7 @@
 {
   "properties": {
     "commit": {
+      "minimum": 0,
       "type": "number"
     },
     "content": {
@@ -36,11 +37,11 @@
     },
     "handleId": {
       "description": "The handle id of the ADR",
+      "format": "handle-id",
       "type": "string"
     }
   },
   "required": [
-    "handleId",
     "name",
     "status"
   ],

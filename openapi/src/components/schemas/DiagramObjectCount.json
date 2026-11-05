@@ -1,4 +1,5 @@
 {
+  "description": "The number of objects on the diagram, counted by object type and shape",
   "properties": {
     "actor": {
       "type": "number"
@@ -6,10 +7,10 @@
     "app": {
       "type": "number"
     },
-    "group": {
+    "component": {
       "type": "number"
     },
-    "component": {
+    "group": {
       "type": "number"
     },
     "store": {
@@ -28,8 +29,8 @@
   "required": [
     "actor",
     "app",
-    "group",
     "component",
+    "group",
     "store",
     "system",
     "area",

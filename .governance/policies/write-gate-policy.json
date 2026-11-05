@@ -1,20 +1,13 @@
 {
   "requiredSkills": [
-    "solution-architect",
-    "network-engineer",
-    "security-auditor",
-    "grill-me",
-    "brainstorming",
-    "writing-plans",
-    "test-driven-development",
-    "verification-before-completion"
+    "spec",
+    "review"
   ],
   "requiredReviewerRoles": [
-    "solutions-architect",
-    "network-engineer",
-    "security-auditor",
-    "grill-me"
+    "plan-validator",
+    "security-reviewer"
   ],
   "requireValidationActors": true,
-  "maxRiskFlagsBeforeBlock": 0
+  "maxRiskFlagsBeforeBlock": 0,
+  "requireSeparationOfDuties": true
 }

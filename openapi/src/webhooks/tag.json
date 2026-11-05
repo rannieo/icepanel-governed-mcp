@@ -1,0 +1,120 @@
+{
+  "post": {
+    "description": "Webhook event triggered when a tag was modified",
+    "operationId": "onTag",
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "example": {
+              "after": {
+                "id": "ktLn0NRHkzKp2GTPzXl5",
+                "landscapeId": "kClOhzcBdYPX1tx4sYzC",
+                "versionId": "O1XSZ7r7xWMXfhd7FHAV"
+              },
+              "before": {
+                "id": "ktLn0NRHkzKp2GTPzXl5",
+                "landscapeId": "kClOhzcBdYPX1tx4sYzC",
+                "versionId": "O1XSZ7r7xWMXfhd7FHAV"
+              },
+              "collection": "tag",
+              "operation": "created",
+              "organizationId": "ZGDaIrw2DrVnYnxMDES3",
+              "resourceId": "ktLn0NRHkzKp2GTPzXl5",
+              "subscriptionId": "cK0eZN6MLSw8XDg7uPnY"
+            },
+            "properties": {
+              "after": {
+                "properties": {
+                  "id": {
+                    "format": "id",
+                    "type": "string"
+                  },
+                  "landscapeId": {
+                    "format": "id",
+                    "type": "string"
+                  },
+                  "versionId": {
+                    "format": "id",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id"
+                ],
+                "type": "object"
+              },
+              "before": {
+                "properties": {
+                  "id": {
+                    "format": "id",
+                    "type": "string"
+                  },
+                  "landscapeId": {
+                    "format": "id",
+                    "type": "string"
+                  },
+                  "versionId": {
+                    "format": "id",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id"
+                ],
+                "type": "object"
+              },
+              "collection": {
+                "enum": [
+                  "tag"
+                ],
+                "type": "string"
+              },
+              "operation": {
+                "enum": [
+                  "created",
+                  "updated",
+                  "deleted"
+                ],
+                "type": "string"
+              },
+              "organizationId": {
+                "format": "id",
+                "type": "string"
+              },
+              "resourceId": {
+                "format": "id",
+                "type": "string"
+              },
+              "subscriptionId": {
+                "format": "id",
+                "type": "string"
+              }
+            },
+            "required": [
+              "collection",
+              "operation",
+              "organizationId",
+              "resourceId",
+              "subscriptionId"
+            ],
+            "type": "object"
+          }
+        }
+      },
+      "required": true
+    },
+    "responses": {
+      "200": {
+        "description": "OK"
+      }
+    },
+    "summary": "Tag",
+    "tags": [
+      "Webhook Events"
+    ],
+    "x-fern-audiences": [
+      "public"
+    ]
+  }
+}

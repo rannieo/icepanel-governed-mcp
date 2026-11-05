@@ -12,6 +12,8 @@
       "type": "string"
     },
     "endAtId": {
+      "deprecated": true,
+      "description": "use cursor instead",
       "type": "string"
     },
     "endBeforeDate": {
@@ -19,21 +21,13 @@
       "type": "string"
     },
     "endBeforeId": {
+      "deprecated": true,
+      "description": "use cursor instead",
       "type": "string"
     },
     "includeActionsInContext": {
       "description": "include actions from objects inside the context, eg: update of a model connection that is connected to a model object",
       "type": "boolean"
-    },
-    "limit": {
-      "type": "number"
-    },
-    "order": {
-      "enum": [
-        "asc",
-        "desc"
-      ],
-      "type": "string"
     },
     "performedBy": {
       "oneOf": [
@@ -69,6 +63,8 @@
       "type": "string"
     },
     "startAfterId": {
+      "deprecated": true,
+      "description": "use cursor instead",
       "type": "string"
     },
     "startAtDate": {
@@ -76,6 +72,8 @@
       "type": "string"
     },
     "startAtId": {
+      "deprecated": true,
+      "description": "use cursor instead",
       "type": "string"
     }
   },

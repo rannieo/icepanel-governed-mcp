@@ -3,6 +3,7 @@
   "properties": {
     "description": {
       "description": "Detailed description",
+      "maxLength": 950000,
       "type": "string"
     },
     "direction": {
@@ -26,6 +27,7 @@
       "type": "array"
     },
     "name": {
+      "maxLength": 4000,
       "type": "string"
     },
     "originId": {

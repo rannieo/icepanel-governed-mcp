@@ -1,0 +1,6 @@
+{
+  "enum": [
+    "domain-broadcast"
+  ],
+  "type": "string"
+}

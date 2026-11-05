@@ -1,0 +1,82 @@
+{
+  "properties": {
+    "breakpoints": {
+      "description": "User-controlled corner waypoints the connection routes through, ordered origin to target. Only valid on square connections, breakpoints are not stored on any other line shape and setting them on one is rejected. The path must be a valid orthogonal L-shape: consecutive breakpoints share an x or a y (no diagonals), no two are identical, and every interior breakpoint is a right-angle corner (segments alternate horizontal/vertical, no collinear or backtracking points).",
+      "items": {
+        "properties": {
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "x",
+          "y"
+        ],
+        "type": "object"
+      },
+      "maxItems": 100,
+      "type": "array"
+    },
+    "labelPosition": {
+      "description": "The percentage along the line where the label should be placed, defaults to 50",
+      "maximum": 100,
+      "minimum": 0,
+      "type": "number"
+    },
+    "lineShape": {
+      "$ref": "./LineShape.json"
+    },
+    "modelId": {
+      "description": "The id of the model connection this connection represents",
+      "nullable": true,
+      "type": "string"
+    },
+    "originConnector": {
+      "$ref": "./DiagramObjectConnector.json",
+      "description": "The anchor point on the edge of the origin object where the connection attaches"
+    },
+    "originId": {
+      "description": "The id of the diagram object the connection starts from",
+      "nullable": true,
+      "type": "string"
+    },
+    "points": {
+      "deprecated": true,
+      "description": "Deprecated: points are now computed automatically",
+      "items": {
+        "properties": {
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "x",
+          "y"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "targetConnector": {
+      "$ref": "./DiagramObjectConnector.json",
+      "description": "The anchor point on the edge of the target object where the connection attaches"
+    },
+    "targetId": {
+      "description": "The id of the diagram object the connection ends at",
+      "nullable": true,
+      "type": "string"
+    }
+  },
+  "required": [
+    "modelId",
+    "originId",
+    "targetId"
+  ],
+  "type": "object"
+}
